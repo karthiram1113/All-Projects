@@ -1,0 +1,671 @@
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  /* Ensure it's on top of other elements */
+  will-change: transform;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.clients li {
+  font-size: medium !important;
+}
+
+.clients li {
+  /* text-align: center; */
+  /* align-items: center; */
+  list-style-type: none;
+  display: inline;
+  /* padding: 0px 10px; */
+  letter-spacing: 10px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.edit-font {
+  color: green;
+  /* color: green;
+    font-size: 22px; */
+}
+
+.delete-font {
+  color: red;
+  /* color: red;
+    font-size: 22px; */
+}
+
+.tableHost {
+  width: 100%;
+  text-wrap: nowrap;
+}
+
+.over {
+  overflow-x: scroll;
+  max-width: 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+/* button box */
+/* ✅ KEEP THIS (Your animation and button style) */
+.button-box {
+  position: relative;
+  width: 5rem;
+  height: 0rem;
+  display: flex;
+}
+
+.button-box .button {
+    position: absolute;
+      left: 50%;
+      top: 50%;
+      cursor: pointer;
+      /* border: 3px solid #311703; */
+      border-radius: 50px;
+      padding: 7px !important;
+  transition: 0.3s;
+  /* opacity: 0.85; */
+  align-self: center;
+
+}
+
+.button-box .button .icon {
+  font-size: 16px;
+  opacity: 0.7;
+  transition: 0.25s;
+}
+
+.button-box .button:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(-360deg);
+  z-index: 50;
+      padding: 8px;
+  background: #90EE90;
+      /* background-image: linear-gradient(to bottom, #8ac43f, #90EE90); */
+}
+
+.button-box .button:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(-115deg);
+  z-index: 40;
+    padding: 8px;
+  background: rgba(var(--bs-success-rgb));
+      /* background-image: linear-gradient(to top, #0D98BA, #000000); */
+}
+
+.button-box .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 30;
+  background: rgba(var(--bs-danger-rgb));
+      /* background-image: linear-gradient(to left bottom, rgba(var(--bs-danger-rgb)), #000000); */
+}
+
+/* .button-box .button:nth-child(6) .icon {
+  animation: active 2.2s linear infinite;
+} */
+
+.button-box .touch {
+  position: relative;
+  z-index: 60;
+  height: 100%;
+  flex: 1;
+  cursor: pointer;
+}
+
+.button-box .touch.left:hover~.button:nth-child(4) {
+  opacity: 1;
+  transform: translate(-170%, -50%) rotate(-90deg) scale(1.05);
+}
+
+.button-box .touch.left:hover~.button:nth-child(4) .icon,
+.button-box .touch.right:hover~.button:nth-child(5) .icon,
+.button-box .touch.middle:hover~.button:nth-child(6) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+
+.button-box .touch.left:active~.button:nth-child(4) {
+  transform: translate(-170%, -50%) rotate(-90deg) scale(0.9);
+}
+
+.button-box .touch.right:hover~.button:nth-child(5) {
+  opacity: 1;
+  transform: translate(70%, -50%) rotate(90deg) scale(1.05);
+}
+
+.button-box .touch.right:active~.button:nth-child(5) {
+  transform: translate(70%, -50%) rotate(90deg) scale(0.9);
+}
+
+.button-box .touch.middle:hover~.button:nth-child(6) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+}
+
+.button-box .touch.middle:active~.button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(0deg) scale(0.9);
+}
+
+.button-box:hover .button:nth-child(4) {
+  transform: translate(-170%, -50%) rotate(360deg);
+}
+
+.button-box:hover .button:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.button-box:hover .button:nth-child(6) {
+  transform: translate(70%, -50%) rotate(360deg);
+}
+
+/* .button-box:hover .button:nth-child(6) .icon {
+  animation: active 4s linear infinite;
+} */
+
+@keyframes active {
+  to {
+    transform: rotate(360deg);
+  }
+}
+  /* button-box end */
+
+
+
+
+
+
+
+/* percentage input */
+.percentage-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.percentage-input-wrapper .input {
+  width: 100%;
+  padding-right: 30px;
+  /* Leave space for % */
+}
+
+.percentage-symbol {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9c9fa6;
+  font-weight: bold;
+}
+
+
+
+
+
+/* multiple image */
+.dropzone {
+  padding: 13px 10px !important;
+  font-size: 15px;
+  border: 1px solid rgb(230 230 230);
+  border-radius: 5px;
+  border-top-left-radius: 5px;
+  background: white;
+  cursor: pointer;
+
+}
+
+.img-input p {
+  margin: 0px;
+  padding: 3px 0px !important;
+  color: lightgray;
+}
+
+/* .dropzone:hover {
+  border-color: #0a58ca;
+} */
+
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.img-preview {
+    width: 80px;
+      height: 80px;
+      margin-right: 9px;
+      margin-bottom: 8px;
+      /* object-fit: contain; */
+      /* padding: 5px 10px !important; */
+      /* font-size: 15px; */
+      /* border: 1px solid rgb(230 230 230); */
+      /* border-radius: 5px; */
+      border-top-left-radius: 5px;
+      /* border: 1px solid #ccc; */
+      border-radius: 5px;
+      overflow: hidden;
+}
+
+.img-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* showmore dec */
+.product-dec-text {
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+.content {
+  max-height: 3.6em;
+  /* approx 2 lines */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+.content.expanded {
+  max-height: none;
+}
+
+.show-more {
+  display: block;
+  margin-top: 8px;
+  color: #00acf0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* status */
+.toggle-icon-btn {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  border-radius: 999px;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+  padding: 0;
+}
+
+/* Circle inside the switch */
+.toggle-icon-btn {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  padding: 0;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Circle (thumb) */
+.toggle-icon-btn::before {
+content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Active state */
+.btn-active {
+  background-color: #8ac43f !important;
+}
+
+.btn-active::before {
+  transform: translateX(24px);
+}
+
+/* Inactive state */
+.btn-inactive {
+  background-color: rgba(var(--bs-danger-rgb)) !important;
+}
+
+.btn-inactive::before {
+  transform: translateX(0);
+}
+
+/* Icon positioning inside the button */
+
+.icon-cross {
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Hide icons visually if needed — remove this if you want them visible */
+.icon-check,
+.icon-cross {
+  pointer-events: none;
+}
+
+/* Move the circle right if active */
+/* .btn-active {
+  background-color: #00c875;
+} */
+
+.btn-active::before {
+  transform: translateX(24px);
+}
+
+/* .btn-inactive {
+  background-color: #ff6b6b;
+} */
+
+.btn-inactive::before {
+  transform: translateX(0);
+}
+
+/* Hide text icons visually but keep for screen readers */
+
+.icon-cross {
+position: absolute;
+  /* opacity: 0; */
+  pointer-events: none;
+  left: 30px;
+}
+.icon-check {
+position: absolute;
+  /* opacity: 0; */
+  pointer-events: none;
+  left: 5px;
+}
+
+
+/* end status */
+
+
+/* ckediter */
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){
+      border: 1px solid rgb(230 230 230) !important;
+}
+.ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content{
+  border: 1px solid rgb(230 230 230) !important;
+}
+
+.ck.ck-editor__main>.ck-editor__editable.ck-focused{
+      border: 1px solid #00acf0 !important;
+
+}
+.ck-editor__editable_inline{
+   max-height: 250px;
+  overflow-y: scroll;
+    scrollbar-width: thin;
+ }
+
+/* end ckediter */
+
+
+
+/* Description-list */
+
+/* Cell width */
+.toggle-text-cell {
+  max-width: 200px;
+}
+
+/* Common text styles */
+.toggle-text {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  display: block;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+/* Collapsed state — limit to 2 lines */
+.toggle-text.collapsed {
+  max-height: 3.6em;
+  /* 2 lines * 1.8em */
+  /* line-height: 1.8em; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Expanded state — show full content */
+.toggle-text.expanded {
+  max-height: none;
+  line-height: 1.5em;
+  white-space: normal;
+}
+
+/* Show more/less button */
+.toggle-button {
+  margin-top: 6px;
+  background: none;
+  border: none;
+  color: #00acf0;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* End Description-list */
+
+
+
+
+/* modal close */
+.modal-header .btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+
+/* product-card */
+
+.product-card {
+    display: flex;
+      /* align-items: flex-start; */
+      gap: 20px;
+      /* border: 1px solid #ddd; */
+      padding: 15px;
+      border-radius: 6px;
+      /* max-width: 720px; */
+      /* font-family: Arial, sans-serif; */
+      background-color: #fff;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.badge-new {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(var(--bs-danger-rgb));
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-title {
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ffb400;
+  /* gold stars color */
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 16px;
+  user-select: none;
+}
+
+.numeric-rating {
+  color: #666;
+}
+
+.product-description {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.product-purchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  min-width: 140px;
+}
+
+.price-section {
+  text-align: right;
+}
+.Qty-section {
+    display: flex;
+      gap: 23px;
+}
+
+.price-current {
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.price-original {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.free-shipping {
+  display: block;
+  color: #28a745;
+  /* green */
+  font-size: 12px;
+}
+
+/* view modal end */
+
+
+
+
+/* // report download button */
+.custom-button {
+  /* width: 50px;
+  height: 50px;
+  border: 2px solid rgb(214, 214, 214);
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  display: flex; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+}
+
+.svgIcon {
+  fill: rgb(255, 255, 255);
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+}
+
+.custom-button:hover {
+  background-color: rgb(51, 51, 51);
+  transition-duration: 0.3s;
+}
+
+.custom-button:hover .icon2 {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  border-left: 2px solid rgb(235, 235, 235);
+  border-right: 2px solid rgb(235, 235, 235);
+}
+
+.custom-button:hover .svgIcon {
+  fill: rgb(255, 255, 255);
+  animation: slide-in-top 1s linear infinite;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+/* toastify success icon color */
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: #8ac43f;
+}
