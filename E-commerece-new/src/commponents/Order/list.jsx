@@ -32,12 +32,12 @@ function OrderList() {
   const [recordsPerPage] = useState(10);
   const [totalRecords, setTotalRecords] = useState(0);
 
-  // useEffect(() => {
-  //   orderList(currentPage);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1500);
-  // }, [currentPage]);
+  useEffect(() => {
+    orderList(currentPage);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, [currentPage]);
 
   // Pagination Method
 
@@ -83,36 +83,36 @@ function OrderList() {
 
 
 
-  // const orderList = async (page) => {
-  //   // e.preventDefault();
-  //   setLoading(true);
-  //   const totken = localStorage.getItem("token");
-  //   if (!totken) {
-  //     navigate("/");
-  //     return;
-  //   }
-  //   const apiData = {
-  //     pageIndex: page - 1,
-  //     dataLength: recordsPerPage,
-  //   };
+  const orderList = async (page) => {
+    // e.preventDefault();
+    setLoading(true);
+    const totken = localStorage.getItem("token");
+    if (!totken) {
+      navigate("/");
+      return;
+    }
+    const apiData = {
+      pageIndex: page - 1,
+      dataLength: recordsPerPage,
+    };
 
-  //   try {
-  //     const responseData = await OVERALLAPI.adminOrderList(apiData);
-  //     if (responseData.apiStatus.code === "400") {
-  //       setList([]);
-  //       // setNoData(true);
-  //     } else if (responseData.apiStatus.code === "200") {
-  //       // toast.success(responseData.apiStatus.message);
-  //       setList(responseData.result.OrderData);
-  //       setTotalRecords(responseData.result.totalRecordCount);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during login:", error);
-  //     toast.error("An error occurred during login.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+    try {
+      const responseData = await OVERALLAPI.adminOrderList(apiData);
+      if (responseData.apiStatus.code === "400") {
+        setList([]);
+        // setNoData(true);
+      } else if (responseData.apiStatus.code === "200") {
+        // toast.success(responseData.apiStatus.message);
+        setList(responseData.result.OrderData);
+        setTotalRecords(responseData.result.totalRecordCount);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      toast.error("An error occurred during login.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
 
@@ -221,14 +221,14 @@ function OrderList() {
             <div className="card">
               <div ref={cardRef}
                 className={`card-body ${isOverflowing && isMobile ? "over" : ""}`}>
-                {/* {loading ? (
+                {loading ? (
                   <Preloader />
 
                 ) : list.length === 0 ? (
                   <Nodatafounded />
 
                 ) : (
-                  <> */}
+                  <>
                 <table className="table table-hover tableHost">
                   <thead>
                     <tr>
@@ -242,27 +242,22 @@ function OrderList() {
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {list.map((item, ind) => ( */}
+                    {list.map((item, ind) => (
                     <tr >
                       <th scope="row">
-                        {/* {(currentPage - 1) * recordsPerPage + ind + 1} */}
-                        1
+                        {(currentPage - 1) * recordsPerPage + ind + 1}
                       </th>
                       <td>
-                        {/* {item.created_date} */}
-                        date
+                        {item.created_date}
                       </td>
                       <td>
-                        {/* {item.created_date} */}
-                        date
+                        {item.created_date}
                       </td>
                       <td>
-                        {/* {item.code} */}
-                        5555
+                        {item.code}
                       </td>
                       <td>
-                        {/* {item.total_amount} */}
-                        6666
+                        {item.total_amount}
                       </td>
                       {/* <td>
                         <div
@@ -365,20 +360,19 @@ function OrderList() {
                         </div>
                       </td>
                     </tr>
-                    {/* // ))} */}
+                     ))}
                   </tbody>
                 </table>
-                {/* <div style={{ display: 'flex', justifyContent: 'end', marginTop: '20px' }}>
+                <div style={{ display: 'flex', justifyContent: 'end', marginTop: '20px' }}>
                       {totalRecords === "10" ? null : <> <Pagination>
                         <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
                         {renderPaginationItems()}
                         <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
                       </Pagination></>}
 
-                    </div> */}
-                {/* </> */}
-
-                {/* )} */}
+                    </div>
+                </>
+                )}
               </div>
             </div>
 

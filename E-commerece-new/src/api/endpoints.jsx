@@ -6,6 +6,8 @@ let endpoints = {
 	adminvendorlist: "vendor/list",
 	adminvendordelete: "vendor/delete/:id",
 	adminvendorget: "vendor/activation/:id",
+	adminclientlist: "client/list",
+	adminclientdelete: "client/delete/:id",
 
 
 	adminProductList: "admin/productlist",
@@ -14,8 +16,6 @@ let endpoints = {
 	adminorderget:"order/getadmin/:id",
 	adminVendorcreate: "/vendor/create",
 	adminvendorupdate:"admin/updatevendor",
-	adminclientlist:"client/list",
-	adminclientdelete:"client/delete/:id",
 	adminclientget:"client/get/:id",
 	adminclientupdate:"admin/updateclient",
 	adminshoplist:"shoptype/list",

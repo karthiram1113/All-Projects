@@ -43,84 +43,84 @@ function Userform() {
     const [submit, setSubmit] = useState(false)
     // Useeffect Method
 
-    // useEffect(() => {
-    //     const queryParams = window.location.pathname;
-    //     const myArray = queryParams.split("/");
-    //     const userId = myArray[3];
-    //     setUserId(userId);
-    //     setUrlName(myArray[2]);
-    //     userGetMethod(userId);
-    // }, []);
+    useEffect(() => {
+        const queryParams = window.location.pathname;
+        const myArray = queryParams.split("/");
+        const userId = myArray[3];
+        setUserId(userId);
+        setUrlName(myArray[2]);
+        userGetMethod(userId);
+    }, []);
 
 
     // Shoptype Create Api
 
-    // const userCreateApi = async (e) => {
-    //     e.preventDefault();
-    //     setSubmit(true);
+    const userCreateApi = async (e) => {
+        e.preventDefault();
+        setSubmit(true);
 
-    //     try {
-    //         const formData = new FormData();
-    //         formData.append('firstName', firstName);
-    //         formData.append('lastName', lastName);
-    //         formData.append('email', userName);
-    //         formData.append('loginType', loginType);
-    //         formData.append('password', password);
-    //         if (avatar) {
-    //             formData.append('avatar', avatar);
-    //         }
+        try {
+            const formData = new FormData();
+            formData.append('firstName', firstName);
+            formData.append('lastName', lastName);
+            formData.append('email', userName);
+            formData.append('loginType', loginType);
+            formData.append('password', password);
+            if (avatar) {
+                formData.append('avatar', avatar);
+            }
  
 
-    //         const responseData = await OVERALLAPI.adminUserCreate(formData);
+            const responseData = await OVERALLAPI.adminUserCreate(formData);
 
 
-    //         if (responseData.apiStatus.code === '200') {
-    //             Navigate('/userlist');
-    //             setSubmit(false);
-    //             toast.success(responseData.apiStatus.message);
-    //         } else {
-    //             toast.error(responseData.apiStatus.message);
-    //         }
-    //     } catch (error) {
-    //         console.error('Error in clientEdit:', error);
-    //     } finally {
-    //     }
-    // };
+            if (responseData.apiStatus.code === '200') {
+                Navigate('/userlist');
+                setSubmit(false);
+                toast.success(responseData.apiStatus.message);
+            } else {
+                toast.error(responseData.apiStatus.message);
+            }
+        } catch (error) {
+            console.error('Error in clientEdit:', error);
+        } finally {
+        }
+    };
 
     // Shoptype Update Api
 
-    // const userEditApi = async (e) => {
-    //     e.preventDefault();
-    //     setSubmit(true);
+    const userEditApi = async (e) => {
+        e.preventDefault();
+        setSubmit(true);
 
 
-    //     try {
-    //         const formData = new FormData();
-    //         formData.append('firstName', firstName);
-    //         formData.append('lastName', lastName);
-    //         formData.append('email', userName);
-    //         formData.append('loginType', loginType);
-    //         formData.append('password', password);
-    //         formData.append('userId', userId);
-    //         if (avatar) {
-    //             formData.append('avatar', avatar);
-    //         }
-    //         console.log('FormData being sent:', [...formData.entries()]);
+        try {
+            const formData = new FormData();
+            formData.append('firstName', firstName);
+            formData.append('lastName', lastName);
+            formData.append('email', userName);
+            formData.append('loginType', loginType);
+            formData.append('password', password);
+            formData.append('userId', userId);
+            if (avatar) {
+                formData.append('avatar', avatar);
+            }
+            console.log('FormData being sent:', [...formData.entries()]);
 
-    //         const responseData = await OVERALLAPI.adminUserEdit(formData);
+            const responseData = await OVERALLAPI.adminUserEdit(formData);
 
-    //         if (responseData.apiStatus.code === '200') {
-    //             Navigate('/userlist');
-    //             setSubmit(false);
-    //             toast.success(responseData.apiStatus.message);
-    //         } else {
-    //             toast.error(responseData.apiStatus.message);
-    //         }
-    //     } catch (error) {
-    //         console.error('Error in clientEdit:', error);
-    //     } finally {
-    //     }
-    // };
+            if (responseData.apiStatus.code === '200') {
+                Navigate('/userlist');
+                setSubmit(false);
+                toast.success(responseData.apiStatus.message);
+            } else {
+                toast.error(responseData.apiStatus.message);
+            }
+        } catch (error) {
+            console.error('Error in clientEdit:', error);
+        } finally {
+        }
+    };
 
 
     // Handler for file input change
@@ -131,30 +131,30 @@ function Userform() {
 
     // User Get Api Method
 
-    // const userGetMethod = async (userId) => {
-    //     try {
-    //         const response = await OVERALLAPI.adminUserGet(userId);
+    const userGetMethod = async (userId) => {
+        try {
+            const response = await OVERALLAPI.adminUserGet(userId);
 
 
-    //         if (!response || !response.result || !response.result.AdminData) {
-    //             throw new Error("Invalid response data");
-    //         }
+            if (!response || !response.result || !response.result.AdminData) {
+                throw new Error("Invalid response data");
+            }
 
-    //         // Extract the client data
-    //         const dat = response.result.AdminData;
-    //         console.log(dat, "dat");
+            // Extract the client data
+            const dat = response.result.AdminData;
+            console.log(dat, "dat");
 
-    //         setFirstName(dat.firstname)
-    //         setLastName(dat.lastname)
-    //         setUserName(dat.username)
-    //         setPassword(dat.password)
-    //         setAvatar(dat.avatar)
-    //         setLoginType(dat.type)
+            setFirstName(dat.firstname)
+            setLastName(dat.lastname)
+            setUserName(dat.username)
+            setPassword(dat.password)
+            setAvatar(dat.avatar)
+            setLoginType(dat.type)
 
-    //     } catch (error) {
-    //         console.log("Error handled =", error);
-    //     }
-    // };
+        } catch (error) {
+            console.log("Error handled =", error);
+        }
+    };
 
 
 
@@ -394,29 +394,29 @@ function Userform() {
                                                 Cancel
                                             </Link>
                                             {urlName == "Create" ? 
-                                            // <button type="submit"
-                                            //     // onClick={userCreateApi}
-                                            //     class="btn btn-gradient-primary me-2">Create</button>
-                                            <Link
-                                                to={"/userlist"}
+                                            <button type="submit"
+                                                onClick={userCreateApi}
+                                                class="btn btn-gradient-primary me-2">Create</button>
+                                            // <Link
+                                            //     to={"/userlist"}
 
-                                                type="button"
-                                                class="btn btn-gradient-primary me-2"
-                                            >
-                                                Create
-                                            </Link>
+                                            //     type="button"
+                                            //     class="btn btn-gradient-primary me-2"
+                                            // >
+                                            //     Create
+                                            // </Link>
                                                  :
-                                                // <button type="submit"
-                                                //     // onClick={userEditApi}
-                                                //     class="btn btn-gradient-primary me-2">Submit</button>
-                                            <Link
-                                                to={"/userlist"}
+                                                <button type="submit"
+                                                    onClick={userEditApi}
+                                                    class="btn btn-gradient-primary me-2">Submit</button>
+                                            // <Link
+                                            //     to={"/userlist"}
 
-                                                type="button"
-                                                class="btn btn-gradient-primary me-2"
-                                            >
-                                                Submit
-                                            </Link>
+                                            //     type="button"
+                                            //     class="btn btn-gradient-primary me-2"
+                                            // >
+                                            //     Submit
+                                            // </Link>
                                                     }
 
                                         </div>

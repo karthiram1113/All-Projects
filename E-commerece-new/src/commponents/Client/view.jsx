@@ -27,44 +27,44 @@ function ClientView() {
 
     // Useeffect Method
 
-    // useEffect(() => {
-    //     const queryParams = window.location.pathname;
-    //     const myArray = queryParams.split("/");
-    //     const vendorId = myArray[2];
-    //     setListUser(vendorId);
-    //     vendorGetMethod(vendorId);
+    useEffect(() => {
+        const queryParams = window.location.pathname;
+        const myArray = queryParams.split("/");
+        const vendorId = myArray[2];
+        setListUser(vendorId);
+        vendorGetMethod(vendorId);
 
-    // }, []);
+    }, []);
 
 
 
     // Vendor Get Api Method
-    // const vendorGetMethod = async (vendorId) => {
-    //     // e.preventDefault();
+    const vendorGetMethod = async (vendorId) => {
+        // e.preventDefault();
 
 
-    //     try {
-    //         const response = await OVERALLAPI.adminUserView(vendorId);
-    //         if (response.apiStatus.code !== "200") {
-    //             setListUser(null);
-    //             return;
-    //         }
-    //         setListUser(response.result.AdminData)
-    //         const dat = response.result.AdminData;
-    //         console.log(dat, "dat");
+        try {
+            const response = await OVERALLAPI.adminUserView(vendorId);
+            if (response.apiStatus.code !== "200") {
+                setListUser(null);
+                return;
+            }
+            setListUser(response.result.AdminData)
+            const dat = response.result.AdminData;
+            console.log(dat, "dat");
 
-    //         setFirstName(dat.firstname)
-    //         setLastName(dat.lastname)
-    //         setuserName(dat.username)
-    //         setPassword(dat.password)
-    //         setLogType(dat.type)
-    //         setImg(dat.avatar)
+            setFirstName(dat.firstname)
+            setLastName(dat.lastname)
+            setuserName(dat.username)
+            setPassword(dat.password)
+            setLogType(dat.type)
+            setImg(dat.avatar)
 
-    //     } catch (error) {
-    //         console.log("Error handled =", error);
-    //     }
+        } catch (error) {
+            console.log("Error handled =", error);
+        }
 
-    // };
+    };
 
 
     return (
@@ -83,7 +83,7 @@ function ClientView() {
                             <div style={{ textAlign: "right" }}>
                                 <a type="button" class="btn btn-primary" onClick={() => navigate('/clientlist')} data-discover="true" style={{ float: "right", marginBottom: "1px" }}>Back</a></div>
                         </div>
-                        {/* {list ? <>  */}
+                        {list ? <> 
                         <div className="row flex-grow auth ms-0 me-0">
                                 <div style={{ padding: '50px', borderRadius: "5px" }} className="auth-form-light">
                                     <div className="row">
@@ -114,14 +114,14 @@ function ClientView() {
                                     </div>
                                 </div>
                         </div>
-                        {/* </> :
+                        </> :
                         <div className="row flex-grow auth ms-0 me-0">
                                 <div style={{ padding: '50px', borderRadius: "5px" }} className="auth-form-light">
 
                         <Nodatafounded />
                         </div>
                         </div>
-                        } */}
+                        }
 
 
                     </div>

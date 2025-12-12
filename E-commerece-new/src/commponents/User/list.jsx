@@ -39,12 +39,12 @@ function Userlist() {
   const [recordsPerPage] = useState(10);
   const [totalRecords, setTotalRecords] = useState(0);
 
-  //  useEffect(() => {
-  //   userList(currentPage);
-  //    setTimeout(() => {
-  //      setLoading(false);
-  //    }, 1500);
-  //  }, [currentPage]);
+   useEffect(() => {
+    userList(currentPage);
+     setTimeout(() => {
+       setLoading(false);
+     }, 1500);
+   }, [currentPage]);
 
   // Pagination Method
 
@@ -84,37 +84,37 @@ function Userlist() {
 
   // user List
 
-  // const userList = async (page) => {
-  //   // e.preventDefault();
-  //   setLoading(true);
-  //   const totken = localStorage.getItem("token");
-  //   if (!totken) {
-  //     navigate("/");
-  //     return;
-  //   }
-  //   const apidata={
+  const userList = async (page) => {
+    // e.preventDefault();
+    setLoading(true);
+    const totken = localStorage.getItem("token");
+    if (!totken) {
+      navigate("/");
+      return;
+    }
+    const apidata={
 
-  //     pageIndex: page - 1,
-  //     dataLength: recordsPerPage
-
-
-  //   }
-
-  //   try {
-  //     const responseData = await OVERALLAPI.adminUserList(apidata);
-  //     if (responseData.apiStatus.code === "404") {
-  //       setList([]);
+      pageIndex: page - 1,
+      dataLength: recordsPerPage
 
 
-  //     } else if (responseData.apiStatus.code === "200") {
-  //       setList(responseData.result.AdminData);
-  //       setTotalRecords(responseData.result.totalRecordCount); 
+    }
 
-  //     }
-  //   } catch (error) {
-  //     console.log("Error handled =" + error);
-  //   }
-  // };
+    try {
+      const responseData = await OVERALLAPI.adminUserList(apidata);
+      if (responseData.apiStatus.code === "404") {
+        setList([]);
+
+
+      } else if (responseData.apiStatus.code === "200") {
+        setList(responseData.result.AdminData);
+        setTotalRecords(responseData.result.totalRecordCount); 
+
+      }
+    } catch (error) {
+      console.log("Error handled =" + error);
+    }
+  };
 
 
   // Pagination Method
@@ -179,40 +179,40 @@ function Userlist() {
 
   // User Delete Api Start
 
-  // const userDeleteApi = async (e) => {
-  //   e.preventDefault();
-  //   const deleteId = deleteIdRef.current;
-  //   if (!deleteId) return;
-  //   setLoading(true);
+  const userDeleteApi = async (e) => {
+    e.preventDefault();
+    const deleteId = deleteIdRef.current;
+    if (!deleteId) return;
+    setLoading(true);
 
-  //   try {
-  //     const responseData = await OVERALLAPI.adminUserDelete(deleteId);
+    try {
+      const responseData = await OVERALLAPI.adminUserDelete(deleteId);
 
-  //     if (responseData.apiStatus.code === '200') {
-  //       toast.success(responseData.apiStatus.message);
+      if (responseData.apiStatus.code === '200') {
+        toast.success(responseData.apiStatus.message);
 
-  //       const newTotalRecords = totalRecords - 1;
-  //       setTotalRecords(newTotalRecords);
+        const newTotalRecords = totalRecords - 1;
+        setTotalRecords(newTotalRecords);
 
-  //       let totalPages = Math.ceil(newTotalRecords / recordsPerPage);
-  //       if (currentPage > totalPages) {
-  //         setCurrentPage(totalPages);
-  //       }
-  //       userList(currentPage);
+        let totalPages = Math.ceil(newTotalRecords / recordsPerPage);
+        if (currentPage > totalPages) {
+          setCurrentPage(totalPages);
+        }
+        userList(currentPage);
 
 
-  //       handleClose()
+        handleClose()
 
-  //     } else {
-  //       toast.error(responseData.apiStatus.message);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error in shopTypeDeleteApi:", error);
-  //     toast.error("An error occurred while deleting the item.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+      } else {
+        toast.error(responseData.apiStatus.message);
+      }
+    } catch (error) {
+      console.error("Error in shopTypeDeleteApi:", error);
+      toast.error("An error occurred while deleting the item.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
 
@@ -264,14 +264,14 @@ function Userlist() {
               <div ref={cardRef}
                 className={`card-body ${isOverflowing && isMobile ? "over" : ""}`}>
 
-                {/* {loading ? (
+                {loading ? (
                   <Preloader />
 
     ) : list.length === 0 ? (
                     <Nodatafounded />
 
     ):
-      <> */}
+      <>
                 <table className="table table-hover tableHost">
                   <thead>
                     <tr>
@@ -285,11 +285,11 @@ function Userlist() {
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {list.map((list, index) => ( */}
+                    {list.map((list, index) => (
                     <tr >
                       <th scope="row">
-                        {/* {(currentPage - 1) * recordsPerPage + index + 1} */}
-                        1
+                        {(currentPage - 1) * recordsPerPage + index + 1}
+                        
                       </th>
                       <td>
                         <img
@@ -299,10 +299,10 @@ function Userlist() {
                           style={{ width: '60px', height: '60px' }} />
                       </td>
                       <td>
-                        {/* {list.firstname + " " + list.lastname}  */}
-                        name</td>
+                        {list.firstname + " " + list.lastname} 
+                        </td>
                       {/* <td>{list.username} name</td> */}
-                      <td>{list.type} Admin</td>
+                      <td>{list.type}</td>
 
 {/* 
                       <td className="clients">
@@ -393,10 +393,10 @@ function Userlist() {
                       </td>
 
                     </tr>
-                    {/* ))} */}
+                     ))} 
                   </tbody>
                 </table>
-                {/* <div style={{ display: 'flex', justifyContent: 'end', marginTop: '20px' }}>
+                <div style={{ display: 'flex', justifyContent: 'end', marginTop: '20px' }}>
                         {totalRecords === "10" ? null : <> <Pagination>
                           <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
                           {renderPaginationItems()}
@@ -404,10 +404,10 @@ function Userlist() {
                         </Pagination></>}
 
                      
-                    </div> */}
-                {/* </>
+                    </div>
+                </>
 
-    } */}
+    }
 
 
               </div>

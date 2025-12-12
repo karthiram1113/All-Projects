@@ -4,13 +4,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import Pagination from 'react-bootstrap/Pagination';
 import { Button, Modal, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import OVERALLAPI from '../../api/over-all-api';
-import Navbar from '../../shared/navbar';
-import Sidenav from '../../shared/sidenav';
 import Preloader from '../../shared/preloader';
 import Nodatafounded from '../../shared/NoDataFound';
 import { environment } from '../../api/api';
 import Modalwrapper from '../../shared/ModalWrapper';
-import Footer from '../../shared/footer';
 import IndexLayout from '../../views';
 
 
@@ -32,12 +29,12 @@ function ClientList() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    // useEffect(() => {
-    //     clientList(currentPage);
-    //     setTimeout(() => {
-    //         setLoading(false);
-    //     }, 1500);
-    // }, [currentPage]);
+    useEffect(() => {
+        clientList(currentPage);
+        setTimeout(() => {
+            setLoading(false);
+        }, 1500);
+    }, [currentPage]);
 
     // Pagination Method
 
@@ -83,74 +80,74 @@ function ClientList() {
 
     // Client List
 
-    // const clientList = async (page) => {
-    //     // e.preventDefault();
-    //     setLoading(true);
-    //     const totken = localStorage.getItem("token");
-    //     if (!totken) {
-    //         navigate("/");
-    //         return;
-    //     }
-    //     const apidata = {
-    //         pageIndex: page - 1,
-    //         dataLength: recordsPerPage
-    //     }
+    const clientList = async (page) => {
+        // e.preventDefault();
+        setLoading(true);
+        const totken = localStorage.getItem("token");
+        if (!totken) {
+            navigate("/");
+            return;
+        }
+        const apidata = {
+            pageIndex: page - 1,
+            dataLength: recordsPerPage
+        }
 
-    //     try {
-    //         const responseData = await OVERALLAPI.adminClientList(apidata);
-    //         if (responseData.apiStatus.code === "404") {
-    //             setList([]);
+        try {
+            const responseData = await OVERALLAPI.adminClientList(apidata);
+            if (responseData.apiStatus.code === "404") {
+                setList([]);
 
 
-    //         } else if (responseData.apiStatus.code === "200") {
-    //             setList(responseData.result.ClientData);
-    //             setTotalRecords(responseData.result.totalRecordCount);
+            } else if (responseData.apiStatus.code === "200") {
+                setList(responseData.result.ClientData);
+                setTotalRecords(responseData.result.totalRecordCount);
 
-    //         }
-    //     } catch (error) {
-    //         console.log("Error handled =" + error);
-    //     }
-    // };
+            }
+        } catch (error) {
+            console.log("Error handled =" + error);
+        }
+    };
 
 
     // Client Delete Api Start
 
-    // const clientDeleteApi = async (e) => {
-    //     e.preventDefault();
-    //     const deleteId = deleteIdRef.current;
-    //     if (!deleteId) return;
-    //     setLoading(true);
+    const clientDeleteApi = async (e) => {
+        e.preventDefault();
+        const deleteId = deleteIdRef.current;
+        if (!deleteId) return;
+        setLoading(true);
 
-    //     try {
-    //         const responseData = await OVERALLAPI.adminClientDelete(deleteId);
+        try {
+            const responseData = await OVERALLAPI.adminClientDelete(deleteId);
 
-    //         if (responseData.apiStatus.code === '200') {
-    //             toast.success(responseData.apiStatus.message);
-
-
-
-    //             const newTotalRecords = totalRecords - 1;
-    //             setTotalRecords(newTotalRecords);
-
-    //             let totalPages = Math.ceil(newTotalRecords / recordsPerPage);
-    //             if (currentPage > totalPages) {
-    //                 setCurrentPage(totalPages);
-    //             }
-    //             clientList(currentPage);
+            if (responseData.apiStatus.code === '200') {
+                toast.success(responseData.apiStatus.message);
 
 
-    //             handleClose()
 
-    //         } else {
-    //             toast.error(responseData.apiStatus.message);
-    //         }
-    //     } catch (error) {
-    //         console.error("Error in shopTypeDeleteApi:", error);
-    //         toast.error("An error occurred while deleting the item.");
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
+                const newTotalRecords = totalRecords - 1;
+                setTotalRecords(newTotalRecords);
+
+                let totalPages = Math.ceil(newTotalRecords / recordsPerPage);
+                if (currentPage > totalPages) {
+                    setCurrentPage(totalPages);
+                }
+                clientList(currentPage);
+
+
+                handleClose()
+
+            } else {
+                toast.error(responseData.apiStatus.message);
+            }
+        } catch (error) {
+            console.error("Error in shopTypeDeleteApi:", error);
+            toast.error("An error occurred while deleting the item.");
+        } finally {
+            setLoading(false);
+        }
+    };
 
 
     // Pagination Method
@@ -255,13 +252,13 @@ function ClientList() {
                             <div ref={cardRef}
                                 className={`card-body ${isOverflowing && isMobile ? "over" : ""}`}>
 
-                                {/* {loading ?
+                                {loading ?
                                     <Preloader />
                                     : list.length === 0 ? (
                                         <Nodatafounded />
 
 
-                                    ) : <> */}
+                                    ) : <>
                                 <table class="table table-hover tableHost">
                                     <thead>
                                         <tr>
@@ -275,11 +272,11 @@ function ClientList() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {/* {list.map((list, ind) => ( */}
+                                        {list.map((list, ind) => (
                                         <tr key={list.id}>
                                             <th scope="row">
-                                                {/* {(currentPage - 1) * recordsPerPage + ind + 1} */}
-                                                1
+                                                {(currentPage - 1) * recordsPerPage + ind + 1}
+                                                
                                             </th>
                                             <td>
                                                 <img
@@ -391,12 +388,12 @@ function ClientList() {
                                                 </div>
                                             </td>
                                         </tr>
-                                        {/* // ))} */}
+                                         ))} 
 
 
                                     </tbody>
                                 </table>
-                                {/* <div style={{ display: 'flex', justifyContent: 'end', marginTop: '20px' }}>
+                                <div style={{ display: 'flex', justifyContent: 'end', marginTop: '20px' }}>
                                             {totalRecords === "10" ? null : <> <Pagination>
                                                 <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
                                                 {renderPaginationItems()}
@@ -404,10 +401,10 @@ function ClientList() {
                                             </Pagination></>}
 
 
-                                        </div> */}
-                                {/* </> */}
+                                        </div>
+                                </>
 
-                                {/* } */}
+                                }
 
 
                             </div>
@@ -458,7 +455,7 @@ function ClientList() {
                         Cancel
                     </Button>
                     <Button className='btn btn-gradient-primary me-2' variant="primary"
-                    // onClick={clientDeleteApi}
+                    onClick={clientDeleteApi}
                     >
                         Delete
                     </Button>

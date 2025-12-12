@@ -18,7 +18,6 @@ function Vendorform() {
     // Useeffect Method
 
     useEffect(() => {
-
         const queryParams = window.location.pathname;
         const myArray = queryParams.split("/");
         setUrlName(myArray[2])
@@ -53,109 +52,109 @@ function Vendorform() {
 
     // Useeffect Method
 
-    // useEffect(() => {
-    //     const queryParams = window.location.pathname;
-    //     const myArray = queryParams.split("/");
-    //     const vendorId = myArray[2];
-    //     setVendorId(vendorId);
-    //     vendorGetMethod(vendorId);
-    //     console.log(vendorId, "iddd");
-    // }, []);
+    useEffect(() => {
+        const queryParams = window.location.pathname;
+        const myArray = queryParams.split("/");
+        const vendorId = myArray[2];
+        setVendorId(vendorId);
+        vendorGetMethod(vendorId);
+        console.log(vendorId, "iddd");
+    }, []);
 
 
     // vendor Create Api
 
-    // const vendorAdd = async (e) => {
-    //     e.preventDefault();
-    //     setLoading(true);
-    //     setSubmit(true)
-    //     if (!phone || !owner || !shopType || !password || !confirmPassword) {
-    //         return;
-    //     }
-    //     if (password !== confirmPassword || phone?.length < 10) {
-    //         return;
-    //     }
+    const vendorAdd = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setSubmit(true)
+        if (!phone || !owner || !shopType || !password || !confirmPassword) {
+            return;
+        }
+        if (password !== confirmPassword || phone?.length < 10) {
+            return;
+        }
 
-    //     const formData = new FormData();
-    //     formData.append('shopOwnerFullName', owner);
-    //     formData.append('shopName', shopName);
-    //     formData.append('contact', phone);
-    //     formData.append('shopType', shopType);
-    //     formData.append('username', userName);
-    //     formData.append('password', password);
-    //     formData.append('status', status);
-    //     formData.append('confirmPassword', confirmPassword);
-    //     formData.append('avatar', img);
+        const formData = new FormData();
+        formData.append('shopOwnerFullName', owner);
+        formData.append('shopName', shopName);
+        formData.append('contact', phone);
+        formData.append('shopType', shopType);
+        formData.append('username', userName);
+        formData.append('password', password);
+        formData.append('status', status);
+        formData.append('confirmPassword', confirmPassword);
+        formData.append('avatar', img);
 
-    //     try {
+        try {
 
-    //         const responseData = await OVERALLAPI.adminVendorCreate(formData);
+            const responseData = await OVERALLAPI.adminVendorCreate(formData);
 
-    //         console.log('shoptype', responseData);
+            console.log('shoptype', responseData);
 
-    //         if (responseData.apiStatus.code == '200') {
-    //             Navigate('/vendorlist');
-    //             setSubmit(false)
-    //             toast.success(responseData.apiStatus.message);
-    //         } else {
-    //             toast.error(responseData.apiStatus.message);
-    //         }
-    //     } catch (error) {
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
+            if (responseData.apiStatus.code == '200') {
+                Navigate('/vendorlist');
+                setSubmit(false)
+                toast.success(responseData.apiStatus.message);
+            } else {
+                toast.error(responseData.apiStatus.message);
+            }
+        } catch (error) {
+        } finally {
+            setLoading(false);
+        }
+    };
 
 
 
 
 
     // Vendor Edit Api
-    // const vendorEdit = async (e) => {
-    //     e.preventDefault();
-    //     setLoading(true);
-    //     setSubmit(true)
-    //     if (!phone || !owner || !shopType || !password || !confirmPassword) {
-    //         return;
-    //     }
-    //     if (password !== confirmPassword || phone?.length < 10) {
-    //         return;
-    //     }
+    const vendorEdit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setSubmit(true)
+        if (!phone || !owner || !shopType || !password || !confirmPassword) {
+            return;
+        }
+        if (password !== confirmPassword || phone?.length < 10) {
+            return;
+        }
 
 
 
-    //     console.log('Form inputs:', { phone, owner, shopName });
-    //     const formData = new FormData();
-    //     formData.append('vendorId', vendorId);
-    //     formData.append('shopOwnerFullName', owner);
-    //     formData.append('shopName', shopName);
-    //     formData.append('contact', phone);
-    //     formData.append('shopType', shopType);
-    //     formData.append('username', userName);
-    //     formData.append('password', password);
-    //     formData.append('status', status);
-    //     formData.append('confirmPassword', confirmPassword);
-    //     formData.append('avatar', img);
+        console.log('Form inputs:', { phone, owner, shopName });
+        const formData = new FormData();
+        formData.append('vendorId', vendorId);
+        formData.append('shopOwnerFullName', owner);
+        formData.append('shopName', shopName);
+        formData.append('contact', phone);
+        formData.append('shopType', shopType);
+        formData.append('username', userName);
+        formData.append('password', password);
+        formData.append('status', status);
+        formData.append('confirmPassword', confirmPassword);
+        formData.append('avatar', img);
 
-    //     try {
-    //         const responseData = await OVERALLAPI.adminVendorUpdate(formData);
+        try {
+            const responseData = await OVERALLAPI.adminVendorUpdate(formData);
 
-    //         console.log("responsedata", responseData);
-    //         console.log(responseData.apiStatus, "wwww");
+            console.log("responsedata", responseData);
+            console.log(responseData.apiStatus, "wwww");
 
-    //         if (responseData.apiStatus.code == "200") {
+            if (responseData.apiStatus.code == "200") {
 
-    //             Navigate("/vendorlist");
-    //             setSubmit(true);
-    //             toast.success(responseData.apiStatus.message);
-    //         } else {
-    //             toast.error(responseData.apiStatus.message);
-    //         }
-    //     } catch (error) {
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
+                Navigate("/vendorlist");
+                setSubmit(true);
+                toast.success(responseData.apiStatus.message);
+            } else {
+                toast.error(responseData.apiStatus.message);
+            }
+        } catch (error) {
+        } finally {
+            setLoading(false);
+        }
+    };
 
 
 
@@ -171,34 +170,34 @@ function Vendorform() {
 
     // Vendor Get Api Method
 
-    // const vendorGetMethod = async (vendorId) => {
-    //     console.log(vendorId, "vendorid");
+    const vendorGetMethod = async (vendorId) => {
+        console.log(vendorId, "vendorid");
 
-    //     try {
-    //         // Call the clientGet function with the clientId
-    //         const response = await OVERALLAPI.adminVendorGet(vendorId);
+        try {
+            // Call the clientGet function with the clientId
+            const response = await OVERALLAPI.adminVendorGet(vendorId);
 
-    //         // Check if the response has a valid JSON structure
-    //         if (!response || !response.result || !response.result.VendorData) {
-    //             throw new Error("Invalid response data");
-    //         }
+            // Check if the response has a valid JSON structure
+            if (!response || !response.result || !response.result.VendorData) {
+                throw new Error("Invalid response data");
+            }
 
-    //         // Extract the client data
-    //         const dat = response.result.VendorData;
-    //         console.log(dat, "dat");
+            // Extract the client data
+            const dat = response.result.VendorData;
+            console.log(dat, "dat");
 
-    //         setOwner(dat.shop_owner);
-    //         setShopName(dat.shop_name);
-    //         setuserName(dat.username);
-    //         setPhone(dat.contact);
-    //         setShowType(dat.shop_type);
-    //         setImg(dat.avatar);
-    //         setStatus(dat.status);
-    //         setVendorId(dat.id);
-    //     } catch (error) {
-    //         console.log("Error handled =", error);
-    //     }
-    // };
+            setOwner(dat.shop_owner);
+            setShopName(dat.shop_name);
+            setuserName(dat.username);
+            setPhone(dat.contact);
+            setShowType(dat.shop_type);
+            setImg(dat.avatar);
+            setStatus(dat.status);
+            setVendorId(dat.id);
+        } catch (error) {
+            console.log("Error handled =", error);
+        }
+    };
 
     return (
         <div>
@@ -576,37 +575,37 @@ function Vendorform() {
                             Cancel
                         </Link>
                         {urlName === "Create" ? (
-                            //     <button
-                            //     type="submit"
-                            //     // onClick={vendorAdd}
-                            //     class="btn btn-gradient-primary me-2"
-                            // >
-                            //     Create
-                            // </button>
-                            <Link
-                                to={"/vendorlist"}
-
-                                type="button"
+                                <button
+                                type="submit"
+                                onClick={vendorAdd}
                                 class="btn btn-gradient-primary me-2"
                             >
                                 Create
-                            </Link>
-                        ) : (
-                            // <button
-                            //     type="submit"
-                            //     // onClick={vendorEdit}
+                            </button>
+                            // <Link
+                            //     to={"/vendorlist"}
+
+                            //     type="button"
                             //     class="btn btn-gradient-primary me-2"
                             // >
-                            //     Submit
-                            // </button>
-                            <Link
-                                to={"/vendorlist"}
-
-                                type="button"
+                            //     Create
+                            // </Link>
+                        ) : (
+                            <button
+                                type="submit"
+                                onClick={vendorEdit}
                                 class="btn btn-gradient-primary me-2"
                             >
                                 Submit
-                            </Link>
+                            </button>
+                            // <Link
+                            //     to={"/vendorlist"}
+
+                            //     type="button"
+                            //     class="btn btn-gradient-primary me-2"
+                            // >
+                            //     Submit
+                            // </Link>
                         )}
 
                     </div>

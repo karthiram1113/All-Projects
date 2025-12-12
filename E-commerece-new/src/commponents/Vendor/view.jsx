@@ -29,52 +29,52 @@ function VendorView() {
 
     // Useeffect Method
 
-    // useEffect(() => {
-    //     const queryParams = window.location.pathname;
-    //     const myArray = queryParams.split("/");
-    //     const vendorId = myArray[2];
-    //     setListVendor(vendorId);
-    //     vendorGetMethod(vendorId);
+    useEffect(() => {
+        const queryParams = window.location.pathname;
+        const myArray = queryParams.split("/");
+        const vendorId = myArray[2];
+        setListVendor(vendorId);
+        vendorGetMethod(vendorId);
 
-    // }, []);
+    }, []);
 
 
 
     // Vendor Get Api Method
-    // const vendorGetMethod = async (vendorId) => {
-    //     // e.preventDefault();
+    const vendorGetMethod = async (vendorId) => {
+        // e.preventDefault();
 
-    //     console.log(vendorId, "sss")
+        console.log(vendorId, "sss")
 
-    //     try {
-    //         const response = await OVERALLAPI.adminVendorGet(vendorId);
-    //         if (response.apiStatus.code !== "200") {
-    //             setListVendor(null);
-    //             return;
-    //         }
-    //         if (!response || !response.result || !response.result.VendorData) {
-    //             throw new Error("Invalid response data");
-    //         }
+        try {
+            const response = await OVERALLAPI.adminVendorGet(vendorId);
+            if (response.apiStatus.code !== "200") {
+                setListVendor(null);
+                return;
+            }
+            if (!response || !response.result || !response.result.VendorData) {
+                throw new Error("Invalid response data");
+            }
 
-    //         setListVendor(response.result.VendorData)
-    //         // Extract the client data
-    //         const dat = response.result.VendorData;
-    //         console.log(dat, "dat");
+            setListVendor(response.result.VendorData)
+            // Extract the client data
+            const dat = response.result.VendorData;
+            console.log(dat, "dat");
 
-    //         setOwner(dat.shop_owner)
-    //         setShopName(dat.shop_name)
-    //         setuserName(dat.username)
-    //         setPhone(dat.contact)
-    //         setShowType(dat.shop_type)
-    //         setImg(dat.avatar)
-    //         setStatus(dat.status)
-    //         setCode(dat.code)
+            setOwner(dat.shop_owner)
+            setShopName(dat.shop_name)
+            setuserName(dat.username)
+            setPhone(dat.contact)
+            setShowType(dat.shop_type)
+            setImg(dat.avatar)
+            setStatus(dat.status)
+            setCode(dat.code)
 
-    //     } catch (error) {
-    //         console.log("Error handled =", error);
-    //     }
+        } catch (error) {
+            console.log("Error handled =", error);
+        }
 
-    // };
+    };
 
     return (
         <div>
@@ -94,7 +94,7 @@ function VendorView() {
                     </div>
                     <div className="card">
                         <div className="card-body">
-                            {/* {list ? <>  */}
+                            {list ? <> 
                             <div className='row'>
                                 <div style={{ paddingBottom: '35px' }} className='col-md-6 text-center '>
                                     <img className='chicken-img rounded' style={{ height: "250px", width: "250px" }} src={img ? `${environment.baseURL}${img}` : "/assets/images/noimages.jpg"} />
@@ -134,8 +134,8 @@ function VendorView() {
                                     </div>
                                 </div>
                             </div>
-                            {/* </> : <Nodatafounded />
-                                } */}
+                            </> : <Nodatafounded />
+                                }
 
 
 
