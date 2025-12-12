@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Verifyzone</title>
+    <link rel="icon" href="/assets/img/logotop.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="sidebar-top">
+        <div class="sidebar-menu">
+            <div class="notification sidebar-items">
+                <i class="ri-notification-3-line"></i>
+                <span class="menu-text">Notifications</span>
+            </div>
+ 
+            <div class="side-bar-main">
+     <div class="sidebar-items active">
+                <i class="ri-dashboard-line"></i>
+                <span class="menu-text">Dashboard</span>
+            </div>
+ 
+            <div class="sidebar-dropdown">
+                <div class="sidebar-items sidebar-items1 dropdown-toggle">
+                    <i class="ri-global-line"></i>
+                    <span class="menu-text">ExZone</span>
+                    <i class="ri-arrow-down-s-line arrow-icon"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="exitdetails.html">
+                        <div class="sidebar-subitem">
+                            <i class="ri-logout-circle-line"></i> Add exit details
+                        </div>
+                    </a>
+                    <div class="sidebar-subitem">
+                        <i class="ri-shield-user-line"></i> Verification Request
+                    </div>
+                    <div class="sidebar-subitem">
+                        <i class="ri-file-list-3-line"></i> New request received
+                    </div>
+                    <div class="sidebar-subitem">
+                        <i class="ri-search-line"></i> Search candidate
+                    </div>
+                    <div class="sidebar-subitem">
+                        <i class="ri-upload-cloud-line"></i> Bulk upload
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="sidebar-dropdown">
+                <div class="sidebar-items sidebar-items1 dropdown-toggle">
+                    <i class="ri-settings-3-line"></i>
+                    <span class="menu-text">Configurations</span>
+                    <i class="ri-arrow-down-s-line arrow-icon"></i>
+                </div>
+                <div class="dropdown-content">
+                    <div class="sidebar-subitem">
+                        <i class="ri-rocket-line"></i> Activate Autopilot
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="sidebar-dropdown">
+                <div class="sidebar-items sidebar-items1 dropdown-toggle">
+                    <i class="ri-bar-chart-2-line"></i>
+                    <span class="menu-text">Reports</span>
+                    <i class="ri-arrow-down-s-line arrow-icon"></i>
+                </div>
+                <div class="dropdown-content">
+                    <div class="sidebar-subitem">
+                        <i class="ri-bar-chart-2-line"></i> Attrition Reports
+                    </div>
+                    <div class="sidebar-subitem">
+                        <i class="ri-history-line"></i> Re-verification History
+                    </div>
+                </div>
+            </div>
+            </div>
+       
+        </div>
+    </div>
+ 
+    <div class="sidebar-bottom">
+        <div class="notification1 sidebar-items">
+            <i class="ri-logout-circle-r-line"></i>
+            <span class="menu-text">VZone</span>
+        </div>
+    </div>
+</div>
+
+    <!-- Right Content -->
+    <div class="main-container">
+        <div class="navbar">
+            <div class="navbar-left">
+                <img src="/assets/img/logo-dash.png" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <i class="ri-search-line"></i>
+                </div>
+
+                <div class="profile">
+                    <img src="/assets/img/profile-nav.jpg" alt="Profile" class="profile-img">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">My Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content">
+
+            <div class="dashboard-container">
+                <!-- Card 1 -->
+                <div class="dashboard-card card-white">
+                    <div class="card-icon">
+                        <i class="fas fa-store menu-icon"></i>
+                    </div>
+                    <div class="card-text">
+                        <i class="ri-dashboard-line"></i>
+                        <h3 class="">Exzone</h3>
+                        <p>See all details !</p>
+                    </div>
+                    <div class="card-arrow">
+                        <a href="/productlist" style="transform: rotate(45deg);">
+                            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-decoration" style="bottom: -31px; right: -23px;">
+                        <img src="/assets/img/dash-card1.png" alt="decoration" />
+                    </div>
+                </div>
+                <div class="dashboard-card card-white">
+                    <div class="card-icon">
+                        <i class="fas fa-store menu-icon"></i>
+                    </div>
+                    <div class="card-text">
+                         <i class="ri-settings-3-line"></i>
+                        <h3 class="">Configurations</h3>
+                        <p>See all details !</p>
+                    </div>
+                    <div class="card-arrow">
+                        <a href="/productlist" style="transform: rotate(45deg);">
+                            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-decoration" style="bottom: -31px; right: -23px;">
+                        <img src="/assets/img/imag3.png" alt="decoration" />
+                    </div>
+                </div>
+                <div class="dashboard-card card-white">
+                    <div class="card-icon">
+                        <i class="fas fa-store menu-icon"></i>
+                    </div>
+                    <div class="card-text">
+                        <i class="ri-bar-chart-2-line"></i>
+                        <h3 class="">Reports</h3>
+                        <p>See all details !</p>
+                    </div>
+                    <div class="card-arrow">
+                        <a href="/productlist" style="transform: rotate(45deg);">
+                            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-decoration" style="bottom: -31px; right: -23px;">
+                        <img src="/assets/img/img5.png" alt="decoration" />
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; cursor: pointer;">
+                   <a href="dashboard.html"> <button class="anither-btn">Another dashboard design </button></a>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>@2025 Tarajyau | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar-items').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

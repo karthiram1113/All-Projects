@@ -1,0 +1,1443 @@
+<app-nav></app-nav>
+<div class="faqs page">
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="iwh-title text-left">
+      <h3>
+        <b>{{ "referralspage.contentTitle.Additional X-ray" | translate }}</b>
+      </h3>
+      <div class="emptySpacer" style="height: 16px"></div>
+      <ngb-accordion
+        [ngClass]="{ t_a_s: lang == 'ur' }"
+        [closeOthers]="true"
+        activeIds="custom-panel-1"
+      >
+        <ngb-panel id="custom-panel-1" class="headerSection">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span>
+                    <i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i>
+                    <i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i>
+                  </span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.xraytitle1" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{ "referralspage.contentText.requiredcontent1" | translate }}
+            </p>
+            <p>
+              {{ "referralspage.contentText.requiredcontent2" | translate }}
+            </p>
+            <p>
+              {{ "referralspage.contentText.requiredcontent3" | translate }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-2">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.xraytitle2" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "referralspage.contentText.expectcontent1" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent2" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent3" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent4" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent5" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent6" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent7" | translate }}</p>
+            <p>{{ "referralspage.contentText.expectcontent8" | translate }}</p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-3">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.xraytitle3" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "referralspage.contentText.xraycontent1" | translate }}</p>
+            <p>{{ "referralspage.contentText.xraycontent2" | translate }}</p>
+            <p>{{ "referralspage.contentText.xraycontent3" | translate }}</p>
+            <p>{{ "referralspage.contentText.xraycontent4" | translate }}</p>
+            <p>{{ "referralspage.contentText.xraycontent5" | translate }}</p>
+            <p>{{ "referralspage.contentText.xraycontent6" | translate }}</p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-4">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.xraytitle4" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.samedayreferralcontent1" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.samedayreferralcontent2" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.samedayreferralcontent3" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.samedayreferralcontent4" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.samedayreferralcontent5" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.samedayreferralcontent6" | translate
+              }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-5">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">
+                    {{
+                      "referralspage.contentTitle.xraytitle5" | translate
+                    }}</span
+                  >
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent1" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent2" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent3" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent4" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent5" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent6" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent7" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent8" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent9" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.additionalxraycontent10" | translate
+              }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="iwh-title text-left">
+      <h3>
+        <b>{{
+          "referralspage.contentTitle.Confirmatory Referral" | translate
+        }}</b>
+      </h3>
+      <div class="emptySpacer" style="height: 16px"></div>
+      <ngb-accordion
+        [ngClass]="{ t_a_s: lang == 'ur' }"
+        [closeOthers]="true"
+        activeIds="custom-panel-1"
+      >
+        <ngb-panel id="custom-panel-1" class="headerSection">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.confirmatorytitle1" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{ "referralspage.contentText.confirmatorycontent1" | translate }}
+            </p>
+            <p>
+              {{ "referralspage.contentText.confirmatorycontent2" | translate }}
+            </p>
+            <p>
+              {{ "referralspage.contentText.confirmatorycontent3" | translate }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-2">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.confirmatorytitle2" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent1"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent2"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent3"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent4"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent5"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent6"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent7"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent8"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent9"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent10"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent11"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent12"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent13"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent14"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent15"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent16"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent17"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent18"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent19"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent20"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent21"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent22"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.positivescreeningtestcontent23"
+                  | translate
+              }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <!-- <ngb-panel id="custom-panel-3">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.confirmatorytitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel id="custom-panel-4">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.confirmatorytitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel id="custom-panel-5">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.confirmatorytitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                      
+                    </ng-template>
+                </ngb-panel> -->
+      </ngb-accordion>
+    </div>
+  </div>
+
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="iwh-title text-left">
+      <h3>
+        <b>
+          {{
+            "referralspage.contentTitle.Specialist Lab Referral test"
+              | translate
+          }}</b
+        >
+      </h3>
+      <div class="emptySpacer" style="height: 16px"></div>
+      <ngb-accordion
+        [ngClass]="{ t_a_s: lang == 'ur' }"
+        [closeOthers]="true"
+        activeIds="custom-panel-1"
+      >
+        <ngb-panel id="custom-panel-1" class="headerSection">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.Specialistlabtitle1" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabcontent1" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabcontent2" | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabcontent3" | translate
+              }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-2">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.Specialistlabtitle2" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent1"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent2"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent3"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent4"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent5"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent6"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent7"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent8"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent9"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent10"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent11"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent12"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent13"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent14"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent15"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent16"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.specialistlabexpectcontent17"
+                  | translate
+              }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <!-- <ngb-panel id="custom-panel-3">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.Specialistlabtitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                     
+                    </ng-template>
+                </ngb-panel> -->
+        <!-- <ngb-panel id="custom-panel-4">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.Specialistlabtitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                      
+                    </ng-template>
+                </ngb-panel> -->
+      </ngb-accordion>
+    </div>
+  </div>
+
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="iwh-title text-left">
+      <h3>
+        <b>
+          {{
+            "referralspage.contentTitle.Specialist referral during consultation"
+              | translate
+          }}
+        </b>
+      </h3>
+      <div class="emptySpacer" style="height: 16px"></div>
+      <ngb-accordion
+        [ngClass]="{ t_a_s: lang == 'ur' }"
+        [closeOthers]="true"
+        activeIds="custom-panel-1"
+      >
+        <ngb-panel id="custom-panel-1" class="headerSection">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.consultationtitle1" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.consultationrequiredcontent1"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationrequiredcontent2"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationrequiredcontent3"
+                  | translate
+              }}
+            </p>
+            <ul class="font-color">
+              <li>{{ "referralspage.contentText.Orthopedics" | translate }}</li>
+              <li>
+                {{ "referralspage.contentText.Gastroenterologist" | translate }}
+              </li>
+              <li>
+                {{ "referralspage.contentText.Endocrinologist" | translate }}
+              </li>
+              <li>
+                {{ "referralspage.contentText.Ophthalmologist" | translate }}
+              </li>
+              <li>
+                {{ "referralspage.contentText.Gynecologist" | translate }}
+              </li>
+              <li>
+                {{ "referralspage.contentText.InternalMedicine" | translate }}
+              </li>
+              <li>{{ "referralspage.contentText.Surgeon" | translate }}</li>
+              <li>
+                {{ "referralspage.contentText.Dermatologist" | translate }}
+              </li>
+              <li>
+                {{ "referralspage.contentText.OtherSpecialist" | translate }}
+              </li>
+            </ul>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-2">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "referralspage.contentTitle.consultationtitle2" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent1"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent2"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent3"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent4"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent5"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent6"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent7"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent8"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent9"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent10"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent11"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent12"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent13"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent14"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent15"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent16"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent17"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "referralspage.contentText.consultationexpectcontent18"
+                  | translate
+              }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <!-- <ngb-panel id="custom-panel-3">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.consultationtitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel id="custom-panel-4">
+                    <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button class="btn btn-link p-0 togglegBtn" [class.opened]="opened" ngbPanelToggle>
+                                <p><span><i class="fa fa-chevron-down" *ngIf="!opened" aria-hidden="true"></i><i
+                                            class="fa fa-chevron-up" *ngIf="opened" aria-hidden="true"></i></span>
+                                    <span>{{'referralspage.contentTitle.consultationtitle2' | translate}}</span>
+                                </p>
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        
+                    </ng-template>
+                </ngb-panel> -->
+      </ngb-accordion>
+    </div>
+  </div>
+
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="iwh-title text-left">
+      <h3>
+        <b>{{ "faqsPage.contentTitle.Medical Referral" | translate }}</b>
+      </h3>
+      <div class="emptySpacer" style="height: 16px"></div>
+      <ngb-accordion
+        [ngClass]="{ t_a_s: lang == 'ur' }"
+        [closeOthers]="true"
+        activeIds="custom-panel-1"
+      >
+        <ngb-panel id="custom-panel-1" class="headerSection">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.What is Medical Referral Process?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ "faqsPage.contentText.medicalreferral1" | translate }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-2">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">
+                    {{
+                      "faqsPage.contentTitle.How will Qatar Medical Center contact the applicants in case
+                              their Medical Referral is required?" | translate
+                    }}</span
+                  >
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ "faqsPage.contentText.medicalreferral2" | translate }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-3">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.How to book the Medical Referral Appointment?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ "faqsPage.contentText.medicalreferral3" | translate }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-4">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.What is the time taken to complete the Medical Referral Process?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "faqsPage.contentText.medicalreferral4" | translate }}</p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-5">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.What are the types of Medical Referrals?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "faqsPage.contentText.medicalreferral5a" | translate }}</p>
+            <p>{{ "faqsPage.contentText.medicalreferral5b" | translate }}</p>
+            <p>{{ "faqsPage.contentText.medicalreferral5c" | translate }}</p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-6">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">
+                    {{
+                      "faqsPage.contentTitle.Do the external medical facilities prescribe any tests directly
+                              to the applicants?" | translate
+                    }}</span
+                  >
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ "faqsPage.contentText.medicalreferral6" | translate
+            }}<a
+              style="padding: 0px !important"
+              href="http://info@qatarmedicalcenter.com"
+              >{{
+                "faqsPage.contentText.info@qatarmedicalcenter.com" | translate
+              }}</a
+            >
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-7">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.Why are the Medical Referrals issued?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ "faqsPage.contentText.medicalreferral7" | translate }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-8">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.Where are these advanced Medical Referral tests conducted?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "faqsPage.contentText.medicalreferral8a" | translate }}</p>
+            <p>{{ "faqsPage.contentText.medicalreferral8b" | translate }}</p>
+            <p>{{ "faqsPage.contentText.medicalreferral8c" | translate }}</p>
+            <p style="font-style: italic">
+              {{ "faqsPage.contentText.medicalreferral8d" | translate }}
+            </p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-9">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.Can the applicants visit any external hospital/ lab of their
+                              choice?" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ "faqsPage.contentText.medicalreferral9" | translate }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-10">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p>
+                  <span
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.Are there any additional charges involved in the Medical Referral
+                              Process?" | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "faqsPage.contentText.medicalreferral10" | translate }}</p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="custom-panel-11">
+          <ng-template ngbPanelHeader let-opened="opened" class="headerSection">
+            <div class="d-flex align-items-center justify-content-between">
+              <button
+                class="btn btn-link p-0 togglegBtn"
+                [class.opened]="opened"
+                ngbPanelToggle
+              >
+                <p style="display: flex">
+                  <span style="height: 30px"
+                    ><i
+                      class="fa fa-chevron-down"
+                      *ngIf="!opened"
+                      aria-hidden="true"
+                    ></i
+                    ><i
+                      class="fa fa-chevron-up"
+                      *ngIf="opened"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <span class="txtalign">{{
+                    "faqsPage.contentTitle.What happens if the applicant does not want to continue his/ her
+                              Visa Medical Process post the Referral letter is issued?"
+                      | translate
+                  }}</span>
+                </p>
+              </button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p>{{ "faqsPage.contentText.medicalreferral11" | translate }}</p>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

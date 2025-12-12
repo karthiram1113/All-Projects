@@ -1,0 +1,46 @@
+.page-404-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen */
+  background: #f0f4f8;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page-404-content {
+  max-width: 500px;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.error-title {
+  font-size: 2rem;
+  color: #333;
+  margin: 20px 0 10px;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f);
+  color: rgb(46, 45, 45);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.page-404-content a {
+    font-weight: 900;
+}

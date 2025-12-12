@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Verifyzone</title>
+    <link rel="icon" href="/assets/img/logomain.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <div class="sidebar-menu">
+                <div class="notification sidebar-items">
+                    <i class="ri-notification-3-line"></i>
+                    <span class="menu-text">Notifications</span>
+                </div>
+                <div class="sidebar-items">
+                    <a href="dashboardxzone.html">
+                        <div>
+                            <i class="ri-dashboard-line"></i>
+                            <span class="menu-text">Dashboard</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1 active">
+                        <div class="dropdown-toggle">
+                            <i class="ri-global-line"></i>
+                            <span class="menu-text">ExZone</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-content">
+                        <div class="sidebar-subitem active">
+                            <i class="ri-logout-circle-line"></i> Add exit details
+                        </div>
+
+                        <div class="sidebar-subitem">
+                            <i class="ri-shield-user-line"></i> Verification Request
+                        </div>
+
+                        <div class="sidebar-subitem">
+                            <i class="ri-file-list-3-line"></i> New request received
+                        </div>
+
+                        <div class="sidebar-subitem">
+                            <i class="ri-search-line"></i> Search candidate
+                        </div>
+
+                        <div class="sidebar-subitem">
+                            <i class="ri-upload-cloud-line"></i> Bulk upload
+                        </div>
+
+                    </div>
+                </div>
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1">
+                        <div class="dropdown-toggle">
+                            <i class="ri-settings-3-line"></i>
+                            <span class="menu-text">Configurations</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-content">
+                        <div class="sidebar-subitem">
+                            <i class="ri-rocket-line"></i> Activate Autopilot
+                        </div>
+
+                    </div>
+                </div>
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1">
+                        <div class="dropdown-toggle">
+                            <i class="ri-bar-chart-2-line"></i>
+                            <span class="menu-text">Reports</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-content">
+                        <div class="sidebar-subitem">
+                            <i class="ri-bar-chart-2-line"></i> Attrition Reports
+                        </div>
+
+                        <div class="sidebar-subitem">
+                            <i class="ri-history-line"></i> Re-verification History
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="notification1 sidebar-items">
+                <i class="ri-logout-circle-r-line"></i>
+                <span class="menu-text">VZone</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="main-container">
+        <div class="navbar">
+            <div class="navbar-left">
+                <img src="/assets/img/logo-dash.png" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <i class="ri-search-line"></i>
+                </div>
+
+                <div class="profile">
+                    <img src="/assets/img/profile-nav.jpg" alt="Profile" class="profile-img">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">My Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <h4>Exit Details :</h4>
+        </div>
+
+        <div class="footer">
+            <p>@2025 Tarajyau | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar-items').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

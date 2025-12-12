@@ -1,0 +1,205 @@
+// .qmcBtn {
+//     a:hover {
+//         color: #fff;
+//         text-decoration: none;
+//         background: #600435 !important;
+//     }
+//     a {
+//         padding: 6px 18px;
+//     }
+// }
+
+.panel.title {
+    color: #6f6f6f;
+    border-top: 1px #e5e5e5 solid;
+    padding: 15px 50px;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+
+}
+::ng-deep .accordion .card .card-header {
+    padding: 14px 9px 0px !important;
+    background: #52123100 !important;
+}
+// div#custom-panel-1-header,div#custom-panel-2-header,div#custom-panel-3-header,div#custom-panel-4-header   {
+//     background: #521231;
+//     padding: 12px 12px 0px 12px;
+// }
+.btn-link:focus, .btn-link.focus {
+     text-decoration: none; 
+}
+.btn-link:hover {
+    color: #0056b3;
+    text-decoration: none; 
+}
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: none;
+}
+button.btn.togglegBtn p span:first-child {
+    color: #fff;
+    padding: 3px 9px;
+    background-color: #6f6f6f;
+}
+button.btn.togglegBtn p span:nth-child(2) {
+    color:#6f6f6f;
+    padding: 0 8px;
+    // background-color: #6f6f6f;
+}
+// .collapsed span{
+    
+// }
+button.btn.togglegBtn p span{
+    font-size: 20px;
+    font-weight: 500;
+}
+.opened p span:nth-child(2){
+    color: #521231 !important;
+}
+.opened p span:first-child{
+    background-color: #521231 !important;
+}
+.togglegBtn p:hover span:first-child{
+    color: #fff !important;
+    background-color: #521231 !important;
+}
+.togglegBtn p:hover span:nth-child(2){
+    color: #521231 !important;
+}
+.title::before {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    top: calc(50% - 16px);
+    display: block;
+    font-size: 16px;
+    left: 0;
+    background: #cdcdcd;
+    color: #ffffff;
+}
+
+.iwh-title{
+    font-size: 24px;
+    position: relative;
+    display: block;
+    text-align: left;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: #303030;
+    font-weight: 600;
+    cursor: default;
+}   
+::ng-deep .card {
+    border-left: none;
+    border-right: none;
+}
+.qmcBtn {
+    a:hover {
+        color: #707070 !important;
+        text-decoration: none !important;
+        // background: #600435 !important;
+    }
+    a {
+        color: #5c0931 !important;
+        padding: 6px 18px !important;
+    }
+}
+a.qmcBtn:hover {
+        color: #707070 !important;
+        text-decoration: none !important;
+        // background: #600435 !important;
+    }
+    a.qmcBtn {
+        color: #5c0931 !important;
+        padding: 6px 18px !important;
+    }
+// .title:hover {
+//     color: #9d004c;
+//     text-decoration: none;
+// }
+// .title::after{
+//     content: "";
+//     margin: 10px auto 0;
+//     width: 60px;
+//     height: 2px;
+//     display: block;
+//     line-height: 30px;
+//     background: #5c0931 !important;
+// }
+.accordion-header {
+    color: #6f6f6f;
+    border-top: 1px #e5e5e5 solid;
+    padding: 15px 50px;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.emptySpacer {
+    height: 32px;
+}
+///////////////////////
+.accordion {
+    // background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    text-align: justify !important;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+  
+
+  ::ng-deep .card-body{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: justify !important;
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+  }
+  
+@media screen and (max-width:600px) {
+    .togglegBtn p span {
+        text-align: left;
+        font-size: 12px;
+    }
+    
+    .togglegBtn p {
+        text-align: left;
+    }
+}
+.btn{
+    text-align: start;
+}
+
+.t_a_s{
+    text-align: start ;
+}
+
+p{
+    text-align: justify !important;
+}
+div{
+    text-align: justify !important;
+}
+
+h1,h2,h3,h4,h5{
+    text-align: justify !important;
+}
+
+.txtalign{
+    text-align: justify !important;
+}

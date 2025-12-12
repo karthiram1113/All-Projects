@@ -1,0 +1,816 @@
+
+/* chart */
+
+.layoutchart {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+ 
+.contentmainchart {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1;
+  overflow: hidden;
+}
+ 
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+.dash-board-card-container1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.138);
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+}
+
+.dash-board-card-container1:hover {
+  border-left: 5px solid green;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dash-board-card-container2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.138);
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+}
+
+.dash-board-card-container2:hover {
+  border-left: 5px solid orange;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dash-board-card-container3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.138);
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+}
+
+.dash-board-card-container3:hover {
+  border-left: 5px solid rgb(248, 74, 74);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+  opacity: 0.8;
+}
+
+.card-text i {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-text h4 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card-text p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+.dash-board-icon-right1 {
+  font-size: 2rem;
+  background-color: green;
+  color: white;
+  padding: 0px 7px;
+  border-radius: 10px;
+}
+
+.dash-board-icon-right2 {
+  font-size: 2rem;
+  background-color: orange;
+  color: white;
+  padding: 0px 7px;
+  border-radius: 10px;
+}
+
+.dash-board-icon-right3 {
+  font-size: 2rem;
+  background-color: rgb(248, 74, 74);
+  color: white;
+  padding: 0px 7px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* dashcard */
+ .dashboard-content{
+  height: 410px;
+  width: 100%;
+}
+  
+    .folder-card-wrapper {
+      position: relative;
+      height: 200px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .folder-card-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .folder-main-body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      z-index: 10;
+    }
+  
+   
+    .folder-internal-shape {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 5;
+      border-bottom-left-radius: 70% 50%;
+      border-top-right-radius: 1rem;
+      transition: transform 0.5s ease;
+    }
+  
+    .folder-card-wrapper:hover .folder-internal-shape {
+      transform: scale(1.05);
+    }
+  
+    .folder-tab {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 15px;
+      width: 30%;
+      height: 20px;
+      z-index: 20;
+      border-radius: 10px 10px 0 0;
+      opacity: 0.8;
+    }
+  
+    .folder-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      color: white;
+      z-index: 30;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .folder-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .ux-folder-card {
+    background: linear-gradient(180deg, var(--purple-color), var(--purple-color));
+
+    }
+  
+    .ux-folder-card .folder-tab {
+    background: linear-gradient(180deg, var(--purple-color), var(--purple-color));
+
+    }
+  
+
+    .design-folder-card {
+    background: linear-gradient(180deg, var(--purple-color), var(--purple-color));
+
+    }
+  
+    .design-folder-card .folder-tab {
+    background: linear-gradient(180deg, var(--purple-color), var(--purple-color));
+
+    }
+
+    .folder-category-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+  
+    .folder-file-count {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+/* --- 1. Basic Timeline Card Styling --- */
+.timeline-card {
+  position: absolute;
+  width: 250px; /* Width of the card */
+  min-height: 100px;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  top: 50%; /* Center card vertically with the dot */
+  transform: translateY(-50%);
+  padding: 15px;
+  z-index: 0; /* Keeps cards behind the timeline dots/line (optional) */
+}
+
+.card-content-area {
+    /* Basic styling for text */
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* --- 2. Positioning Left Cards (Default) --- */
+.left-card {
+  /* Position to the left of the timeline */
+  right: 50px; /* Adjust this value to set the distance from the center line */
+}
+
+
+/* --- 3. Positioning Right Cards (Targeting '.right-line' class) --- */
+.right-card {
+  /* Position to the right of the timeline */
+  left: 50px; /* Adjust this value to set the distance from the center line */
+}
+
+/* --- 4. Alignment Fixes (Adjusting your existing code) --- */
+
+/* Adjust the dashed line for the left-side cards (default behavior) */
+.waypoint:not(.right-line)::before {
+    /* Existing code already handles the right side of the dot */
+    right: 15px; 
+    left: auto; /* Ensure it only goes right */
+}
+
+/* Adjust the dashed line for the right-side cards */
+.waypoint.right-line::before {
+  /* Change the dashed line to extend to the left of the dot */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px; /* Start outside the dot, extending to the left */
+  right: auto;
+  width: 100px;
+  height: 0;
+  border-top: 2px dotted #ccc;
+  transform: translateY(-50%);
+}
+
+/* IMPORTANT: Resetting the left/right margin adjustment you added in HTML */
+.waypoint {
+    /* Ensure the dot stays centered in its column unless you explicitly move it */
+    margin-left: 0 !important; 
+}
+
+  /* --- 1. Container & List Setup --- */
+  .timeline-container {
+    /* This centers the timeline on the screen for demonstration */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px auto; */
+    min-height: 500px;
+    /* Gives vertical space */
+  }
+
+  .zigzag-timeline {
+    list-style: none;
+    /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  /* --- 2. The Waypoint Dots and Main Line --- */
+  .waypoint {
+    position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-top: 75px;
+      z-index: 2;
+      background-color: var(--waypoint-color, gray);
+  }
+
+  /* Fix for the first dot to start at the top */
+  .waypoint:first-child {
+    margin-top: 0;
+  }
+
+  /* --- 3. Creating the Zigzag Line (Connector) --- */
+
+  /* This targets the space between the current dot and the next dot */
+  .waypoint:not(:last-child)::after {
+    content: '';
+      position: absolute;
+      top: 75%;
+      left: 13%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 100px;
+      background-color: #555;
+      z-index: 1;
+      transform-origin: top left;
+      transform: rotate(30deg);
+  }
+
+  /* Override the rotation for the 2nd, 4th, 6th, etc., dots to create the ZAG */
+  .waypoint:nth-child(even)::after {
+        content: '';
+          position: absolute;
+          top: 100%;
+          left: 60%;
+          transform: translateX(-50%);
+          width: 10px;
+          height: 75px;
+          background-color: #555;
+          z-index: 1;
+          transform-origin: top left;
+          transform: rotate(-38deg);
+  }
+
+
+  /* --- 4. Creating the Dashed Horizontal Lines --- */
+
+  .waypoint::before {
+    content: '';
+      position: absolute;
+      top: 50%;
+      right: 24px !important;
+      width: 100px;
+      height: 0;
+      border-top: 2px solid white !important;
+      transform: translateY(-50%);
+  }
+  .waypoint.right-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Center vertically with the dot */
+    right: 0px;
+    left: 20px;
+    /* Start outside the dot */
+    width: 100px;
+    /* Length of the dashed line */
+    height: 0;
+    border-top: 2px dotted #ccc;
+    /* Dashed style and light gray color */
+    transform: translateY(-50%);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Container for the entire card to position it */
+.infographic-card-container {
+    display: flex; /* Allows flag and content to sit side-by-side */
+    width: 500px; /* Adjust as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensures flag's overflow is hidden if it goes slightly out */
+    position: relative; /* For the speech bubble tail */
+    font-family: Arial, sans-serif;
+}
+
+/* --- Flag Section Styling --- */
+.infographic-flag-section {
+    background-color: #6a40a8; /* Purple color from image */
+    color: #fff;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px; /* Adjust flag width */
+    position: relative;
+    border-top-left-radius: 10px; /* Match card border radius */
+    border-bottom-left-radius: 10px;
+    /* Create the triangular "bookmark" tail */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    padding-bottom: 30px; /* Make space for the pointed bottom */
+}
+
+.flag-number {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1; /* Adjust vertical alignment */
+    margin-top: 5px;
+}
+
+.flag-icon {
+    font-size: 2em; /* Adjust icon size */
+    margin: 10px 0;
+}
+
+.flag-label {
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker purple for the label */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: absolute; /* Position relative to .infographic-flag-section */
+    bottom: 10px; /* Adjust to sit at the bottom before the clip-path point */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* --- Content Section Styling --- */
+.infographic-content-section {
+    padding: 20px 25px;
+    flex-grow: 1; /* Allows content section to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.content-title {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.content-body {
+    margin: 0 0 15px 0;
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.read-more-link {
+    color: #6a40a8; /* Matching the flag color */
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start; /* Aligns link to the start if content section is flex-column */
+    margin-top: auto; /* Pushes it to the bottom */
+}
+
+/* --- Speech Bubble Tail on the Right --- */
+.infographic-card-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px; /* Adjust to move the tail further out or in */
+    transform: translateY(-50%) rotate(45deg);
+    width: 30px; /* Size of the tail */
+    height: 30px;
+    background-color: #fff; /* Same as card background */
+    border-right: 1px solid #f0f0f0; /* Simulate border */
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parent {
+  width: 290px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.dash-card-animation {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #5c249a 0%, #5c249a 100%);
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+}
+
+.glass {
+  transform-style: preserve-3d;
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+  /* -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); */
+  transform: translate3d(0px, 0px, 25px);
+  /* border-left: 1px solid white;
+  border-bottom: 1px solid white; */
+  transition: all 0.5s ease-in-out;
+}
+
+.content {
+  padding: 100px 60px 0px 30px;
+  transform: translate3d(0, 0, 26px);
+}
+
+.content .title {
+  display: block;
+  color: lightslategray;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.content .text {
+  display: block;
+  color: lightslategray;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.bottom {
+  padding: 10px 12px;
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate3d(0, 0, 26px);
+}
+
+.bottom .view-more {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: flex-end;
+  transition: all 0.2s ease-in-out;
+}
+
+.bottom .view-more:hover {
+  transform: translate3d(0, 0, 10px);
+}
+
+.bottom .view-more .view-more-button {
+  background: none;
+  border: none;
+  color: lightslategray;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.bottom .view-more .svg {
+  fill: none;
+  stroke: lightslategray;
+  stroke-width: 3px;
+  max-height: 15px;
+}
+
+.bottom .social-buttons-container {
+  display: flex;
+  gap: 10px;
+  transform-style: preserve-3d;
+}
+
+.bottom .social-buttons-container .social-button {
+  width: 30px;
+  aspect-ratio: 1;
+  padding: 5px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-content: center;
+  box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
+}
+
+.bottom .social-buttons-container .social-button:first-child {
+  transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+}
+
+.bottom .social-buttons-container .social-button:nth-child(2) {
+  transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+}
+
+.bottom .social-buttons-container .social-button:nth-child(3) {
+  transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+}
+
+.bottom .social-buttons-container .social-button .svg {
+  width: 15px;
+  fill: lightslategray;
+}
+
+.bottom .social-buttons-container .social-button:hover {
+  background: black;
+}
+
+.bottom .social-buttons-container .social-button:hover .svg {
+  fill: white;
+}
+
+.bottom .social-buttons-container .social-button:active {
+  background: rgb(255, 234, 0);
+}
+
+.bottom .social-buttons-container .social-button:active .svg {
+  fill: black;
+}
+
+.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.logo .circle {
+  display: block;
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+    background: rgb(154 0 249 / 20%);
+  transition: all 0.5s ease-in-out;
+}
+
+.logo .circle1 {
+  width: 170px;
+  transform: translate3d(0, 0, 20px);
+  top: 8px;
+  right: 8px;
+}
+
+.logo .circle2 {
+  width: 140px;
+  transform: translate3d(0, 0, 40px);
+  top: 10px;
+  right: 10px;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  transition-delay: 0.4s;
+}
+
+.logo .circle3 {
+  width: 110px;
+  transform: translate3d(0, 0, 60px);
+  top: 17px;
+  right: 17px;
+  transition-delay: 0.8s;
+}
+
+.logo .circle4 {
+  width: 80px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+
+.logo .circle5 {
+  width: 50px;
+  transform: translate3d(0, 0, 100px);
+  top: 30px;
+  right: 30px;
+  display: grid;
+  place-content: center;
+  transition-delay: 1.6s;
+}
+
+.logo .circle5 div {
+  width: 20px;
+  color: white;
+}
+
+.parent:hover .dash-card-animation {
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+}
+
+.parent:hover .dash-card-animation .bottom .social-buttons-container .social-button {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+}
+
+.parent:hover .dash-card-animation .logo .circle2 {
+  transform: translate3d(0, 0, 60px);
+}
+
+.parent:hover .dash-card-animation .logo .circle3 {
+  transform: translate3d(0, 0, 80px);
+}
+
+.parent:hover .dash-card-animation .logo .circle4 {
+  transform: translate3d(0, 0, 100px);
+}
+
+.parent:hover .dash-card-animation .logo .circle5 {
+  transform: translate3d(0, 0, 120px);
+}

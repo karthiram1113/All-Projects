@@ -1,0 +1,66 @@
+.contentSection{
+    position: relative;
+    top:-110px;
+}
+.iwh-title{
+    color: #777777;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.1;
+}
+.wpb_wrapper p {
+    color: #777;
+}
+.emptySpacer {
+    height: 64px;
+}
+.iw-button.butten.large a {
+    height: 46px;
+    line-height: 42px;
+    padding: 0 25px;
+    font-size: 18px;
+}
+.qmcBtn {
+    a:hover {
+        background: #521231 !important;
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #777777;
+    
+    }
+}
+.bg-pink {
+    background: #5c0931 !important;
+    font-size: 18px;
+} 
+a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+.cols.qmcBtn a {
+    padding: 13px 34px;
+}
+
+@media screen and (max-width:600px) {
+    .cols.qmcBtn {
+        margin-bottom: 25px;
+        a{
+            padding: 15px 18px;
+            font-size: 13px;
+        }
+    }
+}
+
+p{
+    text-align: justify !important;
+}
+div{
+    text-align: justify !important;
+}
+
+h1,h2,h3,h4,h5{
+    text-align: justify !important;
+}

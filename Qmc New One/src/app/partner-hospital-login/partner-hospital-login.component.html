@@ -1,0 +1,819 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<app-nav [item]="partnerLogin"></app-nav>
+<div *ngIf="loginpage">
+    <div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-auto text-center">
+                <div class="h5"><strong> Partner Hospital Login</strong></div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col col-md-5 col-sm-7 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <form [formGroup]="loginform" autocomplete="off" novalidate="" class="ng-untouched ng-pristine ng-invalid">
+                                    <div class="form-group">
+                                        <label>{{
+                        "partnerhospitalpage.contentTitle.username" | translate
+                      }}<span class="text-danger">*</span></label
+                    >
+                    <input
+                      class="form-control ng-untouched ng-pristine ng-invalid"
+                      name="username"
+                      formControlName="username"
+                      type="text"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label
+                      >{{
+                        "partnerhospitalpage.contentTitle.password" | translate
+                      }}<span class="text-danger">*</span></label
+                    >
+                    <input
+                      class="form-control"
+                      name="password"
+                      type="password"
+                      formControlName="password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <ngx-recaptcha2
+                      #captchaElem
+                      [siteKey]="siteKey"
+                      formControlName="recaptcha"
+                    >
+                    </ngx-recaptcha2>
+                  </div>
+                  <div class="row">
+                    <div class="loginbtn">
+                      <button
+                        (click)="login()"
+                        class="btn btncolor"
+                        type="button"
+                        [disabled]="loginform.invalid"
+                      >
+                        {{
+                          "partnerhospitalpage.contentTitle.login" | translate
+                        }}
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="dropdownpage" class="col-md-12">
+  <div class="row justify-content-center mt-4">
+    <div class="col-auto text-center">
+      <div class="h5">
+        <strong id="hospitalLogin"> Partner Hospital</strong>
+      </div>
+    </div>
+  </div>
+  <div style="width: 50%; margin-left: 30%" class="row mt-3">
+    <div class="col col-md-10 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <form
+            [formGroup]="dropdownform"
+            autocomplete="off"
+            novalidate=""
+            class="ng-untouched ng-pristine ng-invalid"
+          >
+            <div class="col pt-3">
+              <span style="text-align: left" class="font-color"
+                >Country <span style="color: red">*</span>
+                <select
+                  formControlName="country"
+                  (ngModelChange)="getcitydetails($event)"
+                  class="font-color"
+                  class="form-control"
+                >
+                  <option
+                    *ngFor="let country of countrydetails"
+                    [value]="country.id"
+                  >
+                    {{ country.name }}
+                  </option>
+                </select>
+              </span>
+            </div>
+            <div class="col pt-3">
+              <span style="text-align: left" class="font-color"
+                >City <span style="color: red">*</span>
+                <select
+                  formControlName="city"
+                  (ngModelChange)="gethospitaldetails($event)"
+                  class="font-color"
+                  class="form-control"
+                >
+                  <option disabled selected>--select --</option>
+                  <option *ngFor="let city of citydetails" [value]="city.id">
+                    {{ city.name }}
+                  </option>
+                </select>
+              </span>
+            </div>
+            <div class="col pt-3">
+              <span style="text-align: left" class="font-color"
+                >Hospital / Diagnostic center <span style="color: red">*</span>
+                <select
+                  formControlName="hospitalname"
+                  class="font-color"
+                  class="form-control"
+                >
+                  <option disabled selected>--select --</option>
+                  <option
+                    *ngFor="let hospital of hospitaldetails"
+                    [value]="hospital.id"
+                  >
+                    {{ hospital.name }}
+                  </option>
+                </select>
+              </span>
+            </div>
+            <div class="col pt-3">
+              <div class="loginbtn">
+                <button
+                  [disabled]="dropdownform.invalid"
+                  (click)="gethospitalreferrals()"
+                  class="btn btncolor"
+                  type="button"
+                >
+                  Proceed
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="tablepage">
+  <div class="row justify-content-center mt-4">
+    <div class="col-auto text-center">
+      <div class="h5"><strong> Partner Hospital</strong></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="col col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5 t-3" style="margin-left: 15px">
+              <div class="form-group">
+                <label>Visa Number<span class="text-danger">*</span></label>
+                                        <input (keypress)="onlyNumberKey($event)" maxlength="12" minlength="12" [(ngModel)]="visanumber" class="form-control" name="password" type="text" />
+                                    </div>
+                            </div>
+                            <div class="col-md-1 t-3" style="margin-left: 15px">
+                                <div class="visabtn">
+                                    <div class="loginbtn">
+                                        <button (click)="clearvisanumber()" class="btn btncolor" type="button">
+                      Clear
+                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1 t-3" style="margin-left: 15px">
+                                <div class="visabtn">
+                                    <div class="loginbtn">
+                                        <button [disabled]="!visanumber" (click)="searchvisanumber()" class="btn btncolor" type="button">
+                  Search
+                </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Partnet Method -->
+
+                    <div class="card-body pt-3">
+                        <ul class="nav nav-tabs nav-tabs-bordered">
+                            <!-- Tab 1: Normal Data -->
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1-content" (click)="gethospitalreferrals()">Referrals</button>
+                            </li>
+
+                            <!-- Tab 2: Additional Referrals -->
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2-content" (click)="gethospitalLabreferrals()">Additional Referrals</button>
+                            </li>
+                        </ul>
+
+                        <!--Tab1-->
+                        <div class="tab-content">
+                            <div *ngIf="referralTabActive">
+                                <div *ngIf="loadReferralTable">
+                                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100" matSort (matSortChange)="onMatSortChange()">
+                                        <ng-container matColumnDef="Visa Application No">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="visa_number">
+                                                Visa Application No
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                {{ element.visa_number }}
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Gender">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="gender">
+                                                Gender
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Applicant Name">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="applicant_name">
+                                                Applicant Name
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                {{ element.applicant_name }}
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Expected Appointment Date">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="appointment_date">
+                                                Expected Appointment Date
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <div *ngIf="element.appointment_date != '-'">
+                                                    {{ element.appointment_date | date : "dd-MM-yyyy" }}
+                                                </div>
+                                                <div *ngIf="element.appointment_date == '-'">
+                                                    {{ element.appointment_date }}
+                                                </div>
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Referral Creation Date">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="referral_created_on">
+                                                Referral Creation Date
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <div *ngIf="element.referral_created_on != '-'">
+                                                    {{ element.referral_created_on | date : "dd-MM-yyyy" }}
+                                                </div>
+                                                <div *ngIf="element.referral_created_on == '-'">
+                                                    {{ element.referral_created_on }}
+                                                </div>
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Test Name">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="test_name">
+                                                Test Name
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                {{ element.test_name }}
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Type">
+                                            <th mat-header-cell *matHeaderCellDef>Type</th>
+                                            <td mat-cell *matCellDef="let element">External Speciality</td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Hospital Registration Date">
+                                            <th mat-header-cell *matHeaderCellDef>
+                                                Hospital Registration Date
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <div>
+                                                    <input [(ngModel)]="element.hospital_registeration_date" class="form-control" name="password" type="date" />
+                                                    <!-- {{element.hospital_registered_on | date :'dd-MM-yyyy'}} -->
+                                                </div>
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Action">
+                                            <th mat-header-cell *matHeaderCellDef>Action</th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <img matTooltip="upload" *ngIf="element.letter_print_count != 0" (click)="Uploaddocument(element)" class="tableicon" src="assets/images/icons8-upload-20.png" />
+                                                <img matTooltip="download" *ngIf="element.letter_print_count <= 2" (click)="downloaddocument(element)" class="tableicon" src="assets/images/icons8-document-20.png" />
+                                                <img *ngIf="element.hospital_registeration_date" matTooltip="save" (click)="savehospitalregistrationdate(element)" class="tableicon" src="assets/images/icons8-save-20.png" />
+                                            </td>
+                                        </ng-container>
+
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                                    </table>
+                                    <mat-paginator #scheduledOrdersPaginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+                                </div>
+                                <div class="norecord" *ngIf="dataSource.filteredData.length === 0">
+                                    No records found
+                                </div>
+                            </div>
+
+
+                            <!--Tab2-->
+                            <div *ngIf="labTabActive">
+                                <div *ngIf="labDataSource.filteredData.length > 0">
+                                    <table mat-table [dataSource]="labDataSource" class="mat-elevation-z8 w-100" matSort (matSortChange)="onMatSortChanges()">
+                                        <ng-container matColumnDef="Visa Application No">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="visa_number">
+                                                Visa Application No
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                {{ element.visa_number }}
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Gender">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="gender">
+                                                Gender
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Applicant Name">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="applicant_name">
+                                                Applicant Name
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                {{ element.applicant_name }}
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Expected Appointment Date">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="appointment_date">
+                                                Expected Appointment Date
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <div *ngIf="element.appointment_date != '-'">
+                                                    {{ element.appointment_date | date : "dd-MM-yyyy" }}
+                                                </div>
+                                                <div *ngIf="element.appointment_date == '-'">
+                                                    {{ element.appointment_date }}
+                                                </div>
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Referral Creation Date">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="referral_created_on">
+                                                Referral Creation Date
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <div *ngIf="element.referral_created_on != '-'">
+                                                    {{ element.referral_created_on | date : "dd-MM-yyyy" }}
+                                                </div>
+                                                <div *ngIf="element.referral_created_on == '-'">
+                                                    {{ element.referral_created_on }}
+                                                </div>
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Test Name">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header="test_name">
+                                                Test Name
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                {{ element.test_name }}
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Type">
+                                            <th mat-header-cell *matHeaderCellDef>Type</th>
+                                            <td mat-cell *matCellDef="let element">Additional Lab Test</td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Hospital Registration Date">
+                                            <th mat-header-cell *matHeaderCellDef>
+                                                Hospital Registration Date
+                                            </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <div>
+                                                    <input [(ngModel)]="element.hospital_registeration_date" class="form-control" name="password" type="date" />
+                                                    <!-- {{element.hospital_registered_on | date :'dd-MM-yyyy'}} -->
+                                                </div>
+                                            </td>
+                                        </ng-container>
+                                        <ng-container matColumnDef="Action">
+                                            <th mat-header-cell *matHeaderCellDef>Action</th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <img matTooltip="upload" *ngIf="element.letter_print_count != 0" (click)="Uploadadditionaldocument(element)" class="tableicon" src="assets/images/icons8-upload-20.png" />
+                                                <img matTooltip="download" *ngIf="element.letter_print_count <= 2" (click)="downloadadditionaldocument(element)" class="tableicon" src="assets/images/icons8-document-20.png" />
+                                                <img *ngIf="element.hospital_registeration_date" matTooltip="save" (click)="savehospitaladditionalregistrationdate(element)" class="tableicon" src="assets/images/icons8-save-20.png" />
+                                            </td>
+                                        </ng-container>
+
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                                    </table>
+                                    <mat-paginator #scheduledOrdersPaginator1 [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+                                </div>
+                                <div class="norecord" *ngIf="labDataSource.filteredData.length === 0">
+                                    No records found
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <ng-template #content let-modal>
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: bold" id="exampleModalLabel">
+                    Information Result Upload
+                </h5>
+                <img (click)="modalclose()" class="tableicon" src="assets/images/icons8-close-20.png" />
+            </div>
+            <div class="modal-body" style="color: #000000; text-align: justify !important" *ngIf="fileUploadScreen; else uploadSuccess">
+                <div class="col">
+                    <div class="flex col-md-12">
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Applicant Name</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">{{ popupdetails.applicant_name }}</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Referral</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Speciality</p>
+                        </div>
+                    </div>
+                    <div class="flex col-md-12">
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Visa Number</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">{{ popupdetails.visa_number }}</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Externel Speciality</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">{{ popupdetails.test_name }}</p>
+                        </div>
+                    </div>
+                    <form [formGroup]="uploadFileForm">
+                        <!-- <div class="flex col-md-12">
+                            <div class="pt-4">
+                                <div class="col">
+                                    <label class="fontweight">Document Name<span class="text-danger">*</span></label
+                >
+                <input
+                  class="form-control"
+                  [(ngModel)]="docName"
+                  name="docname"
+                  type="text"
+                  formControlName="docName"
+                />
+              </div>
+              <div
+                class="text-danger"
+                *ngIf="
+                  submitted && uploadFileForm.hasError('required', 'docName')
+                "
+              >
+                Document Name is required.
+              </div>
+            </div>
+            <div class="pt-4">
+              <div class="col">
+                <label class="fontweight"
+                  >Comments<span class="text-danger">*</span></label
+                >
+                <input
+                  class="form-control"
+                  [(ngModel)]="comments"
+                  name="comment"
+                  type="text"
+                  formControlName="comments"
+                />
+              </div>
+              <div
+                class="text-danger"
+                *ngIf="
+                  submitted && uploadFileForm.hasError('required', 'docName')
+                "
+              >
+                Comments is required.
+              </div>
+            </div>
+            <div class="pt-4">
+              <div class="col">
+                <label class="fontweight">Upload Document</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <div class="fileUpload">
+                                                <input class="form-control uploadInput" (change)="onFileSelected($event)" aria-describedby="fileHelpId" id="formFileLg" type="file" required data-max-size="512000" formControlName="file" [ngClass]="{
+                          'border-danger':
+                            submitted &&
+                            (pdfFileFormatPdfFileSize ||
+                              uploadFileForm.hasError('required', 'file'))
+                        }" />
+                                                <div class="fileUploadBtn d-flex">
+                                                    <button type="button" class="btn btn-primary ms-2 uploadBtn" [disabled]="uploadFileForm.invalid" (click)="uploadFile()">
+                          Upload
+                        </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-danger" *ngIf="
+                        submitted && uploadFileForm.hasError('required', 'file')
+                      ">
+                                                File is required.
+                                            </div>
+                                            <div class="text-danger" *ngIf="pdfFileFormatPdfFileSize && submitted && !pdfFileFormatPdfFileRefferalType">
+                                                PDF format only allowed. Maximum size is 10MB
+                                            </div>
+                                            <div class="text-danger" *ngIf="pdfFileFormatPdfFileSize && submitted && pdfFileFormatPdfFileRefferalType">
+                                              PDF format only allowed. Maximum size is 512KB
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                        <div class="row">
+                          <div class="col">
+                            <label class="fontweight">Document Name<span class="text-danger">*</span></label
+                              >
+                            <input
+                              class="form-control"
+                              [(ngModel)]="docName"
+                              name="docname"
+                              type="text"
+                              formControlName="docName"
+                            />
+                            <div
+                              class="text-danger"
+                              *ngIf="
+                                submitted && uploadFileForm.hasError('required', 'docName')
+                              "
+                            >
+                              Document Name is required.
+                            </div>
+                          </div>
+                          <div class="col">
+                            <label class="fontweight"
+                              >Comments<span class="text-danger">*</span></label
+                            >
+                            <input
+                              class="form-control"
+                              [(ngModel)]="comments"
+                              name="comment"
+                              type="text"
+                              formControlName="comments"
+                            />
+                            <div
+                              class="text-danger"
+                              *ngIf="
+                                submitted && uploadFileForm.hasError('required', 'docName')
+                              "
+                            >
+                              Comments is required.
+                            </div>
+                          </div>
+                          <div class="col">
+                            <label class="fontweight">Upload Document</label>
+                            <div class="col-12">
+                              <div class="fileUpload">
+                                  <input class="form-control uploadInput" (change)="onFileSelected($event)" aria-describedby="fileHelpId" id="formFileLg" type="file" required data-max-size="512000" formControlName="file" [ngClass]="{
+                                    'border-danger':
+                                      submitted &&
+                                      (pdfFileFormatPdfFileSize ||
+                                        uploadFileForm.hasError('required', 'file'))
+                                  }" />
+                              </div>
+                              <div class="text-danger" *ngIf="submitted && uploadFileForm.hasError('required', 'file')">
+                                  File is required.
+                              </div>
+                              <div class="text-danger" *ngIf="pdfFileFormatPdfFileSize && submitted && !pdfFileFormatPdfFileRefferalType">
+                                  PDF format only allowed. Maximum size is 10MB
+                              </div>
+                              <div class="text-danger" *ngIf="pdfFileFormatPdfFileSize && submitted && pdfFileFormatPdfFileRefferalType">
+                                PDF format only allowed. Maximum size is 512KB
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-md-4" *ngIf="testCodeStatus">
+                            <label class="fontweight">CT images Uploaded ?<span class="text-danger">*</span></label
+                              >
+                            <div class="radio-btn-continer">
+                              <label>
+                                <input
+                                  [(ngModel)]="testCodeS"
+                                  name="testCodeS"
+                                  type="radio"
+                                  formControlName="testCodeS"
+                                  value="yes"
+                                /> Yes
+                              </label>
+                              <label>
+                                <input
+                                  [(ngModel)]="testCodeS"
+                                  name="testCodeS"
+                                  type="radio"
+                                  formControlName="testCodeS"
+                                  value="no"
+                                  checked
+                                /> No
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-4" *ngIf="testCodeStatus">
+                            <label class="fontweight">Patient ID</label
+                              >
+                              <input
+                              class="form-control"
+                              [(ngModel)]="patientId"
+                              name="patientId"
+                              type="text"
+                              formControlName="patientId"
+                            />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="fileUploadBtn">
+                              <button type="button" class="btn btn-primary ms-2 uploadBtn" [disabled]="uploadFileForm.invalid" (click)="uploadFile()">
+                                Upload
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <ng-template #uploadSuccess>
+                <div class="col-12">
+                    <div class="fileUploadContainer p-3">
+                        <div class="fileUpload">
+                            <h4 class="uploadSuccessFully">File uploaded successfully!</h4>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </ng-template>
+    </div>
+
+    <!--Tab2-->
+
+    <div>
+        <ng-template #content1 let-modal>
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: bold" id="exampleModalLabel">
+                    Information Result Upload
+                </h5>
+                <img (click)="modalclose()" class="tableicon" src="assets/images/icons8-close-20.png" />
+            </div>
+            <div class="modal-body" style="color: #000000; text-align: justify !important" *ngIf="fileUploadAdditionalScreen; else uploadSuccess">
+                <div class="col">
+                    <div class="flex col-md-12">
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Applicant Name</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">{{ popupdetails.applicant_name }}</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Referral</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Speciality</p>
+                        </div>
+                    </div>
+                    <div class="flex col-md-12">
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Visa Number</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">{{ popupdetails.visa_number }}</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">Externel Speciality</p>
+                        </div>
+                        <div class="flex col-md-3">
+                            <p class="fontweight">{{ popupdetails.test_name }}</p>
+                        </div>
+                    </div>
+                    <form [formGroup]="uploadFileForm">
+                      <div class="row">
+                        <div class="col">
+                          <label class="fontweight">Document Name<span class="text-danger">*</span></label
+                            >
+                          <input
+                            class="form-control"
+                            [(ngModel)]="docName"
+                            name="docname"
+                            type="text"
+                            formControlName="docName"
+                          />
+                          <div
+                          class="text-danger"
+                          *ngIf="
+                            submitted && uploadFileForm.hasError('required', 'docName')
+                          "
+                          >
+                            Document Name is required.
+                          </div>
+                        </div>
+                        <div class="col">
+                          <label class="fontweight"
+                            >Comments<span class="text-danger">*</span></label
+                          >
+                          <input
+                            class="form-control"
+                            [(ngModel)]="comments"
+                            name="comment"
+                            type="text"
+                            formControlName="comments"
+                          />
+                          <div
+                            class="text-danger"
+                            *ngIf="
+                              submitted && uploadFileForm.hasError('required', 'docName')
+                            "
+                          >
+                            Comments is required.
+                          </div>
+                        </div>
+                        <div class="col">
+                          <label class="fontweight">Upload Document</label>
+                          <div class="col-12">
+                            <div class="fileUpload">
+                                <input class="form-control uploadInput" (change)="onFileSelected($event)" aria-describedby="fileHelpId" id="formFileLg" type="file" required data-max-size="512000" formControlName="file" [ngClass]="{
+                                'border-danger':
+                                  submitted &&
+                                  (pdfFileFormatPdfFileSize ||
+                                    uploadFileForm.hasError('required', 'file'))
+                              }" />
+                            </div>
+                            <div class="text-danger" *ngIf="submitted && uploadFileForm.hasError('required', 'file')">
+                                File is required.
+                            </div>
+                            <div class="text-danger" *ngIf="pdfFileFormatPdfFileSize && submitted">
+                                PDF format only allowed. Maximum size is 10MB
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-md-4" *ngIf="testCodeStatus">
+                          <label class="fontweight">CT images Uploaded ?<span class="text-danger">*</span></label
+                            >
+                          <div class="radio-btn-continer">
+                            <label>
+                              <input
+                                [(ngModel)]="testCodeS"
+                                name="testCodeS"
+                                type="radio"
+                                formControlName="testCodeS"
+                                value="yes"
+                              /> Yes
+                            </label>
+                            <label>
+                              <input
+                                [(ngModel)]="testCodeS"
+                                name="testCodeS"
+                                type="radio"
+                                formControlName="testCodeS"
+                                value="no"
+                                checked
+                              /> No
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="testCodeStatus">
+                          <label class="fontweight">Patient ID</label
+                            >
+                            <input
+                            class="form-control"
+                            [(ngModel)]="patientId"
+                            name="patientId"
+                            type="text"
+                            formControlName="patientId"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="fileUploadBtn">
+                            <button type="button" class="btn btn-primary ms-2 uploadBtn" [disabled]="uploadFileForm.invalid" (click)="uploadadditionalFile()">Upload</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <ng-template #uploadSuccess>
+                <div class="col-12">
+                    <div class="fileUploadContainer p-3">
+                        <div class="fileUpload">
+                            <h4 class="uploadSuccessFully">File uploaded successfully!</h4>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </ng-template>
+    </div>

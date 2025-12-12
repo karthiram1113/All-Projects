@@ -1,0 +1,37 @@
+.table-bordered{
+    border:0.5px solid rgb(235, 234, 234) !important;
+}
+
+.pagination .page-item .page-link {
+    color: rgba(139,196,63,255);
+    font-weight: 600;
+    border-radius: 100px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(139,196,63,255);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: rgba(139,196,63,255);
+    color: white;
+    border-color: rgba(139,196,63,255);
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: rgba(139,196,63,255);
+    color: white;
+    border-color: rgba(139,196,63,255);
+}
+
+.case-study-drop{
+    border: 0.5px dotted lightgray;
+    border-radius: 5px;
+    padding: 19px;
+    text-align: center;
+}
+
+.loading-position{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+}

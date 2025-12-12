@@ -1,0 +1,94 @@
+.card_container{
+    background-color: rgb(245, 239, 239);
+  }
+
+  .add_btn_card{
+    padding: 1px 50px 1px 50px;
+  }
+
+  .badge-card-align{
+    background-color: rgb(206, 248, 206);
+    color: #08b02f;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .card_rating{
+    font-size: 13px;
+  }
+
+
+  /*fruits  */
+  
+.card_fruit_main {
+    display: inline-block;
+    width: 240px;
+    text-align: center;
+  }
+  
+  .img-container_fruit {
+      height: 230px;
+      width: 200px;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+      display: inline-block;
+  }
+  
+  .img-container_fruit img {
+      transform: skew(0deg, -13deg);
+      height: 250px;
+      margin: -35px 0px 0px -70px;
+  }
+  
+  .inner-skew-fruit {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 0px;
+      transform: skew(0deg, 13deg);
+      font-size: 0px;
+      margin: 30px 0px 0px 0px;
+      background: #c8c2c2;
+      height: 250px;
+      width: 200px;
+  }
+  
+  .text-container-fruit {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+  }
+  
+  .text-container-fruit h3 {
+    margin: 20px 0px 10px 0px;
+    color: #04bcff;
+    font-size: 18px;
+  }
+
+  .link-text {
+    display: block;
+    color: #bda73b;
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: auto 0 0;
+    transition: color .45s ease;
+
+    svg {
+      margin-left: .5em;
+      transition: transform .6s ease;
+      
+      path {
+        transition: fill .45s ease;
+      }
+    }
+  }
+
+  .view-offer-link{
+    text-decoration: none;
+  }
+  

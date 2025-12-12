@@ -1,0 +1,893 @@
+<header class="headerStandard">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <a class="navbar-brand" href="#"><img src="assets/images/qmc-logo-new1.png" /></a>
+            </div>
+        </div>
+    </div>
+    <nav *ngIf="!applicantdetailpage" class="navbar navbar-expand-md navbar-dark bg-pink">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleDisplay()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <!-- <a class="navbar-brand" href="#"><img src="assets/images/qmc-logo-new1.png"></a> -->
+            <div class="collapse navbar-collapse d-none d-sm-block" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" routerLink="/home">{{ "headerSection.menu.Home" | translate }}
+              </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/about">{{
+              "headerSection.menu.About" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/visa-medical-services">{{
+              "headerSection.menu.Visa Medical
+                            Services" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/careers">{{
+              "headerSection.menu.Careers" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/faqs">{{
+              "headerSection.menu.FAQs" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/contact">{{
+              "headerSection.menu.Contact" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/referrals">{{
+              "headerSection.menu.Referrals" | translate
+            }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-mobile d-block d-sm-none animate__animated animate__fadeInLeft" *ngIf="!isShow">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" routerLink="/home">{{ "headerSection.menu.Home" | translate
+              }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/about">{{
+              "headerSection.menu.About" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/visa-medical-services">{{
+              "headerSection.menu.Visa Medical
+                            Services" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/careers">{{
+              "headerSection.menu.Careers" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/faqs">{{
+              "headerSection.menu.FAQs" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/contact">{{
+              "headerSection.menu.Contact" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/referrals">{{
+              "headerSection.menu.Referrals" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/checklist">
+              {{ "homePage.contentTitle.Visit Checklist" | translate }}</a
+            >
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/book-referral-appointment">{{
+              "homePage.contentTitle.Book
+                            Referral Appointment" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/status-check">{{
+              "homePage.contentTitle.Status Check" | translate
+            }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav *ngIf="applicantdetailpage" class="navbar navbar-expand-md navbar-dark bg-pink">
+        <div style="text-align: right; display: inline; width: 100%; padding: 2px">
+            <button (click)="logout()" class="btn" style="background-color: rgb(179 89 89); color: white" type="button">
+        Logout
+      </button>
+        </div>
+    </nav>
+</header>
+
+<div *ngIf="!applicantdetailpage">
+    <div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-auto text-center">
+                <div class="h5"><strong> Appointment Login</strong></div>
+            </div>
+        </div>
+        <div style="width: 50%; margin-left: 30%" class="row mt-3">
+            <div class="col col-md-10 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <form [formGroup]="loginform" autocomplete="off" novalidate="" class="ng-untouched ng-pristine ng-invalid">
+                                    <div class="form-group">
+                                        <label>Visa Reference Number<span class="text-danger"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      class="form-control ng-untouched ng-pristine ng-invalid"
+                      name="visa_number"
+                      (input)="isNumberKey($event)"
+                      formControlName="visa_number"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    *ngIf="!visavalidation"
+                    class="alert alert-danger"
+                    role="alert"
+                  >
+                    Invalid Visa Reference Number
+                  </div>
+                  <div class="form-group">
+                    <label
+                      >Passport Number<span class="text-danger">*</span></label
+                    >
+                    <input
+                      class="form-control"
+                      name="passport_number"
+                      type="text"
+                      (keypress)="passportvalidation($event)"
+                      formControlName="passport_number"
+                    />
+                  </div>
+                  <!-- <div class="form-group">
+                    <label
+                      >Date of Birth<span class="text-danger">*</span></label
+                    >
+                    <input type="text" class="form-control" placement="top" #dp="bsDatepicker"
+                                            bsDatepicker [(bsValue)]="model2" formControlName="dob"
+                                            [bsConfig]="bsConfig">
+                    <input
+                      formControlName="dob"
+                      class="form-control"
+                      name="DOB"
+                      type="date"
+                    />
+                  </div> -->
+                  <div class="row">
+                    <div class="col-auto">
+                      <ngx-recaptcha2
+                        #captchaElem
+                        formControlName="recaptcha"
+                        [siteKey]="siteKey"
+                      >
+                      </ngx-recaptcha2>
+                    </div>
+                    <div style="margin-left: 100px; margin-top: 15px">
+                      <button
+                     
+                        class="btn btncolor"
+                        type="button"
+                        (click)="getuserdetailss()"
+                        [disabled]="loginform.invalid"
+                      >
+                        <!--  -->
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="applicantdetailpage" class="container-fluid">
+  <div class="row m-2 mt-2">
+    <div class="col-12">
+      <div class="row mt-4">
+        <div class="col-8">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="h5 ml-2">Applicant Detail</div>
+                </div>
+              </div>
+              <div class="row mx-1">
+                <div
+                  class="col-12 border"
+                  style="border-color: #630332 !important"
+                ></div>
+              </div>
+              <div class="row m-2 mt-4">
+                <div class="col-6">
+                  <label class="lead">Applicant Name</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input class="form-control" readonly="" [(ngModel)]="applicantdata.fullName" type="text" />
+                                    </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-6">
+                                    <label class="lead">Visa Reference Number</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-control" [(ngModel)]="applicantdata.visaApplicationNumber" readonly="" type="text" />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-6">
+                                    <label class="lead">Passport Number</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-control" [(ngModel)]="applicantdata.passportNumber" readonly="" type="text" />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-6">
+                                    <label class="lead">Date of Birth</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-control" [(ngModel)]="applicantdata.dob" readonly="" type="text" />
+                                </div>
+                            </div>
+                            <!-- <div class="row m-2">
+                                <div class="col-6"><label class="lead">Visa
+                                        Type</label></div>
+                                <div class="col-6"><input class="form-control" readonly="" type="text"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2rem">
+                <div class="col-12">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12 tabcolor">
+                                            <ul class="nav nav-tabs" style="border-bottom: 2px solid #630332 !important" id="myTab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <a style="font-size: 18px; font-weight: bold" [ngClass]="{ activetab: booking }" (click)="tabchange('booking')" class="nav-link h5" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Appointment Booking</a
+                          >
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                          <a
+                            style="font-size: 18px; font-weight: bold"
+                            [ngClass]="{ activetab: history }"
+                            (click)="tabchange('history')"
+                            class="nav-link h5"
+                            id="home-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#home"
+                            type="button"
+                            role="tab"
+                            aria-controls="home"
+                            aria-selected="true"
+                            >Appointment History</a
+                          >
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div
+                          *ngIf="booking"
+                          [ngClass]="{ show: booking, active: booking }"
+                          class="tab-pane fade"
+                          id="home"
+                          role="tabpanel"
+                          aria-labelledby="home-tab"
+                        >
+                          <div
+                            style="margin-top: 20px"
+                            class="col-12 table-responsive col-row"
+                          >
+                            <table class="table">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th colspan="1">#</th>
+                                  <th colspan="2">Reason for Appointment</th>
+                                  <th colspan="1">Action Required</th>
+                                  <th colspan="1">Book Appointment</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr
+                                  *ngFor="
+                                    let booking of applicantdata.referralDetails;
+                                    let i = index
+                                  "
+                                >
+                                  <th scope="row">{{ i + 1 }}</th>
+                                  <td colspan="2">{{ booking.referral }}</td>
+                                  <td colspan="1">
+                                    <span> {{ booking.referralAction }}</span>
+                                  </td>
+                                  <td colspan="1">
+                                    <button
+                                      [ngClass]="{
+                                        'btn btn-danger':
+                                          !booking.disablereferral,
+                                        'btn btn-light': booking.disablereferral
+                                      }"
+                                      (click)="openModal(i)"
+                                    >
+                                      Book Appointment
+                                    </button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div
+                          *ngIf="history"
+                          [ngClass]="{ show: history, active: history }"
+                          class="tab-pane fade"
+                          id="profile"
+                          role="tabpanel"
+                          aria-labelledby="profile-tab"
+                        >
+                          <div class="row">
+                            <div class="col-12 ng-trigger ng-trigger-fadeInOut">
+                              <div class="row mt-4">
+                                <div class="col-12 table-responsive">
+                                  <table class="table table-striped">
+                                    <thead class="thead-dark">
+                                      <tr>
+                                        <th scope="col">Date of Booking</th>
+                                        <th scope="col">
+                                          Reason for Appointment
+                                        </th>
+                                        <th scope="col">Action Required</th>
+                                        <th scope="col">Appointment Date</th>
+                                        <th scope="col">Appointment Time</th>
+                                        <th scope="col">Status</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr
+                                        *ngFor="
+                                          let history of appointmenthistorydata;
+                                          let i = index
+                                        "
+                                      >
+                                        <td>
+                                          {{
+                                            history.updatedAt
+                                              | date
+                                                : "MMM
+                                                                                    dd, y"
+                                          }}
+                                        </td>
+                                        <td>
+                                          <span>
+                                            {{
+                                              history.appt_reason.reasonName
+                                            }}</span
+                                          >
+                                        </td>
+                                        <td>
+                                          <span>
+                                            {{
+                                              history.actionRequired[0]
+                                                .actionName
+                                            }}
+                                          </span>
+                                        </td>
+                                        <td>
+                                          {{
+                                            history.appointmentDate
+                                              | date : "MMM dd, y"
+                                          }}
+                                        </td>
+                                        <td>
+                                          {{ history.slotId.starttime }} to
+                                          {{ history.slotId.endtime }}
+                                        </td>
+                                        <td>
+                                          <span> {{ history.status }}</span>
+                                        </td>
+                                        <td>
+                                          <button
+                                            *ngIf="history.status == 'booked'"
+                                            class="btn historybtn"
+                                            data-placement="top"
+                                            data-toggle="tooltip"
+                                            title="Cancel Appointment"
+                                            (click)="cancelAppointment(history)"
+                                          >
+                                            <i class="fas fa-ban"></i>
+                                          </button>
+                                        </td>
+                                        <td>
+                                          <button
+                                            *ngIf="history.status == 'booked'"
+                                            (click)="
+                                              rescheduleAppointment(history, i)
+                                            "
+                                            class="btn historybtn"
+                                            title="Reschedule Appointment"
+                                          >
+                                            <i
+                                              class="fas fa-calendar-alt"
+                                              aria-hidden="true"
+                                            ></i>
+                                          </button>
+                                        </td>
+                                        <td>
+                                          <button
+                                            (click)="
+                                              downloadappointmentfromhistory(
+                                                history
+                                              )
+                                            "
+                                            class="btn historybtn"
+                                            data-placement="top"
+                                            data-toggle="tooltip"
+                                            title="Appointment letter"
+                                          >
+                                            <i
+                                              class="fas fa-file-download"
+                                              aria-hidden="true"
+                                            ></i>
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="mini-footer bg-pink">
+    <div class="iw-copy-right">
+        <div style="padding: 10px">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        {{ "footerSection.footerAbt.Copyright © 2023 Stemz Healthcare. All rights reserved." | translate }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<ng-template #OTPModel let-modal>
+  <div class="modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">OTP Verification</h5>
+        <button
+          (click)="closeModel()"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          type="button"
+        >
+          <span> × </span>
+        </button>
+      </div>
+      <div class="modal-body flex-center">
+        <div *ngIf="checkotp">
+          <label>Enter OTP<span class="text-danger">*</span></label>
+          <input
+            class="form-control"
+            name="Enter OTP"
+            placeholder="Enter OTP"
+            [(ngModel)]="OTPvalue"
+            required=""
+            (input)="isNumberKey($event)"
+            type="text"
+          />
+        </div>
+        <h6 *ngIf="!checkotp">
+          The Submitted Otp is incorrect. Please try again
+        </h6>
+      </div>
+      <div class="modal-footer footer-end">
+        <button
+          (click)="closeModel()"
+          type="button"
+          *ngIf="checkotp"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <button
+          *ngIf="checkotp"
+          type="button"
+          class="btn btn-danger"
+          (click)="submitOTP()"
+        >
+          Submit
+        </button>
+        <button
+          *ngIf="!checkotp"
+          type="button"
+          class="btn btn-danger"
+          (click)="resubmitOTP()"
+        >
+          Retry
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #unavailableslot let-modal>
+  <div style="text-align: center" class="modal-body">
+    No Further Appointment Required.
+  </div>
+  <div class="modal-footer">
+    <div style="text-align: center; margin-bottom: 2%">
+      <button
+        (click)="modal.close('Save click')"
+        class="btn btn-danger"
+        data-dismiss="modal"
+        type="button"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #availableslot let-modal>
+  <div class="modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Please select an available slot
+        </h5>
+        <button
+          (click)="closeModel()"
+          class="close"
+          data-dismiss="modal"
+          type="button"
+        >
+          <span>×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row justify-content-center mb-3">
+          <div class="col-10">
+            <b *ngIf="selectedslot.date"
+              >Our Doctors recommend visiting on or after:
+              {{ selectedslot.date | date : "EEEE, MMMM dd,yyyy " }}
+            </b>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <div class="card shadow">
+              <div class="card-body">
+                <div class="row justify-content-center align-items-center m-2">
+                  <div class="col-auto mr-1">
+                    <button
+                      (click)="slotbydates('left')"
+                      class="btn btn-danger"
+                    >
+                      <i class="fas fa-angle-left py-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    *ngFor="let slotgroups of showslotgroup; let i = index"
+                    class="col text-center rounded mx-1 border"
+                    (click)="getslotgroupdetails(slotgroups)"
+                    [ngClass]="{
+                      'selected-dated': selectedslotitem(slotgroups)
+                    }"
+                    style="cursor: pointer"
+                  >
+                    <div
+                      class="text-center noselect py-1"
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        width: 60px;
+                        height: 56px;
+                      "
+                    >
+                      <span>{{ slotgroups.date | date : "MMM dd" }}</span>
+                      <span>{{ slotgroups.date | date : "E" }}</span>
+                    </div>
+                  </div>
+
+                  <div class="col-auto ml-1">
+                    <button
+                      (click)="slotbydates('right')"
+                      class="btn btn-danger"
+                    >
+                      <i class="fas fa-angle-right py-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row mx-4 my-3">
+                  <div class="col-12 border border-dark"></div>
+                </div>
+                <div *ngIf="Slottime.length == 0" class="row mx-4 my-2">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row justify-content-center text-center">
+                          <div class="col-12 text-center text-capitalize">
+                            slots not available
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div *ngIf="Slottime.length != 0" class="row mx-4 my-3">
+                  <div class="col-12">
+                    <div class="row justify-content-center">
+                      <div class="col-4 text-center">Morning</div>
+                      <div class="col-4 text-center">Afternoon</div>
+                      <div class="col-4 text-center">Evening</div>
+                    </div>
+                    <div class="col-12">
+                      <div class="row justify-content-center">
+                        <div class="col-4 text-center">
+                          <div
+                            *ngFor="let timeslot of Slottime"
+                            class="row mx-1"
+                          >
+                            <div
+                              *ngIf="timeslot.endtime <= '12:00'"
+                              style="border: 1px solid #dee2e6"
+                              class="col-12 mt-1 text-center noselect rounded"
+                              (click)="
+                                !timeslot.isAvailable
+                                  ? $event.stopPropagation()
+                                  : selectslottime(timeslot);
+                                (!timeslot.isAvailable ? false : null)
+                              "
+                              [ngClass]="{
+                                slotavailable: timeslot.isAvailable,
+                                'selected-dated': selectedlottimeitem(timeslot)
+                              }"
+                            >
+                              {{ timeslot.starttime | Timepipe }} to
+                              {{ timeslot.endtime | Timepipe }}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 text-center">
+                          <div
+                            class="row mx-1"
+                            *ngFor="let timeslot of Slottime"
+                          >
+                            <div
+                              *ngIf="
+                                '12:00' < timeslot.endtime &&
+                                '16:00' >= timeslot.endtime
+                              "
+                              (click)="
+                                !timeslot.isAvailable
+                                  ? $event.stopPropagation()
+                                  : selectslottime(timeslot);
+                                (!timeslot.isAvailable ? false : null)
+                              "
+                              [ngClass]="{
+                                slotavailable: timeslot.isAvailable,
+                                'selected-dated': selectedlottimeitem(timeslot)
+                              }"
+                              class="col-12 mt-1 text-center noselect rounded"
+                              style="border: 1px solid #dee2e6"
+                            >
+                              {{ timeslot.starttime | Timepipe }} to
+                              {{ timeslot.endtime | Timepipe }}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-4 text-center">
+                          <div
+                            *ngFor="let timeslot of Slottime"
+                            class="row mx-1"
+                          >
+                            <div
+                              *ngIf="'16:00' < timeslot.endtime"
+                              (click)="
+                                !timeslot.isAvailable
+                                  ? $event.stopPropagation()
+                                  : selectslottime(timeslot);
+                                (!timeslot.isAvailable ? false : null)
+                              "
+                              [ngClass]="{
+                                slotavailable: timeslot.isAvailable,
+                                'selected-dated': selectedlottimeitem(timeslot)
+                              }"
+                              class="col-12 mt-1 text-center noselect rounded"
+                              style="border: 1px solid #dee2e6"
+                            >
+                              {{ timeslot.starttime | Timepipe }} to
+                              {{ timeslot.endtime | Timepipe }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center" style="margin-top: 2rem">
+          <div
+            class="col-4 border m-2 rounded text-center"
+            style="background-color: #e0f1b5"
+          >
+            Available
+          </div>
+          <div class="col-4 border m-2 rounded bg-light text-center">
+            Not Available
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="align-items: end; place-content: end">
+        <button
+          (click)="closeModel()"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          type="button"
+        >
+          Close
+        </button>
+        <button
+          class="btn btn-danger"
+          type="button"
+          (click)="
+            fromhistory ? reschedule() : Bookappointment();(fromhistory ? false : null)">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+
+<!-- Spiner -->
+
+  
+<ngx-spinner style="text-align: center;"
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-scale-multiple"
+
+>
+<!-- <img style="display: block; margin: 0 auto; width: 400px; height: auto; will-change: transform;" src="assets/images/qmc-logo-new1.png" /> -->
+
+<!-- <p style="font-size: 20px; color: white;text-align: center">Loading Please Wait...</p> -->
+</ngx-spinner> 
+
+<ng-template #slotbooked let-modal>
+  <div class="modal-xl">
+    <div class="modal-content">
+      <div class="modal-body" style="text-align: center">
+        Your Appointment has been booked for
+        {{ Bookedslots.slotId.date | date : "MMM dd y" }} and
+        {{ Bookedslots.slotId.starttime }} - {{ Bookedslots.slotId.endtime }}.
+        Please arrive 15 minute in advance of the appointment and carry a print
+        out of your appointnment letter and passport
+      </div>
+      <div class="modal-footer">
+        <button
+          (click)="closeModel()"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          type="button"
+        >
+          Okay
+        </button>
+        <button
+          class="btn btn-danger"
+          type="button"
+          (click)="downloadappointment()"
+        >
+          Download Appointment Letter
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #slotsempty let-modal>
+  <div class="modal-xl">
+    <div class="modal-content">
+      <div
+        class="modal-body"
+        style="text-align: center; display: flex; flex-direction: column"
+      >
+        <div
+          class="swal2-icon swal2-error swal2-icon-show"
+          style="display: flex"
+        >
+          <span class="swal2-x-mark">
+            <span class="swal2-x-mark-line-left"></span>
+            <span class="swal2-x-mark-line-right"></span>
+          </span>
+        </div>
+        <h2 *ngIf="fromhistory">Unable To Reschedule the appointment</h2>
+        <h2 *ngIf="!fromhistory">Unable To Schedule the appointment</h2>
+        <span *ngIf="fromhistory">
+          slots are not open to reschedule for this booking
+        </span>
+      </div>
+
+      <div
+        class="modal-footer"
+        style="align-items: center; place-content: center"
+      >
+        <button
+          (click)="closeModel()"
+          class="btn btn-primary"
+          style="width: 100px; height: 50px"
+          data-dismiss="modal"
+          type="button"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

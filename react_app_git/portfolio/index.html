@@ -1,0 +1,234 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Karthi Ram's Portfolio</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Google Fonts: Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+   <!-- Mouse Cursor Trail Particles -->
+    <div id="trail-container"></div>
+
+    <!-- Success Message Box -->
+    <div id="success-message" class="hidden">
+        Message sent successfully!
+    </div>
+
+    <!-- Hero Section with Parallax -->
+    <div id="hero" class="section-container relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="parallax-bg">
+            <div class="parallax-layer parallax-layer-1" data-speed="20"></div>
+            <div class="parallax-layer parallax-layer-2" data-speed="50"></div>
+            <div class="parallax-layer parallax-layer-3" data-speed="30"></div>
+        </div>
+        <div class="content-container">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-on-scroll delay-1">Hello, I'm Karthi Ram L</h1>
+            <p class="text-xl md:text-2xl font-light mb-8 animate-on-scroll delay-2">A Dynamic Front-End Developer with expertise in React.js and Angular.</p>
+            <a href="#projects" class="btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 animate-on-scroll delay-3">
+                View My Work
+            </a>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" class="section-container bg-gray-800">
+        <div class="max-w-4xl w-full p-8 card text-center animate-on-scroll">
+            <h2 class="text-4xl font-semibold mb-4 text-indigo-400">About Me</h2>
+            <p class="text-lg leading-relaxed text-gray-300">
+                Adept at creating responsive and visually appealing web applications, with a focus on performance and user experience. I have a proven ability to collaborate with cross-functional teams to deliver high-quality solutions. My journey is fueled by a passion for continuous learning and a drive to build seamless digital experiences.
+            </p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="section-container bg-gray-900">
+        <div class="max-w-6xl w-full p-8 text-center">
+            <h2 class="text-4xl font-semibold mb-12 text-indigo-400 animate-on-scroll">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: Client Management System -->
+                <div class="card p-6 animate-on-scroll delay-1">
+                    <img src="https://placehold.co/400x250/2563eb/ffffff?text=Client+Management+System" alt="Client Management System" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Client Management System</h3>
+                    <p class="text-gray-400 mb-4">Developed a responsive system to streamline client data handling and improve user experience. Built with React and Bootstrap.</p>
+                    <a href="#" class="text-indigo-400 hover:underline transition-colors duration-200">View Project &rarr;</a>
+                </div>
+
+                <!-- Project Card 2: School Management System -->
+                <div class="card p-6 animate-on-scroll delay-2">
+                    <img src="https://placehold.co/400x250/2563eb/ffffff?text=School+Management+System" alt="School Management System" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">School Management System</h3>
+                    <p class="text-gray-400 mb-4">A comprehensive application for managing student records, faculty information, and grades to enhance operational efficiency.</p>
+                    <a href="#" class="text-indigo-400 hover:underline transition-colors duration-200">View Project &rarr;</a>
+                </div>
+
+                <!-- Project Card 3: E-Commerce Product Database -->
+                <div class="card p-6 project-card-parallax animate-on-scroll delay-3">
+                    <img src="https://placehold.co/400x250/2563eb/ffffff?text=E-Commerce+Product+Database" alt="E-Commerce Product Database" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">E-Commerce Product Database</h3>
+                    <p class="text-gray-400 mb-4">A robust product database solution designed for e-commerce platforms, utilizing a **RESTful API** built with **Node.js** to manage product data, and a front-end interface built with **React** to allow for easy product management.</p>
+                    <a href="#" class="text-indigo-400 hover:underline transition-colors duration-200">View Project &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section-container bg-gray-800">
+        <div class="max-w-2xl w-full p-8 card text-left animate-on-scroll">
+            <h2 class="text-4xl font-semibold mb-6 text-center text-indigo-400">Get in Touch</h2>
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-400">Your Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-400">Your Email</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3">
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-400">Subject</label>
+                    <input type="text" id="subject" name="subject" required
+                        class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-400">Message</label>
+                    <textarea id="message" name="message" rows="4" required
+                        class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="btn bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+ <footer class="footer-container bg-gray-900 border-t border-gray-700">
+        <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="text-xl font-semibold text-indigo-400 mb-2">Karthi Ram L</p>
+                <p class="text-sm text-gray-400">&copy; 2025 Karthi Ram. All rights reserved.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
+                <a href="#hero" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">About</a>
+                <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Projects</a>
+                
+                                <a href="mailto:ramkarthi168@gmail.com" class="text-indigo-400 hover:text-white font-medium transition-colors d-flex">
+                    ramkarthi168@gmail.com
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // === Mouse Trail Effect ===
+            const trailContainer = document.getElementById('trail-container');
+            document.addEventListener('mousemove', (e) => {
+                const particle = document.createElement('div');
+                particle.className = 'trail-particle';
+                const size = Math.random() * 8 + 2; // Particle size between 2 and 10
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${e.clientX}px`;
+                particle.style.top = `${e.clientY}px`;
+                
+                trailContainer.appendChild(particle);
+
+                // Remove the particle after its animation
+                particle.addEventListener('animationend', () => {
+                    particle.remove();
+                });
+            });
+
+            // === Parallax Effect on Hero Section (Scroll and Mouse) ===
+            const parallaxBg = document.querySelector('.parallax-bg');
+            const hero = document.getElementById('hero');
+
+            // Mouse-based parallax
+            hero.addEventListener('mousemove', (e) => {
+                const rect = hero.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const middleX = rect.width / 2;
+                const middleY = rect.height / 2;
+
+                const offsetX = (x - middleX) / middleX * 10; // Adjust multiplier for effect intensity
+                const offsetY = (y - middleY) / middleY * 10;
+
+                parallaxBg.style.transform = `translate(${-offsetX}px, ${-offsetY}px)`;
+            });
+            
+            // Mouse leave effect
+            hero.addEventListener('mouseleave', () => {
+                parallaxBg.style.transform = `translate(0px, 0px)`;
+            });
+
+            // === Intersection Observer for Scroll Animations ===
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    } else {
+                        entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Select all elements to animate
+            const animatedElements = document.querySelectorAll('.animate-on-scroll, .project-card-parallax');
+            animatedElements.forEach(el => observer.observe(el));
+
+            // === Form Submission Handler ===
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the default form submission
+
+                // You would typically send this data to a server here.
+                // For this example, we'll just log it to the console.
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData.entries());
+                console.log('Form data:', data);
+
+                // Show the success message
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('show');
+                
+                // Hide the message after 3 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                    setTimeout(() => {
+                        successMessage.classList.add('hidden');
+                    }, 300);
+                }, 3000);
+
+                // Clear the form
+                contactForm.reset();
+            });
+        });
+    </script>
+    </body>
+</html>

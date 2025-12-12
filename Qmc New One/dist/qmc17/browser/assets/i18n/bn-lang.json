@@ -1,0 +1,837 @@
+{
+    "headerSection": {
+        "marq": {
+            "Qatar Visa Center, Colombo will resume operations from 20th of January 2021 and the appointment bookings are available now | Please be informed that Qatar Visa Centers (QVCs) do not provide job offers of any kind. QVC role is to provide the legal services necessary for the issuance of visa. Hence, kindly beware of fraudulent/fictitious job offers from individuals misrepresenting themselves as agents or representatives of Qatar Visa Center": "কাতার ভিসা সেন্টার, কলম্বো 20 শে জানুয়ারী 2021 থেকে পুনরায় কাজ শুরু করবে এবং অ্যাপয়েন্টমেন্ট বুকিং এখন উপলব্ধ রয়েছে | অনুগ্রহ করে অবহিত করুন যে কাতার ভিসা কেন্দ্রগুলি (কিউভিসি) কোনও ধরণের চাকরির অফার দেয় না। QVC এর ভূমিকা হল প্রয়োজনীয় আইনি পরিষেবা প্রদান করা ভিসা প্রদানের জন্য। তাই, কাতার ভিসা সেন্টারের এজেন্ট বা প্রতিনিধি হিসাবে নিজেকে ভুলভাবে উপস্থাপনকারী ব্যক্তিদের কাছ থেকে প্রতারণামূলক/কাল্পনিক চাকরির অফার থেকে সাবধান থাকুন"
+        },
+        "menu": {
+            "Home": "হোম",
+            "About": "সম্পর্কিত",
+            "About Us": "আমাদের সম্পর্কে",
+            "Visa Medical Services": "ভিসা চিকিৎসা সেবা",
+            "Careers": "ক্যারিয়ার",
+            "FAQs": "সচরাচার জিজ্ঞাসিত প্রশ্ন",
+            "Contact": "যোগাযোগ",
+            "Status Check": "স্থিতি পরীক্ষা",
+            "Contact Us": "যোগাযোগ করুন",
+            "Privacy Policy": "গোপনীয়তা নীতি",
+            "Make an appointment": "একটি অ্যাপয়েন্টমেন্ট করুন",
+
+            "Partner login": "অংশীদার লগইন",
+            "Referrals": "প্রচার",
+            "Quick Links": "দ্রুত লিঙ্ক",
+            "Follow us on": "আমাদেরকে অনুসরণ করুন"
+        }
+    },
+    "homePage": {
+        "bannerPart": {
+            "WELCOME TO QATAR MEDICAL CENTER": "কাতার মেডিকেল সেন্টারে স্বাগতম",
+            "Best of Medical Technology & Healthcare Services": "চিকিৎসা প্রযুক্তি ও স্বাস্থ্যসেবা পরিষেবার সেরা"
+        },
+        "contentTitle": {
+            "MEDICAL VISA REQUIREMENTS FOR EXPATS IN THE STATE OF QATAR": "কাতার রাজ্যে প্রবাসীদের জন্য মেডিকেল ভিসার প্রয়োজনীয়তা",
+            "Visit Checklist": "চেকলিস্ট দেখুন",
+            "Book Referral Appointment": "রেফারেল অ্যাপয়েন্টমেন্ট বুক করুন",
+            "Status Check": "স্থিতি পরীক্ষা",
+            "Our Visa Medical Process": "আমাদের ভিসা মেডিকেল প্রসেস",
+            "Stemz Healthcare": "স্টেমজ হেলথ কেয়ার",
+            "About Us": "আমাদের সম্পর্কে",
+            "Visit Our Centers": "আমাদের কেন্দ্রগুলিতে যান",
+            "Work with us": "আমাদের সাথে কাজ করো",
+            "VISIT OUR CENTER": "আমাদের কেন্দ্রে যান",
+            "What Happens at the QATAR MEDICAL CENTER?": "কাতার মেডিক্যাল সেন্টারে কি হয়?",
+            "Please send us your resume at careers@qatarmedicalcenter.com": "অনুগ্রহ করে আমাদের careers@qatarmedicalcenter.com এ আপনার জীবনবৃত্তান্ত পাঠান"
+        },
+        "contentText": {
+            "Checklist": "চেকলিস্ট",
+            "Mumbai": "মুম্বাই",
+            "Hallmark Business Plaza, 2nd floor , Opposite Gurunanak Hospital, Bandra East Mumbai. ": "02য় তলা, আইকনিক বিল্ডিং, উর্মি এস্টেট, 95,গণপতরাও কদম মার্গ, লোয়ার পারেল , মুম্বাই 400013",
+            "Delhi": "দিল্লি",
+            "Delhi – Unit no. 2, Lower Ground Floor, Parsvnath Mall, Akshardham Metro Station,Akshardham, New Delhi – 110092.": "দিল্লি - ইউনিট নং 2, নীচ তলা, পার্শ্বনাথ মল, অক্ষরধাম মেট্রো স্টেশন, অক্ষরধাম, নিউ দিল্লি - 110092।",
+            "Kolkata": "কলকাতা",
+            "BIPL Building Gamma, First Floor,Bengal Intelligent Park,Block EP & GP, Plot A2 & M2,Sector V Salt Lake Electronic Complex,Bidhan Nagar, Kolkata-700 091.": "BIPL বিল্ডিং গামা, প্রথম তলা, বেঙ্গল ইন্টেলিজেন্ট পার্ক, ব্লক ইপি এবং জিপি, প্লট A2 এবং M2, সেক্টর V সল্টলেক ইলেকট্রনিক কমপ্লেক্স, বিধান নগর, কলকাতা-700 091।",
+            "Hyderabad": "হায়দরাবাদ",
+            "Krishe Sapphire, Ground Floor, Hitech City Rd, Vittal Rao Nagar, Madhapur, Hyderabad, Telangana 500081.": "কৃষে স্যাফায়ার, গ্রাউন্ড ফ্লোর, হাইটেক সিটি আরডি, ভিট্টল রাও নগর, মাধাপুর, হায়দ্রাবাদ, তেলেঙ্গানা 500081।",
+            "Chennai": "চেন্নাই",
+            "No. 136, Shyalama Towers, 1st Floor, Arcot Road, Vadapalani, Chennai.": "নং 136, শ্যালমা টাওয়ারস, 1ম তলা, আরকোট রোড, ভাদাপালানি, চেন্নাই।",
+            "Lucknow": "লখনউ",
+            "2nd floor, BBD Viraj Tower, Vibhuti Khand, Gomti Nagar, Lucknow.": "২য় তলা, বিবিডি বিরাজ টাওয়ার, বিভূতি খন্ড, গোমতী নগর, লখনউ।",
+            "Kochi": "কোচি",
+            "National Building,Pearl Star, Ground Floor,Edappally Raghavan Pillai Rd, Devankulangara, Mamangalam,Ernakulam, Kerala.": "ন্যাশনাল বিল্ডিং, পার্ল স্টার, গ্রাউন্ড ফ্লোর, এডাপ্পলি রাঘবন পিল্লাই আরডি, দেবানকুলাঙ্গরা, মামঙ্গলাম, এরনাকুলাম, কেরালা।",
+            "Please send us your resume at": "অনুগ্রহ করে আমাদের এখানে আপনার জীবনবৃত্তান্ত পাঠান",
+            "Medical check-up is mandatory before travelling to Qatar": "কাতার ভ্রমণের আগে মেডিকেল চেকআপ বাধ্যতামূলক",
+            "Expats who wish to visit the State of Qatar are required to apply for a Residence Visa with the Government of Qatar. As a part of the process, the people who are going to work and stay in Qatar from specific countries need to undergo a medical fitness check before traveling to Qatar.": "প্রবাসী যারা কাতার ভিজিট করতে ইচ্ছুক তাদেরকে কাতার সরকারের নিকটে আবাসন ভিসার জন্য আবেদন করতে হবে। প্রক্রিয়ার অংশ হিসাবে, যারা নির্দিষ্ট দেশ থেকে কাজের জন্য যাচ্ছেন এবং কাতারে অবস্থান করবেন তাদেরকে কাতারে ভ্রমণের পূর্বে একটি মেডিকেল ফিটনেস যাচাইকরণ প্রক্রিয়ার মধ্য দিয়ে যেতে হবে।",
+            "The Qatar Medical Center (QMC) is exclusively authorized by the Ministry of Interiors, Qatar to provide a Visa Medical certificate. QMC provides an efficient and up-to-date medical fitness check.": "কাতার মেডিকেল সেন্টার (QMC) একটি ভিসা মেডিকেল সার্টিফিকেট প্রদানের জন্য কাতারের স্বরাষ্ট্র মন্ত্রণালয়ের দ্বারা একচেটিয়াভাবে অনুমোদিত। QMC দক্ষ এবং আপ টু ডেট মেডিকেল ফিটনেস চেক প্রদান করে।",
+            "indialocation": "ভারতে, আমাদের কেন্দ্রগুলি দিল্লি, মুম্বাই, কলকাতা, হায়দ্রাবাদ, চেন্নাই, লখনউ এবং কোচিতে অবস্থিত।",
+            "bangaladeshlocation": "বাংলাদেশে, আমাদের কেন্দ্র ঢাকায় অবস্থিত।",
+            "The Qatar Medical Center (QMC) is exclusively authorized by the Ministry of Interiors, Qatar to provide a Visa Medical certificate. QMC provides an efficient and up-to-date medical fitness check. In India, our centers are located in Delhi, Mumbai, Kolkata, Hyderabad, Chennai, Lucknow, and Kochi.": "কাতার স্বরাষ্ট্র মন্ত্রণালয় কর্তৃক এককভাবে কাতার মেডিকেল সেন্টার (QMC) অনুমোদিত হয়েছে, ভিসা মেডিকেল সার্টিফিকেট প্রদানের জন্য। QMC একটি দক্ষ এবং হালনাগাদকৃত মেডিকেল ফিটনেস যাচাইকরণ প্রক্রিয়া সরবরাহ করে। ভারতে, আমাদের কেন্দ্রগুলি দিল্লি, মুম্বাই, কলকাতা, হায়দরাবাদ, চেন্নাই, লখনউ, এবং কচিতে অবস্থিত।",
+            "Our team of professionals understands the visa requirements. They are trained to support the applicants throughout the process. The Visa Medical Test is a sequential process that starts with the confirmation of the appointment. On reaching the centers, the applicants are guided on how they need to proceed further.": "আমাদের পেশাদার টিম ভিসার প্রয়োজনীয়তাগুলি বোঝেন। তারা পুরো প্রক্রিয়া জুড়ে আবেদনকারীকে সাপোর্ট দেওয়ার জন্য প্রশিক্ষণপ্রাপ্ত। ভিসা মেডিকেল টেস্ট হল একটি ধারাবাহিক প্রক্রিয়া যা অ্যাপয়েন্টমেন্টের নিশ্চিতকরণের মধ্য দিয়ে আরম্ভ করা হয়। কেন্দ্রে পৌঁছানোর পর, কীভাবে তাদেরকে পরবর্তী প্রক্রিয়ায় যেতে হবে সে বিষয়ে আবেদনকারীদেরকে নির্দেশনা দেওয়া হয়।",
+            "The Visa applicants are expected to undergo a preliminary medical check in their home country as part of the visa application process for the State of Qatar. The tests are carried out in the following steps": "কাতারের ভিসা আবেদন প্রক্রিয়ার অংশ হিসাবে ভিসা আবেদনকারীরা তাদের নিজ দেশে প্রাথমিক মেডিকেল টেস্ট করবেন বলে প্রত্যাশা করা হয়। টেস্টগুলো নিম্নলিখিত ধাপে সম্পন্ন করা হয়",
+            "STEMZ was founded in 2015, to become the leading healthcare provider for tourists, immigrants and working professionals serving Government and Diplomatic missions globally.": "2015 সালে STEMZ স্বাস্থ্যসেবা প্রতিষ্ঠিত হয়েছিল, পর্যটক, অভিবাসী এবং বিশ্বব্যাপী সরকারী ও কূটনৈতিক মিশনে কর্মরত পেশাজীবীদের জন্য অন্যতম স্বাস্থ্যসেবা প্রদানকারী হতে।",
+
+            "We believe in creating a long-lasting relationship with all our stakeholders, including our visitors, employees and partners.": "আমরা আমাদের ভিজিটর, কর্মচারী এবং অংশীদার সহ, আমাদের সকল স্টেকহোল্ডারদের সাথে দীর্ঘস্থায়ী সম্পর্ক তৈরিতে বিশ্বাসী।",
+
+            "STEMZ is backed by a team of highly qualified healthcare professionals with internal systems and processes based on the latest medical standards and best practices.": "STEMZ সর্বাধুনিক চিকিৎসা মান এবং সর্বোত্তম অনুশীলনের উপর ভিত্তি করে অভ্যন্তরীণ সিস্টেম এবং প্রক্রিয়াগুলির সাথে উচ্চ যোগ্যতা সম্পন্ন স্বাস্থ্যসেবা পেশাদারের একটি টিম দ্বারা পরচিালিত।",
+
+            "Stemz Healthcare is backed by a team of highly qualified healthcare professionals with internal systems and processes based on the latest medical standards and best practices.": "Stemz Healthcare সর্বাধুনিক চিকিৎসা মান এবং সর্বোত্তম অনুশীলনের উপর ভিত্তি করে অভ্যন্তরীণ সিস্টেম এবং প্রক্রিয়াগুলির সাথে উচ্চ যোগ্যতাসম্পন্ন স্বাস্থ্যসেবা পেশাদারদের একটি টিম দ্বারা পরচিালিত।",
+
+            "Take the next step in your career with Qatar Medical Center": "কাতার মেডিকেল সেন্টারের সাথে আপনার ক্যারিয়ারের পরবর্তী পদক্ষেপ নিন",
+            "Please remember to mention the job title and location in the subject line.": "সাবজেক্ট লাইনে চাকরির শিরোনাম এবং অবস্থান উল্লেখ করতে দয়া করে মনে রাখবেন।",
+            "PLEASE SEND US YOUR RESUME AT careers@qatarmedicalcenter.com": "অনুগ্রহ করে careers@qatarmedicalcenter.com এ আপনার জীবনবৃত্তান্ত পাঠান"
+        },
+        "BookReferralAppointmentpopuptext": {
+            "Only referral medical appointments can be booked": "শুধুমাত্র রেফারেল মেডিকেল অ্যাপয়েন্টমেন্ট বুক করা যাবে",
+            "Fresh applicants are required to book an appointment through": "নতুন আবেদনকারীদের এর মাধ্যমে একটি অ্যাপয়েন্টমেন্ট বুক করতে হবে",
+            "Continue": "চালিয়ে যান"
+        }
+    },
+    "aboutPage": {
+        "contentTitle": {
+            "WHO WE ARE": "আমরা কারা",
+            "OUR VISION": "আমাদের দৃষ্টি",
+            "OUR MISSION": "আমাদের লক্ষ্য",
+            "OUR CORE SERVICE": "আমাদের মূল পরিষেবা"
+        },
+        "contentText": {
+            "Stemz Healthcare was founded in 2015, to become the leading healthcare service provider for tourists, immigrants, and working professionals. We are a globally established organization and believe in creating lasting relationships with our employees, partners, and visitors, that establishes a positive environment based on honesty and trust.": "Stemz Healthcare 2015 সালে প্রতিষ্ঠিত হয়েছিল, পর্যটক, অভিবাসী এবং বিশ্বব্যাপী সরকারী ও কূটনৈতিক মিশনে কর্মরত পেশাজীবীদের জন্য অন্যতম স্বাস্থ্যসেবা প্রদানকারী হওয়ার জন্য। আমরা একটি বিশ্বব্যাপী প্রতিষ্ঠিত সংস্থা এবং আমাদের কর্মচারী, অংশীদার এবং দর্শনার্থীদের সাথে দীর্ঘস্থায়ী সম্পর্ক তৈরিতে বিশ্বাস করি, যা সততা এবং বিশ্বাসের উপর ভিত্তি করে একটি ইতিবাচক পরিবেশ প্রতিষ্ঠা করে।",
+            "Our infrastructure, systems, and processes have been developed to provide support and comfort to applicants and visitors while ensuring all government requirements are adhered to. At Stemz Healthcare we believe in innovation and continuous growth. We provide support to our employees, ensure they are trained on the latest techniques, processes, and protocols, and maintain an up-to-date technology-enabled environment at all our centers.": "আমাদের অবকাঠামো, সিস্টেম এবং প্রক্রিয়াগুলি আবেদনকারীদের এবং দর্শনার্থীদের সহায়তা এবং স্বাচ্ছন্দ্য প্রদানের জন্যে বিকাশিত এবং সমস্ত সরকারি প্রয়োজনীয়তা মেনে চলার বিষয়টি নিশ্চিত করা হয়েছে। Stemz Healthcare -এ আমরা উদ্ভাবন এবং ক্রমাগত বিকাশে বিশ্বাস করি। আমরা আমাদের কর্মীদের সহায়তা প্রদান করি, নিশ্চিত করি যে তারা সর্বাধুনিক কৌশল, প্রক্রিয়া এবং প্রটোকল সম্পর্কে প্রশিক্ষণ প্রাপ্ত এবং আমাদের সকল কেন্দ্রে একটি আধুনিক প্রযুক্তি-সক্ষম পরিবেশ বজায় রাখি।",
+            "Stemz Healthcare manages the Visa Medical part of the process through the Qatar Medical Centers which are strategically located in the same location as the Qatar Visa Centers for the convenience of the applicants.": "Stemz Healthcare কাতার মেডিকেল সেন্টারের মাধ্যমে প্রক্রিয়ার ভিসা মেডিকেল পার্ট পরিচালনা করে যা কৌশলগতভাবে আবেদনকারীদের সুবিধার জন্য কাতার ভিসা সেন্টারের মতো একই স্থানে অবস্থিত।",
+            "The Ministry of Interior, State of Qatar has awarded a mandate to Biomet Services Pte. Ltd to provide select residency procedures on its behalf in eight countries through the Qatar Visa Centers.": "Biomet Services Pte. Ltd কে কাতারের স্বরাষ্ট্র মন্ত্রণালয় ম্যান্ডেট প্রদান করেছে। কাতার ভিসা সেন্টারের মাধ্যমে এর পক্ষ থেকে আটটি দেশে নির্বাচিত আবাসিক পদ্ধতি প্রদান করবে।",
+            "As per the agreement, those coming to work in Qatar must complete their biometric enrollment, undergo medical examinations, and sign their work contracts in their home countries before coming to Qatar.": "চুক্তি অনুযায়ী, যারা কাতারে কাজ করতে আসছেন তাদেরকে অবশ্যই বায়োমেট্রিক তালিকাভুক্তি সম্পন্ন করতে হবে, মেডিকেল টেস্ট করতে হবে, এবং কাতারে আসার পূর্বেই তাদের নিজ দেশে কাজের চুক্তিতে স্বাক্ষর করতে হবে।",
+            "The first phase of the project will take place in eight countries: India, Nepal, Sri Lanka, Pakistan, Bangladesh, Indonesia, Philippines & Tunisia with the first ‘Qatar Visa Center launched in Colombo, Sri Lanka.": "প্রকল্পের প্রথম ধাপটি আটটি দেশে অনুষ্ঠিত হবে: ভারত, নেপাল, শ্রীলঙ্কা, পাকিস্তান, বাংলাদেশ, ইন্দোনেশিয়া, ফিলিপাইন এবং তিউনিসিয়া শ্রীলঙ্কার, কলম্বোতে প্রথম চালুকৃত ‘কাতার ভিসা সেন্টার সহ।",
+            "The main objective behind this project is for the Ministry of Interior to align the rights of the workers with the best international standards while providing the services in the state-of-the-art facilities through a seamless efficient process.": "এই প্রকল্পের মূল উদ্দেশ্য হল স্বরাষ্ট্র মন্ত্রণালয় একটি নির্বিঘ্ন দক্ষ প্রক্রিয়ার মাধ্যমে অত্যাধুনিক সুবিধার সাথে পরিষেবা প্রদান করার সময় শ্রমিকদের অধিকারকে সর্বোত্তম আন্তর্জাতিক মানদণ্ডের সাথে সামঞ্জস্য করা।",
+            "Our expertise and effective collaboration make sure that we achieve our goal of becoming the leading integrated global healthcare provider for travel and general health.": "আমাদের দক্ষতা এবং কার্যকর সহযোগিতা নিশ্চিত করে যে আমরা ভ্রমণ এবং সাধারণ স্বাস্থ্যের জন্য শীর্ষস্থানীয় সমন্বিত বিশ্ব স্বাস্থ্যসেবা প্রদানকারী হওয়ার লক্ষ্য অর্জন করেছি।",
+            "As the dedicated provider for medical health screenings, our goal is to provide an efficient customer-oriented service. We are one strong team united by our mission and values in our relentless quest to be the global partner of choice in Travel healthcare solutions. We are committed to building symbiotic relationships.": "মেডিকেল হেলথ স্ক্রিনিংয়ের জন্য নিবেদিত সরবরাহকারী হিসেবে, আমাদের লক্ষ্য হল একটি দক্ষ গ্রাহক-ভিত্তিক পরিষেবা প্রদান করা। ভ্রমণ স্বাস্থ্যসেবা সমাধানে বিশ্বব্যাপী পছন্দের অংশীদার হওয়ার জন্য আমাদের নিরলস অন্বেষণে আমাদের মিশন এবং মূল্যবোধের দ্বারা আমরা এক শক্তিশালী টিম। আমরা সিম্বায়োটিক সম্পর্ক গড়ে তুলতে প্রতিশ্রুতিবদ্ধ।",
+            "Visa Medical Services – Some governments require a certificate of health before applying for entry visas, these tests may differ depending upon various factors including nationality and the type of visa applied for.": "ভিসা মেডিকেল সার্ভিস – কিছু সরকারের এন্ট্রি ভিসার জন্য আবেদন করার পূর্বে স্বাস্থ্য সার্টিফিকেটের প্রয়োজন হয়, জাতীয়তা এবং আবেদনকৃত ভিসার ধরন সহ বিভিন্ন বিষয়ের উপর নির্ভর করে এই পরীক্ষাগুলি ভিন্ন হতে পারে।",
+            "Stemz Healthcare provides visa medical services to individuals who must meet medical fitness standards when applying for work or tourist visas for specific countries. Our protocols are aligned to the requirements of international government departments": "Stemz Healthcare নির্দিষ্ট ব্যক্তিদের কাজের জন্য অথবা পর্যটন ভিসার জন্য আবেদন করার সময় চিকিৎসা ফিটনেসের মানদন্ড পূরণ করে এমন ব্যক্তিদের ভিসা মেডিকেল পরিষেবা প্রদান করে। আমাদের প্রোটোকলগুলি আন্তর্জাতিক সরকারী বিভাগের প্রয়োজনীয়তার সাথে সামঞ্জস্যপূর্ণ।"
+        }
+    },
+    "vmsPage": {
+        "contentTitle": {
+            "OUR VISA MEDICAL PROCESS": "আমাদের ভিসা মেডিকেল প্রক্রিয়া"
+        },
+        "contentText": {
+            "We follow strict guidelines defined by the Qatar Ministry of Interior to provide an efficient and up-to-date medical fitness check service aligned to the Qatar Government’s requirements.": "আমরা কাতারের স্বরাষ্ট্র মন্ত্রণালয় কর্তৃক নির্ধারিত কঠোর নির্দেশনা অনুসরণ করে কাতার সরকারের প্রয়োজনীয়তার সাথে সামঞ্জস্যপূর্ণ একটি উপযুক্ত এবং হালনাগাতকৃত মেডিকেল ফিটনেস যাচাইকরণ পরিষেবা প্রদান করি।",
+            "Our team is well-versed with government visa requirements and trained to support applicants throughout the medical test part of the application process. On the confirmation of the appointment, the visa medical process is carried out in sequential steps and the applicants are led through the center efficiently and seamlessly.": "আমাদের টিম সরকারী ভিসার প্রয়োজনীয়তা সম্বন্ধে দক্ষ এবং আবেদন প্রক্রিয়ায় মেডিকেল টেস্টের অংশ জুড়ে আবেদনকারীদের সাপোর্ট দেওয়ার জন্য প্রশিক্ষিত। অ্যাপয়েন্টমেন্ট নিশ্চিত হওয়ার পরে, ভিসা মেডিকেল প্রক্রিয়া ক্রমানুসারে সম্পন্ন করা হয় এবং আবেদনকারীদের দক্ষতার সাথে এবং নির্বিঘ্নে কেন্দ্রের মাধ্যমে পরিচালিত করা হয়।",
+            "Access to the QMC is restricted to applicants only.": "QMC –তে প্রবেশাধিকার শুধুমাত্র আবেদনকারীদের জন্য সীমাবদ্ধ।",
+            "Our staff are not involved in the decision-making process and cannot provide immigration advice. All visa applications are assessed and decided by Qatar Authorities.": "আমাদের কর্মীরা সিদ্ধান্ত গ্রহণ প্রক্রিয়ায় জড়িত নয় এবং অভিবাসন সংক্রান্ত পরামর্শ দিতে পারেন না। সমস্ত ভিসা আবেদন মূল্যায়ন এবং সিদ্ধান্ত নেয় কাতার কর্তৃপক্ষ।",
+            "The medical investigations done by all our centers as part of the medical fitness check are the same and these may or may not be the same as the medical investigations done by visa centers of other countries or missions. While we make every effort to adhere to the stipulated turnaround timelines for the visa application and medical process, in some cases customers may be called back to the center on the advice of authorised medical professionals, for additional testing within the parameters of what is required by the Qatar visa process, as outlined below.": "মেডিকেল ফিটনেস যাচাইকরণের অংশ হিসাবে আমাদের সকল কেন্দ্র দ্বারা মেডিকেল অনুসন্ধান একই এবং অন্যান্য দেশের ভিসা সেন্টার বা মিশনগুলি দ্বারা কৃত মেডিকেল অনুসন্ধানের মত হতে পারে বা নাও হতে পারে। যদিও আমরা ভিসা আবেদন এবং মেডিকেল প্রক্রিয়ার জন্য নির্ধারিত সময়সীমা মেনে চলার সর্বাত্মক প্রচেষ্টা করি, কিছু ক্ষেত্রে গ্রাহকদের অনুমোদিত মেডিকেল পেশাদারদের পরামর্শে কেন্দ্রে  পুনরায় ডাকা হতে পারে, প্যারামিটারের মধ্য থেকে অতিরিক্ত পরীক্ষার জন্য যা কাতারের ভিসা প্রক্রিয়ার জন্য প্রয়োজনীয়, যেমন নিচে বর্ণিত হয়েছে।",
+            "As per the Qatar Ministry of Health guidelines, the applicants will be required to undergo advanced medical investigations if there are certain findings in their medical report after the initial medical fitness check at the center. If there are findings in an applicant’s :": "কাতার স্বাস্থ্য মন্ত্রণালয়ের নির্দেশিকা অনুযায়ী, কেন্দ্রে প্রাথমিক মেডিকেল ফিটনেস চেকের পর যদি তাদের মেডিকেল রিপোর্টে কিছু নির্দিষ্ট ফলাফল পাওয়া যায় তবে আবেদনকারীদেরকে অগ্রবর্তী মেডিকেল অনুসন্ধান করতে হবে। যদি কোন আবেদনকারীর কোন ফলাফল থাকে: ",
+            "a) X-ray investigation, then the applicant may be required to revisit the QVC for advanced X-ray investigations.": "এক্স-রে অনুসন্ধান, তাহলে আবেদনকারীকে অগ্রবর্তী এক্স-রে অনুসন্ধানের জন্য QVC -তে পুনরায় আসার প্রয়োজন হতে পারে।",
+            "b) Blood investigation, then the applicant may be required to revisit the QVC for advanced blood investigations through an approved external laboratory.": "রক্তের অনুসন্ধান, তাহলে আবেদনকারীকে অনুমোদিত বাহ্যিক পরীক্ষাগারের মাধ্যমে রক্তের অগ্রবর্তী অনুসন্ধানের জন্য QVC -তে পুনরায় ভিজিট করার প্রয়োজন হতে পারে।",
+            "c) Doctor investigation, then the applicant may be required to consult a specialist doctor at an approved external hospital.": "চিকিৎসকের অনুসন্ধান, তবে আবেদনকারীকে বাইরের অনুমোদিত হাসপাতালে বিশেষজ্ঞ ডাক্তারের পরামর্শ নিতে হতে পারে।",
+            "completionsteps": "উপরের পদক্ষেপগুলি সম্পূর্ণ করার পরেও কাতারের স্বরাষ্ট্র মন্ত্রণালয়ের দ্বারা একজন আবেদনকারীর ভিসার আবেদন প্রত্যাখ্যান করা হতে পারে।",
+            "The appointments are confirmed through SMS and/or emails. To complete the Visa Medical Process, the applicants must provide their active contact numbers and email ids. In case of referrals/revisits, the applicants are only allowed to enter the center if they have a confirmation of the appointment on SMS.": "এসএমএস এবং/অথবা ইমেলের মাধ্যমে অ্যাপয়েন্টমেন্ট নিশ্চিত করা হয়। ভিসা মেডিকেল প্রক্রিয়া সম্পন্ন করার জন্য, আবেদনকারীকে অবশ্যই তাদের সচল কন্টাক্ট নম্বর এবং ইমেল আইডি প্রদান করতে হবে। রেফারেল/পুন়ঃভিজিটের ক্ষেত্রে, আবেদনকারীদেরকে শুধুমাত্র এসএমএস -এ অ্যাপয়েন্টমেন্টের নিশ্চিতকরণ থাকলেই কেন্দ্রে প্রবেশের অনুমতি দেওয়া হয়।",
+            "Once the applicants go through the referred tests/consultations, they are required to submit their reports to the medical center physically/ in person.": "একবার আবেদনকারী উল্লেখিত পরীক্ষা/ পরামর্শের মধ্য দিয়ে গেলে, তাদেরকে সরাসরি/ ব্যক্তিগতভাবে মেডিকেল সেন্টারে তাদের রিপোর্ট জমা দিতে হবে।"
+        }
+    },
+    "careersPage": {
+        "contentTitle": {
+            "PUBLIC NOTICE": " গণবিজ্ঞপ্তি ",
+            "CAUTION AGAINST EMPLOYMENT FRAUD": " নিয়োগ জালিয়াতির বিরুদ্ধে সতর্কতা ",
+            "WORK WITH US": "আমাদের সাথে কাজ করুন",
+            "Please send us your resume at careers@qatarmedicalcenter.com": "অনুগ্রহ করে আমাদেরকে আপনার জীবনবৃত্তান্ত পাঠান careers@qatarmedicalcenter.com -এ",
+            "OUR GLOBAL PRESENCE": "আমাদের বৈশ্বিক উপস্থিতি",
+            "Profile Information:": "প্রোফাইল তথ্য:",
+            "First Name": "নামের প্রথম অংশ",
+            "Last Name": "নামের শেষাংশ",
+            "Email Id": "ইমেইল আইডি",
+            "emailval1": "ইমেল প্রয়োজন",
+            "emailval2": "ইমেল অবশ্যই একটি বৈধ ইমেল ঠিকানা হতে হবে",
+            "Mobile Number": "মোবাইল নম্বর",
+            "Candidate City": "প্রার্থী শহর",
+            "Country": "দেশ",
+            "Prefered Location": "পছন্দের স্থান",
+            "Select Location": "স্থান নির্বাচন করুন",
+            "Position Applied For": "পজিশনের জন্য আবেদন করা হয়েছে",
+            "Job Specific Information:": "চাকরীর নির্দিষ্ট তথ্য:",
+            "Highest Qualification": "সর্বচ্চ যোগ্যতা",
+            "Total Years Of Experience (In Years)": "মোট বছরের অভিজ্ঞতা (বছরে)",
+            "Relevant Years Of Experience (In Years)": "প্রাসঙ্গিক বছরের অভিজ্ঞতা (বছরে)",
+            "Current CTC (Per Annum)": "বর্তমান CTC (বার্ষিক)",
+            "Expected CTC (Per Annum)": "প্রত্যাশিত CTC (বার্ষিক)",
+            "Notice Period (In Days)": "নোটিস পিরিয়ড (দিনে)",
+            "Languages Known And Proficiency": "জানা ভাষা এবং দক্ষতা",
+            "Upload Resume Options (Word Or Pdf Only) -": "আপলোড রিজিউম অপশন (শুধুমাত্র ওয়ার্ড বা পিডিএফ) -",
+            "Applicant statement": "আবেদনকারীর স্টেটমেন্ট",
+            "Applicant statement1": "এতদ্বারা আমি ঘোষণা করছি এবং স্বীকার করছি যে এই আবেদনে দেওয়া আমার সমস্ত বিবরণ সত্য। আমি জানি যদি কোন বিবরণ মিথ্যা বলে প্রমাণিত হয়, তাহলে এটি আমার প্রার্থিতা প্রত্যাখ্যানের কারণ হতে পারে।",
+            "Applicant statement2": "আমি সম্মত যে কোম্পানি সেই তথ্য জমা রাখতে এবং প্রক্রিয়াকরণ করতে পারবে, যা আমি এই ফর্মটিতে অন্যান্য অতিরিক্ত তথ্যের সাথে প্রদান করেছি, যা আমি আমার সাক্ষাৎকার এবং কর্মসংস্থান প্রক্রিয়ার সময় কোম্পানির সাথে শেয়ার করতে পারি।",
+            "Accept Ts & Cs is required": "শর্তাবলীতে সম্মতি দেওয়া আবশ্যিক,",
+            "Acknowledgement": "স্বীকৃতি",
+            "Acknowledgement1": "আপনি কি বর্তমানে, বা পূর্বে, কাতার মেডিকেল সেন্টারে চাকরির জন্য আবেদন করেছেন?",
+            "Acknowledgement2": "আপনি কি বর্তমানে, বা পূর্বে, কাতার মেডিকেল সেন্টার কর্তৃক নিয়োগপ্রাপ্ত হয়েছিলেন?",
+            "Acknowledgement3": "আপনার আত্মীয় কি কাতার মেডিকেল সেন্টারে কাজ করছেন?,",
+            "Select": " নির্বাচন করুন",
+            "Yes": "হ্যাঁ",
+            "No": "না",
+            "If yes, specify the name and relationship.": "যদি হ্যাঁ হয়, নাম এবং সম্পর্ক উল্লেখ করুন।",
+            "Name": "নাম",
+            "Relationship": "সম্পর্ক",
+            "Submit": "জমা দিন"
+        },
+        "contentText": {
+            "contentText1": "আমরা এটি সমস্ত চাকরিপ্রার্থী এবং সাধারণ জনগণের নজরে আনতে চাই যে আমাদের প্রতিষ্ঠানের জন্য নিয়োগ একটি সুপ্রতিষ্ঠিত বাছাই প্রক্রিয়ার মাধ্যমে সম্পন্ন করা হয়।",
+            "contentText2": "আমরা নিয়োগ প্রক্রিয়ার কোন পর্যায়েই প্রার্থীর কাছ থেকে কোন অর্থ চাই না।",
+            "contentText3": "ব্যক্তি/ব্যক্তিদের গ্রুপ/সংস্থা যা সংগঠনের প্রতিনিধিত্বকারী হিসেবে পরিচয় প্রদান করে এমন কাওকে কোন ব্যক্তির প্রদত্ত অর্থের জন্য আমরা দায়ী নই।",
+            "Issued in Public Interest.": "জনস্বার্থে ইস্যুকৃত",
+            "Take the next step in your career with Qatar Medical Center": "কাতার মেডিকেল সেন্টারে আপনার ক্যারিয়ারের পরবর্তী পদক্ষেপ নিন",
+            "Please remember to mention the job title and location in the subject line.": "অনুগ্রহ সাবজেক্ট লাইনে চাকরির শিরোনাম এবং অবস্থান উল্লেখ করতে করে মনে রাখবেন।"
+        },
+        "popuptext": {
+            "Public Notice- Beware of Recruitment Fraudsters": "গণবিজ্ঞপ্তি- নিয়োগ জালিয়াতিদের থেকে সাবধান",
+            "popupcontent": "জানা গেছে যে কিছু জালিয়াতি সম্ভাব্য চাকরি প্রার্থীদেরকে 'অনুমোদিত নিয়োগ সংস্থা' হিসেবে পরিচয় দিয়ে প্রতারিত করে আসছে। তারা কোম্পানির নাম, লোগো, ওয়েবসাইট লিংক এবং ঠিকানা ব্যবহার করে ভুয়া নিয়োগপত্র ভূয়া স্টেশনারিতে ইস্যু করে এবং ভুয়া ইমেল আইডি এবং ফোন নম্বরের মাধ্যমে যোগাযোগ করে। তারা একটি অফার লেটার এবং বাছাই নিশ্চিতকরণের ক্ষেত্রে অর্থও চায়।",
+            "Know More": "আরও জানুন"
+        }
+    },
+    "faqsPage": {
+        "contentTitle": {
+            "PRE-EXAMINATION (BOOKING)": "প্রাক-পরীক্ষা (বুকিং)",
+            "How are Visa Medical Tests Scheduled?": "ভিসা মেডিকেল টেস্ট কিভাবে নির্ধারিত হয়?",
+            "How early can I make an appointment?": "কত তাড়াতাড়ি আমি একটি অ্যাপয়েন্টমেন্ট করতে পারি?",
+            "When will my visa medical Fitness Certificate expire?": "আমার ভিসার মেডিকেল ফিটনেস সার্টিফিকেট কখন শেষ হবে?",
+            "How do I book a Visa Medical examination?": "আমি কিভাবে ভিসা মেডিকেল পরীক্ষা বুক করব?",
+            "What if I have already had a Visa Medical for a different visa category?": " একটি ভিন্ন ভিসা বিভাগের জন্য যদি আমার আগে থেকেই একটি ভিসা মেডিকেল থাকে তাহলে পদ্ধতিটি কী?",
+            "CHECKLIST": "নজর তালিকা",
+            "What important information do I need to know before I arrive for my appointment?": "আমার অ্যাপয়েন্টমেন্টের জন্য পৌঁছানোর আগে আমার কী কী গুরুত্বপূর্ণ তথ্য জানা দরকার?",
+            "What do I need to bring on the day of appointment?": "অ্যাপয়েন্টমেন্টের দিন আমাকে কী আনতে হবে?",
+            "How long will the Visa Medical Testing at the Center take?": "QMC-তে ভিসা মেডিকেল প্রক্রিয়া সম্পূর্ণ করতে কতক্ষণ সময় লাগে",
+            "What happens if I forget the required items on the day of appointment?": " আমি যদি অ্যাপয়েন্টমেন্টের দিন প্রয়োজনীয় জিনিসপত্র ভুলে যাই তাহলে কি হবে?",
+            "PROCESS": "পদ্ধতি",
+            "What are the steps/process I will go through during my medical test?": "আমার মেডিকেল পরীক্ষার সময় আমি কোন প্রক্রিয়ার মধ্য দিয়ে যাব?",
+            "How do I know if I require a Medical Referral?": "আমার মেডিকেল রেফারেলের প্রয়োজন হলে আমি কিভাবে জানব?",
+            "What process do I need to follow for Medical Tests Referral?": " মেডিকেল টেস্ট রেফারেলের জন্য আমাকে কোন প্রক্রিয়া অনুসরণ করতে হবে?",
+            "RESULTS AND FOLLOW UP": "ফলাফল এবং অনুসরণ করুন",
+            "What happens after I have completed my Visa Medical Test?": "আমার ভিসা মেডিক্যাল টেস্ট সম্পূর্ণ করার পর প্রক্রিয়াটি কী?",
+            "FEMALE APPLICANTS": " মহিলা আবেদনকারী",
+            "What if I prefer to be seen by Female Doctor?": "মহিলা ডাক্তার দেখাতে পছন্দ করার পদ্ধতি কি?",
+            "What do I need to do to prepare for an X-Ray?": "এক্স-রে করার জন্য আমাকে কোন প্রস্তুতি অনুসরণ করতে হবে?",
+            "If I usually wear a head covering, can I wear this to my Visa Medical Test?": "যদি আমি সাধারণত মাথা ঢেকে রাখি, তাহলে কি আমার ভিসা মেডিকেল টেস্টে কোনো সমস্যা হবে?",
+            "Can I complete a chest x-ray examination if I am pregnant?": "মহিলা আবেদনকারী যদি গর্ভবতী হন, তাহলে তিনি কি QVC-তে এক্স-রে প্রক্রিয়ার মধ্য দিয়ে যাবেন?",
+
+            "GENERAL": "সাধারণ",
+            "Do I need to provide a photograph for my Visa Medical Test?": "আমার ভিসা মেডিকেল টেস্টের জন্য কি আমাকে ছবি দিতে হবে?",
+            "If I arrive early to my appointment will I be seen earlier?": "আমি যদি আমার অ্যাপয়েন্টমেন্টে তাড়াতাড়ি পৌঁছাই তাহলে কি আমাকে আগে দেখা হবে?",
+            "Whom do I contact to find-out if my visa has been granted?": "আমার ভিসা মঞ্জুর হয়েছে কিনা তা জানতে আমি কার সাথে যোগাযোগ করব?",
+            "Will I need to visit the medical Centre again?": "আমাকে কি আবার কাতার চিকিৎসা কেন্দ্রে যেতে হবে?",
+            "How can I provide feedback of my experience with the Qatar Medical Center?": "আমি কিভাবে কাতার মেডিকেল সেন্টারের সাথে আমার অভিজ্ঞতার প্রতিক্রিয়া জানাতে পারি?",
+            "What are the services that Qatar Medical Center offers?": "কাতার মেডিকেল সেন্টার কি কি সেবা প্রদান করে?",
+            "Which locations does Qatar Medical Center operate in?": "কাতার মেডিকেল সেন্টার কোন জায়গায় কাজ করে?",
+            "What are the documents required at Qatar Medical Center?": "কাতার মেডিকেল সেন্টারে কী কী কাগজপত্র প্রয়োজন?",
+            "What is the lounge service?": "লাউঞ্জ সার্ভিস কাকে বলে?",
+            "Medical Referral": "মেডিকেল রেফারেল",
+            "What is Medical Referral Process?": "মেডিকেল রেফারেল প্রক্রিয়া কি?",
+            "How will Qatar Medical Center contact the applicants in case their Medical Referral is required?": "কাতার মেডিকেল সেন্টার আবেদনকারীদের মেডিকেল রেফারেলের প্রয়োজন হলে তাদের সাথে কিভাবে যোগাযোগ করবে?",
+            "How to book the Medical Referral Appointment?": "আমি কিভাবে মেডিকেল রেফারেল অ্যাপয়েন্টমেন্টের জন্য বুক করব?",
+            "What is the time taken to complete the Medical Referral Process?": "মেডিকেল রেফারেল প্রক্রিয়া সম্পন্ন করতে কত সময় লাগে?",
+            "What are the types of Medical Referrals?": "উন্নত পরীক্ষার প্রকৃতির উপর নির্ভর করে এই পরীক্ষাগুলি সম্পন্ন হতে কয়েক দিন থেকে সপ্তাহ পর্যন্ত সময়লাগতে পারে।",
+            "Do the external medical facilities prescribe any tests directly to the applicants?": "বাহ্যিক চিকিৎসা সুবিধার জন্য তারা কি সরাসরি আবেদনকারীদের কোন পরীক্ষা লিখে দেয়?",
+            "Why are the Medical Referrals issued?": "কেন মেডিকেল রেফারেল জারি করা হয়?",
+            "Where are these advanced Medical Referral tests conducted?": "এই উন্নত মেডিকেল রেফারেল পরীক্ষাগুলি কোথায় পরিচালিত হয়?",
+            "Can the applicants visit any external hospital/ lab of their choice?": "আবেদনকারীরা কি তাদের পছন্দের কোনো বহিরাগত হাসপাতাল/ল্যাব দেখতে পারেন?",
+            "Are there any additional charges involved in the Medical Referral Process?": "মেডিকেল রেফারেল প্রক্রিয়ার সাথে জড়িত কোন অতিরিক্ত চার্জ আছে কি?",
+            "What happens if the applicant does not want to continue his/ her Visa Medical Process post the Referral letter is issued?": "রেফারেল লেটার ইস্যু করার পর আবেদনকারী তার ভিসা মেডিকেল প্রক্রিয়া চালিয়ে যেতে না চাইলে কী হবে?",
+            "Complaints": "অভিযোগ",
+            "How to report any incident of Bribery or Corruption at the Qatar Medical Center?": "কাতার মেডিকেল সেন্টারে ঘুষ বা দুর্নীতির কোনো ঘটনা ঘটলে কীভাবে রিপোর্ট করবেন?"
+        },
+        "contentText": {
+            "All Visa Medical Tests are carried out at the Qatar Medical centers within a few hours after applicants complete their visa application process and biometric enrolment at the Qatar Visa Center (QVC).": " যখন আবেদনকারীরা QVC ওয়েবসাইটের মাধ্যমে বায়োমেট্রিক তালিকাভুক্তির জন্য তাদের অ্যাপয়েন্টমেন্ট বুক করে",
+            "The Visa Medical Test is automatically scheduled when the applicants book their appointment for biometric enrolment via the QVC website. The time interval between both appointments is approximately one hour.": " তখন মেডিকেল টেস্ট স্বয়ংক্রিয়ভাবে নির্ধারিত হয়। উভয় অ্যাপয়েন্টমেন্টের মধ্যে সময়ের ব্যবধান প্রায় এক ঘন্টার কাছাকাছি।",
+            "Example: If the biometric appointment is set for 09:30 AM as per the QVC website appointment scheduler, the Visa Medical Test is automatically set at 10:30 AM": " উদাহরণ: QVC ওয়েবসাইট অনুসারে বায়োমেট্রিক প্রক্রিয়ার জন্য অ্যাপপয়েন্টমেট সকাল 9.30 এ সেট করা হয়েছে,তারপর স্বয়ংক্রিয়ভাবে মেডিকেল টেস্ট সকাল 10:30 এ সেট করা হবে।",
+            "For any information on the appointment at Qatar visa Center, Please click": "কাতার ভিসা সেন্টারে অ্যাপয়েন্টমেন্টের বিস্তারিত জানতে, অনুগ্রহ করে ক্লিক করুন",
+            "Appointments for first time booking can be done at the Qatar visa center. Please click": "কাতার ভিসা সেন্টারে প্রথমবারের মতো বুকিংয়ের জন্য অ্যাপয়েন্টমেন্ট করা যেতে পারে। ক্লিক করুন",
+            "Appointments for referral booking or any pending medical tests can be done at Qatar Medical center": " রেফারেল বুকিং বা কোনো মুলতুবি মেডিকেল পরীক্ষার জন্য অ্যাপয়েন্টমেন্ট কাতার মেডিকেল সেন্টারে সম্পন্ন করা যেতে পারে।",
+            "All appointments are managed by the Qatar Visa Center, Please refer to the details here": "সমস্ত অ্যাপয়েন্টমেন্ট কাতার ভিসা সেন্টার দ্বারা পরিচালিত হয়। অনুগ্রহ করে এখানে বিস্তারিত দেখুন",
+            "The Visa Medical Report is usually valid for a period of Sixty (60) days from the date of issue depending upon your visa category. Please get in touch with your sponsor for further information.": " ভিসা মেডিকেল রিপোর্ট সাধারণত আপনার ভিসার বিভাগের উপর নির্ভর করে ইস্যুর তারিখ থেকে ষাট (60) দিনের জন্য বৈধ। আরও তথ্যের জন্য আপনার স্পনসর সঙ্গে যোগাযোগ করুন.",
+            "All appointments booked through the Qatar Visa Center appointment scheduling system are automatically eligible for a Visa Medical Test on the same day. An applicant is not required to schedule an appointment separately for Visa Medical Test, except in the case of a missed appointment, whereby the applicant will need to re-schedule the appointment via the Qatar Visa Center website": "সমস্ত অ্যাপয়েন্টমেন্ট কাতার ভিসা সেন্টার সিস্টেমের মাধ্যমে বুক করা হয় যা একই দিনে মেডিকেল টেস্টের জন্য স্বয়ংক্রিয়ভাবে যোগ্য। একজন আবেদনকারীকে মেডিকেল টেস্টের জন্য আলাদাভাবে অ্যাপয়েন্টমেন্টের সময় নির্ধারণ করতে হবে না, মিস অ্যাপয়েন্টমেন্টের ক্ষেত্রে, যার ফলে আবেদনকারীকে কাতার ভিসা সেন্টারের ওয়েবসাইটের মাধ্যমে অ্যাপয়েন্টমেন্টের পুনরায় সময়সূচী করতে হবে।",
+            "If you have completed a Visa Medical Test within the last 3 months and you are required to do the same test for a different category of visa, please contact your sponsor for further instruction": " আপনি যদি গত 3 মাসের মধ্যে একটি ভিসা মেডিকেল পরীক্ষা সম্পন্ন করে থাকেন এবং আপনাকে ভিসার ভিন্ন বিভাগের জন্য একই পরীক্ষা করতে হবে, তাহলে অনুগ্রহ করে আরও নির্দেশের জন্য আপনার স্পনসরের সাথে যোগাযোগ করুন",
+            "It is recommended to arrive at the center at least 15 minutes before the appointment.": "অ্যাপয়েন্টমেন্টের কমপক্ষে 15 মিনিট আগে কেন্দ্রে পৌঁছানো বাধ্যতামূলক।",
+            "If you are late for your appointment by more than 15 minutes, then your appointment may be re-scheduled to later time.": "আপনি যদি আপনার অ্যাপয়েন্টমেন্টের জন্য 15 মিনিটের বেশি দেরি করেন, তাহলে আপনার অ্যাপয়েন্টমেন্ট পরবর্তী সময়ে পুনরায় নির্ধারিত হতে পারে।",
+            "The Visa Medical Test takes approximately 2 hours to be completed.": "মেডিকেল টেস্ট সম্পূর্ণ হতে প্রায় 2 ঘন্টা সময় লাগে।",
+            "No fasting is required –Eat and drink as normal prior to your appointment.": "কোন উপবাসের প্রয়োজন নেই - আপনার অ্যাপয়েন্টমেন্টের আগে স্বাভাবিকভাবে খাওয়া এবং পান করুন।",
+            "Do not wear any metallic objects such as jewelry when you come for the medical test.": "আপনি যখন মেডিকেল পরীক্ষার জন্য আসবেন তখন কোনো ধাতব বস্তু যেমন গয়না পরবেন না।",
+            "Do not bring any luggage or bags as these are not allowed in the centre.": "কোনো লাগেজ বা ব্যাগ আনবেন না কারণ এগুলো কেন্দ্রে অনুমোদিত নয়।",
+            "Please note that you may be asked to store bags, wallets or purses, money in the dedicated lockers before entering the medical center.": " দয়া করে মনে রাখবেন যে চিকিৎসা কেন্দ্রে প্রবেশের আগে আপনাকে ব্যাগ, মানিব্যাগ বা পার্স, টাকা ডেডিকেটেড লকারে রাখতে বলা হতে পারে।",
+            "Food items are not allowed inside the center": "কেন্দ্রে কোনো খাদ্য সামগ্রী অনুমোদিত নয়",
+            "Applicants with confirmed appointment are allowed in the centre, However, if applicant is disabled or a minor then he/she can be accompanied by another person to assist. Please notify the location security staff if you require further assistance.": "যে সমস্ত আবেদনকারী অ্যাপয়েন্টমেন্ট নিশ্চিত করেছেন তাদের কেন্দ্রে অনুমতি দেওয়া হয়। আবেদনকারী যদি অক্ষম বা অপ্রাপ্তবয়স্ক হয় তবে তাকে সাহায্য করার জন্য অন্য একজনের সাথে যেতে পারে। আপনার আরও সহায়তার প্রয়োজন হলে অনুগ্রহ করে অবস্থানের নিরাপত্তা কর্মীদের অবহিত করুন।",
+            "Do not carry laptops or any other electronic devices, apart from your mobile phone.": "মেডিকেল সেন্টারে যাওয়ার সময় আপনার মোবাইল ফোন ছাড়া একটি ল্যাপটপ বা অন্য কোনো ইলেকট্রনিক ডিভাইস সঙ্গে রাখুন",
+            "checklist9A": "দয়া করে মনে রাখবেন নিরাপত্তার কারণে, QMC-তে মোবাইল ফোনের অনুমতি নেই। চিকিৎসা কেন্দ্রে প্রবেশ করার আগে এগুলি ডেডিকেটেড লকারে সংরক্ষণ করা যেতে পারে।",
+            "You may be required to store your personal belongings in the dedicated lockers before entering the medical center.": "মেডিকেল সেন্টারে প্রবেশের আগে আপনাকে আপনার ব্যক্তিগত জিনিসপত্র ডেডিকেটেড লকারে সংরক্ষণ করতেহবে।",
+            "Taking pictures/photographs without the permission of authorized personnel in the centre is strictly prohibited.": "কেন্দ্রে অনুমোদিত কর্মীদের অনুমতি ছাড়া ছবি/ছবি তোলা কঠোরভাবে নিষিদ্ধ।",
+            "You will be required to sign a consent form before starting the visa medical process.": "ভিসা চিকিৎসা প্রক্রিয়া শুরু করার আগে আপনাকে একটি সম্মতি ফর্মে স্বাক্ষর করতে হবে।",
+            "The Qatar Medical Center shall not be responsible for any loss of personal items or belongings.": "ব্যক্তিগত জিনিসপত্র বা জিনিসপত্রের কোনো ক্ষতির জন্য কাতার মেডিকেল সেন্টার দায়ী থাকবে না।",
+            "For your comfort during vaccination and blood sampling, please wear loose-fitting clothing that allows easy access to your upper arm.": "টিকা এবং রক্তের নমুনা নেওয়ার সময় আপনার স্বাচ্ছন্দ্যের জন্য, অনুগ্রহ করে ঢিলেঢালা পোশাক পরুন যা আপনার উপরের বাহুতে সহজে প্রবেশ করতে দেয়।",
+            "Please bring the following:": " অ্যাপয়েন্টমেন্টের দিনে ভিসা মেডিকেল পরীক্ষার জন্য আসার সময় অনুগ্রহ করে নিশ্চিত করুন যে আপনি নিম্নলিখিত আইটেমগুলি বহন করবেন",
+            "Current valid passport": "বর্তমান বৈধ পাসপোর্টের আসল কপি",
+            "All documents released by Qatar Visa Center": "কাতার ভিসা সেন্টার দ্বারা প্রকাশিত সমস্ত নথি",
+            "Any medial report(s) relating to your health condition": "আপনার স্বাস্থ্যের অবস্থার সাথে সম্পর্কিত যেকোন মেডিকেল রিপোর্ট(গুলি)",
+            "Prescription glasses or contact lenses (if applicable)": " প্রেসক্রিপশন, চশমাবা কন্টাক্ট লেন্স (যদি প্রযোজ্য হয়) দৃষ্টিশক্তির সর্বশেষ বিবরণ সহ।",
+            "It is recommended to arrive 15 minutes before the appointment. The Visa Medical Test may take upto 02 hours to be completed.": "অ্যাপয়েন্টমেন্টের 15 মিনিট আগে পৌঁছানো বাঞ্ছনীয়। ভিসা মেডিকেল টেস্ট সম্পূর্ণ হতে 02 ঘন্টা পর্যন্ত সময় লাগতে পারে।",
+            "If you do not bring a certain document required for the Visa medical process, you may be required to re-schedule your appointment to the next available time/date.": " আপনি যদি ভিসা চিকিৎসা প্রক্রিয়ার জন্য প্রয়োজনীয় একটি নির্দিষ্ট নথি না আনেন, তাহলে আপনাকে পরবর্তী উপলব্ধ সময়/তারিখে আপনার অ্যাপয়েন্টমেন্ট পুনরায় নির্ধারণ করতে হতে পারে।",
+            "The video describes steps of the Visa Medical Process": "আমার মেডিকেল পরীক্ষার সময় আমি কোন প্রক্রিয়ার মধ্য দিয়ে যাব?",
+            "medicalteststepprocessA": "ক. সাধারণ পরীক্ষা",
+            "procesA1": "মেডিকেল ইতিহাস এবং শারীরিক পরীক্ষা ",
+            "procesA2": "দৃষ্টি পরীক্ষা",
+            "procesA3": "উচ্চতা, ওজন এবং রক্তচাপের মতো শারীরিক লক্ষণগুলির মরেিধপভরমাপ েরা হকি",
+            "medicalteststepprocessB": "খ. এক্স-রে পরীক্ষা:",
+            "procesB1": "বুকের এক্স-রে, পোস্টেরো সামনের দৃশ্য",
+            "medicalteststepprocessC": "গ. ল্যাব পরীক্ষা:",
+            "procesC1": "এইচআইভি, এইচবিসাগ এবং অ্যান্টি এইচসিভির জন্য এলিসা পরীক্ষা",
+            "procesC2": "সিফিলিসের জন্য ভিভিআরএল পরীক্ষা",
+            "procesC3": "জৈব রসায়ন পরীক্ষা যেমন র‍্যান্ডম ব্লাড সুগার, SGOT, SGPT, Serum Creatinine",
+            "procesC4": "মহিলাদের জন্য গর্ভাবস্থা পরীক্ষা",
+            "procesC5": "হিমোগ্লোবিন পরীক্ষা",
+            "medicalteststepprocessD": "d টিকা",
+
+            "https://qatarmedicalcenter.com/sl/visa-medical-services/": "https://qatarmedicalcenter.com/sl/visa-medical-services/",
+            "All Applicants will be notified through an SMS or call in the event they are required to undergo any additional test as a part of the referral process": "সমস্ত আবেদনকারীদের রেফারেল প্রক্রিয়ার অংশ হিসাবে কোনও অতিরিক্ত পরীক্ষার মধ্য দিয়ে যেতে হলে এসএমএসবা কলের মাধ্যমে",
+            "During the Visa Medical process, if there is any finding that requires further investigation, the applicant will have to revisit the Qatar Medical Center to get further instructions in order to complete their Visa Medical process. Appointment can be booked either by contacting the call center or by visiting": "ভিসা মেডিক্যাল প্রক্রিয়া চলাকালীন, যদি এমন কোনো তথ্য পাওয়া যায় যার জন্য আরও তদন্তের প্রয়োজন হয়,আবেদনকারীকে তাদের ভিসা মেডিকেল প্রক্রিয়া সম্পূর্ণ করার জন্য আরও তথ্য পেতে কাতার মেডিকেল সেন্টারে পুনরায় যেতে হবে। কল সেন্টারে যোগাযোগ করে বা ভিজিট করে অ্যাপয়েন্টমেন্ট বুক করা যেতে পারে।",
+            "If the applicant doesn’t visit the center within four (04) weeks from the date of his/her first visit, then applicant may have to go through the entire visa medical process again and the current medical process will be deemed expired.": "যদি আবেদনকারী তার প্রথম দর্শনের তারিখ থেকে চার (04) সপ্তাহের মধ্যে কেন্দ্রে না আসেন, তাহলে আবেদনকারীকে আবার পুরো ভিসা চিকিৎসা প্রক্রিয়ার মধ্য দিয়ে যেতে হবে এবং বর্তমান চিকিৎসা প্রক্রিয়াটির মেয়াদ শেষ বলে গণ্যহবে।",
+
+            "All medical Referrals will require applicant to collect a referral letter from the center, visit the specialist referred to complete the required medical tests and return to the center with the referral report/ invoices.": "সমস্ত মেডিকেল রেফারেলের জন্য আবেদনকারীকে কেন্দ্র থেকে একটি রেফারেল চিঠি সংগ্রহ করতে হবে, উল্লেখিত বিশেষজ্ঞ হাসপাতালগুলিতে যেতে হবে এবং প্রয়োজনীয় মেডিকেল পরীক্ষাগুলি সম্পূর্ণ করতে হবে এবং রেফারেল রিপোর্ট/ চালান নিয়ে কেন্দ্রে ফিরে আসতে হবে।",
+
+            "The Qatar Medical Center will submit your medical test results directly to the respective authority. Please get in touch with your sponsor if you require any further information regarding your medical test. For any further assistance please get in touch with the QVC contact center.": "কাতার মেডিকেল সেন্টার আপনার মেডিকেল পরীক্ষার ফলাফল সরাসরি সংশ্লিষ্ট কর্তৃপক্ষের কাছে জমা দেবে। আপনার মেডিকেল পরীক্ষা সংক্রান্ত আরও তথ্যের প্রয়োজন হলে অনুগ্রহ করে আপনার স্পনসরের সাথে যোগাযোগ করুন।আরও যেকোন প্রশ্নের জন্য অনুগ্রহ করে QVC কেন্দ্রের সাথে যোগাযোগ করুন।",
+            "We are supportive of reasonable preferences. In case of female doctor assistance, we will do our best to accommodate you.": "আমরা আপনার পছন্দ সমর্থন করছি এবং মহিলা ডাক্তার সহায়তার ক্ষেত্রে, আমরা আপনার জন্য আমাদের যথাসাধ্য চেষ্টা করব।",
+
+            "All applicants are required to remove jewelry and/or any metallic accessories. Long hair must be tied back and away from the face and front body area.": "সমস্ত আবেদনকারীকে গয়না বা ধাতব জিনিসপত্র অপসারণ করতে হবে। লম্বা চুল অবশ্যই মুখ এবং শরীরের সামনের অংশ থেকে পিছনে এবং দূরে বাঁধতে হবে।",
+
+            "If you normally wear a head covering (hijab), you can still wear this at the time of visible for a photograph from the bottom of your chin to above your eyebrows, including both cheeks for identity check medical examination. However, at some point of time, your face must be clearly.": "আপনি যদি সাধারণত হিজাব দিয়ে মাথা ঢেকে রাখেন, তবুও আপনি এটি পরতে পারেন। ডাক্তারি পরীক্ষায় পরিচয় পরীক্ষা করার জন্য আমাদের মূলত আপনার চিবুকের নিচ থেকে আপনার ভ্রুর উপরে পর্যন্ত একটি ফটোগ্রাফ প্রয়োজন যাতে উভয় গাল অন্তর্ভুক্ত থাকে। তবে আপনার মুখ অবশ্যই প্রতিবার স্পষ্টভাবে দৃশ্যমান হতে হবে।",
+
+            "In case of a pregnancy, it is imperative that you MUST notify us during the registration process.": "গর্ভাবস্থার ক্ষেত্রে, রেজিস্ট্রেশন প্রক্রিয়া চলাকালীন আপনাকে অবশ্যই আমাদের অবহিত করতে হবে।",
+
+            "Chest X-Ray will not be processed incase of a suspected pregnant applicant.": "সন্দেহভাজন গর্ভবতী আবেদনকারীর ক্ষেত্রে বুকের এক্স-রে প্রক্রিয়া করা হবে না।",
+            "No. However, your photograph will be taken on the same day to confirm your identity. Your face must be uncovered for the photograph.": "না আপনাকে কোনো ছবি দিতে হবে না কারণ আপনার পরিচয় নিশ্চিত করতে আপনার ছবি একই দিনে তোলা হবে। আপনার ছবি তোলার সময় আপনার মুখ যেন ঢেকে না যায় তা নিশ্চিত করুন",
+
+            "No. It is necessary to arrive for your appointment not earlier than 15 minutes prior to the scheduled time.": "না, নির্ধারিত সময়ের 15 মিনিটের আগে আপনার অ্যাপয়েন্টমেন্টের জন্য পৌঁছানো বাধ্যতামূলক।",
+
+            "All appointments are pre-scheduled, and you will be checked-in for your scheduled appointment block even if you arrive early.": "সমস্ত অ্যাপয়েন্টমেন্ট পূর্ব-নির্ধারিত, এমনকি যদি আপনি তাড়াতাড়ি পৌঁছান তবে আপনার নির্ধারিত অ্যাপয়েন্টমেন্ট সময়ে আপনাকে চেক-ইন করা হবে",
+
+            "You will receive an update via SMS on the registered number. The Qatar Medical Center is unable to provide an update about the processing of your visa application. If you need further advice, please contact Qatar Visa Center or your sponsor.": "আপনি আপনার মোবাইল নম্বরে SMS এর মাধ্যমে একটি আপডেট পাবেন। কাতার মেডিকেল সেন্টার আপনার ভিসা আবেদন প্রক্রিয়াকরণ সম্পর্কে একটি আপডেট প্রদান করতে অক্ষম। আপনার যদি আরও পরামর্শের প্রয়োজন হয়,অনুগ্রহ করে কাতার ভিসা সেন্টার বা আপনার স্পনসরের সাথে যোগাযোগ করুন।",
+
+            "If a medical referral is required, then applicant will be required to re-visit the center. It is important to provide the correct contact information. If the retesting/referral process takes longer than two months, then the entire Visa Medical Test may be repeated.": "যদি মেডিকেল রেফারেলের প্রয়োজন হয়, তাহলে আবেদনকারীকে কেন্দ্রে পুনরায় পরিদর্শন করতে হবে। সঠিক যোগাযোগের তথ্য প্রদান করা গুরুত্বপূর্ণ। যদি রেফারেল প্রক্রিয়া দুই মাসের বেশি সময় নেয়, তাহলে সম্পূর্ণ ভিসা মেডিকেল টেস্ট পুনরাবৃত্তি হতে পারে।",
+
+            "If you are at the medical centre, you can request for a feedback form. We at Qatar Medical Center welcome your feedback/suggestions (if any) to serve you better. Please write to us on": " আপনি যদি চিকিৎসা কেন্দ্রে থাকেন, আপনি একটি প্রতিক্রিয়া ফর্মের জন্য অনুরোধ করতে পারেন। কাতার মেডিকেল সেন্টারে আমরা আপনার প্রতিক্রিয়া/পরামর্শ (যদি থাকে) স্বাগত জানাই যাতে আমরা আপনাকে আরও ভালভাবে পরিবেশন করি। অনুগ্রহ করে info@qatarmedicalcenter.com-এ আমাদের কাছে লিখুন",
+            "info@qatarmedicalcenter.com": "info@qatarmedicalcenter.com",
+            "general6": "কাতার মেডিকেল সেন্টারে আমরা ভিসা আবেদনকারীদের এক্স-রে, রক্ত পরীক্ষা, চোখের পরীক্ষা, টিকা, ডাক্তারের পরামর্শ ইত্যাদি পরিষেবা প্রদান করি.",
+            "general7": "কাতার মেডিকেল সেন্টার বিশ্বব্যাপী 6টি দেশে 14টি কেন্দ্রে কাজ করে - ভারত, শ্রীলঙ্কা, বাংলাদেশ, পাকিস্তান,নেপাল এবং ফিলিপাইন।",
+            "general8-a": "অ্যাপয়েন্টমেন্ট লেটার: নিশ্চিত করুন যে অ্যাপয়েন্টমেন্ট লেটারে আপনার নামটি আপনার পাসপোর্টের মতোই রয়েছে।",
+            "general8-b": "পাসপোর্ট: এটি কমপক্ষে ছয় মাসের জন্য বৈধ হতে হবে।",
+            "general8-c": "বায়োমেট্রিক তালিকাভুক্তি রসিদ",
+            "general9": "লাউঞ্জ পরিষেবা একটি ঐচ্ছিক পরিষেবা৷ তবে এটি কাতার রাজ্যের স্বরাষ্ট্র মন্ত্রণালয়ের দ্বারা দ্রুত ভিসা বা চিকিৎসা প্রক্রিয়াকরণকে প্রভাবিত বা গ্যারান্টি দেয় না।",
+            "medicalreferral1": "ভিসা আবেদন প্রক্রিয়ার একটি অংশ হিসাবে, কিছু আবেদনকারীকে (লাউঞ্জ/ভিআইপি অন্তর্ভুক্ত) কাতার কর্তৃপক্ষের দ্বারা সংজ্ঞায়িত প্রোটোকল অনুযায়ী উন্নত চিকিৎসা তদন্তের জন্য একটি মেডিকেল রেফারেল জারি করা হতে পারে। এই উন্নত চিকিৎসা তদন্তগুলিকে মেডিকেল রেফারেল হিসাবে বর্ণনা করা হয়।",
+            "medicalreferral2": "আবেদনকারীদের একটি এসএমএস/কলের মাধ্যমে QVC পুনরায় দেখার জন্য অবহিত করা হবে। রিসেপশনে সঠিক যোগাযোগের নম্বর প্রদান করা আবশ্যক।",
+            "medicalreferral3": "আবেদনকারীদের রেফারেল প্রক্রিয়ার মধ্য দিয়ে যাওয়ার জন্য একটি রেফারেল অ্যাপয়েন্টমেন্ট বুক করতে হতে পারে যাএসএমএস/কল দ্বারা ব্যাখ্যা করা হয়েছে।",
+            "medicalreferral4": "উন্নত পরীক্ষার প্রকৃতির উপর নির্ভর করে এই পরীক্ষাগুলি সম্পন্ন হতে কয়েক দিন থেকে সপ্তাহ পর্যন্ত সময় লাগতে পারে।",
+            "medicalreferral5a": "1) অতিরিক্ত এক্স-রে ছবি - আবেদনকারীদের MoH নির্দেশাবলীর উপর ভিত্তি করে অতিরিক্ত এক্স-রে চিত্রের জন্যকাতার মেডিকেল সেন্টারে পুনরায় যেতে হতে পারে।",
+            "medicalreferral5b": "2) অতিরিক্ত ল্যাব পরীক্ষা:- যদি অতিরিক্ত ল্যাব পরীক্ষার প্রয়োজন হয়, তাহলে রক্তের নমুনাগুলি আরও পরীক্ষার জন্য বাইরের ল্যাবে পাঠানো হয়।",
+            "medicalreferral5c": "3) বহিরাগত বিশেষজ্ঞ পরীক্ষা - আবেদনকারীদের MoH নির্দেশিকাগুলির উপর ভিত্তি করে আরও পরীক্ষার জন্য অনুমোদিত হাসপাতালের বিশেষজ্ঞদের কাছে রেফার করা যেতে পারে (রেফারেল লেটার/ডকুমেন্ট জমা দেওয়ার প্রয়োজন হতে পারে)।",
+            "medicalreferral6": "যে সমস্ত আবেদনকারীকে মেডিকেল রেফারেল দেওয়া হয়েছে তাদের শুধুমাত্র সেই পরীক্ষাগুলি সম্পন্ন করতে হবে যা MoH কাতার তাদের রেফারেল লেটারে উল্লিখিত হিসাবে সুপারিশ করেছে। রেফার করা হাসপাতালগুলিতে পরিদর্শনের সময় কাতার মেডিকেল সেন্টার কর্তৃক জারি করা রেফারেল চিঠিতে উল্লেখ না থাকা অতিরিক্ত পরীক্ষার জন্য যেকোন অনুরোধ কাতার মেডিকেল সেন্টারে হেল্পলাইন নম্বরে কল করে বা info@qatarmedicalcenter.com এ লিখে রিপোর্ট করা যেতে পারে।",
+            "medicalreferral7": "মেডিকেল রিপোর্টের পর্যালোচনার পর, MoH আরো রোগ নির্ণয়ের জন্য বা নিশ্চিত বিশ্লেষণের জন্য অতিরিক্ত এক্স-রে ছবি/ল্যাব পরীক্ষা/বিশেষজ্ঞ পরীক্ষা লিখতে পারে।",
+            "medicalreferral8a": "আবেদনকারীদের নিম্নলিখিত প্রক্রিয়াটি করতে হবে",
+            "medicalreferral8b": "1)সিটি স্ক্যান, কোয়ান্টিফেরন পরীক্ষা এবং অন্যান্য পরীক্ষা সহ কাতার MoH দ্বারা জারি করা কিছু উন্নত চিকিৎসা তদন্তের জন্য বহিরাগত হাসপাতালে যেতে হবে",
+            "medicalreferral8c": "2) আবেদনকারীদের কাতার MoH-এর নির্দেশ অনুসারে অতিরিক্ত এক্স-রে করার জন্য কাতার মেডিকেল সেন্টারে পুনরায় পরিদর্শন করতে হবে, হয় একই দিনে বা পরে তাদের উপলব্ধতার ভিত্তিতে",
+            "medicalreferral8d": "*কিছু বিশেষ ক্ষেত্রে, আবেদনকারীদের আলাদা QVC অবস্থানে তাদের উন্নত চিকিৎসা পরীক্ষা সম্পূর্ণ করার অনুমতি দেওয়া হয়।",
+            "medicalreferral9": "কাতার মেডিকেল সেন্টার দ্বারা নির্দেশিকা অনুযায়ী সমস্ত চিকিৎসা পরীক্ষা করা হয়েছে এবং মান বজায় রাখা হয়েছে তানিশ্চিত করার জন্য যারা NABL( টেস্টিং এবং ক্যালিব্রেশন ল্যাবরেটরির জন্য জাতীয় স্বীকৃতি বোর্ড) এবং NABH হাসপাতাল এবং স্বাস্থ্যসেবা প্রদানকারীদের জন্য জাতীয় স্বীকৃতি বোর্ড) (এর মতো নিয়ন্ত্রক মান পূরণ করে, এমন স্বীকৃত স্বাস্থ্যসেবা (হাসপাতাল/ল্যাব) সুবিধাগুলি চিহ্নিত করে এবং তালিকাভুক্ত করে।",
+            "medicalreferral10": "কাতার মেডিকেল সেন্টারে আবেদনকারীকে কোনো খরচ ছাড়াই অতিরিক্ত এক্স-রে করা হয়। বহিরাগত হাসপাতালে পরিচালিত মেডিকেল তদন্তের জন্য, আবেদনকারীদের সরাসরি হাসপাতালে পরীক্ষার চার্জ দিতে হতে পারে। একটি অর্থপ্রদানের রসিদ আবেদনকারীকে সরাসরি প্রদান করা হবে।",
+            "medicalreferral11": "বহিরাগত চিকিৎসা কেন্দ্রগুলিতে পরিচালিত আপনার মেডিকেল রিপোর্টের একটি অনুলিপি পেতে, আপনি হয় কাতার চিকিৎসা কেন্দ্রে একটি লিখিত অনুরোধ জমা দিতে পারেন বা info@qatarmedicalcenter.com-এ একটি ইমেল পাঠাতে পারেন। আমাদের দল 24 ঘন্টার মধ্যে আপনার অনুরোধে সাড়া দেবে এবং সেই অনুযায়ী আপনাকে সহায়তা করবে। দয়া করে মনে রাখবেন যে প্রক্রিয়াকরণের সময় পরিবর্তিত হতে পারে, তবে আমরা যত তাড়াতাড়ি সম্ভব আপনাকে প্রয়োজনীয় তথ্য সরবরাহ করার চেষ্টা করি।",
+            "Complaints1": "কাতার মেডিকেল সেন্টার ঘুষ ও দুর্নীতির প্রতি জিরো টলারেন্স নীতি অনুসরণ করে। আমাদের হেল্পলাইন নম্বরে আমাদের সাথে যোগাযোগ করে অথবা info@qatarmedicalcenter.com-এ আমাদের ইমেল করে কোনো দুর্নীতি বা ঘুষের আবেদনের অভিযোগ করুন"
+        },
+        "newContentTitles": {
+            "newContentTitle1": "আমি কি ভিন্ন কোন মেডিকেল সেন্টারে পরীক্ষা করাতে পারি?",
+            "newContentTitle2": "বহিরাগত চিকিৎসা কেন্দ্রগুলিতে পরিচালিত পরীক্ষার জন্য আমি কীভাবে আমার রিপোর্টের একটি অনুলিপি পেতে পারি?",
+            "newContentTitle3": "মেডিকেল রেফারেল প্রক্রিয়ার সাথে জড়িত কোন অতিরিক্ত চার্জ আছে কি?",
+            "newContentTitle4": "বাইরের চিকিৎসা কেন্দ্রে পরীক্ষার খরচ অসাধ্য বলে মনে হলে কি কোন বিকল্প আছে??",
+            "newContentTitle5": "আমি কিভাবে পরবর্তী চিকিৎসা স্ক্রীনিং প্রক্রিয়া বন্ধ করতে পারি? প্রক্রিয়াটি বাতিল বা বন্ধ করতে আমাকে কোন পদক্ষেপগুলি অনুসরণ করতে হবে?",
+            "newContentTitle6": "বাহ্যিক চিকিৎসা কেন্দ্রে কোন নির্দিষ্ট চিকিৎসা পরীক্ষা করাতে হবে?",
+            "newContentTitle7": "আমার রক্তচাপের মাত্রা বেড়ে গেলে এক সপ্তাহ পর আবার কেন্দ্রে যেতে হবে কেন? বহিরাগত চিকিৎসা কেন্দ্রে চেক-আপ করিয়ে নেওয়ার পর কি আমি একই দিনে ফলো-আপ অ্যাপয়েন্টমেন্ট পেতে পারি?",
+            "newContentTitle8": "স্বাস্থ্য মন্ত্রক (MOH) দ্বারা প্রদত্ত নির্দেশিকা অনুসারে, এটি একটি রক্ত পরীক্ষা করা প্রয়োজন। - আমরা হাইলাইট করা লাইন মুছে দিতে পারি?",
+            "newContentTitle9": "বহিরাগত চিকিৎসা সুবিধা কি সরাসরি আবেদনকারীদের কোন পরীক্ষার নির্দেশ দেয়?",
+            "newContentTitle10": "মেডিকেল রেফারেল ইস্যু করার কারণ?",
+            "newContentTitle11": "অনুমোদিত বহিরাগত চিকিৎসা সুবিধাগুলিতে রেফারেলের প্রকারগুলি কি কি করতে হবে?",
+            "newContentTitle12": "সরকারি কর্তৃপক্ষ ভিসা মেডিকেল প্রক্রিয়ার জন্য নির্দেশিকা সংজ্ঞায়িত করেছে। প্রাথমিক ভিসা মেডিকেল পরীক্ষার সময় ডাক্তারের মূল্যায়নে এই নির্দেশিকাগুলি পূরণ না হলে, অনুমোদিত এবং অনুমোদিত বহিরাগত হাসপাতালে আবেদনকারীর আরও মূল্যায়নের প্রয়োজন হতে পারে।?",
+            "newContentTitle13": "আমি কীভাবে অনুমোদিত মেডিকেল সুবিধাগুলিতে রেফারেল পরীক্ষার জন্য আমার পছন্দের অবস্থান বেছে নিতে পারি?"
+        },
+        "newContentContents": {
+            "newContentContent1": "কাতার কর্তৃপক্ষের দ্বারা নির্ধারিত প্রবিধানগুলি মেনে চলার জন্য, অনুমোদিত বহিরাগত চিকিৎসা কেন্দ্রে একচেটিয়াভাবে পরীক্ষা করা বাধ্যতামূলক। অন্য কোন হাসপাতাল বা চিকিৎসা কেন্দ্রের রিপোর্ট গ্রহণ করা হবে না। পরীক্ষার ফলাফলের বৈধতা এবং গ্রহণযোগ্যতা নিশ্চিত করতে এই প্রয়োজনীয়তা অনুসরণ করা অপরিহার্য।",
+            "newContentContent2": "বহিরাগত চিকিৎসা কেন্দ্রগুলিতে পরিচালিত আপনার মেডিকেল রিপোর্টের একটি অনুলিপি পেতে, আপনি হয় কাতার চিকিৎসা কেন্দ্রে একটি লিখিত অনুরোধ জমা দিতে পারেন বা info@qatarmedicalcenter.com-এ একটি ইমেল পাঠাতে পারেন। আমাদের দল 24 ঘন্টার মধ্যে আপনার অনুরোধে সাড়া দেওয়ার জন্য সর্বাত্মক চেষ্টা করবে এবং সেই অনুযায়ী আপনাকে সহায়তা করবে। দয়া করে মনে রাখবেন যে প্রক্রিয়াকরণের সময় পরিবর্তিত হতে পারে, তবে আমরা যত তাড়াতাড়ি সম্ভব আপনাকে প্রয়োজনীয় তথ্য সরবরাহ করার চেষ্টা করি।",
+            "newContentContent3": "কাতার মেডিকেল সেন্টারে আবেদনকারীকে কোনো খরচ ছাড়াই অতিরিক্ত এক্স-রে স্ক্যান করা হয়। যাইহোক, বহিরাগত অনুমোদিত মেডিকেল সুবিধাগুলিতে পরিচালিত উন্নত চিকিৎসা তদন্তের জন্য, আবেদনকারীদের সরাসরি উল্লেখিত চিকিৎসা সুবিধাগুলিতে পরীক্ষার চার্জ প্রদান করতে হতে পারে। বহিরাগত চিকিৎসা সুবিধা দ্বারা সরাসরি আবেদনকারীকে একটি অফিসিয়াল রসিদ দেওয়া হবে।",
+            "newContentContent4": "প্রক্রিয়াটি চূড়ান্ত করতে এবং কাতার কর্তৃপক্ষের দ্বারা নির্ধারিত নির্দেশিকা মেনে চলার জন্য, এটি উল্লেখ করা গুরুত্বপূর্ণ যে নির্দিষ্ট ফি ভিসা চিকিৎসা প্রক্রিয়ার সাথে যুক্ত। আবেদনকারীদের সুবিধার জন্য এই দামগুলি বিশেষভাবে হাসপাতালগুলির সাথে আলোচনা করা হয়েছে৷ অনুমোদিত মেডিকেল সুবিধাগুলিতে প্রয়োজনীয় পরীক্ষা এবং পদ্ধতিগুলি সম্পন্ন করার মাধ্যমে, আপনি আপনার ভিসার আবেদনের জন্য প্রয়োজনীয় প্রয়োজনীয়তাগুলি পূরণ করবেন।",
+            "newContentContent5": "আপনি যদি মেডিকেল স্ক্রীনিং প্রক্রিয়া বন্ধ করার সিদ্ধান্ত নেন, তাহলে আপনি কাতার মেডিকেল সেন্টারের অভ্যর্থনা ডেস্কে উপলব্ধ \"অস্বীকৃতি ফর্ম\" পূরণ করতে পারেন। আরও তথ্যের জন্য অনুগ্রহ করে প্রি-প্রিন্ট ডকুমেন্টটি পড়ুন এবং কীভাবে বন্ধের সাথে এগিয়ে যেতে হবে সে সম্পর্কে নির্দিষ্ট বিশদ বিবরণের জন্য।",
+            "newContentContent6": "অনুগ্রহ করে বাহ্যিকভাবে অনুমোদিত মেডিকেল সেন্টারে রেফারেল লেটারে উল্লিখিত পরীক্ষাগুলি সম্পূর্ণ করা নিশ্চিত করুন। ডাক্তার যদি কোনো অতিরিক্ত পরীক্ষার পরামর্শ দেন, তাহলে নিশ্চিতকরণের জন্য কল সেন্টারে যোগাযোগ করুন। রেফারেল প্রক্রিয়া সম্পর্কে আরও জানতে, অনুগ্রহ করে আপনাকে প্রদত্ত পূর্ব-মুদ্রিত নথি দেখুন।",
+            "newContentContent7": "রক্তচাপের ওষুধের সঠিক মূল্যায়ন নিশ্চিত করার জন্য, কেন্দ্রে ফিরে যাওয়ার আগে এক সপ্তাহ অপেক্ষা করার পরামর্শ দেওয়া হয়। এটি ওষুধটি কার্যকর হওয়ার জন্য পর্যাপ্ত সময় দেয় এবং আপনার রক্তচাপের মাত্রার উপর এর প্রভাব সঠিকভাবে মূল্যায়ন করে",
+            "newContentContent8": "যেকোন অতিরিক্ত রক্ত পরীক্ষার প্রয়োজন হলে, আমাদের নার্স কেন্দ্রে নমুনা সংগ্রহ করবেন, যা তারপর প্রক্রিয়াকরণের জন্য আমাদের বহিরাগত চিকিৎসা সুবিধা বা ল্যাবে পাঠানো হবে। পরীক্ষার খরচ ব্যাঙ্ক অ্যাকাউন্টের বিবরণ সহ স্লিপে নির্দেশিত হবে। অনুগ্রহ করে নির্দিষ্ট পরিমাণ সরাসরি উল্লিখিত ব্যাঙ্ক অ্যাকাউন্টে জমা দিন। পেমেন্ট হয়ে গেলে, অনুগ্রহ করে আপনার রক্তের নমুনা সংগ্রহের জন্য জমা স্লিপ নিয়ে কেন্দ্রে ফিরে যান। অনুগ্রহ করে মনে রাখবেন যে অর্থ প্রদান সরাসরি বহিরাগত চিকিৎসা সুবিধা বা ল্যাবে করা উচিত, কাতার মেডিকেল সেন্টারে নয়।",
+            "newContentContent9": "যে সকল আবেদনকারীকে মেডিকেল রেফারেল জারি করা হয়েছে তাদের শুধুমাত্র কাতার মেডিকেল সেন্টার দ্বারা জারি করা তাদের রেফারেল লেটারে উল্লিখিত হিসাবে MoH কাতার দ্বারা সুপারিশকৃত পরীক্ষাগুলি সম্পূর্ণ করতে হবে। রেফার করা হাসপাতালগুলিতে পরিদর্শনের সময় কাতার মেডিকেল সেন্টার কর্তৃক জারি করা রেফারেল চিঠিতে উল্লেখ না থাকা অতিরিক্ত পরীক্ষার জন্য যেকোন অনুরোধ কাতার মেডিকেল সেন্টারে হেল্পলাইন নম্বরে কল করে বা info@qatarmedicalcenter.com এ লিখে রিপোর্ট করা যেতে পারে।",
+            "newContentContent10": "প্রাথমিক মেডিকেল রিপোর্টের পর্যালোচনার পর, MOH গভীর রোগ নির্ণয়ের জন্য বা নিশ্চিত বিশ্লেষণের জন্য অতিরিক্ত এক্স-রে ছবি/ল্যাব পরীক্ষা/বিশেষজ্ঞ পরীক্ষা লিখতে পারে।",
+            "newContentContent11": "*স্পেশালিস্ট ল্যাবরেটরি রেফারেল টেস্ট *সরকারী কর্তৃপক্ষ ভিসা মেডিকেল প্রক্রিয়ার জন্য নির্দেশিকা সংজ্ঞায়িত করেছে *যদি একজন আবেদনকারীর জন্য প্রাথমিক ভিসা মেডিক্যাল পরীক্ষার সময় *QMC ল্যাবে পরিচালিত ল্যাব তদন্তের ফলাফলে সংজ্ঞায়িত নির্দেশিকাগুলি পূরণ না হয়, তাহলে অনুমোদিত এবং অনুমোদিত বহিরাগত হাসপাতালে (গুলি) আরও মূল্যায়নের প্রয়োজন হতে পারে। *এই রেফারেলটি সাধারণত QMC পরীক্ষাগারে অস্বাভাবিক পরীক্ষাগার ফলাফলের জন্য তৈরি করা হয়। *পরামর্শের সময় স্পেশালিস্ট রেফারেল",
+            "newContentContent12": "যদি আবেদনকারীদের আরও মূল্যায়নের জন্য এক বা একাধিক বিশেষজ্ঞ ডাক্তারের কাছে যেতে হয়, তাহলে তাদের এই ধরনের পরামর্শের জন্য অর্থ প্রদান করতে হবে। যে ধরনের বিশেষজ্ঞ ডাক্তারদের কাছে যেতে হবে তা নিম্নলিখিতগুলির মধ্যে এক বা একাধিক হতে পারে: *অর্থোপেডিকস *গ্যাস্ট্রোএন্টারোলজিস্ট*এন্ডোক্রিনোলজিস্ট*চক্ষু বিশেষজ্ঞ *স্ত্রীরোগ বিশেষজ্ঞ *অভ্যন্তরীণ ঔষধ *সার্জন*চর্মরোগ বিশেষজ্ঞ *অন্যান্য বিশেষজ্ঞ ",
+            "newContentContent13": "QMC এ নিবন্ধনের সময় আবেদনকারীদের জিআরও কাউন্টারে সঠিক পছন্দের অবস্থানের নাম প্রদান করতে হবে।"
+        }
+    },
+    "contactPage": {
+        "contentTitle": {
+            "HEAD OFFICE": "হেড অফিস",
+            "Email ID": "ইমেল আইডি",
+            "Delhi": "দিল্লি",
+            "Business Hours": "কর্ম ঘন্টা",
+            "MUMBAI": "মুম্বায়",
+            "KOLKATA": "কোলকাতা",
+            "HYDERABAD": "হায়দ্রাবাদ",
+            "CHENNAI": "চেন্নাই",
+            "LUCKNOW": "লাখনাউ",
+            "KERALA": "কেরালা",
+            "Kochi": "কচি",
+            "Colombo": "কলম্বো",
+            "Kathmandu": "কাঠমান্ডু",
+            "Dhaka": "ঢাকা",
+            "Sylhet": "সিলেট",
+            "Islamabad": "ইসলামবাদ",
+            "Karachi": "করাচি",
+            "Manila": "ম্যানিলা",
+            "CONTACT US": "যোগাযোগ করুন",
+            "REACH US": "আমাদের কাছে পৌছান"
+        },
+        "contentText": {
+            "Email ID : info@qatarmedicalcenter.com": "ইমেল আইডি : info@qatarmedicalcenter.com",
+            "Contact Number : +91 44 6133 1333": " যোগাযোগের নম্বর :+91 44 6133 1333",
+            "Contact Number : +880 9666 777 101": " যোগাযোগের নম্বর :+880 9666 777 101",
+            "Hallmark Business Plaza, 2nd floor, Opposite Gurunanak Hospital, Bandra East Mumbai.": "02য় তলা, আইকনিক বিল্ডিং, উর্মি এস্টেট, 95,গণপতরাও কদম মার্গ, লোয়ার পারেল , মুম্বাই 400013",
+            "Delhi - Unit no. 2, Lower Ground Floor, Parsvnath Mall, Akshardham Metro Station, Akshardham, New Delhi - 110092.": " দিল্লি - ইউনিট নং 2, নীচ তলা,পার্শ্বনাথ মল, অক্ষরধাম মেট্রো স্টেশন, অক্ষরধাম, নতুন দিল্লি - 110092।",
+            "Floor, Emaar Digital green, Tower A": "ফ্লোর, এমার ডিজিটাল সবুজ, টাওয়ার এ",
+            "Sector –61, Gurgaon, Haryana, India – 122010.": "সেক্টর -61, গুরগাঁও, হরিয়ানা, ভারত - 122010।",
+            "info@qatarmedicalcenter.com": "info@qatarmedicalcenter.com",
+            "Delhi - Unit no. 2, Lower Ground Floor": "দিল্লি - ইউনিট নং 2, নীচ তলা",
+            "Parsvnath Mall, Akshardham Metro Station, Akshardham, New Delhi - 110092.": "পার্শ্বনাথ মল, অক্ষরধাম মেট্রো স্টেশন, অক্ষরধাম, নতুন দিল্লি - 110092।",
+            "Monday to Friday - 8:30 AM to 5:30 PM": "সোম থেকে শুক্রবার - সকাল 8:30 থেকে বিকাল 5:30 পর্যন্ত",
+            "8.30 AM TO 5.30 PM.": " সকাল 8:30 থেকে বিকাল 5:30 পর্যন্ত",
+            "Hallmark Business Plaza, 2nd floor": "হলমার্ক বিজনেস প্লাজা, ২য় তলা",
+            "Opposite Gurunanak Hospital, Bandra East Mumbai.": "গুরুনানক হাসপাতালের বিপরীতে, বান্দ্রা পূর্ব মুম্বাই।",
+            "BIPL Building Gamma, First Floor, Bengal Intelligent Park, Block EP & GP, Plot A2 & M2, Sector V Salt Lake Electronic Complex, Bidhan Nagar, Kolkata-700 091.": "BIPL বিল্ডিং গামা, প্রথম তলা, বেঙ্গল ইন্টেলিজেন্ট পার্ক, ব্লক ইপি এবং জিপি, প্লট A2 এবং M2, সেক্টর V সল্টলেক ইলেকট্রনিক কমপ্লেক্স, বিধান নগর, কলকাতা-700 091।",
+            "Krishe Sapphire, Ground Floor, Hitech City Rd, Vittal Rao Nagar, Madhapur, Hyderabad, Telangana 500081.": "কৃষে স্যাফায়ার, গ্রাউন্ড ফ্লোর, হাইটেক সিটি আরডি, ভিট্টল রাও নগর, মাধাপুর, হায়দ্রাবাদ, তেলেঙ্গানা 500081।",
+            "No. 136, Shyalama Towers, 1st Floor, Arcot Road, Vadapalani, Chennai.": "নং 136, শ্যালমা টাওয়ারস, 1ম তলা, আরকোট রোড, ভাদাপালানি, চেন্নাই।",
+            "2nd floor, BBD Viraj Tower, Vibhuti Khand,Gomti Nagar, Lucknow.": "২য় তলা, বিবিডি বিরাজ টাওয়ার, বিভূতি খন্ড, গোমতী নগর, লখনউ।",
+            "National Building, Pearl Star, Ground Floor, Edappally Raghavan Pillai Rd, Devankulangara, Mamangalam, Ernakulam, Kerala.": "ন্যাশনাল বিল্ডিং, পার্ল স্টার, গ্রাউন্ড ফ্লোর, এডাপ্পলি রাঘবন পিল্লাই আরডি, দেবানকুলঙ্গারা, মামঙ্গলাম, এরনাকুলাম, কেরালা।",
+            "No.475 /3 , Sentra Super City, Sri Jayawardenepura MW, Rajagiriya , Kotte Sri Lanka.": "নং. 475/3 , সেন্ট্রা সুপার সিটি, শ্রী জয়াবর্ধনেপুরা MW, রাজাগিরিয়া, কোত্তে শ্রীলঙ্কা।",
+            "Ward no. 4 Maharajgunj Chakrapath Kathmandu Nepal.": "4 নং ওয়ার্ড মহারাজগঞ্জ চক্রপথ কাঠমান্ডু নেপাল।",
+            "Rupayan Trade Center at 114, Kazi Nazrul Islam Avenue (11th Floor), Bangla Motor, Ramna, Dhaka-1000, Bangladesh.": "114 এ রূপায়ন ট্রেড সেন্টার, কাজী নজরুল ইসলাম এভিনিউ (11 তলা), বাংলা মোটর, রমনা, ঢাকা-1000, বাংলাদেশ।",
+            "Syed Plaza (Level-5, East Side) of Multiplan Shahjalal City, Plot #D/1, Main Road, Block-D, Shahjalal Housing Estate, Sylhet, Bangladesh.": "মাল্টিপ্ল্যান শাহজালাল সিটির সৈয়দ প্লাজা (লেভেল-৫, ইস্ট সাইড), প্লট #ডি/১, মেইন রোড, ব্লক-ডি, শাহজালাল হাউজিং এস্টেট, সিলেট, বাংলাদেশ।",
+            "Garden Tower, 2nd Floor, Sahajalal Bridge,Link Road, PS : Kotwali,Sylhet - 3100, Bangladesh.": "Garden Tower, 2nd Floor, Sahajalal Bridge,Link Road, PS : Kotwali,Sylhet - 3100, Bangladesh.",
+            "Gerry’s Building, 1-A, I & T Center, G-6, Islamabad, Pakistan": "গেরিস বিল্ডিং, 1-এ, আই অ্যান্ড টি সেন্টার, জি -6, ইসলামাবাদ, পাকিস্তান।",
+            "Bahria Complex IV, 4th Floor, Main Chaudhary Khaliq UZ Zaman Road, Gizri Road, Clifton area Navy Housing Society, Karachi, Pakistan.": "বাহরিয়া কমপ্লেক্স IV, 4র্থ তলা, প্রধান চৌধুরী খালিক ইউজেড জামান রোড, গিজরি রোড, ক্লিফটন এলাকা নেভি হাউজিং সোসাইটি, করাচি, পাকিস্তান।",
+            "Unit 106, NU mall of Asia Building, Coral Way st., MOA complex, Pasay City, Manila, Philippines.": "ইউনিট 106, এশিয়া বিল্ডিং এর NU মল, কোরাল ওয়ে সেন্ট., MOA কমপ্লেক্স, প্যাসে সিটি, ম্যানিলা, ফিলিপাইন।",
+            "All fields are mandatory.": "সব বিষয় আবশ্যক.",
+            "YOUR NAME": "আপনার নাম",
+            "YOUR EMAIL": "তোমার ইমেইল",
+            "VISA NUMBER": "ভিসার নম্বর",
+            "CATEGORY": "শ্রেণী",
+            "PRE-EXAMINATION (booking)": "প্রাক-পরীক্ষা (বুকিং)",
+            "PAYMENT": "পেমেন্ট",
+            "CHECKLIST": "চেকলিস্ট",
+            "APPOINTMENT": "অ্যাপয়েন্টমেন্ট",
+            "PROCESS": "প্রক্রিয়া",
+            "RESULT AND FOLLOW UP": "ফলাফল এবং অনুসরণ করুন",
+            "WOMEN": "মহিলা",
+            "CHILDREN": "শিশু",
+            "GENERAL": "সাধারণ",
+            "OTHERS": "অন্যান্য",
+            "MESSAGE": "বার্তা",
+            "REFERRAL APPOINTMENT": "রেফারাল অ্যাপয়েন্টমেন্ট",
+            "REFERRAL PROCESS": "রেফারেল প্রসেস",
+            "Business hours might extend depending on the number of applicants at the center.": "কেন্দ্রে আবেদনকারীদের সংখ্যার উপর নির্ভর করে ব্যবসার সময় বাড়ানো হতে পারে।",
+            "Saturday - 8:30 AM to 1:00 PM": "শনিবার - 8:30 AM থেকে 1:00 PM",
+            "nameval": "নাম প্রয়োজন",
+            "emailval": "ইমেল প্রয়োজন",
+            "visaval1": "ভিসা নম্বর প্রয়োজন",
+            "visaval2": "সর্বনিম্ন দৈর্ঘ্য 8",
+            "visaval3": "অনুগ্রহ করে শুধুমাত্র সংখ্যাসূচক লিখুন",
+            "categoryval": "বিভাগ প্রয়োজন",
+            "messageval": "ম্যাসেজ প্রয়োজন"
+        }
+    },
+    "tooltipContentPage": {
+        "contentTitle": {
+            "SECURITY CHECK": "নিরাপত্তা যাচায়",
+            "REGISTRATION": "নিবন্ধন",
+            "NURSE STATION": "নার্স স্টেশন",
+            "DOCTOR CONSULTATION": "ডাক্তারের পরামর্শ",
+            "CHEST X RAY": "বুকের এক্স - রে"
+        },
+        "contentText": {
+            "a)Applicant’s documents are collected and verified.": "a) আবেদনকারীর নথি সংগ্রহ এবং যাচাই করা হয়।",
+            "b)3 Check process where the Passport, Appointment letter, and the biometric receipt are validated.": "b) 3 যেখানে পাসপোর্ট, অ্যাপয়েন্টমেন্ট লেটার এবং বায়োমেট্রিক রসিদ যাচাই করা হয়েছে তা পরীক্ষা করুন।",
+            "c)The applicants are then guided to the registration desk.": "c) আবেদনকারীদেরকে তারপর রেজিস্ট্রেশন ডেস্কে নিয়ে যাওয়া হয়।",
+            "a)Applicants are registered post verification of documents.": "a) আবেদনকারীরা নথি যাচাইকরণের পরে নিবন্ধিত হয়।",
+            "b)Biometric authentication of the applicant.": "b) আবেদনকারীর বায়োমেট্রিক প্রমাণীকরণ।",
+            "c)The applicant signs the consent form.": "c) আবেদনকারী সম্মতি ফর্মে স্বাক্ষর করেন।",
+            "d)A token is generated for the applicant to begin his Visa medical journey.": "d) আবেদনকারীকে তার ভিসা চিকিৎসা যাত্রা শুরু করার জন্য একটি টোকেন তৈরি করা হয়।",
+            "e)Applicant feedback is captured.": "e) আবেদনকারীর মতামত নেওয়া হয়েছে।",
+            "f)The applicant is then guided to the waiting area.": "f) তারপরে আবেদনকারীকে ওয়েটিং এরিয়াতে নিয়ে যাওয়া হয়।",
+            "a)Biometric authentication of the applicant.": "a) আবেদনকারীর বায়োমেট্রিক প্রমাণীকরণ।",
+            "b)Height, weight, and blood pressure is recorded.": "b) উচ্চতা, ওজন এবং রক্তচাপ রেকর্ড করা হয়।",
+            "c)Vision Testing.": "c) দৃষ্টি পরীক্ষা।",
+            "d)Vaccine administration.": "d) ভ্যাকসিন প্রশাসন।",
+            "e)Medical History is entered.": "e) চিকিৎসার ইতিহাস প্রবেশ করানো হয়েছে।",
+            "f)Blood sample collection.": "f) রক্তের নমুনা সংগ্রহ।",
+            "g)Applicant feedback is captured.": "g) আবেদনকারীর মতামত নেওয়া হয়েছে।",
+            "h)The applicant is then guided to the waiting area.": "h) তারপরে আবেদনকারীকে ওয়েটিং এরিয়াতে নিয়ে যাওয়া হয়।",
+            "b)Review of Nurse findings.": "b) নার্স অনুসন্ধানের পর্যালোচনা।",
+            "c)Complete Medical History and Physical examination.": "c) সম্পূর্ণ মেডিকেল ইতিহাস এবং শারীরিক পরীক্ষা।",
+            "d)Applicant feedback is captured.": "d) আবেদনকারীর মতামত নেওয়া হয়েছে।",
+            "e)The applicant is then guided to the waiting area.": "e) তারপরে আবেদনকারীকে ওয়েটিং এরিয়াতে নিয়ে যাওয়া হয়।",
+            "b)Chest X-ray (PA view) is captured.": "b) বুকের এক্স-রে (পিএ ভিউ) ক্যাপচার করা হয়েছে।",
+            "c)Image quality is assessed by a technician and sent to the Radiologist.": "c) ছবির গুণমান একজন প্রযুক্তিবিদ দ্বারা মূল্যায়ন করা হয় এবং রেডিওলজিস্টের কাছে পাঠানো হয়।",
+            "e)The applicant ends the Visa Medical Process and exits the center.": "e) আবেদনকারী ভিসা মেডিক্যাল প্রক্রিয়া শেষ করে কেন্দ্র থেকে বেরিয়ে যায়।"
+        }
+    },
+    "statusCheckPage": {
+        "contentTitle": {
+            "VISA STATUS CHECK": "ভিসা স্ট্যাটাস চেক"
+        },
+        "contentText": {
+            "visa number": "ভিসা নম্বর",
+            "passport number": "পাসপোর্ট নম্বর",
+            "Registration date": "নিবন্ধনের তারিখ",
+            "Application status": "আবেদনপত্রের অবস্থা",
+            "Description": "বর্ণনা",
+            "medicalpendingcontent1": "চিকিৎসা পরিদর্শনের জন্য আপনার পদক্ষেপগুলি চলছে বা অসম্পূর্ণ।",
+            "medicalpendingcontent2": "অনুগ্রহ করে স্থিতি পরিবর্তনের জন্য 4 কার্যদিবসের জন্য অপেক্ষা করুন৷ যদি স্থিতি পরিবর্তন না হয়ে থাকে, অনুগ্রহ করে কল সেন্টারে যোগাযোগ করুন ",
+            "medicalreportpending1": "আপনার মেডিকেল সার্টিফিকেট রিপোর্ট করার জন্য মুলতুবি আছে।",
+            "medicalreportpending2": "যারা বহিরাগত ল্যাব টেস্টিং প্রক্রিয়ার মধ্য দিয়ে যাওয়ার জন্য রক্তের নমুনা জমা দিয়েছেন, তাদের জন্য, ল্যাব রিপোর্টে স্থিতি পরিবর্তনের আগে 10 দিন পর্যন্ত বিলম্ব হতে পারে।",
+            "Authoritiespending": "আপনার মেডিকেল সার্টিফিকেট কর্তৃপক্ষের সাথে রিপোর্ট করার জন্য মুলতুবি আছে",
+            "revisitstatus": "অতিরিক্ত অনুসন্ধান সম্পন্ন করার জন্য আপনাকে কেন্দ্রটি পুনরায় পরিদর্শন করতে হবে",
+            "revisitstatus1": "রেফারেলের বর্ণনার জন্য অনুগ্রহ করে লিঙ্কে ক্লিক করুন ( রেফারেল বিবরণের জন্য লিঙ্ক যোগ করুন)",
+            "Please contact call center": "অনুগ্রহ করে কল সেন্টারে যোগাযোগ করুন",
+            "to book appointment.": "অ্যাপয়েন্টমেন্ট বুক করতে।",
+            "finalreport": "আপনার চূড়ান্ত মেডিকেল রিপোর্ট সম্পন্ন হয়েছে। আবেদনকারী এখন ফলাফল বা ভিসা সংক্রান্ত কোনো অতিরিক্ত অনুসন্ধানের জন্য নিয়োগকর্তার সাথে যোগাযোগ করতে পারেন",
+            "medicalreportpending3": "For Applicants who have submitted blood samples for undergoing external lab testing process, the lab report delay may be up to 10 days before status changes.",
+            "Authoritiespending1": " স্থিতি পরিবর্তনের জন্য 04 কার্যদিবস পর্যন্ত সময় লাগতে পারে। 04 দিনের পরে যেকোনো সাহায্যের জন্য, -এ আমাদের কাছে লিখুন",
+            "with your Visa Number and Passport Number.": "অনুগ্রহ করে আপনার ভিসা নম্বর এবং পাসপোর্ট নম্বর সহ."
+        }
+    },
+    "privacyPolicyPage": {
+        "contentText": {
+            "privacyPolicycontent1": "এই গোপনীয়তা নীতি ('নীতি') আমাদের ব্যবহারকারীদের গোপনীয়তা রক্ষা করার জন্য ডিজাইন করা হয়েছে। এই নীতি শুধুমাত্র স্টেমজ হেলথকেয়ার ওয়েবসাইট ('সাইট') এর মাধ্যমে সংগ্রহ করা ব্যক্তিগত তথ্যের ক্ষেত্রে প্রযোজ্য। এই নীতি অনুসারে, ব্যক্তিগত তথ্য উল্লেখ করা হয় সম্পূর্ণ বা আংশিক ব্যবহারকারীর বিবরণ যেমন পুরো নাম, ইমেল ঠিকানা, ফোন নম্বর, মেইলিং ঠিকানা, ছবি, ফ্যাক্স নম্বর, পাসপোর্ট নম্বর, ভিসা নম্বর, পাসপোর্ট তথ্য, কর্মসংস্থানের বিবরণ, জাতীয়তা ইত্যাদি।",
+            "privacyPolicycontent2": "সাইটটি ব্যবহার করার আগে বা সাইটে আপনার ব্যক্তিগত তথ্য প্রদান করার আগে এই নীতিটি সাবধানে পড়ার পরামর্শ দেওয়া হচ্ছে। স্টেমজ হেলথকেয়ার অ্যাপয়েন্টমেন্ট করার সময়, সাইটে আমাদের সাথে যোগাযোগ করার ফর্মটি পূরণ করার সময় আপনার ব্যক্তিগত তথ্য সংগ্রহ করার অধিকার সংরক্ষণ করে। আমরা আপনার দ্বারা প্রদত্ত ব্যক্তিগত তথ্যের সত্যতা বা নির্ভুলতা নিশ্চিত করার জন্য দায়ী নই। আপনার ব্যক্তিগত তথ্য অবশ্যই সঠিক, সম্পূর্ণ এবং আপ টু ডেট হওয়া উচিত তা নিশ্চিত করা আপনার কর্তব্য।",
+            "What do we use your information for?": "আমরা কি যে কারনে আপনার তথ্য ব্যবহার করব?",
+            "useinformationcontent": "আমরা ভিসা আবেদন প্রক্রিয়াকরণে আপনার ব্যক্তিগত তথ্য ব্যবহার করি, যা তথ্য সংগ্রহের একমাত্র উদ্দেশ্য। আমরা কোনো প্রচারমূলক ইমেল বা বার্তা পাঠানোর জন্য আপনার ব্যক্তিগত তথ্য ব্যবহার করি না। যদিও, আমরা আমাদের সাইটের সাথে সম্পর্কিত সমস্ত প্রতিক্রিয়া/পরামর্শকে স্বাগত জানাই। আমরা যে পরিষেবাগুলি অফার করি এবং সামগ্রিক ব্যবহারকারীর অভিজ্ঞতা বাড়ানোর জন্য এবং/অথবা কার্যকর এবং দক্ষ পদ্ধতিতে আমাদের পরিষেবাগুলির আরও ভাল সংস্করণ অফার করতে এই তথ্যগুলি ব্যবহার করি।",
+            "How do we protect your information?": "আমরা কিভাবে আপনার তথ্য সংরক্ষণ করব?",
+            "protectinformationcontent1": "আমরা আপনার ব্যক্তিগত তথ্য সুরক্ষিত করার জন্য সমস্ত যুক্তিসঙ্গত ব্যবস্থা গ্রহণ করা এবং ব্যক্তিগত তথ্য এবং/অথবা সাইটের কোনো তৃতীয় পক্ষ বা অননুমোদিত কর্মীদের অপব্যবহার এবং অননুমোদিত অ্যাক্সেসের বিরুদ্ধে এটিকে একটি সুরক্ষা প্রদান নিশ্চিত করি।",
+            "protectinformationcontent2": "আমরা সুরক্ষিত সার্ভার ব্যবহার করি। সাইটের যেকোনো অননুমোদিত অ্যাক্সেস এবং/অথবা ব্যবহার রোধ করতে, সমস্ত আগত এবং বহির্গামী ইমেলগুলিকে নিরাপদ ইন্টারনেট ব্রাউজিং এবং সুরক্ষা প্রদান করতে আমাদের নেটওয়ার্ক ফায়ারওয়াল নিরাপত্তা ব্যবস্থার মাধ্যমে সুরক্ষিত। আমাদের কিছু প্রযুক্তিগত এবং শারীরিক নিরাপত্তা সীমাবদ্ধতা রয়েছে যা আমরা সাইটের মাধ্যমে প্রাপ্ত যেকোন ব্যক্তিগত তথ্যের অ্যাক্সেস এবং ব্যবহার সীমিত করি।",
+            "Do we use cookies?": "আমরা কি কুকিজ ব্যবহার করি?",
+            "cookiesinformation": "হ্যাঁ, আমরা করি৷ এই কুকিগুলি আমাদেরকে আপনার ব্যক্তিগত তথ্য সঠিকভাবে মনে রাখতে এবং প্রক্রিয়া করতে, ভবিষ্যতের রেফারেন্সের জন্য আপনার পছন্দগুলি বুঝতে এবং সংরক্ষণ করতে এবং সাইটের ট্র্যাফিক এবং সাইটের মিথস্ক্রিয়া সম্পর্কে সামগ্রিক ডেটা সংগ্রহ করতে সহায়তা করে৷ স্টেমজ হেলথকেয়ার তৃতীয় পক্ষের পরিষেবা প্রদানকারীর কাছে চুক্তিবদ্ধ হতে পারে৷ সাইটের ট্র্যাফিক এবং মিথস্ক্রিয়া সম্পর্কে আরও ভাল বোঝা। যদিও, তৃতীয় পক্ষের পরিষেবা প্রদানকারীকে আপনার ব্যক্তিগত তথ্য ব্যবহার বা অ্যাক্সেস করার অনুমতি দেওয়া হয় না।",
+            "Do we disclose any information to outside parties?": "আমরা কি বাইরের পক্ষের কাছে কোনো তথ্য প্রকাশ করি?",
+            "outsidepartiesinformation": "আমরা তৃতীয় পক্ষের কাছে আপনার ব্যক্তিগত তথ্য বিক্রি, বাণিজ্য বা অন্যথায় স্থানান্তর করার বিরুদ্ধে। স্টেমজ হেলথকেয়ারের অনুমোদিত কর্মীরা, যারা সাইটটি পরিচালনা করছেন, ব্যবসায়িক প্রক্রিয়া পরিচালনা করছেন এবং/অথবা পরিষেবা দিচ্ছেন আপনার ব্যক্তিগত তথ্য অ্যাক্সেস করার এবং রাখার অধিকার রয়েছে। বিধান অনুযায়ী গোপনীয়। অধিকন্তু, ভিসা আবেদন প্রক্রিয়াকরণ এবং অন্যান্য সম্পর্কিত প্রক্রিয়ার অংশ হিসাবে আমরা আপনার ব্যক্তিগত তথ্য কাতারের সরকারি সংস্থার কাছে প্রকাশ করি। আইন এবং এই নীতি মেনে চলার জন্য উপযুক্ত হলেই আমরা আপনার ব্যক্তিগত তথ্য প্রকাশ করি।",
+            "Third party links": "তৃতীয় পক্ষের সংযুক্ততা",
+            "thirdpartycontent": "সাইটটিতে তৃতীয় পক্ষের লিঙ্ক থাকতে পারে এবং আপনাকে অন্য ওয়েবসাইটে ('লিঙ্কড সাইট') রিডাইরেক্ট করতে পারে। স্টেমজ হেলথকেয়ার দায়ী নয় এবং/অথবা লিঙ্কযুক্ত সাইটে উপলব্ধ এই লিঙ্কগুলি এবং/অথবা সামগ্রীর উপর কোনও নিয়ন্ত্রণ নেই। আমরা কোনও দায়বদ্ধতা নিই না। আপনার দ্বারা প্রদত্ত লিঙ্কযুক্ত সাইটে আপনার ব্যক্তিগত তথ্যের সুরক্ষার জন্য। এই ধরনের ক্ষেত্রে সমস্ত ব্যক্তিগত তথ্যের জন্য শুধুমাত্র ব্যবহারকারীই দায়ী।",
+            "Children’s Online Privacy Protection Act Compliance": "শিশুদের অনলাইন গোপনীয়তা সুরক্ষা আইন সম্মতি",
+            "childrenactcontent": "আমরা COPPA (চিলড্রেনস অনলাইন প্রাইভেসি প্রোটেকশন অ্যাক্ট) এর বাধ্যকাধকতা মেনে চলেছি, আমরা 13 বছরের কম বয়সী কারো কাছ থেকে কোনো তথ্য সংগ্রহ করি না। আমাদের ওয়েবসাইট, পণ্য এবং পরিষেবাগুলি সবই এমন লোকদের জন্য নির্দেশিত হয় যাদের বয়স কমপক্ষে 13 বছর বা তার অধীক।",
+            "Online Privacy Policy Only": "শুধুমাত্র অনলাইন গোপনীয়তা নীতি",
+            "onlineprivacypolicy": "এই অনলাইন গোপনীয়তা নীতি শুধুমাত্র আমাদের ওয়েবসাইটের মাধ্যমে সংগৃহীত তথ্যের জন্য প্রযোজ্য এবং অফলাইনে সংগৃহীত তথ্যের ক্ষেত্রে নয়।",
+            "Terms and Conditions": "শর্তাবলী",
+            "Refer to our Terms and Conditions section of the site.": "সাইটের আমাদের নিয়ম ও শর্তাবলী বিভাগে পড়ুন।",
+            "Your Consent": "আপনার সম্মতি",
+            "consentcontent": "আপনি এই সাইটে অ্যাক্সেস করে, বা ব্যবহার করে, অথবা আমাদের সাথে যোগাযোগ করুন পৃষ্ঠার মাধ্যমে ব্যক্তিগত তথ্য প্রদান করে, একটি অ্যাপয়েন্টমেন্ট করে এই নীতিতে সম্মত হন। আপনি যে কোনো সময় সাইটে অ্যাক্সেস এবং/অথবা ব্যবহার বন্ধ করে আপনার সম্মতি প্রত্যাহার করতে পারেন।",
+            "Policy Changes": "নীতি পরিবর্তন",
+            "pocicychangecontent": "স্টেমজ হেলথকেয়ার এই নীতিতে পর্যায়ক্রমে পরিবর্তন করে এবং কোনো পূর্ব বিজ্ঞপ্তি ছাড়াই সাইটে আপডেট করে। আমরা যদি আমাদের গোপনীয়তা নীতি পরিবর্তন করার সিদ্ধান্ত নেয়, তাহলে আমরা সেই পরিবর্তনগুলি এই পৃষ্ঠায় পোস্ট করব।"
+        }
+    },
+    "footerSection": {
+        "footerAbt": {
+            "Stemz Healthcare is backed by a team of highly qualified healthcare professionals with internal systems and processes based on the latest medical standards and best practices.": "স্টেমজ হেলথকেয়ার অভ্যন্তরীণ সিস্টেম এবং প্রসেস সহ উচ্চ যোগ্য স্বাস্থ্যসেবা পেশাদারদের একটি দল দ্বারা সমর্থিত হয় যা সর্বশেষ চিকিৎসা মান এবং সর্বোত্তম অনুশীলনের উপর ভিত্তি করে।",
+            "Quick Links": "কুইক লিঙ্ক",
+            "Follow us on": "আমাদেরকে অনুসরণ করুন",
+            "Copyright © 2023 Stemz Healthcare. All rights reserved.": "কপিরাইট © 2024 স্টেমজ হেলথকেয়ার। সর্বস্বত্ব সংরক্ষিত।"
+        }
+    },
+    "successPage": {
+        "thankscontent": "আমাদের সাথে কাজ করার আগ্রহ প্রকাশ করার জন্য আপনাকে ধন্যবাদ!",
+        "submitcontent": "আপনার আবেদন জমা দেওয়া হয়েছে.",
+        "submitcontent1": "অত্যধিক পরিমাণে আবেদনের কারণে, আমরা পেয়েছি, আমরা দুঃখিত যে আমরা পৃথকভাবে সমস্ত অ্যাপ্লিকেশনগুলিতে প্রতিক্রিয়া জানাতে সক্ষম নাও হতে পারি৷ যদি আপনার দক্ষতা এবং অভিজ্ঞতা ওপেন পজিশনের জন্য প্রয়োজনীয়তার সাথে মেলে, বা যদি একটি থাকে তাহলে আমরা 14 দিনের মধ্যে আপনার সাথে যোগাযোগ করব৷ অনুরূপ সুযোগ বর্তমানে উপলব্ধ।",
+        "For any further details, please contact us at": "আরো বিস্তারিত জানার জন্য, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন",
+        "value": "এখানে কাজ করার মূল্য কত?",
+        "Know more about us": "আমাদের সম্পর্কে আরও জানুন",
+        "Our Values": "আমাদের মূল্য",
+        "Our Supporting Values": "আমাদের সমর্থনকারী মূল্যবোধ",
+        "Our supporting VALUES are guided by the principles of": "আমাদের সমর্থনকারী মূল্যগুলি এর নীতি দ্বারা পরিচালিত হয়",
+        "AIM": "উদ্দেশ্য"
+    },
+    "checklistPage": {
+        "What to expect while at the Qatar Medical Center": "কাতার মেডিকেল সেন্টারে থাকাকালীন কী আশা করা যায়",
+        "expect1": "ভিসা মেডিকেল প্রক্রিয়া শুরু করার আগে আপনাকে সম্মতি ফর্মগুলিতে স্বাক্ষর করতে হবে।",
+        "expect2": "নিরাপত্তা এবং নিরাপত্তার স্বার্থে, আমরা আবেদনকারী এবং দর্শনার্থীদের এলোমেলো ব্যাগ অনুসন্ধান পরিচালনা করার অধিকার সংরক্ষণ করি",
+        "expect3": "সম্পূর্ণ প্রক্রিয়া জুড়ে দক্ষ যোগাযোগ নিশ্চিত করতে অনুগ্রহ করে কমপক্ষে দুটি (কর্মরত/সক্রিয়) যোগাযোগ নম্বর প্রদান করতে প্রস্তুত থাকুন।",
+        "expect4": "অনুগ্রহ করে পরিদর্শনের দিনে স্বাভাবিক খাবার খান। পরীক্ষা শেষ হতে কয়েক ঘন্টা সময় লাগতে পারে।",
+        "expect5": "আপনি যদি আগে টিডি/এমএমআর টিকা নিয়ে থাকেন, তাহলে আমাদের রেকর্ডের জন্য সার্টিফিকেটের একটি কপি জমা দিন।",
+        "expect6": "সমস্ত কোভিড নির্দেশিকা এবং প্রবিধানগুলি অনুসরণ করুন। কিছু নির্দেশিকা হল নিরাপদ দূরত্ব বজায় রাখা, মাস্ক এবং গ্লাভস পরা এবং নিয়মের বিস্তারিত তালিকার জন্য স্যানিটাইজারের নিয়মিত ব্যবহার অনুগ্রহ করে",
+        "click here": "এখানে ক্লিক করুন.",
+        "expect7": "অপেক্ষার এলাকায় ধৈর্য সহকারে অপেক্ষা করা আমাদের কর্মীদের সাথে সহযোগিতা করুন।",
+        "FEMALE Applicants": "মহিলা আবেদনকারী",
+        "Femaleapplicants1": "আমরা যুক্তিসঙ্গত পছন্দগুলির সমর্থক। মহিলা ডাক্তার সহায়তার ক্ষেত্রে, আমরা আপনাকে সামঞ্জস্য করার জন্য যথাসাধ্য চেষ্টা করব।",
+        "Femaleapplicants2": "সমস্ত আবেদনকারীকে গহনা এবং/অথবা যেকোনো ধাতব জিনিসপত্র অপসারণ করতে হবে। লম্বা চুল অবশ্যই মুখ এবং সামনের অংশ থেকে দূরে এবং পিছনে বাঁধতে হবে।",
+        "Femaleapplicants3": "মহিলা আবেদনকারীদের ঢিলেঢালা পোশাক পরার পরামর্শ দেওয়া হচ্ছে।",
+        "Femaleapplicants4": "গর্ভাবস্থার ক্ষেত্রে, রেজিস্ট্রেশন প্রক্রিয়া চলাকালীন আপনাকে অবশ্যই আমাদের অবহিত করতে হবে।",
+        "referral": "রেফারেল আবেদনকারীদের পুনরাবৃত্তি ভিজিট প্রয়োজন -",
+        "referral1": "আমাদের কেন্দ্রগুলিতে রেফারেল দেখার জন্য অ্যাপয়েন্টমেন্টগুলি “বুক রেফারেল অ্যাপয়েন্টমেন্ট” বিকল্পটি ব্যবহার করে বা যোগাযোগ কেন্দ্রের মাধ্যমে সহজেই বুক করা যেতে পারে।",
+        "referral2": "অনুগ্রহ করে মনে রাখবেন যে সমস্ত আবেদনকারীদের তাদের নিশ্চিত অ্যাপয়েন্টমেন্টের উপর ভিত্তি করে কঠোরভাবে পরিবেশন করা হয়। নির্ধারিত সময়ের 15 মিনিটের আগে অ্যাপয়েন্টমেন্টের জন্য পৌঁছানো প্রয়োজন। আবেদনকারীদের নির্ধারিত অ্যাপয়েন্টমেন্ট ব্লক অনুযায়ী চেক ইন করা হয় যদিও তারা তাড়াতাড়ি পৌঁছায়। ",
+        "referral3": "আবেদনকারীরা অ্যাপয়েন্টমেন্টের সময়সূচী নিশ্চিত করে একটি এসএমএস বিজ্ঞপ্তি পাবেন, অনুগ্রহ করে এটি বজায় রাখুন কারণ এটি প্রবেশদ্বারে যাচাই করা হবে। শুধুমাত্র যাচাইকৃত আবেদনকারীদের কেন্দ্রে প্রবেশের অনুমতি দেওয়া হবে।",
+        "referral4": "আবেদনকারীদের শুধুমাত্র রেফারেলের ক্ষেত্রে বিশেষায়িত (বহিরাগত) এবং অনুমোদিত হাসপাতাল পরিদর্শন করতে হতে পারে। রেফারেল চিঠিতে এই ধরনের সমস্ত অনুমোদিত হাসপাতালের বিবরণ অন্তর্ভুক্ত থাকবে।",
+        "referral5": "এক্স-রে রেফারেলের ক্ষেত্রে, আবেদনকারীদের অতিরিক্ত এক্স-রে চিত্রের জন্য সাধারণত 2-3 ঘন্টার মধ্যে যোগাযোগ করা হবে। আবেদনকারীদের একই দিনে এই ধরনের পুনরাবৃত্তি পরিদর্শনের জন্য উপলব্ধ থাকতে উৎসাহিত করা হয়।",
+        "referral6": "দৃষ্টির জন্য রেফারেল প্রয়োজন এমন আবেদনকারীদের অনুমোদিত হাসপাতালে তাদের পরিদর্শনের সময় নির্ধারিত চশমা বা কন্টাক্ট লেন্স বহন করতে হবে।",
+        "restrictions": "কাতার মেডিকেল সেন্টারে নিষেধাজ্ঞা",
+        "restrictions1": "মোবাইল ফোন ব্যবহার কঠোরভাবে নিষিদ্ধ।",
+        "restrictions2": "কোন ধাতব বস্তু যেমন গহনা পরবেন না।",
+        "restrictions3": "কোনও লাগেজ বা ব্যাগ আনবেন না কারণ এগুলো কেন্দ্রে অনুমোদিত নয়।",
+        "restrictions4": "আপনার মোবাইল ফোন ছাড়া ল্যাপটপ বা অন্য কোনো ইলেকট্রনিক ডিভাইস বহন করবেন না।",
+        "restrictions5": "ব্যক্তিগত জিনিসপত্র বা জিনিসপত্রের কোনো ক্ষতির জন্য কাতার মেডিকেল সেন্টার দায়ী থাকবে না।",
+        "restrictions6": "আমরা কেন্দ্রে কোনো অর্থপ্রদান গ্রহণ করি না। অনুগ্রহ করে কোনো অর্থ প্রদান করবেন না। আবেদনকারীদের অবশ্যই কোনো কর্মী সদস্যকে ঘুষ দিতে হবে না।",
+        "restrictions7": "আবেদনকারীদের বন্ধু/পরিবারের সদস্যদের কেন্দ্রের অভ্যন্তরে অনুমতি দেওয়া হয় না। আমাদের কেন্দ্রের চারপাশে ভিড় এড়াতে, তাদের প্রাঙ্গন ছেড়ে যাওয়ার জন্য অনুরোধ করা হবে। ব্যতিক্রম হিসাবে, 18 বছরের কম বয়সী শিশুদের, বয়স্ক, শারীরিকভাবে অভিভাবকদের অনুমতি দেওয়া হয়। / মানসিকভাবে প্রতিবন্ধী আবেদনকারী যাদের সহায়তা প্রয়োজন। তাদের উচিত মেডিকেল সেন্টারে পৌঁছানোর পর নিরাপত্তা কর্মীদের জানাতে হবে।",
+        "restrictions8": "অনুগ্রহ করে কেন্দ্রের আশেপাশের এলাকা পরিষ্কার রাখুন। কেন্দ্রের আশেপাশে ময়লা ফেলবেন না।",
+        "restrictions9": "চিকিৎসা প্রক্রিয়া সম্পন্ন না করে কেন্দ্র ত্যাগ করবেন না",
+        "Our Response to COVID-19": "কোভিড-19 এর প্রতি আমাদের প্রতিক্রিয়া",
+        "To curb the spread of COVID-19, we expect all our applicants to": "কোভিড -19 এর বিস্তার রোধ করার জন্য, আমরা আমাদের সকল আবেদনকারীদের আশা করি",
+        "COVIDcontent1": "নিজেকে এবং অন্যদের রক্ষা করতে আপনার নাক এবং মুখ ঢেকে একটি মাস্ক পরুন।",
+        "COVIDcontent2": "অন্য আবেদনকারীদের থেকে কমপক্ষে 1 মিটার দূরত্বে বসুন।",
+        "COVIDcontent3": "নিয়মিত সাবান এবং জল দিয়ে হাত ধুয়ে নিন।",
+        "COVIDcontent4": "হ্যান্ড স্যানিটাইজার বহন করুন এবং ঘন ঘন তাদের হাত স্যানিটাইজ করুন।",
+        "COVIDcontent5": "কাশি, হাঁচি বা কথা বলার সময় মুখ ও নাক ঢেকে রাখুন।",
+        "COVIDcontent6": "তাদের মুখোশগুলি পরিষ্কার রাখুন এবং ব্যবহারকে আরও কার্যকর করার জন্য সঠিকভাবে নিষ্পত্তি করুন।"
+    },
+    "referralspage": {
+        "contentTitle": {
+            "Additional X-ray": "অতিরিক্ত এক্স-রে রেফারেল",
+            "Confirmatory Referral": "কনফার্মেটরি রেফারেল-",
+            "Specialist Lab Referral test": "স্পেশালিস্ট ল্যাবরেটরি রেফারেল টেস্ট",
+            "Specialist referral during consultation": "পরামর্শের পর স্পেশালিস্ট রেফারেল",
+            "xraytitle1": "কেন এটা প্রয়োজন?",
+            "xraytitle2": "আমরা কি আশা করতে পারি?",
+            "xraytitle3": "এক্স-রে রুমের ভিতরে প্রক্রিয়া",
+            "xraytitle4": "একই দিনে রেফারেল-",
+            "xraytitle5": "অতিরিক্ত এক্স-রে - যদি আবেদনকারী একই দিনে রেফারেল করতে না পারে",
+            "confirmatorytitle1": "কেন নিশ্চিতকরণ পরীক্ষা প্রয়োজন?",
+            "confirmatorytitle2": "এইচআইভি, এইচসিভি, এইচবিভি এবং সিফিলিসের জন্য স্ক্রীনিং পরীক্ষার ফলাফল ইতিবাচক হলে পরবর্তী প্রক্রিয়া কি?",
+            "Specialistlabtitle1": "কেন বিশেষজ্ঞ পরীক্ষাগার পরীক্ষা প্রয়োজন?",
+            "Specialistlabtitle2": "কি আশা করা যায়",
+            "consultationtitle1": "পরামর্শের পরে বিশেষজ্ঞের রেফারেল কেন প্রয়োজন?",
+            "consultationtitle2": "আমরা কি আশা করতে পারি?"
+        },
+        "contentText": {
+            "requiredcontent1": "সরকারী কর্তৃপক্ষের রিপোর্ট/বিশ্লেষণ/নির্দেশের উপর ভিত্তি করে, অতিরিক্ত এক্স-রে প্রয়োজন হতে পারে",
+
+            "requiredcontent2": "আবেদনকারীকে QMC কেন্দ্রে পুনরায় যেতে হবে এবং প্রক্রিয়াটি সম্পূর্ণ করতে হবে।",
+
+            "requiredcontent3": "সরকারি কর্তৃপক্ষের প্রয়োজনীয়তার উপর ভিত্তি করে এক্স-রে সংখ্যা পরিবর্তিত হতে পারে।",
+
+            "expectcontent1": "আবেদনকারীর উচিত QMC কল সেন্টারে কল করা এবং QMC পরিদর্শন করার আগে একটি অ্যাপয়েন্টমেন্ট ঠিককরা। QMC কল সেন্টারের যোগাযোগের নম্বরগুলি প্রি-প্রিন্ট করা ফর্ম, এসএমএস এবং ওয়েবসাইটে দেওয়া আছে",
+
+            "expectcontent2": "নির্ধারিত অ্যাপয়েন্টমেন্টের কমপক্ষে 15 মিনিট আগে আবেদনকারীকে QMC-তে পৌঁছাতে হবে।",
+
+            "expectcontent3": "আবেদনকারীকে শুধুমাত্র তাদের অ্যাপয়েন্টমেন্টের সময় QMC-তে প্রবেশ করতে দেওয়া হবে।",
+
+            "expectcontent4": "QMC নিরাপত্তা পরীক্ষায়, আবেদনকারীকে তার পাসপোর্ট এবং পরিষেবার রসিদ এবং QVC অ্যাপয়েন্টমেন্ট লেটার দেখাতে হবে।",
+
+            "expectcontent5": "উপবাসের প্রয়োজন নেই তবে ভারী খাবার এড়ানোর পরামর্শ দেওয়া হয়।",
+
+            "expectcontent6": "QMC কেন্দ্রে যাওয়ার সময় আবেদনকারীর অলঙ্কার, মানানসই জামাকাপড় এবং ধাতব জিনিসযুক্ত পোশাক পরা উচিতনয়",
+
+            "expectcontent7": "আবেদনকারীদের QMC কেন্দ্রের ভিতরে লাগেজ এবং ব্যাগ না আনার জন্য অনুরোধ করা হচ্ছে।",
+
+            "expectcontent8": "QMC-এর ভিতরে সেল ফোন ব্যবহার করা এবং ছবি তোলা কঠোরভাবে নিষিদ্ধ৷",
+
+            "xraycontent1": "QMC রিসেপশনে পরিষেবার রসিদ টোকেন নম্বর ইস্যু করার পরে, আবেদনকারীকে পরবর্তী প্রক্রিয়ার জন্য এক্স-রেরুমে নির্দেশিত করা হবে",
+
+            "xraycontent2": "একজন মহিলা আবেদনকারীর জন্য, QMC-তে এক্স-রে রুমের ভিতরে চেঞ্জিং রুম পাওয়া যায়। যেখানে তারা একটি ঢিলেঢালা ফিটেড গাউনে পরিবর্তন করতে পারে।",
+
+            "xraycontent3": "এক্স-রে রুম থেকে বের হওয়ার আগে আবেদনকারীকে সমস্ত জিনিসপত্র নিয়ে যেতে হবে। QMC কোন ক্ষতি বা ক্ষতির জন্য দায়ী থাকবে না",
+
+            "xraycontent4": "আবেদনকারীকে অবশ্যই QMC এক্স-রে টেকনিশিয়ানের দেওয়া নির্দেশাবলী অনুসরণ করতে হবে [যেমন শ্বসন (শ্বাসরাখা), শরীরের ভঙ্গি বজায় রাখা ইত্যাদি]।",
+            "xraycontent5": "QMC এক্স-রে টেকনিশিয়ানের অনুমতি ছাড়া আবেদনকারী এক্স-রে কক্ষ থেকে বের হতে পারবেন না। কখনও কখনও,মূল্যায়নের পরে আরও এক্স-রে প্রয়োজন হতে পারে, তাই আবেদনকারীকে আবার ডাকা হতে পারে।",
+            "xraycontent6": "যদি মহিলা আবেদনকারীরা একজন পুরুষ প্রযুক্তিবিদ দ্বারা পরীক্ষা করতে স্বাচ্ছন্দ্য বোধ করেন না, তাহলে তারাঅভ্যর্থনায় একজন মহিলা টেকনিশিয়ানের জন্য অনুরোধ করতে পারেন।",
+
+            "samedayreferralcontent1": "প্রাথমিক ভিসা চিকিৎসা প্রক্রিয়া সম্পন্ন করার পর, আবেদনকারীদের QMC-তে বা QMC-এর বাইরে নির্ধারিত এলাকায় 30-40 মিনিট অপেক্ষা করার জন্য অনুরোধ করা হচ্ছে।",
+
+            "samedayreferralcontent2": "যদি একটি অতিরিক্ত এক্স-রে প্রয়োজন হয়, তাহলে আবেদনকারী QMC স্টাফ বা QMC কল সেন্টার থেকে একটি কল পাবেন।",
+
+            "samedayreferralcontent3": "আবেদনকারীকে আরও যোগাযোগের জন্য QMC এর সাথে সক্রিয় যোগাযোগ নম্বর শেয়ার করতে হবে।",
+
+            "samedayreferralcontent4": "QMC পরিদর্শন করার জন্য QMC কল সেন্টারের দেওয়া টাইম স্লট মেনে চলার জন্য আবেদনকারীদের অনুরোধ করা হচ্ছে।",
+
+            "samedayreferralcontent5": "QMC-তে কর্মীদের দ্বারা আবেদনকারীর জন্য একটি পরিষেবার রসিদ টোকেন নম্বর তৈরি করা হবে।",
+
+            "samedayreferralcontent6": "একই দিনে এক্স-রে রেফারেল সম্পূর্ণ করতে আবেদনকারীকে নির্ধারিত এক্স-রে রুমে যেতে হবে।",
+
+            "additionalxraycontent1": "যদি একজন আবেদনকারী একই দিনে প্রয়োজনীয় অতিরিক্ত এক্স-রে সম্পূর্ণ করতে না পারেন, তাহলে আবেদনকারী একটি অ্যাপয়েন্টমেন্ট বুক করার জন্য প্রাথমিক নিবন্ধনের সময় আবেদনকারীর দেওয়া যোগাযোগ নম্বরগুলিতে QMC কল সেন্টার থেকে একটি কল পাবেন।",
+
+            "additionalxraycontent2": "আবেদনকারীকে অবশ্যই নিশ্চিত করতে হবে যে QMC-তে রেজিস্ট্রেশনের সময় সঠিক যোগাযোগ নম্বর দেওয়া আছে।",
+
+            "additionalxraycontent3": "কল সেন্টার আবেদনকারীকে তার অতিরিক্ত এক্স-রে সম্পূর্ণ করতে QMC-তে যাওয়ার জন্য একটি অ্যাপয়েন্টমেন্ট বুক করবে",
+
+            "additionalxraycontent4": "নির্ধারিত অ্যাপয়েন্টমেন্ট সময়ের অন্তত 15 মিনিট আগে আবেদনকারীকে QMC-তে পৌঁছাতে হবে।",
+
+            "additionalxraycontent5": "নিশ্চিত অ্যাপয়েন্টমেন্ট সহ আবেদনকারীকে প্রদত্ত স্লটে QMC-এর ভিতরে অনুমতি দেওয়া হয়।",
+            "additionalxraycontent6": "QMC নিরাপত্তা পরীক্ষায়, আবেদনকারীকে তার আসল পাসপোর্ট, QVC অ্যাপয়েন্টমেন্ট লেটার এবং পরিষেবার রসিদ দেখাতে হবে।",
+            "additionalxraycontent7": "QMC রিসেপশনে, কর্মীরা একটি নতুন পরিষেবার রসিদ টোকেন নম্বর ইস্যু করবে এবং আবেদনকারীকে মনোনীত এক্স-রে রুমে যাওয়ার জন্য গাইড করবে।",
+
+            "additionalxraycontent8": "আবেদনকারীরা QMC ওয়েবসাইট - www.qatarmedicalcenter.com-এ তাদের ভিসার মেডিকেল স্ট্যাটাস চেককরতে পারেন।",
+
+            "additionalxraycontent9": "ভিসার অবস্থার পরিবর্তন ওয়েবসাইটে প্রতিফলিত হতে 72 ঘন্টা পর্যন্ত সময় লাগতে পারে।",
+
+            "additionalxraycontent10": "কোনো প্রশ্নের ক্ষেত্রে, আবেদনকারীরা ওয়েবসাইটে দেওয়া নম্বরে কল সেন্টারে কল করতে পারেন বাinfo@qatarmedicalcenter.com-এ একটি ইমেল পাঠাতে পারেন।",
+
+            "confirmatorycontent1": "সংক্রামক রোগের জন্য সরকারি কর্তৃপক্ষের কঠোর নির্দেশিকা রয়েছে।",
+
+            "confirmatorycontent2": "যদি এই সংক্রামক রোগগুলির জন্য স্ক্রীনিং পরীক্ষাগুলি QMC ল্যাবরেটরিতে ইতিবাচক/প্রতিক্রিয়াশীল হয়, তাহলে ফলাফলগুলি নিশ্চিত করার জন্য, আবেদনকারীকে অবশ্যই সরকারী কর্তৃপক্ষের নির্দেশিকাগুলির উপর ভিত্তি করে অনুমোদিত ল্যাবরেটরিগুলিতে নিশ্চিতকরণ পরীক্ষা করতে হবে",
+
+            "confirmatorycontent3": "এই নিশ্চিতকরণ পরীক্ষাগুলি পূর্ব-নির্ধারিত বিরতিতে অনুমোদিত পরীক্ষাগারগুলিতে সঞ্চালিত হয়।",
+
+            "positivescreeningtestcontent1": "QMC রিসেপশনে অ্যাপয়েন্টমেন্ট বুক করার জন্য প্রাথমিক রেজিস্ট্রেশনের সময় আবেদনকারী QMC কল সেন্টার থেকে তার দেওয়া যোগাযোগ নম্বরে একটি কল পাবেন।।",
+
+            "positivescreeningtestcontent2": "আবেদনকারীকে নিশ্চিত করতে হবে যে QMC-তে রেজিস্ট্রেশনের সময় সঠিক যোগাযোগ নম্বর দেওয়া আছে।",
+
+            "positivescreeningtestcontent3": "একবার অ্যাপয়েন্টমেন্ট নিশ্চিত হয়ে গেলে, QMC কল সেন্টার আবেদনকারীকে যোগাযোগ নম্বরে একটি নিশ্চিতকরণবার্তা পাঠায়। [এটি শুধুমাত্র ভারতে ভিসার জন্য আবেদনকারী আবেদনকারীদের জন্য প্রযোজ্য।]",
+
+            "positivescreeningtestcontent4": "নির্ধারিত অ্যাপয়েন্টমেন্টের কমপক্ষে 15 মিনিট আগে আবেদনকারীকে QMC-তে পৌঁছাতে হবে।",
+
+            "positivescreeningtestcontent5": "নিশ্চিতকরণ পরীক্ষার জন্য উপবাসের প্রয়োজন নেই।",
+
+            "positivescreeningtestcontent6": "অনুমোদিত ল্যাবরেটরিতে নিশ্চিতকরণ পরীক্ষার জন্য আবেদনকারীকে ব্যাঙ্কের মাধ্যমে অর্থপ্রদান করতে হবে।",
+
+            "positivescreeningtestcontent7": "QMC-এর ভিতরে সেল ফোন ব্যবহার করা এবং ছবি তোলা কঠোরভাবে নিষিদ্ধ৷",
+
+            "positivescreeningtestcontent8": "QMC নিরাপত্তা পরীক্ষায়, আবেদনকারীকে তার আসল পাসপোর্ট, QVC অ্যাপয়েন্টমেন্ট লেটার এবং পরিষেবার রসিদ দেখাতে হবে।",
+
+            "positivescreeningtestcontent9": "QMC রিসেপশনে, নথিগুলি যাচাই করা হবে, রেফারেল লেটার জারি করা হবে এবং আরও পরীক্ষার জন্য আবেদনকারীরকাছ থেকে সম্মতি নেওয়া হবে (নিশ্চিত পরীক্ষা)",
+
+            "positivescreeningtestcontent10": "QMC কর্মীরা অনুমোদিত পরীক্ষাগারে নিশ্চিতকরণ পরীক্ষার জন্য অর্থপ্রদানের বিষয়ে আবেদনকারীকে গাইড করবে।",
+
+            "positivescreeningtestcontent11": "QMC-তে পৌঁছানোর পর, আবেদনকারীকে পরবর্তী পরীক্ষার ফলাফলের ব্যাখ্যার জন্য ডাক্তারের কাছে নির্দেশ দেওয়াহবে",
+
+            "positivescreeningtestcontent12": "যদি আবেদনকারী নিশ্চিতকরণ পরীক্ষা প্রক্রিয়া চালিয়ে যেতে ইচ্ছুক না হন, তাহলে তিনি একটি প্রত্যাখ্যান ফর্মেস্বাক্ষর করতে পারেন যা QMC রিসেপশনে পাওয়া যায়।",
+
+            "positivescreeningtestcontent13": "পেমেন্ট প্রক্রিয়া সম্পন্ন হলে, আবেদনকারীকে QMC রিসেপশনে পেমেন্ট স্লিপ জমা দিতে হবে। আবেদনকারীতার প্রয়োজনের জন্য রসিদের একটি কপি রাখতে পারেন",
+
+            "positivescreeningtestcontent14": "QMC কর্মীরা পেমেন্ট স্লিপ সংগ্রহ করবে এবং নার্সিং কাউন্টারে যাওয়ার জন্য টোকেন নম্বর সহ পরিষেবার রসিদতৈরি করবে।",
+
+            "positivescreeningtestcontent15": "রক্তের নমুনা সংগ্রহের জন্য আবেদনকারীকে নার্সিং স্টেশনে নির্দেশিত করা হবে।",
+
+            "positivescreeningtestcontent16": "QMC-তে নমুনা সংগ্রহ শেষ করার পরে, আবার নমুনাগুলি আরও পরীক্ষা করা হয়",
+
+            "positivescreeningtestcontent17": "রিপোর্টগুলি সরাসরি অনুমোদিত ল্যাবরেটরি দ্বারা QMC-তে পাঠানো হয়।",
+
+            "positivescreeningtestcontent18": "সরকারি কর্তৃপক্ষের অনুসন্ধান এবং নির্দেশিকাগুলির উপর ভিত্তি করে, আবেদনকারীকে আরও তদন্তের জন্য QMC-তে যেতে হতে পারে।",
+
+            "positivescreeningtestcontent19": "কেন্দ্রে পুনরায় দেখার জন্য আবেদনকারীকে তার দেওয়া যোগাযোগ নম্বরে কল করা যেতে পারে।",
+
+            "positivescreeningtestcontent20": "সরকারী কর্তৃপক্ষের অনুসন্ধান এবং নির্দেশিকাগুলির উপর ভিত্তি করে উপরের প্রক্রিয়াটি পুনরাবৃত্তি করা যেতে পারে।",
+
+            "positivescreeningtestcontent21": "আবেদনকারীর রেফারেল প্রক্রিয়া সম্পূর্ণ করতে বিলম্ব করা উচিত নয়।",
+
+            "positivescreeningtestcontent22": "আবেদনকারীরা QMC ওয়েবসাইট -www.qatarmedicalcenter.com-এ তাদের ভিসার মেডিকেল স্ট্যাটাস চেককরতে পারেন।",
+
+            "positivescreeningtestcontent23": "কোনো প্রশ্নের ক্ষেত্রে, আবেদনকারীরা ওয়েবসাইটে দেওয়া নম্বরে কল সেন্টারে কল করতে পারেন বাinfo@qatarmedicalcenter.com-এ একটি ইমেল পাঠাতে পারেন।",
+
+            "specialistlabcontent1": "সরকারী কর্তৃপক্ষ ভিসা মেডিকেল প্রক্রিয়ার জন্য নির্দেশিকা সংজ্ঞায়িত করেছে",
+            "specialistlabcontent2": "যদি একজন আবেদনকারীর জন্য প্রাথমিক ভিসা মেডিকেল পরীক্ষার সময় QMC-তে পরিচালিত ল্যাব তদন্তে সংজ্ঞায়িত নির্দেশিকা পূরণ না হয়, তাহলে আরও পরীক্ষার জন্য আবেদনকারীকে অনুমোদিত বহিরাগত হাসপাতালে পরিদর্শন করতে হবে",
+
+            "specialistlabcontent3": "এই রেফারেলটি সাধারণত QMC পরীক্ষাগারে অস্বাভাবিক পরীক্ষাগার ফলাফলের জন্য তৈরি করা হয়।",
+
+            "specialistlabexpectcontent1": "অ্যাপয়েন্টমেন্ট বুক করার জন্য প্রাথমিক রেজিস্ট্রেশনের সময় আবেদনকারী QMC কল সেন্টার থেকে একটি কল পাবেন।",
+
+            "specialistlabexpectcontent2": "QMC-তে নিবন্ধনের সময় আবেদনকারীকে সঠিক যোগাযোগ নম্বর(গুলি) প্রদান করা হয়েছে তা নিশ্চিত করতে হবে।",
+
+            "specialistlabexpectcontent3": "স্পেশালিস্ট ল্যাবরেটরি টেস্ট প্রক্রিয়া সম্পূর্ণ করার জন্য কল সেন্টারটি আবেদনকারীর জন্য QMC তে পুনরায় দেখার জন্য একটি অ্যাপয়েন্টমেন্ট বুক করে।",
+
+            "specialistlabexpectcontent4": "একবার অ্যাপয়েন্টমেন্ট নিশ্চিত হয়ে গেলে, QMC কল সেন্টার আবেদনকারীকে যোগাযোগ নম্বরে একটি নিশ্চিতকরণবার্তা পাঠায়। যদি আবেদনকারী একটি এসএমএস না পান, তাহলে তিনি আবার QMC কল সেন্টারের সাথে সংযোগ করতে পারেন এবং এসএমএসটি পুনরায় পাঠানোর অনুরোধ করতে পারেন। [এটি শুধুমাত্র ভারতে ভিসার জন্য আবেদনকারী আবেদনকারীদের জন্য প্রযোজ্য।",
+
+            "specialistlabexpectcontent5": "QMC নিরাপত্তা পরীক্ষায়, আবেদনকারীকে তার আসল পাসপোর্ট, QVC অ্যাপয়েন্টমেন্ট লেটার এবং পরিষেবার রসিদ দেখাতে হবে।",
+
+            "specialistlabexpectcontent6": "QMC রিসেপশনে, QMC রিসেপশন কর্মীরা একটি রেফারেল লেটার ইস্যু করবে এবং আবেদনকারীকে অনুমোদিত এবং অনুমোদিত বহিরাগত হাসপাতাল(গুলি) পরিচয় যাচাইকরণের জন্য গাইড করবে।",
+
+            "specialistlabexpectcontent7": "QMC অভ্যর্থনা কর্মীরা অনুমোদিত এবং অনুমোদিত বহিরাগত হাসপাতালের যোগাযোগ নম্বর এবং ঠিকানা আবেদনকারীর সাথে শেয়ার করবেন।",
+
+            "specialistlabexpectcontent8": "আবেদনকারীকে প্রক্রিয়াটি অনুসরণ করতে হবে এবং অনুমোদিত ও অনুমোদিত বহিরাগত হাসপাতালে (গুলি) বিশেষজ্ঞ পরীক্ষাগার পরীক্ষার জন্য অর্থ প্রদান করতে হবে এবং রেফারেল প্রক্রিয়াটি সম্পূর্ণ করতে হবে।",
+
+            "specialistlabexpectcontent9": "অনুমোদিত এবং অনুমোদিত বহিরাগত হাসপাতাল(গুলি) থেকে মূল রিপোর্ট সংগ্রহ করার পর, আবেদনকারীকে অবশ্যইQMC-তে গিয়ে রিপোর্ট জমা দিতে হবে।",
+
+            "specialistlabexpectcontent10": "QMC এর ভিতরে সেল ফোন ব্যবহার করা এবং ছবি তোলা কঠোরভাবে নিষিদ্ধ।",
+
+            "specialistlabexpectcontent11": "আবেদনকারীকে ব্যক্তিগত রেকর্ডের জন্য এই রিপোর্টগুলির একটি অনুলিপি তার কাছে রাখার পরামর্শ দেওয়া হচ্ছে।",
+
+            "specialistlabexpectcontent12": "আবেদনকারীকে অবশ্যই নিশ্চিত করতে হবে যে QMC দ্বারা জারি করা রেফারেল চিঠি(গুলি) অনুযায়ী বিশেষজ্ঞ হাসপাতালের পরীক্ষা(গুলি) সম্পন্ন হয়েছে।",
+
+            "specialistlabexpectcontent13": "অনুমোদিত এবং অনুমোদিত বহিরাগত হাসপাতাল(গুলি) থেকে মেডিকেল রিপোর্ট এবং সরকারী কর্তৃপক্ষের নির্দেশিকাগুলির উপর ভিত্তি করে, আবেদনকারীদের আরও তদন্তের জন্য QMC-তে যেতে হতে পারে।",
+            "specialistlabexpectcontent14": "আবেদনকারীদের দ্রুত রেফারেল প্রক্রিয়া সম্পন্ন করতে হবে।",
+
+            "specialistlabexpectcontent15": "যেকোন রেকর্ডকে মিথ্যা প্রমাণ করার ফলে আবেদনকারীর বিরুদ্ধে যথাযথ ব্যবস্থা নেওয়া হতে পারে।",
+
+            "specialistlabexpectcontent16": "আবেদনকারীরা QMC ওয়েবসাইট - www.qatarmedicalcenter.com-এ তাদের ভিসার মেডিকেল স্ট্যাটাস চেককরতে পারেন।",
+
+            "specialistlabexpectcontent17": "কোনো প্রশ্নের ক্ষেত্রে, আবেদনকারীরা ওয়েবসাইটে দেওয়া নম্বরে কল সেন্টারে কল করতে পারেন বাinfo@qatarmedicalcenter.com-এ একটি ইমেল পাঠাতে পারেন।",
+
+            "consultationrequiredcontent1": "সরকারী কর্তৃপক্ষ ভিসা মেডিকেল প্রক্রিয়ার জন্য নির্দেশিকা সংজ্ঞায়িত করেছে, যদি ভিসা মেডিকেল পরীক্ষার সময় ডাক্তারের পরামর্শ প্রক্রিয়ায় এই নির্দেশিকাগুলি পূরণ না হয় তাহলে অনুমোদিত হাসপাতালে আবেদনকারীর আরও মূল্যায়নের প্রয়োজন হতে পারে।",
+            "consultationrequiredcontent2": "যদি আবেদনকারীদের আরও মূল্যায়নের জন্য এক বা একাধিক বিশেষজ্ঞ ডাক্তারের কাছে যেতে হয়, তাহলে তাদের এই ধরনের পরামর্শের জন্য অর্থ প্রদান করতে হবে।",
+            "consultationrequiredcontent3": "যে ধরনের বিশেষজ্ঞ ডাক্তারদের কাছে যেতে হবে তা নিম্নলিখিতগুলির মধ্যে এক বা একাধিক হতে পারে:",
+            "Orthopedics": "অর্থোপেডিকস",
+            "Gastroenterologist": "গ্যাস্ট্রোএন্টারোলজিস্ট",
+            "Endocrinologist": "এন্ডোক্রিনোলজিস্ট",
+            "Ophthalmologist": "চক্ষু বিশেষজ্ঞ",
+            "Gynecologist": "স্ত্রীরোগ বিশেষজ্ঞ",
+            "InternalMedicine": "অভ্যন্তরীণ ঔষধ",
+            "Surgeon": "সাজধন্",
+            "Dermatologist": "চর্মরোগ বিশেষজ্ঞ",
+            "OtherSpecialist": "অন্যান্য বিশেষজ্ঞ",
+            "consultationexpectcontent1": "QMC-তে ডাক্তারের সাথে পরামর্শের পর, যে আবেদনকারীর আরও পরামর্শ প্রয়োজন তাকে QMC রিসেপশন থেকে তার রেফারেল লেটার সংগ্রহ করতে হবে।",
+            "consultationexpectcontent2": "QMC রিসেপশন কর্মীরা আবেদনকারীর রেফারেল স্ট্যাটাস পরীক্ষা করবে এবং সেই অনুযায়ী রেফারেল লেটার ইস্যুকরবে।",
+            "consultationexpectcontent3": "QMC কর্মীরা অনুমোদিত হাসপাতালের ঠিকানা এবং যোগাযোগের বিশদ শেয়ার করবেন।",
+            "consultationexpectcontent4": "QMC অভ্যর্থনা কর্মীরা প্রয়োজনে অনুমোদিত হাসপাতালে অ্যাপয়েন্টমেন্ট বুকিংয়ে আবেদনকারীকে সহায়তা করবে",
+            "consultationexpectcontent5": "আবেদনকারীদের অ্যাপয়েন্টমেন্টের কমপক্ষে 15 মিনিট আগে অনুমোদিত হাসপাতালে পৌঁছানোর জন্য অনুরোধ করাহচ্ছে।",
+            "consultationexpectcontent6": "আবেদনকারীকে প্রক্রিয়াটি অনুসরণ করতে হবে এবং অনুমোদিত হাসপাতালে অর্থ প্রদান করতে হবে।",
+            "consultationexpectcontent7": "QMC এর ভিতরে সেল ফোন ব্যবহার করা এবং ছবি তোলা কঠোরভাবে নিষিদ্ধ।",
+            "consultationexpectcontent8": "আবেদনকারীকে অনুমোদিত হাসপাতাল থেকে সমস্ত মেডিকেল রিপোর্ট সংগ্রহ করতে হবে এবং সমস্ত মেডিকেল রিপোর্ট এবং রেফারেল চিঠিতে বিশেষজ্ঞ ডাক্তার এবং হাসপাতালের সাইন এবং স্ট্যাম্প আছে কিনা তা পরীক্ষা করতে হবে।",
+            "consultationexpectcontent9": "বিশেষজ্ঞ ডাক্তারের সাইন এবং স্ট্যাম্প সহ রিপোর্ট এবং রেফারেল চিঠিগুলি সংগ্রহ করার পরে, আবেদনকারীকে এই রিপোর্টগুলি জমা দিতে অবশ্যই QMC-তে যেতে হবে।",
+            "consultationexpectcontent10": "আবেদনকারীদের পরবর্তী প্রক্রিয়ার জন্য রিপোর্টের সমস্ত কপি তার কাছে রাখার পরামর্শ দেওয়া হচ্ছে",
+            "consultationexpectcontent11": "আবেদনকারীকে অবশ্যই নিশ্চিত করতে হবে যে QMC দ্বারা জারি করা রেফারেল লেটার অনুসারে পরামর্শগুলি সম্পন্ন হয়েছে।",
+            "consultationexpectcontent12": "বিশেষজ্ঞ ডাক্তারদের মেডিকেল রিপোর্ট এবং সরকারী কর্তৃপক্ষের নির্দেশিকাগুলির উপর ভিত্তি করে,আবেদনকারীকে আরও তদন্তের জন্য QMC-তে যেতে হতে পারে।",
+            "consultationexpectcontent13": " QMC পুনরায় দেখার জন্য আবেদনকারীকে তার দেওয়া যোগাযোগ নম্বরগুলিতে কল করা হবে৷ অনুগ্রহ করে নিশ্চিত করুন যে সঠিক যোগাযোগ নম্বরগুলি দেওয়া হয়েছে৷৷",
+            "consultationexpectcontent14": "নির্দিষ্ট কিছু বিশেষজ্ঞের পরামর্শের জন্য, আবেদনকারীকে বিশেষজ্ঞ ডাক্তারের দ্বারা নির্ধারিত ব্যবধানের পরআসতে হতে পারে। প্রাথমিক ভিসা মেডিক্যাল পরীক্ষার সময় QMC-এর ডাক্তার এটি ব্যাখ্যা করবেন।",
+            "consultationexpectcontent15": "আবেদনকারীকে শীঘ্রই বিশেষজ্ঞ ডাক্তারদের পরামর্শ সম্পন্ন করতে হবে।",
+            "consultationexpectcontent16": "কোনো মেডিকেল রেকর্ডকে মিথ্যা প্রমাণ করার ফলে আবেদনকারীর বিরুদ্ধে যথাযথ ব্যবস্থা নেওয়া হতে পারে।",
+            "consultationexpectcontent17": "আবেদনকারীরা QMC ওয়েবসাইট -www.qatarmedicalcenter.com-এ তাদের ভিসার মেডিকেল স্ট্যাটাস চেককরতে পারেন।",
+            "consultationexpectcontent18": "কোনো প্রশ্নের ক্ষেত্রে, আবেদনকারীরা ওয়েবসাইটে দেওয়া নম্বরগুলিতে কল সেন্টারে কল করতে পারেন বাinfo@qatarmedicalcenter.com-এ একটি ইমেল পাঠাতে পারেন।"
+        }
+    },
+    "Comman": {
+        "Book Appointment": " অ্যাপয়েন্টমেন্ট বুক করুন ",
+        "Book Referral Appointment": "রেফারেল অ্যাপয়েন্টমেন্ট বুক করুন",
+        "Location": "স্থান",
+        "send mail": "মেইল পাঠাও",
+        "check": "চেক",
+        "Bookreferralcontact": "আপনার ভিসা মেডিকেল প্রসেস সংক্রান্ত যেকোনো প্রশ্ন বা স্পষ্টীকরণের জন্য, কল করে বা একটি ইমেল পাঠিয়ে আমাদের সাথে যোগাযোগ করুন।",
+        "To Book a Medical Referral Appointment call us at": "একটি মেডিকেল রেফারেল অ্যাপয়েন্টমেন্ট বুক করতে আমাদের কল করুন এখানে",
+        "Call us -": "আমাদের কল করুন -",
+        "Email us -": "আমাদেরকে ইমেইল করুন -",
+        "You are being directed to the Qatar Visa Center website": "আপনাকে কাতার ভিসা সেন্টারের ওয়েবসাইটে পাঠানো হচ্ছে",
+        "Please indicate whether you wish to continue": "আপনি চালিয়ে যেতে চান কিনা অনুগ্রহ করে নির্দেশ করুন",
+        "YES, I WOULD LIKE TO CONTINUE": "হ্যাঁ, আমি চালিয়ে যেতে চাই",
+        "I WOULD LIKE TO REMAIN ON STEMZ HEALTHCARE": "আমি স্টেমজ হেলথকেয়ারে থাকতে চাই",
+        "Indiaantiscroller": "QMC স্থানান্তরের বিজ্ঞপ্তি: অনুগ্রহ করে মনে রাখবেন যে QMC মুম্বাই 02nd Floor, Iconic Building, Urmi Estate, 95, Ganpatrao Kadam Marg, Lower Parel, Mumbai 400013 থেকে কাজ করবে সোমবার, 07 নভেম্বর 2022 থেকে। আমাদের নতুন সুবিধা আপনাকে পরিবেশন করা.আরও তথ্যের জন্য, অনুগ্রহ করে হেল্পলাইনে কল করুন বা info@qatarmedicalcenter.com-এ আমাদের কাছে লিখুন",
+        "antiscroller": "প্রিয় আবেদনকারী, QMC প্রতিনিধি বা এজেন্ট বলে দাবি করে ফোন/ইমেল স্ক্যাম এবং ভুয়া অনলাইন প্ল্যাটফর্ম (চ্যাট রুম সহ) সম্পর্কে সতর্ক থাকুন।  দয়া করে টাকা দেবেন না বা প্রতারকদের আপনার ব্যক্তিগত তথ্য দেবেন না।  যাচাইকৃত এবং খাঁটি তথ্যের জন্য শুধুমাত্র অফিসিয়াল QMC প্ল্যাটফর্ম ব্যবহার করুন।  আমাদের হেল্পলাইন নম্বরে কল করে কোনো প্রতারণার প্রতিবেদন করুন।  এছাড়াও আপনি info@qatarmedicalcenter.com-এ আমাদের বিস্তারিত ইমেল করতে পারেন",
+        "bangaladeshAntiscroller": "দৃষ্টি আকর্ষণ: প্রিয় আবেদনকারীরা, অনুগ্রহ করে মনে রাখবেন: রেফারেল পরীক্ষার জন্য পুনরায় নির্ধারিত অ্যাপয়েন্টমেন্ট শুধুমাত্র এই আউটবাউন্ড নম্বর থেকে প্রদান করা হবে: ০৯৬৭৭৬০২৪০২। অতিরিক্ত সহায়তার জন্য, অনুগ্রহ করে info@qatarmedicalcenter.com ইমেইলে আপনার ভিসা নম্বর এবং নাম উল্লেখ করে আমাদের সাথে যোগাযোগ করুন।. Notice/Alert: Dear Applicants, please note: All revisit appointments for referral tests will be provided only through the outbound number: 09677602402. For further assistance, please email info@qatarmedicalcenter.com and include your visa number and name.",
+        "disclamcontent": "কাতার মেডিকেল সেন্টারে অনুসরণ করা পদক্ষেপের ক্রম অবস্থান অনুযায়ী পরিবর্তিত হতে পারে.",
+        "City name": "শহরের নাম",
+        "Country name": "দেশের নাম",
+        "Delhi, INDIA": "দিল্লী, ভারত",
+        "Mumbai, INDIA": "মুম্বাই, ভারত",
+        "Kolkata, INDIA": " কলকাতা, ভারত",
+        "Hyderabad, INDIA": "হায়দ্রাবাদ, ভারত",
+        "Chennai, INDIA": "চেন্নাই, ভারত",
+        "Lucknow, INDIA": "লক্ষ্ণৌ, ভারত",
+        "Kochi, INDIA": "কোচি, ভারত",
+        "Colombo, SRI LANKA": "কলম্বো, শ্রীলঙ্কা",
+        "Kathmandu, NEPAL": "কাঠমান্ডু, নেপাল",
+        "Dhaka, BANGLADESH": "ঢাকা, বাংলাদেশ",
+        "Sylhet, BANGLADESH": "সিলেট, বাংলাদেশ",
+        "Manila, PHILIPPINES": "ম্যানিলা, ফিলিপিনস",
+        "Qualification": "যোগ্যতা",
+        "Years": "বছর",
+        "Lakhs": "লক্ষ",
+        "Days": "দিন",
+        "Language": "ভাষা"
+    }
+}

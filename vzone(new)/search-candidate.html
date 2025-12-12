@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Verifyzone</title>
+    <link rel="icon" href="/assets/img/logotop.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/dash.css">
+    <link rel="stylesheet" href="/assets/css/search-candidate.css">
+    <link rel="stylesheet" href="/assets/css/verification-request.css">
+    <link rel="stylesheet" href="/assets/css/bulk.css">
+    <link rel="stylesheet" href="/assets/css/exit-details.css">
+    <link rel="stylesheet" href="/assets/css/new-request.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+    <style>
+.toast-buttons button {
+  margin: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toast-buttons button:hover {
+  background: #5750e0;
+}
+
+/* Modal Background */
+.toast-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 25px 40px;
+  border-radius: 12px;
+      width: 35%;
+    height: 35%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: popup 0.4s ease;
+}
+
+/* Animation */
+@keyframes popup {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Icon animation */
+.toast-modal .icon {
+    top: 10px;
+  font-size: 48px;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+
+
+/* Smooth pop/bounce entry */
+@keyframes popIn {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* Gentle spinning effect */
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.success .icon i {
+  color: #a5dc86;
+      height: 80px;
+    width: 80px;
+    font-size: 50px;
+    border-radius: 50px;
+  border: 3px solid #ceffb3;
+  font-size: 50px;
+  animation: spinIn 1s ease, iconPop 0.6s ease;
+}
+
+.error .icon i {
+    color: #f27474;
+          height: 80px;
+    width: 80px;
+    font-size: 50px;
+    border-radius: 50px;
+  border: 3px solid #f7a0a0;
+  font-size: 50px;
+  animation: errorXMark 0.5s ease;
+}
+.warning .icon p {
+  color: #f8bb86;
+  height: 80px;
+    width: 80px;
+    font-size: 50px;
+    border-radius: 50px;
+  border: 3px solid #fdd8b8;
+  font-size: 50px;
+  animation: warning 0.5s ease;
+  
+}
+.info .icon p {
+  color: #17a2b8;
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    border-radius: 50px;
+  border: 3px solid #b8daff;
+  font-size: 50px;
+  animation: info 0.5s ease;
+}
+.question .icon p {
+    color: #87adbd;
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    border-radius: 50px;
+  border: 3px solid #87adbd;
+  font-size: 50px;
+  animation: question 0.5s ease;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
+  50% { text-shadow: 0 0 15px currentColor, 0 0 30px currentColor; }
+}
+
+/* Icon pop/bounce animation */
+@keyframes iconPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Icon rotation animation */
+@keyframes spinIn {
+  0% { transform: rotate(-180deg) scale(0.5); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+
+
+@keyframes warning {
+0% {
+    transform: rotateZ(45deg);
+    opacity: 0;
+}
+
+25% {
+    transform: rotateZ(-25deg);
+    opacity: .4;
+}
+
+50% {
+    transform: rotateZ(15deg);
+    opacity: .8;
+}
+
+75% {
+    transform: rotateZ(-5deg);
+    opacity: 1;
+}
+
+100% {
+    transform: rotateX(0);
+    opacity: 1;
+}
+}
+
+
+
+@keyframes errorXMark {
+0% {
+    margin-top: 1.625em;
+    transform: scale(0.4);
+    opacity: 0;
+}
+
+50% {
+    margin-top: 1.625em;
+    transform: scale(0.4);
+    opacity: 0;
+}
+
+80% {
+    margin-top: -0.375em;
+    transform: scale(1.15);
+}
+
+100% {
+    margin-top: 0;
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+
+@keyframes info {
+0% {
+    transform: rotateZ(45deg);
+    opacity: 0;
+}
+
+25% {
+    transform: rotateZ(-25deg);
+    opacity: .4;
+}
+
+50% {
+    transform: rotateZ(15deg);
+    opacity: .8;
+}
+
+75% {
+    transform: rotateZ(-5deg);
+    opacity: 1;
+}
+
+100% {
+    transform: rotateX(0);
+    opacity: 1;
+}
+}
+
+@keyframes question {
+0% {
+    transform: rotateY(-360deg);
+}
+
+100% {
+    transform: rotateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <div class="notification-logo sidebar-items">
+                <img src="/assets/img/V.png" alt="Small Logo" class="logo-small">
+                <img src="/assets/img/white-logo.png" alt="Full Logo" class="logo-full">
+            </div>
+        </div>
+        <div class="sidebar-scroll">
+            <div class="sidebar-menu">
+                <a href="dashboardxzone.html" class="sidebar-items">
+                    <i class="ri-dashboard-line"></i>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+
+                <a href="exitdetails.html" class="sidebar-items">
+                    <i class="ri-user-add-line"></i>
+                    <span class="menu-text"> Add exit details</span>
+                </a>
+                <a href="verification-request.html" class="sidebar-items">
+                    <i class="ri-user-follow-line"></i>
+                    <span class="menu-text"> Verification Request</span>
+                </a>
+                <a href="new-request.html" class="sidebar-items">
+                    <i class="ri-notification-2-line"></i>
+                    <span class="menu-text"> New request received</span>
+                </a>
+                <a href="search-candidate.html" class="sidebar-items active">
+                    <i class="ri-user-search-line"></i>
+                    <span class="menu-text">Search candidate</span>
+                </a>
+                <a href="bulk-upload.html" class="sidebar-items">
+                    <i class="ri-upload-cloud-line"></i>
+                    <span class="menu-text">Bulk upload</span>
+                </a>
+                   <a href="approve-manager.html" class="sidebar-items">
+                    <i class="ri-group-2-line"></i>
+                    <span class="menu-text">Approve manager</span>
+                </a>
+
+                <!-- <div class="sidebar-dropdown mt-2">
+                    <div class="sidebar-items sidebar-items1 active dropdown-toggle1">
+                        <i class="ri-earth-line"></i>
+                        <span class="menu-text">ExZone</span>
+                        <i class="ri-arrow-down-s-line arrow-icon"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="exitdetails.html">
+                            <div class="sidebar-subitem mt-2">
+                                <i class="ri-logout-circle-line"></i> Add exit details
+                            </div>
+                        </a>
+                        <a href="verification-request.html">
+                            <div class="sidebar-subitem"><i class="ri-shield-user-line"></i> Verification Request</div>
+                        </a>
+                        <div class="sidebar-subitem"><i class="ri-file-list-3-line"></i> New request received
+                        </div>
+                        <div class="sidebar-subitem active"><i class="ri-search-line"></i> Search candidate</div>
+                        <a href="bulk-upload.html">
+                            <div class="sidebar-subitem"><i class="ri-upload-cloud-line"></i> Bulk upload</div>
+                        </a>
+                    </div>
+                </div> -->
+
+                 <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1 dropdown-toggle1">
+                        <i class="ri-settings-3-line"></i>
+                        <span class="menu-text">Configurations</span>
+                        <i class="ri-arrow-down-s-line arrow-icon"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="activate-autopilot.html">
+                            <div class="sidebar-subitem">
+                                <i class="ri-rocket-line"></i> Activate Autopilot
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1 dropdown-toggle1">
+                        <i class="ri-bar-chart-2-line"></i>
+                        <span class="menu-text">Reports</span>
+                        <i class="ri-arrow-down-s-line arrow-icon"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="attrition-report.html"><div class="sidebar-subitem"><i class="ri-line-chart-line"></i> Attrition Reports</div></a>
+                        <a href="reverify-histry.html"><div class="sidebar-subitem"><i class="ri-history-line"></i> Re-verification History</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="sidebar-bottom">
+            <div class="notification1 sidebar-items">
+                <i class="ri-logout-circle-r-line"></i>
+                <span class="menu-text">VZone</span>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Right Content -->
+    <div class="main-container">
+        <div class="navbar">
+            <div class="navbar-left d-flex">
+                <!-- <div>
+                    <h5 class="navbar-exzone"><i class="ri-user-star-line"></i> Exzone /</h5>
+                </div>
+                <div class="navbar-x-vzone">
+                    <div class="navbar-vzone-button" data-tooltip="Go to Vzone">
+                        <div class="button-wrapper">
+                            <div class="text"><i class="ri-shield-check-line"></i> Vzone</div>
+                            <span class="icon">
+                                <i class="ri-shield-check-line"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="navbar-ex-toggle">
+                    <input type="checkbox" id="exswitch">
+                    <label for="exswitch" class="exzone-slider">
+                        <span class="ex-nav-text on">Exzone</span>
+                        <span class="ex-nav-text off"> Vzone</span>
+                        <!-- <span class="ex-nav-text off2"><i class="ri-lock-line"></i> Vzone</span> -->
+                    </label>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <!-- <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <i class="ri-search-line"></i>
+                </div> -->
+
+                <div class="profile">
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <img src="/assets/img/profile-nav.jpg" alt="Profile" class="profile-img">
+                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                        </button>
+                        <div class="dropdown-menu border-0">
+                            <a href="#">
+                                <i class="ri-user-line"></i> My Profile
+                            </a>
+                            <a href="#">
+                                <i class="ri-settings-3-line"></i> Settings
+                            </a>
+                            <a href="index.html">
+                                <i class="ri-logout-box-r-line"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="breadcrumbs" style="padding: 10px 0px 20px 5px"><a href="dashboardxzone.html"><i
+                    class="ri-home-8-line" style="color: var(--purple-color)"></i></a> <i class="ri-arrow-right-s-line"
+                style="color: var(--purple-color)"></i> <span
+                style="color: var(--purple-color);font-size: 14px;">Ex-Zone</span> <i class="ri-arrow-right-s-line"
+                style="color: var(--purple-color)"></i> <span style="font-size: 14px;">Search candidate details</span>
+        </div>
+
+        <!-- <div class="bulk-upload-card mb-3 shadow-sm">
+            <h5 class=" bulk-table-heading mb-4">Search candidate details</h5>
+
+
+            <div class="row align-items-center">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 mb-2">
+                    <div class="upload-component">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search..." />
+                            <i class="ri-search-line"></i>
+                        </div>
+
+                        <div class="w-100 gap-2 d-flex justify-content-center mt-4">
+                            <button class="btn-submit rounded-pill px-2">
+                                <div class="original"><i class="ri-search-line"></i></div>
+                                <div class="letters">
+                                    <i class="ri-search-line"></i>
+                                </div>
+                            </button>
+                            <button class="btn-submit">
+                                <div class="original">Get Date</div>
+                                <div class="letters">
+                                    <span>G</span>
+                                    <span>e</span>
+                                    <span>t</span>
+                                    <span></span>
+                                    <span>D</span>
+                                    <span>a</span>
+                                    <span>t</span>
+                                    <span>a</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div> -->
+
+        <div class="content">
+
+            <h5 class="bulk-table-heading mb-4">Candidate details</h5>
+
+            <div class="d-flex justify-content-center gap-3">
+                <div class="search-box">
+                    <input type="text" placeholder="Enter employee code..." />
+                    <i class="ri-search-line"></i>
+                </div>
+                <button class="btn-submit">
+                    <div class="original">Get Data</div>
+                    <div class="letters">
+                        <span>G</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span></span>
+                        <span>D</span>
+                        <span>a</span>
+                        <span>t</span>
+                        <span>a</span>
+                    </div>
+                </button>
+            </div>
+
+            <div class="text-center mt-5">
+                <img src="/assets/img/no-data-found-img.jpg" alt="no-record-found" style="height: 200px;">
+                <h6 class="no-data-found-text">No record found</h6>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            
+  <div class="toast-buttons">
+    <button onclick="openModal('success')">Success</button>
+    <button onclick="openModal('error')">Error</button>
+    <button onclick="openModal('warning')">Warning</button>
+    <button onclick="openModal('info')">Info</button>
+    <button onclick="openModal('question')">Question</button>
+  </div>
+
+
+
+
+
+<!-- Modals -->
+<div id="success" class="toast-modal">
+  <div class="modal-content success">
+    <div class="icon"><i class="ri-check-line"></i></div>
+    <p>Operation Successful!</p>
+  </div>
+</div>
+
+<div id="error" class="toast-modal">
+  <div class="modal-content error">
+    <div class="icon"><i class="ri-close-line"></i></div>
+    <p>Something went wrong!</p>
+  </div>
+</div>
+
+<div id="warning" class="toast-modal">
+  <div class="modal-content warning">
+    <div class="icon"><p>!</p></div>
+    <p>Be careful!</p>
+  </div>
+</div>
+
+<div id="info" class="toast-modal">
+  <div class="modal-content info">
+    <div class="icon"><p>i</p></div>
+    <p>Just so you know...</p>
+  </div>
+</div>
+
+<div id="question" class="toast-modal">
+  <div class="modal-content question">
+    <div class="icon"><p>?</p></div>
+    <p>Are you sure?</p>
+  </div>
+</div>
+            <!-- <div class="card p-0 mt-3 mb-4 border-0">
+                <table>
+                    <thead style="background: #f8ece2">
+                        <tr>
+                            <th class="sortable">ID <i class="ri-arrow-down-line"></i><i
+                                    class="ri-arrow-up-line d-none"></i></th>
+                            <th class="sortable">Employee name <i class="ri-arrow-down-line"></i><i
+                                    class="ri-arrow-up-line d-none"></i></th>
+                            <th class="sortable">Employee code <i class="ri-arrow-down-line"></i><i
+                                    class="ri-arrow-up-line d-none"></i></th>
+                            <th class="sortable">Designation <i class="ri-arrow-down-line"></i><i
+                                    class="ri-arrow-up-line d-none"></i></th>
+                            <th class="sortable">From date <i class="ri-arrow-down-line"></i><i
+                                    class="ri-arrow-up-line d-none"></i></th>
+                            <th class="sortable">Action <i class="ri-arrow-down-line"></i><i
+                                    class="ri-arrow-up-line d-none"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="tbody-tr">
+                        <tr class="selected">
+                            <td>01</td>
+                            <td>sbardwell0</td>
+                            <td>1443</td>
+                            <td>IT</td>
+                            <td>05-11-20205</td>
+                            <td class="d-flex gap-3">
+                                <button class="new-request-table-accept-btn" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-accept" title="Accept">
+                                    <i class="ri-user-add-line"></i>
+                                </button>
+
+                                <button class="new-request-table-delete-btn" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-delete" title="Remove">
+                                    <i class="ri-delete-bin-5-line"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+                        <tr class="selected">
+                            <td>02</td>
+                            <td>sbardwell0</td>
+                            <td>1443</td>
+                            <td>IT</td>
+                            <td>05-11-20205</td>
+                            <td class="d-flex gap-3">
+                                <button class="new-request-table-accept-btn" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-accept" title="Accept">
+                                    <i class="ri-user-add-line"></i>
+                                </button>
+
+                                <button class="new-request-table-delete-btn" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-delete" title="Remove">
+                                    <i class="ri-delete-bin-5-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="selected">
+                            <td>03</td>
+                            <td>sbardwell0</td>
+                            <td>1443</td>
+                            <td>IT</td>
+                            <td>05-11-20205</td>
+                            <td class="d-flex gap-3">
+                                <button class="new-request-table-accept-btn" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-accept" title="Accept">
+                                    <i class="ri-user-add-line"></i>
+                                </button>
+
+                                <button class="new-request-table-delete-btn" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-delete" title="Remove">
+                                    <i class="ri-delete-bin-5-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div> -->
+
+        </div>
+
+        <div class="footer pt-3" style="font-size: 12px;">
+            <p>@2025 <span style="color:var(--purple-color)">Tarajyau</span> | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar-items').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Initialize all tooltips
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            [...tooltipTriggerList].forEach(el => new bootstrap.Tooltip(el));
+        });
+
+function openModal(id) {
+
+  document.querySelectorAll('.toast-modal').forEach(modal => modal.style.display = 'none');
+
+  const modal = document.getElementById(id);
+  modal.style.display = 'flex';
+
+  modal.onclick = e => {
+    if (e.target === modal) modal.style.display = 'none';
+  };
+}
+
+    </script>
+    <script src="/assets/js/sort.js"></script>
+</body>
+
+</html>

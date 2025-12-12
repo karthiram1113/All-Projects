@@ -1,0 +1,63 @@
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: white !important;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .print-modal-dialog {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+
+  .print-modal-content {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-modal-body {
+    padding: 35px !important;
+  }
+
+  /* Keep row/col structure intact */
+  .print-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+  .print-col-3, .print-col-4, .print-col-6, .print-col-9 {
+    float: none !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Left image + right content */
+  .print-row-left-right {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Customer details + loan details stacked properly */
+  .print-col-9 .print-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .print-col-9 .print-col-4 {
+    width: 33.3333% !important;
+    flex: 0 0 33.3333% !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

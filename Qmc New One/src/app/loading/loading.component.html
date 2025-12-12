@@ -1,0 +1,156 @@
+<div class="loading-page bg-pink">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="bannerBg"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="emptySpacer"></div>
+    <div class="form-check" style="text-align: center; display: none">
+      <label class="form-check-label">
+        <input type="checkbox" [(ngModel)]="langState" /> Language
+      </label>
+    </div>
+    <div class="row bg-pink">
+      <div class="col-md-3">
+        <div class="wpb_wrapper">
+          <p>
+            <span style="color: #ffffff">Select your Centre اختر مركزك </span
+            ><br />
+            <span style="color: #ffffff"
+              >আপনার কেন্দ্র নির্বাচন করুন अपना केंद्र चुनें </span
+            ><br />
+            <span style="color: #ffffff">Pilih Pusat Anda </span><br />
+            <span style="color: #ffffff">Piliin ang iyong sentro</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="wpb_wrapper">
+          <div class="vc_empty_space" style="height: 16px">
+            <span class="vc_empty_space_inner"></span>
+          </div>
+
+          <div class="wpb_text_column wpb_content_element">
+            <div class="wpb_wrapper">
+              <p style="text-align: center">
+                <select (change)="onChangeLanguage($event)">
+                  <option value="">--Select language--</option>
+                  <ng-template
+                    ngFor
+                    let-item
+                    [ngForOf]="languageList"
+                    let-i="index"
+                  >
+                    <option [selected]="item.code == 'en'" [value]="item.code">
+                      {{ item.nativeLang }}
+                    </option>
+                  </ng-template>
+                </select>
+              </p>
+            </div>
+          </div>
+
+          <div class="wpb_text_column wpb_content_element">
+            <div class="wpb_wrapper">
+              <p style="text-align: center">
+                <select name="forma" (change)="pageLocation($event)">
+                  <option value="">--Select Country--</option>
+                  <ng-template
+                    ngFor
+                    let-i="index"
+                    let-country
+                    [ngForOf]="countryList"
+                  >
+                    <option value="{{ country.engCountry }}">
+                      {{ country.natCountry }}
+                    </option>
+                  </ng-template>
+                </select>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="wpb_wrapper">
+          <div id="output" class="margin-top ng-scope" style="text-align: left">
+            <div id="output" class="margin-top ng-scope">
+              <span
+                id="selectedText-ne"
+                class="ng-binding"
+                style="color: #ffffff; font-size: 12pt"
+                >तपाइँको केन्द्र छान्नुहोस्</span
+              >
+            </div>
+            <div id="output" class="margin-top ng-scope">
+              <span
+                id="selectedText-si"
+                class="ng-binding"
+                style="color: #ffffff; font-size: 12pt"
+                >ඔබගේ මධ්යස්ථානය තෝරන්න</span
+              >
+            </div>
+            <div id="output" class="margin-top ng-scope">
+              <span style="color: #ffffff; font-size: 12pt"
+                ><strong class="ng-binding">&nbsp;</strong
+                ><span id="selectedText-ta" class="ng-binding"
+                  >உங்கள் மையத்தைத் தேர்ந்தெடுக்கவும்</span
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="emptySpacer"></div>
+    <div class="row bg-pink">
+      <div class="col-md-6">
+        <div class="footerLogo">
+          <img src="assets/images/qmc_grey-500x142.png" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="footer-right">
+          <div>Powered by</div>
+          <div class="footerBg">
+            <img src="assets/images/footer-logo.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+  </div>
+</div>
+
+<div class="customModalPopup" id="landingpagePopup">
+  <div class="customModal-header">
+      <button type="button" class="close" (click)="closeModalPopup()">
+          <span>&times;</span>
+      </button>
+  </div>
+  <div class="customModal-body">
+    <div class="model-img-header">
+      <div><img class="popup-logo" src="assets/images/qmc-logo-new1.png" alt="download-app" /></div>
+      <div><img class="popup-download-text" src="assets/images/popup/popup-header-img.png" alt="download-app" /></div>
+    </div>
+    <div class="model-img-body">
+      <table>
+        <tr>
+          <td class="left"><a href="https://play.google.com/store/apps/details?id=com.stemzhealthcare.qmc_app" target="_blank"><img src="assets/images/popup/googleplay-btn.png" alt="download-app" /></a></td>
+          <td class="right"><a href="https://apps.apple.com/in/app/qmc-app/id6499140562" target="_blank"><img src="assets/images/popup/applestore-btn.png" alt="download-app" /></a></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <img class="popup-qr" src="assets/images/download-app-qr.png" alt="download-app" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="model-img-footer"><img src="assets/images/popup/popup-footer-img.png" alt="download-app" /></div>
+  </div>
+</div>

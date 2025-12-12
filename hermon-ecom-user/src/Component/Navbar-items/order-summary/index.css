@@ -1,0 +1,62 @@
+.summary-card-01{
+    background-color: rgb(246, 252, 254);
+}
+
+.tracker-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .tracker-step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    margin: 0 auto 10px auto;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .tracker-step.active .circle {
+    background-color: rgb(16, 137, 186);
+  }
+
+  .tracker-step::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -50%;
+    height: 3px;
+    width: 100%;
+    background-color: #ddd;
+    z-index: -1;
+  }
+
+  .tracker-step:last-child::after {
+    display: none;
+  }
+
+  /* .tracker-step.active::after {
+    background-color: orange;
+  } */
+
+  .checkout-card-main-1{
+    width: 400px;
+    margin-right: 70px;
+  }
+
+  .order-back-icon{
+    text-decoration: none;
+    color: black;
+  }

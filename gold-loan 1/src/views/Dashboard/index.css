@@ -1,0 +1,146 @@
+.small-card {
+  border-radius: 14px;
+  background: #fdfdfd;
+  transition: 0.3s ease;
+}
+
+.small-card:hover {
+  transform: scale(1.03);
+}
+
+.output-box {
+  background: #fff;
+  border-radius: 10px;
+  /* font-size: 17px; */
+  font-weight: bold;
+  padding: 12px;
+  /* text-align: center; */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.animate-fade {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide {
+  animation: slideUp 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+.dashboard-price-headings {
+  font-size: 18px;
+}
+
+
+@keyframes blink-red {
+  0%, 100% { background-color: #f79191; opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes blink-yellow {
+  0%, 100% { background-color: #f0d373; opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink-red {
+  animation: blink-red 1s infinite;
+}
+
+.blink-yellow {
+  animation: blink-yellow 1.5s infinite;
+}
+
+.whatsapp-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px; /* spacing between icons */
+}
+
+.whatsapp-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.whatsapp-wrapper .tooltip {
+  visibility: hidden;
+  width: 100px;
+   background: linear-gradient(145deg, #d4af37, #ffd700);
+  transform: translateY(-2px);
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 11px;
+  padding: 2px 8px;
+  position: absolute;
+  top: -30px; /* above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.whatsapp-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.round-edit-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f1db96; /* warning color */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.back-icon {
+  font-size: 22px;
+  color: #d4af37;
+}
+.back-icon:hover {
+  color: #b8922f;
+}
+
+.add-investor-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17vh;
+}
+.shake-card:hover {
+  animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+
+.bar-glow {
+  filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.2));
+}

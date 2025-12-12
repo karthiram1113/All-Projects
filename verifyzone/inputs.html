@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /*= Reset CSS 
+============= */
+        /*= Reset CSS End
+================= */
+        /*= input focus effects css
+=========================== */
+        
+         :focus {
+            outline: none;
+        }
+        
+        .inputcol-3 {
+            float: left;
+            width: 27.33%;
+            margin: 40px 3%;
+            position: relative;
+        }
+        /* necessary to give position: relative to parent. */
+        
+        input[type="text"] {
+            font: 15px/24px "Lato", Arial, sans-serif;
+            color: #333;
+            width: 100%;
+            box-sizing: border-box;
+            letter-spacing: 1px;
+        }
+        
+        .effect-20 {
+            border: 1px solid #ccc;
+            padding: 7px 14px;
+            transition: 0.4s;
+            background: transparent;
+        }
+        
+        .effect-20~.focus-border:before,
+        .effect-20~.focus-border:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3399FF;
+            transition: 0.3s;
+        }
+        
+        .effect-20~.focus-border:after {
+            top: auto;
+            bottom: 0;
+            left: auto;
+            right: 0;
+        }
+        
+        .effect-20~.focus-border i:before,
+        .effect-20~.focus-border i:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 0;
+            background-color: #3399FF;
+            transition: 0.4s;
+        }
+        
+        .effect-20~.focus-border i:after {
+            left: auto;
+            right: 0;
+            top: auto;
+            bottom: 0;
+        }
+        
+        .effect-20:focus~.focus-border:before,
+        .effect-20:focus~.focus-border:after,
+        .has-content.effect-20~.focus-border:before,
+        .has-content.effect-20~.focus-border:after {
+            width: 100%;
+            transition: 0.3s;
+        }
+        
+        .effect-20:focus~.focus-border i:before,
+        .effect-20:focus~.focus-border i:after,
+        .has-content.effect-20~.focus-border i:before,
+        .has-content.effect-20~.focus-border i:after {
+            height: 100%;
+            transition: 0.4s;
+        }
+        
+        .effect-20~label {
+            position: absolute;
+            left: 14px;
+            width: 100%;
+            top: 10px;
+            color: #aaa;
+            transition: 0.3s;
+            z-index: -1;
+            letter-spacing: 0.5px;
+        }
+        
+        .effect-20:focus~label,
+        .has-content.effect-20~label {
+            top: -18px;
+            left: 0;
+            font-size: 12px;
+            color: #3399FF;
+            transition: 0.3s;
+        }
+        /*= input focus effects css End
+=============================== */
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="container">
+
+            <h2>Input with Label Effects</h2>
+
+            <div class="inputcol-3 input-effect">
+                <input class="effect-20" type="text" placeholder="">
+                <label>First Name</label>
+                <span class="focus-border">
+            	<i></i>
+            </span>
+            </div>
+
+        </div>
+    </div>
+    <p id="currentTime"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>

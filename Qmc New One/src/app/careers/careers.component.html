@@ -1,0 +1,964 @@
+<app-nav></app-nav>
+<div class="careers-page">
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">
+        {{
+          "careersPage.popuptext.Public Notice- Beware of Recruitment Fraudsters"
+            | translate
+        }}
+      </h5>
+      <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button> -->
+    </div>
+    <div
+      class="modal-body"
+      style="color: #000000; text-align: justify !important"
+    >
+      {{ "careersPage.popuptext.popupcontent" | translate }}
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        style="color: #fff"
+        class="btn btn-light"
+        (click)="modal.close('Save click')"
+        id="knw"
+      >
+        {{ "careersPage.popuptext.Know More" | translate }}
+      </button>
+    </div>
+  </ng-template>
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    It has been learnt that some scamsters are cheating potential job seekers by posing as 'authorised
+                    recruitment agency' for Fortis. They issue fake appointment letters using Company's name, logo,
+                    website link and address on fake stationery and communicate via fake e-mail IDs as well as phone
+                    numbers. They also ask for money in lieu of offer letter and confirmation of selection.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="knw">Know More</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+  <div class="emptySpacer" style="height: 32px"></div>
+  <!-- new content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="iw-heading">
+          <h3 class="iwh-title">
+            <u
+              >{{ "careersPage.contentTitle.PUBLIC NOTICE" | translate }}
+              <br /><br />{{
+                "careersPage.contentTitle.CAUTION AGAINST EMPLOYMENT FRAUD"
+                  | translate
+              }}</u
+            >
+          </h3>
+        </div>
+        <div class="wpb-wrapper">
+          <p style="text-align: justify !important">
+            {{ "careersPage.contentText.contentText1" | translate }}
+          </p>
+          <p style="text-align: justify !important">
+            {{ "careersPage.contentText.contentText2" | translate }}
+          </p>
+          <p style="text-align: justify !important">
+            {{ "careersPage.contentText.contentText3" | translate }}
+          </p>
+          <p
+            style="
+              text-align: center;
+              font-size: 15px;
+              color: #303030;
+              font-weight: 600;
+              margin-bottom: 44px;
+            "
+          >
+            <u>{{
+              "careersPage.contentText.Issued in Public Interest." | translate
+            }}</u>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form
+          [ngClass]="{ t_a_s: lang == 'ur' }"
+          [formGroup]="registerForm"
+          (ngSubmit)="onSubmit()"
+        >
+          <h4 class="form-header">
+            {{ "careersPage.contentTitle.Profile Information:" | translate }}
+          </h4>
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+                <div class="col">
+                  <label
+                    class="font-color"
+                    style="text-transform: capitalize; text-align: left"
+                    >{{ "careersPage.contentTitle.First Name" | translate }}
+                    <span class="mat">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    formControlName="fname"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['fname'].dirty ||
+                          registerForm.controls['fname'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'fname')
+                    }"
+                    placeholder="{{
+                      'careersPage.contentTitle.First Name' | translate
+                    }}"
+                  />
+                </div>
+                <div class="col">
+                  <label
+                    class="font-color"
+                    style="text-transform: capitalize; text-align: left"
+                    >{{ "careersPage.contentTitle.Last Name" | translate }}
+                    <span class="mat">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    formControlName="lname"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['lname'].dirty ||
+                          registerForm.controls['lname'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'lname')
+                    }"
+                    placeholder="{{
+                      'careersPage.contentTitle.Last Name' | translate
+                    }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{ "careersPage.contentTitle.Email Id" | translate }}
+                <span class="mat">*</span></label
+              >
+              <input
+                type="text"
+                formControlName="email"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['email'].dirty ||
+                      registerForm.controls['email'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'email')
+                }"
+                placeholder="{{
+                  'careersPage.contentTitle.Email Id' | translate
+                }}"
+              />
+              <div
+                *ngIf="
+                  (registerForm.controls['email'].dirty ||
+                    registerForm.controls['email'].touched ||
+                    submitted) &&
+                  registerForm.hasError('required', 'email')
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="
+                    (registerForm.controls['email'].dirty ||
+                      registerForm.controls['email'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'email')
+                  "
+                >
+                  {{ "careersPage.contentTitle.emailval1" | translate }}
+                </div>
+                <div *ngIf="registerForm.hasError('email', 'email')">
+                  {{ "careersPage.contentTitle.emailval2" | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{ "careersPage.contentTitle.Mobile Number" | translate }}
+                <span class="mat">*</span></label
+              >
+              <input
+                type="tel"
+                formControlName="mobile"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['mobile'].dirty ||
+                      registerForm.controls['mobile'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'mobile')
+                }"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+                <div class="col">
+                  <label
+                    class="font-color"
+                    style="text-transform: capitalize; text-align: left"
+                  >
+                    {{ "careersPage.contentTitle.Candidate City" | translate }}
+                    <span class="mat">*</span></label
+                  >
+                  <input
+                    type="text"
+                    formControlName="city"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['city'].dirty ||
+                          registerForm.controls['city'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'city')
+                    }"
+                    placeholder="{{ 'Comman.City name' | translate }}"
+                  />
+                </div>
+                <div class="col">
+                  <label
+                    class="font-color"
+                    style="text-transform: capitalize; text-align: left"
+                  >
+                    {{ "careersPage.contentTitle.Country" | translate }}
+                    <span class="mat">*</span></label
+                  >
+                  <input
+                    type="text"
+                    formControlName="country"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['country'].dirty ||
+                          registerForm.controls['country'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'country')
+                    }"
+                    placeholder="{{ 'Comman.Country name' | translate }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <!-- <span style="text-transform: capitalize; text-align: left;">Prefered Location -->
+              <!-- (mandatory) -->
+              <label class="font-color" style="text-transform: capitalize">
+                {{ "careersPage.contentTitle.Prefered Location" | translate }}
+                <span class="mat">*</span></label
+              >
+              <div style="margin-top: 20px; margin-bottom: 24px">
+                <select
+                  class="font-color"
+                  formControlName="plocation"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid':
+                      (registerForm.controls['plocation'].dirty ||
+                        registerForm.controls['plocation'].touched ||
+                        submitted) &&
+                      registerForm.hasError('required', 'plocation')
+                  }"
+                >
+                  <option selected>
+                    {{ "careersPage.contentTitle.Select Location" | translate }}
+                  </option>
+                  <option value="Delhi">
+                    {{ "Comman.Delhi, INDIA" | translate }}
+                  </option>
+                  <option value="Mumbai">
+                    {{ "Comman.Mumbai, INDIA" | translate }}
+                  </option>
+                  <option value="Kolkata">
+                    {{ "Comman.Kolkata, INDIA" | translate }}
+                  </option>
+                  <option value="Hyderabad">
+                    {{ "Comman.Hyderabad, INDIA" | translate }}
+                  </option>
+                  <option value="Chennai">
+                    {{ "Comman.Chennai, INDIA" | translate }}
+                  </option>
+                  <option value="Lucknow">
+                    {{ "Comman.Lucknow, INDIA" | translate }}
+                  </option>
+                  <option value="Kochi">
+                    {{ "Comman.Kochi, INDIA" | translate }}
+                  </option>
+                  <option value="Colombo">
+                    {{ "Comman.Colombo, SRI LANKA" | translate }}
+                  </option>
+                  <option value="Kathmandu">
+                    {{ "Comman.Kathmandu, NEPAL" | translate }}
+                  </option>
+                  <option value="Dhaka">
+                    {{ "Comman.Dhaka, BANGLADESH" | translate }}
+                  </option>
+                  <option value="Sylhet">
+                    {{ "Comman.Sylhet, BANGLADESH" | translate }}
+                  </option>
+                  <option value="Manila">
+                    {{ "Comman.Manila, PHILIPPINES" | translate }}
+                  </option>
+                </select>
+              </div>
+              <!-- </span> -->
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{ "careersPage.contentTitle.Position Applied For" | translate
+                }}<span class="mat">*</span></label
+              >
+              <input
+                type="text"
+                formControlName="position"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['position'].dirty ||
+                      registerForm.controls['position'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'position')
+                }"
+              />
+            </div>
+          </div>
+          <h4 class="form-header">
+            {{
+              "careersPage.contentTitle.Job Specific Information:" | translate
+            }}
+          </h4>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{
+                  "careersPage.contentTitle.Highest Qualification" | translate
+                }}</label
+              >
+              <input
+                type="text"
+                formControlName="hQualification"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['hQualification'].dirty ||
+                      registerForm.controls['hQualification'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'hQualification')
+                }"
+                placeholder="{{ 'Comman.Qualification' | translate }}"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{
+                  "careersPage.contentTitle.Total Years Of Experience (In Years)"
+                    | translate
+                }}</label
+              >
+              <input
+                type="number"
+                formControlName="totExperience"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['totExperience'].dirty ||
+                      registerForm.controls['totExperience'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'totExperience')
+                }"
+                placeholder="{{ 'Comman.Years' | translate }}"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{
+                  "careersPage.contentTitle.Relevant Years Of Experience (In Years)"
+                    | translate
+                }}</label
+              >
+              <input
+                type="number"
+                formControlName="relExperience"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['relExperience'].dirty ||
+                      registerForm.controls['relExperience'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'relExperience')
+                }"
+                placeholder="{{ 'Comman.Years' | translate }}"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+                <div class="col">
+                  <label
+                    class="font-color"
+                    style="text-transform: capitalize; text-align: left"
+                  >
+                    {{
+                      "careersPage.contentTitle.Current CTC (Per Annum)"
+                        | translate
+                    }}</label
+                  >
+                  <input
+                    type="number"
+                    formControlName="currCTC"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['currCTC'].dirty ||
+                          registerForm.controls['currCTC'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'currCTC')
+                    }"
+                    placeholder="{{ 'Comman.Lakhs' | translate }}"
+                  />
+                </div>
+                <div class="col">
+                  <label
+                    class="font-color"
+                    style="text-transform: capitalize; text-align: left"
+                  >
+                    {{
+                      "careersPage.contentTitle.Expected CTC (Per Annum)"
+                        | translate
+                    }}</label
+                  >
+                  <input
+                    type="number"
+                    formControlName="ExpectCTC"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['ExpectCTC'].dirty ||
+                          registerForm.controls['ExpectCTC'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'ExpectCTC')
+                    }"
+                    placeholder="{{ 'Comman.Lakhs' | translate }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{
+                  "careersPage.contentTitle.Notice Period (In Days)" | translate
+                }}
+              </label>
+              <input
+                type="number"
+                formControlName="noticePeriod"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['noticePeriod'].dirty ||
+                      registerForm.controls['noticePeriod'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'noticePeriod')
+                }"
+                placeholder="{{ 'Comman.Days' | translate }}"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                style="text-transform: capitalize; text-align: left"
+              >
+                {{
+                  "careersPage.contentTitle.Languages Known And Proficiency"
+                    | translate
+                }}
+              </label>
+              <input
+                type="text"
+                formControlName="langProfic"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['langProfic'].dirty ||
+                      registerForm.controls['langProfic'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'langProfic')
+                }"
+                placeholder="{{ 'Comman.Language' | translate }}"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label
+                class="font-color"
+                for="exampleFormControlFile1"
+                style="text-transform: capitalize"
+                >{{
+                  "careersPage.contentTitle.Upload Resume Options (Word Or Pdf Only) -"
+                    | translate
+                }}
+                <span class="mat">*</span></label
+              >
+              <input
+                type="file"
+                (change)="onFileChanged($event)"
+                formControlName="resume"
+                class="form-control-file"
+                [ngClass]="{
+                  'is-invalid':
+                    (registerForm.controls['resume'].dirty ||
+                      registerForm.controls['resume'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'resume')
+                }"
+                id="exampleFormControlFile1"
+              />
+              <span class="errorMsg" *ngIf="fileError">{{ fileError }}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <h5 style="text-transform: none; margin-top: 15px">
+                <b>
+                  {{
+                    "careersPage.contentTitle.Applicant statement" | translate
+                  }}</b
+                >
+              </h5>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  formControlName="applicantStatement"
+                  [ngClass]="{
+                    'is-invalid':
+                      (registerForm.controls['applicantStatement'].dirty ||
+                        registerForm.controls['applicantStatement'].touched ||
+                        submitted) &&
+                      registerForm.hasError('required', 'applicantStatement')
+                  }"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label
+                  class="font-color"
+                  class="form-check-label"
+                  for="flexCheckDefault"
+                >
+                  <p style="text-align: justify; text-transform: none">
+                    {{
+                      "careersPage.contentTitle.Applicant statement1"
+                        | translate
+                    }}
+                  </p>
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  formControlName="acceptTerms"
+                  [ngClass]="{
+                    'is-invalid':
+                      (registerForm.controls['acceptTerms'].dirty ||
+                        registerForm.controls['acceptTerms'].touched ||
+                        submitted) &&
+                      registerForm.hasError('required', 'acceptTerms')
+                  }"
+                  id="flexCheckChecked"
+                />
+                <label
+                  class="font-color"
+                  class="form-check-label"
+                  for="flexCheckChecked"
+                >
+                  <p style="text-align: justify; text-transform: none">
+                    {{
+                      "careersPage.contentTitle.Applicant statement2"
+                        | translate
+                    }}
+                  </p>
+                </label>
+                <div
+                  *ngIf="
+                    (registerForm.controls['acceptTerms'].dirty ||
+                      registerForm.controls['acceptTerms'].touched ||
+                      submitted) &&
+                    registerForm.hasError('required', 'acceptTerms')
+                  "
+                  class="invalid-feedback"
+                >
+                  {{
+                    "careersPage.contentTitle.Accept Ts & Cs is required"
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <h5 style="text-transform: none; margin-top: 15px">
+                <b>{{
+                  "careersPage.contentTitle.Acknowledgement" | translate
+                }}</b>
+              </h5>
+              <div class="col-6">
+                <span style="text-align: justify; text-transform: none"
+                  >{{ "careersPage.contentTitle.Acknowledgement1" | translate }}
+                  <select
+                    class="font-color"
+                    formControlName="acknowledgement"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['acknowledgement'].dirty ||
+                          registerForm.controls['acknowledgement'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'acknowledgement')
+                    }"
+                  >
+                    <input
+                      name="category"
+                      type="dropdown"
+                      placeholder="Dropdown"
+                      class="form-wrapper"
+                    />
+                    <option value="Yes">
+                      {{ "careersPage.contentTitle.Select" | translate }}
+                    </option>
+                    <option value="Yes">
+                      {{ "careersPage.contentTitle.Yes" | translate }}
+                    </option>
+                    <option value="No">
+                      {{ "careersPage.contentTitle.No" | translate }}
+                    </option>
+                  </select>
+                </span>
+              </div>
+              <div class="col-6">
+                <span style="text-align: justify; text-transform: none">
+                  {{ "careersPage.contentTitle.Acknowledgement2" | translate }}
+                  <select
+                    class="font-color"
+                    formControlName="currEmpStatus"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['currEmpStatus'].dirty ||
+                          registerForm.controls['currEmpStatus'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'currEmpStatus')
+                    }"
+                  >
+                    <input
+                      name="category"
+                      type="dropdown"
+                      placeholder="dropdown"
+                      class="form-wrapper"
+                    />
+                    <option value="Yes">
+                      {{ "careersPage.contentTitle.Select" | translate }}
+                    </option>
+                    <option value="Yes">
+                      {{ "careersPage.contentTitle.Yes" | translate }}
+                    </option>
+                    <option value="No">
+                      {{ "careersPage.contentTitle.No" | translate }}
+                    </option>
+                  </select>
+                </span>
+              </div>
+              <div class="col-6">
+                <span style="text-align: justify; text-transform: none">
+                  {{ "careersPage.contentTitle.Acknowledgement3" | translate }}
+                  <select
+                    class="font-color"
+                    formControlName="qatarRefer"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.controls['qatarRefer'].dirty ||
+                          registerForm.controls['qatarRefer'].touched ||
+                          submitted) &&
+                        registerForm.hasError('required', 'qatarRefer')
+                    }"
+                  >
+                    <input
+                      name="category"
+                      type="dropdown"
+                      placeholder="dropdown"
+                      class="form-wrapper"
+                    />
+                    <option value="Yes">
+                      {{ "careersPage.contentTitle.Select" | translate }}
+                    </option>
+                    <option value="Yes">
+                      {{ "careersPage.contentTitle.Yes" | translate }}
+                    </option>
+                    <option value="No">
+                      {{ "careersPage.contentTitle.No" | translate }}
+                    </option>
+                  </select>
+                </span>
+              </div>
+              <div class="col-6">
+                <span
+                  class="font-color"
+                  style="text-align: justify; text-transform: none"
+                >
+                  {{
+                    "careersPage.contentTitle.If yes, specify the name and relationship."
+                      | translate
+                  }}
+                  <div class="row">
+                    <div class="col">
+                      {{ "careersPage.contentTitle.Name" | translate
+                      }}<input
+                        type="text"
+                        formControlName="relativeName"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid':
+                            (registerForm.controls['relativeName'].dirty ||
+                              registerForm.controls['relativeName'].touched ||
+                              submitted) &&
+                            registerForm.hasError('required', 'relativeName')
+                        }"
+                        placeholder="{{
+                          'careersPage.contentTitle.Name' | translate
+                        }}"
+                      />
+                      {{ "careersPage.contentTitle.Relationship" | translate
+                      }}<input
+                        type="text"
+                        formControlName="relationship"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid':
+                            (registerForm.controls['relationship'].dirty ||
+                              registerForm.controls['relationship'].touched ||
+                              submitted) &&
+                            registerForm.hasError('required', 'relationship')
+                        }"
+                        placeholder="{{
+                          'careersPage.contentTitle.Relationship' | translate
+                        }}"
+                      />
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <ngx-recaptcha2
+                #captchaElem
+                formControlName="recaptcha"
+                [siteKey]="siteKey"
+              >
+              </ngx-recaptcha2>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="col">
+                <div class="qmcBtn radiousBtn pinkBg">
+                  <input
+                    *ngIf="!loadingStatus"
+                    class="bg-pink"
+                    type="submit"
+                    [disabled]="registerForm.invalid"
+                    role="button"
+                    style="text-align: center"
+                    value="{{ 'careersPage.contentTitle.Submit' | translate }}"
+                  />
+                  <span *ngIf="loadingStatus" class="loading"
+                    ><img src="assets/images/loading.gif"
+                  /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <ng-template #success let-modal>
+        
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> Thank you for expressing your interest in working with us!</h5> -->
+  <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button> -->
+  <!-- </div> -->
+  <!-- <div class="modal-body">
+            <a class=""></a>
+                <p> Thank you for expressing your interest in working with us!</p>
+                <p> Your application has been submitted.</p>
+                <p> Due to high volume of applications, we receive, we regret that we may not able to respond to
+                    all applications individually. We will contact you within 14 days if your skills and
+                    experience match what's needed for the open position, or if there is a similiar opportunity
+                    currently available.</p>
+                <p>For any further details, please contact us at
+                    <a href="mailto:careers@qatarmedicalcenter.com">careers@qatarmedicalcenter.com</a>
+                </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="modal.close('Save click')"id="knw">OK</button>
+        </div>
+      </ng-template>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <a class=""></a>
+                <p> Thank you for expressing your interest in working with us!</p>
+                <p> Your application has been submitted.</p>
+                <p> Due to high volume of applications, we receive, we regret that we may not able to respond to
+                    all applications individually. We will contact you within 14 days if your skills and
+                    experience match what's needed for the open position, or if there is a similiar opportunity
+                    currently available.</p>
+                <p>For any further details, please contact us at
+                    <a href="careers@qatarmedicalcenter.com">careers@qatarmedicalcenter.com</a>
+                </p>
+            </div>
+        </div>
+    </div> -->
+  <!-- <div class="container-fuild">
+        <div class="row">
+            <div class="container">
+                <div class="emptySpacer"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wpb-wrapper">
+                            <div class="iw-heading">
+                                <h4 class="iwh-title">Work with us</h4>
+                            </div>
+                            <p style="text-align: center; font-size: 15px; color: #777777;">Take the next
+                                step in your
+                                career with Qatar Medical Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fuild">
+        <div class="row">
+            <div class="container">
+                <div class="emptySpacer"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wpb_wrapper">
+                            <div class="iw-heading">
+                                <h4 class="iwh-title">Please send us your resume at careers@qatarmedicalcenter.com
+                                </h4>
+                            </div>
+                            <p style="text-align: center; font-size: 15px;">Please remember to mention the
+                                job title and
+                                location in the subject line.</p>
+                            <div class="seperator_hr"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fuild">
+        <div class="row">
+            <div class="container">
+                <div class="emptySpacer"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wpb_wrapper">
+                            <div class="iw-heading">
+                                <h4 class="iwh-title">OUR GLOBAL PRESENCE</h4>
+                            </div>
+                        </div>
+                        <figure class="wpb_wrapper row img">
+                            <img src="assets/images/careers 1.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+  <div class="emptySpacer"></div>
+  <div style="padding-top: 65px; padding-bottom: 20px"></div>
+</div>
+<app-footer></app-footer>

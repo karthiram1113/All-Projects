@@ -1,0 +1,50 @@
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  color: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.summary-card .icon {
+  font-size: 28px;
+}
+.summary-card p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+.summary-card h5 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.summary-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gold {
+  background: linear-gradient(135deg, #f7b733, #fc4a1a);
+}
+.green {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+.blue {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+.red {
+  background: linear-gradient(135deg, #cb2d3e, #ef473a);
+}
+.purple {
+  background: linear-gradient(135deg, #654ea3, #eaafc8);
+}
+
+
+.collection-page-cards {
+  font-size: 13px !important;
+}

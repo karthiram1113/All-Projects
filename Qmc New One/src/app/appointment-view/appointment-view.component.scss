@@ -1,0 +1,443 @@
+.rows {
+    text-align: center;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.headers {
+    /* text-align: center; */
+    margin-top: 24px;
+    display: flex;
+    margin-bottom: 12px;
+    // margin-left: 10px;
+}
+
+.header h5 {
+    margin-left: 180px;
+}
+
+.check {
+    transform: scale(1.2);
+}
+
+.theme {
+    margin-left: 15px;
+}
+
+.imagelogo {
+    width: 250px;
+}
+
+.cards h5 {
+    font-size: 16px;
+}
+
+.cards h6 {
+    color: gray;
+}
+
+.cards {
+    display: flex;
+    /* gap: 50px; */
+    margin-top: 10px;
+}
+
+.status-booked {
+    color: #2CB22E;
+}
+
+.status-cancelled {
+    color: #B31F1C;
+}
+
+.status-reschedule {
+    color: #1a78f3;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1.5px solid #58151c;
+    font-size: 11px;
+    padding: 3px 20px;
+    border-radius: 3px;
+    color: #58151c;
+    font-weight: bold;
+}
+
+.cardleft {
+    background-color: #F7E5ED;
+    border-radius: 10px;
+}
+
+.one {
+    padding: 20px 20px 35px;
+    margin-bottom: 15px;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    margin-left: 5px;
+}
+
+.copyfooter {
+    margin-top: 38px;
+}
+
+.three-boxes {
+    padding: 0px 21px;
+}
+
+.yes-btn {
+    background-color: #630332;
+    color: white;
+    padding: 7px 30px
+}
+
+.no-btn {
+    background-color: #630332;
+    color: white;
+    padding: 7px 30px
+}
+
+.close-btn {
+    color: white !important;
+    background-color: white;
+    padding: 4px
+}
+
+
+/* ------------------------------------- */
+
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+.marq-section {
+    marquee {
+        p {
+            margin: 0 !important;
+        }
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+
+.footer-end {
+    justify-content: end !important;
+}
+
+.header-top .ag,
+.header-top .pg {
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
+
+.header-top .head-fix-icn {
+    position: fixed;
+    right: 20px;
+    z-index: 9999;
+}
+
+.header-top .pg {
+    background-color: #fff;
+    color: #630332;
+}
+
+a.navbar-brand img {
+    width: 100%;
+}
+
+.modal-header {
+    background: #521231;
+    color: #fff;
+    text-align: center;
+    a {
+        color: #521231;
+    }
+}
+
+.qmcBtn1 {
+    a:hover {
+        color: #777;
+        text-decoration: none;
+    }
+    a {
+        color: #5c0931;
+        padding: 6px 18px;
+    }
+}
+
+.modal-footer {
+    justify-content: center;
+    border-top: 0px solid #dee2e6;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid white;
+    a {
+        background: transparent;
+    }
+    a:hover:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: -1;
+    }
+}
+
+.nav-item {
+    a {
+        height: 56px;
+        line-height: 56px;
+        padding: 0 25px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+    }
+}
+
+nav.navbar {
+    padding: 0px;
+}
+
+.qmcBtn {
+    text-align: right;
+    a:hover {
+        color: #fff;
+        text-decoration: none;
+        background: #600435 !important;
+    }
+    a {
+        padding: 10px 10px;
+    }
+}
+
+.modal-header button {
+    color: #fff !important;
+}
+
+.menu-mobile {
+    position: absolute;
+    width: 100%;
+    background: #1c1c1c;
+    /* height: -webkit-max-content; */
+    /* height: calc(100vh - 0px); */
+    /* right: 50px; */
+    top: 40px;
+    z-index: 1;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.stricky-header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    .menu-mobile {
+        top: 85px;
+    }
+    button.navbar-toggler {
+        padding: 26px;
+    }
+}
+
+.logo-small img {
+    width: 40% !important;
+}
+
+@media screen and (max-width: 600px) {
+    .qmcBtn {
+        text-align: center;
+    }
+}
+
+.activetab {
+    color: #495057 !important;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tabcolor {
+    color: #495057 !important;
+}
+
+.tabcolor {
+    .nav-item {
+        a {
+            height: 56px;
+            line-height: 56px;
+            padding: 0 25px;
+            color: #495057 !important;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+        }
+    }
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #e2535a;
+    margin-bottom: 30px;
+}
+
+.form-control[readonly] {
+    background-color: white !important;
+}
+
+.modal-xl .modal-xl {
+    max-width: 100%;
+}
+
+.selected-dated {
+    border: 1px solid #000 !important;
+    background-color: #bc2e27 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%) !important;
+}
+
+.slotavailable {
+    background-color: #e0f1b5;
+    cursor: pointer;
+}
+
+.btncolor {
+    color: #fff;
+    background-color: #630332;
+}
+
+.historybtn {
+    color: #fff;
+    background-color: #630332;
+    border-color: #630332;
+}
+
+.alert {
+    margin-right: 5px;
+}
+
+.p-characters>p {
+    padding-top: 2px;
+    color: rgb(184, 169, 169) !important;
+    font-size: 13px;
+    
+}
+
+.cancel-submit {
+    padding: 7px 30px;
+    background-color: #630332;
+    color: white;
+    font-size: 14px;
+}
+
+.page-content {
+    min-height: calc(100vh - 70px);
+}
+
+.mini-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+// Tab Css
+
+.appointment-btn-tab-content {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-btn-one {
+    color: #58151c !important;
+    background-color: #f0dade !important;
+}
+
+
+.tab-btn-second {
+    color: #9e7c7c !important;
+    background-color: #f0dade !important;
+}
+
+
+.nav-link.active.tab-btn-one {
+    color: white !important; 
+    background-color: #58151c !important; 
+}
+
+
+.nav-link.active.tab-btn-second {
+    color: white !important; 
+    background-color: #58151c !important;  
+}
+
+
+.tab-btn {
+    border: none;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.tab-btn h6 {
+    margin: 0;
+    font-size: 16px;
+    color: gray
+}
+
+
+
+.tab-btn:hover .loading-bar {
+    width: 0%;
+}
+
+
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.distance-label {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+    text-align: center;
+}
+.hospital-tab h6{
+    color: gray !important;
+}
+.hospital-tab h5{
+    font-size: 16px;
+}
+.no-data-message {
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}

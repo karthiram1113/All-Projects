@@ -1,0 +1,798 @@
+.fancy-card-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #000;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fancy-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover zoom effect */
+.fancy-card-image:hover img {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* Border animation */
+.fancy-card-image::before,
+.fancy-card-image::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.fancy-card-image::before {
+  width: 0%;
+  height: 2px;
+  top: 0;
+  left: 50%;
+}
+
+.fancy-card-image::after {
+  width: 2px;
+  height: 0%;
+  right: 0;
+  top: 50%;
+}
+
+.fancy-card-image:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.fancy-card-image:hover::after {
+  height: 100%;
+  top: 0;
+}
+
+.fancy-card-image {
+  width: 100%;
+  height: 200px;       /* adjust as needed */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+
+
+
+/* stronger selector to avoid overrides */
+.fancy-card-image img.fancy-img,
+.fancy-card-image > img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  max-width: none !important;
+  border-radius: 20px;
+}
+
+
+
+/* .cards {
+  width: 350px;
+  height: 280px;
+  background: white;
+  border-radius: 32px;
+  padding: 3px;
+  position: relative;
+  box-shadow: #604b4a30 0px 70px 30px -50px;
+  transition: all 0.5s ease-in-out;
+}
+  */
+
+ 
+/* .cards .profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  border: 0px solid #befbb6;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+ 
+.cards .profile-pic img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+ 
+.cards .profile-pic svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transform-origin: 45% 20%;
+  transition: all 0.5s ease-in-out 0s;
+}
+ 
+.cards .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: linear-gradient(135deg, #2673c9, #2dd4bf);
+  top: 80%;
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+ 
+.cards .bottom .content {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 160px;
+}
+ 
+.cards .bottom .content .name {
+  display: block;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+ 
+.cards .bottom .content .about-me {
+  display: block;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 1rem;
+}
+ 
+.cards .bottom .bottom-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.cards .bottom .bottom-bottom .social-links-container {
+  display: flex;
+  gap: 1rem;
+}
+ 
+.cards .bottom .bottom-bottom .social-links-container svg {
+  height: 20px;
+  fill: white;
+  filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+}
+ 
+.cards .bottom .bottom-bottom .social-links-container svg:hover {
+  fill: #f55d56;
+  transform: scale(1.2);
+}
+ 
+.cards .bottom .bottom-bottom .button {
+  background: white;
+  color: #fbb9b6;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+}
+ 
+.cards .bottom .bottom-bottom .button:hover {
+  background: #f55d56;
+  color: white;
+}
+ 
+.cards:hover {
+  border-top-left-radius: 55px;
+}
+ 
+.cards:hover .bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+ 
+.cards:hover .profile-pic {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 2px solid #82f8a2;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+ 
+.cards:hover .profile-pic:hover {
+  transform: scale(1.3);
+  border-radius: 0px;
+}
+ 
+.cards:hover .profile-pic img {
+  transform: scale(2.5);
+  -o-object-position: 0px 25px;
+  object-position: 0px 25px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+ 
+.cards:hover .profile-pic svg {
+  transform: scale(2.5);
+  transition: all 0.5s ease-in-out 0.5s;
+}
+  */
+
+
+  /* card11 */
+
+.card11 {
+  --blur: 16px;
+  --size: clamp(300px, 50vmin, 600px);
+  width: var(--size);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  color: #000;
+  transform: translateZ(0);
+}
+
+.card__img11 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
+  transition: transform 0.2s;
+}
+
+.card__footer11 {
+  padding: 0 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  display: grid;
+  grid-template-row: auto auto;
+  gap: 0.5ch;
+  background: hsl(0 0% 100% / 0.5);
+  backdrop-filter: blur(var(--blur));
+  height: 30%;
+  align-content: center;
+}
+
+.card__action11 {
+  position: absolute;
+  aspect-ratio: 1;
+  width: calc(var(--size) * 0.15);
+  bottom: 30%;
+  right: 1.5rem;
+  transform: translateY(50%) translateY(calc((var(--size) * 0.4))) translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+  background: purple;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  background: hsl(0 0% 100% / 0.5);
+  /*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
+  transition: transform 0.2s;
+}
+
+.card__action11 svg {
+  aspect-ratio: 1;
+  width: 50%;
+}
+
+.card__footer11 span:nth-of-type(1) {
+  font-size: calc(var(--size) * 0.065);
+}
+
+.card__footer11 span:nth-of-type(2) {
+  font-size: calc(var(--size) * 0.035);
+}
+
+.card11:is(:hover, :focus-visible) {
+  --hover: 1;
+}
+
+
+
+  /* card flip*/
+
+
+         /* Grid Layout (Mobile First: 1 column) */
+         .document-grid {
+           display: grid;
+           grid-template-columns: 1fr;
+           gap: 2rem;
+           /* Establish perspective on the grid container for 3D effect context */
+           perspective: 1500px;
+         }
+    
+         /* -------------------------------------------
+               FINAL ANIMATION: Card Lift + Inner Visual 360 Rotation
+            ------------------------------------------- */
+    
+         /* Document Item Container (The Card) */
+         .document-item {
+           padding: 1.5rem;
+           background-color: white;
+           border-radius: 0.75rem;
+           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+           border: 2px solid #e5e7eb;
+           /* Static light border */
+    
+           /* Animation Setup for the card itself (Lift only) */
+           transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+           cursor: pointer;
+           overflow: hidden;
+           position: relative;
+           z-index: 1;
+         }
+    
+         /* Hover Effect: Subtle Lift, Static Border Color */
+         .document-item:hover {
+           transform: translateY(-8px);
+           /* Clearer lift */
+           border-color: #d1d5db;
+           /* Static border color on hover */
+           box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
+           /* Neutral, deeper shadow */
+         }
+    
+         /* Document Item Content */
+         .document-item h2 {
+           font-size: 1.5rem;
+           font-weight: 600;
+           color: #1f2937;
+           text-align: center;
+           margin-top: 0.5rem;
+           position: relative;
+           z-index: 3;
+         }
+    
+         .document-item p {
+           display: none;
+         }
+    
+         /* Visual Placeholder Base (The element that rotates) */
+         .document-visual {
+           height: 180px;
+           margin-bottom: 0.5rem;
+           border-radius: 0.5rem;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           position: relative;
+           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+           overflow: hidden;
+           z-index: 3;
+    
+           /* Enable 3D style and set transition for the flip */
+           transform-style: preserve-3d;
+           transition: transform 0.8s ease-out;
+         }
+    
+         /* MANDATORY: Inner Image Rotation on Hover (360 degrees) */
+         .document-item:hover .document-visual {
+           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+           /* **The required 360-degree rotation on the Y-axis** */
+           transform: rotateY(360deg);
+         }
+    
+         /* --- MIMIC STYLES (Unchanged from previous version) --- */
+    
+         /* --- AADHAR FRONT MIMIC (Teal/Cyan) --- */
+         .aadhar-front-visual {
+           background-color: #b2ebf2;
+           border: 3px solid #00bcd4;
+           padding: 10px;
+         }
+    
+         .aadhar-front-visual .doc-inner {
+           background-color: white;
+           border-radius: 4px;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           align-items: center;
+           padding: 8px;
+           position: relative;
+         }
+    
+         .aadhar-front-visual .doc-inner::before {
+           content: "GOVERNMENT OF INDIA";
+           position: absolute;
+           top: 2px;
+           left: 50%;
+           transform: translateX(-50%);
+           font-size: 0.6rem;
+           font-weight: 700;
+           color: #00838f;
+         }
+    
+         .aadhar-front-visual .photo {
+           width: 50px;
+           height: 60px;
+           background-color: #e0f7fa;
+           border: 1px solid #b2dfdb;
+           border-radius: 2px;
+           margin-right: 10px;
+         }
+    
+         .aadhar-front-visual .details {
+           flex-grow: 1;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+         }
+    
+         .aadhar-front-visual .line {
+           height: 6px;
+           background-color: #e0f7fa;
+           margin-bottom: 4px;
+           border-radius: 2px;
+         }
+    
+         .aadhar-front-visual .line:nth-child(1) {
+           width: 80%;
+         }
+    
+         .aadhar-front-visual .line:nth-child(3) {
+           width: 60%;
+         }
+    
+         .aadhar-front-visual .qr-code {
+           width: 50px;
+           height: 50px;
+           background-image: repeating-linear-gradient(45deg, #333, #333 2px, transparent 2px, transparent 4px);
+           border: 1px solid #e0e0e0;
+           margin-left: 10px;
+         }
+    
+         /* --- AADHAR BACK MIMIC (Light Green) --- */
+         .aadhar-back-visual {
+           background-color: #e8f5e9;
+           border: 3px solid #8bc34a;
+           padding: 10px;
+         }
+    
+         .aadhar-back-visual .doc-inner {
+           background-color: white;
+           border-radius: 4px;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           align-items: center;
+           padding: 8px;
+           position: relative;
+         }
+    
+         .aadhar-back-visual .doc-inner::before {
+           content: "GOVERNMENT OF INDIA";
+           position: absolute;
+           top: 2px;
+           left: 50%;
+           transform: translateX(-50%);
+           font-size: 0.6rem;
+           font-weight: 700;
+           color: #558b2f;
+         }
+    
+         .aadhar-back-visual .text-block {
+           flex-grow: 1;
+           padding-left: 10px;
+         }
+    
+         .aadhar-back-visual .text-block .line {
+           height: 6px;
+           background-color: #e0f7fa;
+           margin-bottom: 8px;
+           border-radius: 2px;
+           width: 90%;
+         }
+    
+         .aadhar-back-visual .text-block .line:nth-child(2) {
+           width: 70%;
+         }
+    
+         .aadhar-back-visual .text-block .line:nth-child(4) {
+           width: 50%;
+         }
+    
+    
+         /* --- JEWELRY PHOTO MIMIC (Yellow/Amber) --- */
+         .jewelry-visual {
+           background-color: #ffecb3;
+           border: 3px solid #ffb300;
+           padding: 10px;
+         }
+    
+         .jewelry-visual .photo-inner {
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+           border-radius: 4px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+         }
+    
+         .jewelry-visual .necklace-sim {
+           width: 80%;
+           height: 80%;
+           background: radial-gradient(circle at center, #f5d346, #c2a742);
+           border-radius: 50%;
+           box-shadow: 0 0 20px rgba(255, 193, 7, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.4);
+           transform: rotate(15deg) scale(0.7);
+           filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+         }
+    
+         /* --- OTHER DOCUMENT MIMIC (Rose/Red) --- */
+         .other-doc-visual {
+           background-color: #ffcdd2;
+           border: 3px solid #f44336;
+           padding: 10px;
+         }
+    
+         .other-doc-visual .doc-inner {
+           width: 100%;
+           height: 100%;
+           background-color: white;
+           border-radius: 4px;
+           border: 1px solid #ef9a9a;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+           padding: 10px;
+         }
+    
+         .other-doc-visual .doc-line {
+           width: 90%;
+           height: 10px;
+           background-color: #bdbdbd;
+           border-radius: 2px;
+         }
+    
+         .other-doc-visual .doc-line:nth-child(1) {
+           width: 70%;
+           margin-top: 10px;
+         }
+    
+         .other-doc-visual .doc-line:nth-child(3) {
+           width: 85%;
+         }
+    
+         .other-doc-visual .doc-line:nth-child(5) {
+           width: 50%;
+           margin-bottom: 10px;
+         }
+    
+    
+         /* Responsive Breakpoint (Medium screens and up) */
+         @media (min-width: 768px) {
+           .document-grid {
+             grid-template-columns: repeat(2, 1fr);
+           }
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /* card12 */
+                 .card12 {
+                   position: relative;
+                   padding: 0;
+                   margin: 0 !important;
+                   border-radius: 20px;
+                   overflow: hidden;
+                   /* max-width: 280px;
+                   max-height: 340px; */
+                   cursor: pointer;
+                   border: none;
+                   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+                 }
+        
+                 .card12 .card-image12 {
+                   width: 100%;
+                   max-height: 340px
+                 }
+        
+                 .card12 .card-image12 img {
+                   width: 100%;
+                   max-height: 340px;
+                   object-fit: cover
+                 }
+        
+                 .card12 .card-content12 {
+                   position: absolute;
+                   bottom: -180px;
+                   color: #fff;
+                   background: rgba(255, 255, 255, 0.2);
+                   backdrop-filter: blur(15px);
+                   min-height: 140px;
+                   width: 100%;
+                   transition: bottom .4s ease-in;
+                   box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+                   border-top: 1px solid rgba(255, 255, 255, 0.2)
+                 }
+        
+                 .card12:hover .card-content12 {
+                   bottom: 0px
+                 }
+        
+                 .card12:hover .card-content12 h4,
+                 .card12:hover .card-content12 h5 {
+                   transform: translateY(10px);
+                   opacity: 1
+                 }
+        
+                 .card12 .card-content12 h4,
+                 .card12 .card-content12 h5 {
+                   font-size: 1.1rem;
+                   text-transform: uppercase;
+                   letter-spacing: 3px;
+                   text-align: center;
+                   transition: 0.8s;
+                   font-weight: 500;
+                   opacity: 0;
+                   transform: translateY(-40px);
+                   transition-delay: 0.2s
+                 }
+        
+                 .card12 .card-content12 h5 {
+                   transition: 0.5s;
+                   font-weight: 200;
+                   font-size: 0.8rem;
+                   letter-spacing: 2px
+                 }
+        
+                 .card12 .card-content12 .social-icons {
+                   list-style: none;
+                   padding: 0
+                 }
+        
+                 .card12 .card-content12 .social-icons li {
+                   margin: 10px;
+                   transition: 0.5s;
+                   transition-delay: calc(0.15s * var(--i));
+                   transform: translateY(50px)
+                 }
+        
+                 .card12:hover .card-content12 .social-icons li {
+                   transform: translateY(20px)
+                 }
+        
+                 .card12 .card-content12 .social-icons li a {
+                   color: #fff
+                 }
+        
+                 .card12 .card-content12 .social-icons li a span {
+                   font-size: 1.3rem
+                 }
+        
+                 @media(max-width: 991.5px) {
+                   .container {
+                     margin-top: 20px
+                   }
+        
+                   .container .row .col-lg-4 {
+                     margin: 20px 0px
+                   }
+                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 /* card13 */
+                                 .card13 {
+                                   /* box-shadow: 0 0 20px 0px rgba(104, 104, 104, 0.5); */
+                                   border-radius: 5px;
+                                   height: 200px;
+                                   width: 50%;
+                                   cursor: pointer;
+                                   background-color: var(--card-background);
+                                   overflow: hidden;
+                                   transition: all 400ms ease-in-out;
+                                 }
+                
+                                 .card13:hover {
+                                   box-shadow: 0 0 5px 5px rgba(172, 172, 172, 0.5);
+                                   height: 400px;
+                                   background-color: var(--card-background-hover);
+                                 }
+                
+                                 .card13:hover .icons13 img {
+                                   fill: var(--black);
+                                 }
+                
+                                 .card13:hover .info13 {
+                                   transform: translateY(0px);
+                                   opacity: 1;
+                                   z-index: 0;
+                                 }
+                
+                                 .icons13 {
+                                   position: relative;
+                                   display: flex;
+                                   justify-content: center;
+                                   align-items: center;
+                                   /* height: 240px; */
+                                   z-index: 2;
+                                   transition: all 500s ease-out;
+                                 }
+                
+                                 .icons13 img {
+                                   width: 100%;
+                                   fill: var(--white);
+                                 }
+                
+                                 .info13 {
+                                   position: relative;
+                                   transform: translateY(-300px);
+                                   background-color: var(--white);
+                                   padding: 15px;
+                                   height: 250px;
+                                   text-align: center;
+                                   border-bottom-left-radius: 5px;
+                                   border-bottom-right-radius: 5px;
+                                   opacity: 0;
+                                 }

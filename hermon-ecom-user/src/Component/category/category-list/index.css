@@ -1,0 +1,119 @@
+.category-tile-name{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.category-list-btm-code{
+    border-bottom: 0.5px solid rgb(231, 230, 230);
+}
+
+.side-bar-content{
+    color: rgb(102, 101, 101);
+    font-size: 17px;
+}
+
+.category-sub-list{
+    margin-left: 35px;
+}
+
+.sidebar-card-01{
+    text-align: left;
+    border-radius: 40px;
+    padding: 20px;
+    /* box-shadow: 0 4px 8px 0 rgba(146, 142, 142, 0.2), 
+    0 6px 20px 0 rgba(128, 127, 127, 0.19); */
+}
+
+.sidebar-card-02{
+    border: none;
+    /* box-shadow: 0 4px 8px 0 rgba(146, 142, 142, 0.2), 
+    0 6px 20px 0 rgba(128, 127, 127, 0.19); */
+    text-align: left;
+    border-radius: 0px;
+    padding: 20px;
+}
+
+.sidebar-plus{
+    font-size: 15px;
+    color: rgb(29, 137, 161);
+}
+
+.sidebar-second-add{
+    cursor: pointer;
+    border: 0.5px solid rgb(181, 178, 178);
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+}
+
+.sidebar-second-card-h {
+    width: 300px;
+    padding: 15px;
+    /* border: none; */
+    border-radius: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar-second-card-h:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+    z-index: 10;
+  }
+  
+  .sidebar-second-add-item{
+    cursor: pointer;
+    color: rgb(5, 132, 45);
+    border: 0.5px solid rgb(5, 132, 45);
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+  }
+
+.add-item-input{
+    padding: 5px 30px 10px 30px;
+}
+
+.additem-plus{
+    /* border: 0.2px solid gray; */
+    border-radius: 5px 0px 0px 5px;
+}
+
+.additem-minus{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.sidebar-plus-additem{
+    font-size: 13px;
+    color: rgb(240, 26, 98);
+}
+
+.category-sort-by{
+    border: 1px solid rgb(198, 196, 196);
+    display: inline;
+    padding: 2px 25px 5px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.category-dropdown-menu{
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    padding: 30px 40px 30px 30px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.category-sort-by-sub{
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+input[type="radio"] {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+  }
+
+
+.offer-con-2{
+    left: 20px !important;
+}

@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.menu-arrow {
+  transition: transform 0.3s ease;
+}
+
+.polaroid {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  margin-left: 1px;
+}
+
+.order-value p span {
+
+  color: darkgray !important;
+}
+
+.menu-arrow.rotate-60 {
+  transform: rotate(-90deg);
+}
+
+.menu-arrow.rotate-90 {
+  transform: rotate(90deg);
+}
+
+label {
+  float: left;
+  /* Ensure labels are left-aligned */
+}
+
+
+
+.btn-light {
+  margin-right: 20px;
+}
+
+.form-group input {
+  border-color: rgb(190, 181, 181);
+}
+
+.form-group lable select {
+  border-color: rgb(94, 91, 91);
+}
+
+select.form-control {
+      padding: 18px 10px !important;
+    border: 1px solid rgb(230 230 230) !important;
+  outline: black !important;
+  color: black;
+}
+
+.form-group textarea {
+  border-color: rgb(190, 181, 181) !important;
+}
+
+.overs {
+  overflow-y: scroll;
+  max-width: 1250px;
+  width: 100%;
+}
+
+.tableHosts {
+  width: 100%;
+  text-wrap: nowrap;
+}
+
+.note-statusbar .note-resizebar .note-icon-bar {
+  width: 20px;
+  margin: 1px auto;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+/* CSS */
+.ck-editor__editable_inline {
+  max-height: 250px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.ck-editor__editable {
+  min-height: 300px;
+}
+
+
+
+.ck-editor__editable {
+  min-height: 300px;
+  /* Adjust the minimum height as needed */
+}
+
+.view-close {
+  float: right;
+  padding: 10px 30px;
+  margin-top: 10px;
+
+}
+
+.chicken-img {
+      max-width: fit-content !important;
+  width: 110px;
+  /* padding: 25px; */
+}
+@media (max-width: 425px){
+.chicken-img{
+  width: 100px !important;
+}
+}
+@media (max-width: 768px){
+.chicken-img{
+  width: 200px !important;
+}
+}
+@media (max-width: 1024px){
+.chicken-img{
+  width: 300px !important;
+}
+}
+
+.auth-form-light h4 {
+  font-weight: 100;
+}
+
+.order-value {
+  padding-left: 20px;
+  /* margin: 15px; */
+  text-align: justify;
+  color: darkgray;
+}
+
+.ordername {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 26px;
+}
+
+/* .badges {
+  margin-left: 45px;
+} */
+.chicken-price {
+  color: blue;
+}
+
+.order-list {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.button-center {
+  text-align: center;
+}
+
+.required::after {
+  content: ' *';
+  color: red;
+  font-size: inherit;
+  /* Matches the parent element's font size */
+  margin: 0;
+}
+
+.h1-hermon {
+  text-align: center;
+}
+
+.filter-text {
+  background-image: linear-gradient(to right, #00acf0, #8ac43f) !important;
+  border: 0px;
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: white;
+}
+
+.input-month {
+  border: 1px solid lightgray !important;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 50px;
+}
+
+.delete-btn {
+  background-color: #b66dff !important;
+}
+
+.td-des {
+  max-width: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header .toggle-sidebar-btn {
+  font-size: 32px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #012970;
+}
+
+@media (max-width: 1199px) {
+  .toggle-sidebar .sidebar {
+    left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .toggle-sidebar #main,
+  .toggle-sidebar #footer {
+    margin-left: 0;
+  }
+
+  .toggle-sidebar .sidebar {
+    left: -300px;
+  }
+}
+
+.pagination {
+  gap: 3px;
+}
+
+
+.page-link {
+  border: none;
+  padding: 5px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #f1f1f1;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.page-item :hover {
+  background-image: linear-gradient(to right, #00acf0, #8ac43f);
+  color: #fff;
+}
+
+.page-link.active,
+.active>.page-link {
+  background-image: linear-gradient(to right, #00acf0, #8ac43f) !important;
+  color: #fff;
+}
+
+.eye-icon {
+  color: #9c9a9a;
+}
+
+.modal-body {
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0px;
+}
+
+.nav-icon {
+  font-size: 16px;
+  /* match the blue in the screenshot */
+  width: 20px;
+  /* helps alignment by reserving space */
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+@media(min-width: 992px) {
+  .sidebar-icon-only .sidebar .nav .nav-item.sub-active .nav-link i.menu-icon {
+    margin-left: 14px !important;
+    margin-right: 0px !important;
+  }
+
+  .sidebar-icon-only .sidebar .nav .nav-item {
+    width: 100% !important;
+  }
+}
+
+.report-icon{
+  cursor: pointer;
+      /* align-items: center; */
+        align-self: center;
+        padding: 10px 11px !important;
+        /* border: 1px solid; */
+        border-radius: 31px;
+}
+
+@media (max-width: 425px) {
+  .over-all-btn{
+            display: flex;
+              justify-content: center;
+              gap: 5px;
+  }
+    .over-all-btn .btn.btn-light{
+      padding: 10px 15px !important;
+    }
+    .over-all-btn .btn.btn-gradient-primary{
+      padding: 10px 15px !important;
+    }
+}
+
+@media (max-width: 425px) {
+  .monthly-report-btn{
+  display: block !important;
+  margin-bottom: 15px;
+  }
+  /* .monthly-report-input{
+  margin-left: 50px !important;
+  } */
+  .monthly-report-icons{
+        margin-top: 20px !important;
+          margin-left: 80px;
+  }
+}
+@media (max-width: 375px) {
+  .monthly-report-icons {
+      margin-left: 60px;
+    }
+}
+@media (max-width: 320px) {
+  .monthly-report-icons {
+      margin-left: 30px;
+    }
+}
+    .monthly-report-btn {
+      margin-bottom: 15px;
+    }
+.monthly-report-icons{
+  margin-top: 31px !important;
+}

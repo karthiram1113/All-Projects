@@ -1,0 +1,165 @@
+.btncolor {
+    color: #fff;
+    background-color: #630332;
+}
+
+.nav-link {
+    color: #630332;
+}
+
+.loginbtn {
+    margin-top: 15px;
+    display: flex;
+    place-content: center;
+    width: 100%;
+}
+
+.visabtn {
+    padding-top: 2rem !important;
+    padding: 10px;
+}
+
+.tableicon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex
+}
+
+ ::ng-deep .modal-dialog {
+    max-width: 1000px !important;
+}
+
+.fontweight {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.popupfont {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.norecord {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:885px) {
+    .rc-anchor-content .rc-anchor-normal .rc-anchor-checkbox-label {
+        width: 100px !important;
+    }
+    .rc-inline-block {
+        width: 90px !important;
+    }
+    .rc-anchor-normal {
+        width: fit-content !important;
+    }
+}
+
+app-partner-hospital-login #rc-anchor-container {
+    width: 200px !important;
+}
+
+.rc-anchor-normal .rc-anchor-checkbox-label {
+    width: 52px !important;
+}
+
+.rc-anchor-normal .rc-anchor-content {
+    width: 110px !important;
+}
+
+.rc-anchor-normal {
+    width: 200px !important;
+}
+
+.rc-anchor-normal .rc-anchor-pt {
+    padding-right: 0px !important;
+    left: 0 !important;
+    text-align: end !important;
+    width: 195px !important;
+}
+
+.uploadInput {
+    line-height: 1.9 !important;
+    padding: 0 !important;
+}
+
+.uploadBtn {
+    background-color: #521231 !important;
+}
+
+.uploadSuccessFully {
+    text-align: center;
+}
+
+.border-danger {
+    color: #dc3545;
+}
+
+.fileUpload {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btncolor {
+    color: #fff;
+    background-color: #630332;
+}
+
+.uploadInput {
+    line-height: 1.9 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.uploadBtn {
+    background-color: #521231 !important;
+}
+
+.uploadSuccessFully {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-weight: 600;
+}
+.fileUploadBtn{
+  padding-top: 15px;
+  text-align: right;
+}
+
+.radio-btn-continer label{
+  margin-right: 20px;
+}
+
+.border-danger {
+    color: #dc3545;
+}
+
+.nav-link {
+    background-color: #521231cc;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    padding: 15px;
+}
+
+.nav-link.active {
+    background-color: #521231;
+    color: #fff;
+    border: none;
+    font-weight: bolder;
+    padding: 15px;
+    border-bottom: 2px solid white;
+}
+
+.nav-link:hover {
+    background-color: #e2e6ea;
+    color: #000;
+    font-weight: bolder;
+    padding: 15px;
+}

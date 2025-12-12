@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard | Verifyzone</title>
+        <link rel="icon" href="/assets/img/logomain.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/sidebar.css">
+        <link rel="stylesheet" href="/assets/css/exit-details.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+        <!-- Flatpickr CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+        <!-- Flatpickr JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-menu">
+                    <div class="notification sidebar-items">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="menu-text">Notifications</span>
+                    </div>
+                    <!-- <div class="side-bar-main"> -->
+                    <a class="sidebar-items" href="dashboardxzone.html">
+                        <i class="ri-dashboard-line"></i>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items active sidebar-items1 dropdown-toggle1">
+                            <i class="ri-global-line"></i>
+                            <span class="menu-text">ExZone</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="exitdetails.html">
+                                <div class="sidebar-subitem active">
+                                    <i class="ri-logout-circle-line"></i> Add
+                                    exit details
+                                </div>
+                            </a>
+                            <div class="sidebar-subitem">
+                                <i class="ri-shield-user-line"></i> Verification
+                                Request
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-file-list-3-line"></i> New request
+                                received
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-search-line"></i> Search candidate
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-upload-cloud-line"></i> Bulk upload
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 dropdown-toggle1">
+                            <i class="ri-settings-3-line"></i>
+                            <span class="menu-text">Configurations</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="sidebar-subitem">
+                                <i class="ri-rocket-line"></i> Activate
+                                Autopilot
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 dropdown-toggle1">
+                            <i class="ri-bar-chart-2-line"></i>
+                            <span class="menu-text">Reports</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="sidebar-subitem">
+                                <i class="ri-bar-chart-2-line"></i> Attrition
+                                Reports
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-history-line"></i> Re-verification
+                                History
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="notification1 sidebar-items">
+                    <i class="ri-logout-circle-r-line"></i>
+                    <span class="menu-text">VZone</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="main-container">
+            <div class="navbar p-1">
+                <div class="navbar-left">
+                    <img src="/assets/img/logo-dash.png" alt="Logo"
+                        class="logo">
+                </div>
+                <div class="navbar-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." />
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="profile">
+
+                        <div class="dropdown">
+                            <button class="dropdown-btn">
+                                <img src="/assets/img/profile-nav.jpg"
+                                    alt="Profile" class="profile-img">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="dropdown-menu border-0">
+                                <a href="#">My Profile</a>
+                                <a href="#">Settings</a>
+                                <a href="index.html">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <h5>Add exit details</h5>
+                <div class="row">
+                    <!-- <div class="container"> -->
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Employee name</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Employee code</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder />
+                            <label>Designation</label>
+                            <span class="focus-border"><i></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <div class="inputcol input-effect">
+                            <div class="input-wrapper">
+                                <input class="effect-20 date-input" type="text"
+                                    id="fromDate" placeholder="dd-mm-yyyy" />
+                                <label for="fromDate">From date</label>
+                                <span class="focus-border"><i></i></span>
+                                <i class="calendar-icon"
+                                    onclick="openPicker('fromDate')"></i>
+                            </div>
+                            <div id="fromDate-picker-container"
+                                class="flatpickr-container"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 position-relative">
+                        <div class="inputcol input-effect">
+                            <div class="input-wrapper">
+                                <input class="effect-20 date-input" type="text"
+                                    id="toDate" placeholder="dd-mm-yyyy" />
+                                <label for="toDate">To date</label>
+                                <span class="focus-border"><i></i></span>
+                                <i class="calendar-icon"
+                                    onclick="openPicker('toDate')"></i>
+                            </div>
+                            <div id="toDate-picker-container"
+                                class="flatpickr-container"></div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-4">
+  <div class="inputcol input-effect">
+    <input class="effect-20 date-input" type="date" placeholder=" " required />
+    <label>From date</label>
+    <span class="focus-border"><i></i></span>
+  </div>
+</div><div class="col-md-4">
+  <div class="inputcol input-effect">
+    <input class="effect-20 date-input" type="date" placeholder=" " required />
+    <label>to date</label>
+    <span class="focus-border"><i></i></span>
+  </div>
+</div> -->
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Reason for leaving</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Location</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Job type (Permanent/Contact/Other)</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Last draw salary</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Reporting to</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Manage designation</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Duties & Responsiblities Handled</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="inputcol input-effect">
+                            <input class="effect-20" type="text" placeholder>
+                            <label>Attitude & Personal Reputation of the
+                                Candidates</label>
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="inputcol input-effect">
+                                <textarea class="effect-20 effect-textarea"
+                                    id="reason" placeholder=" "></textarea>
+                                <label for="reason">Reason for leaving</label>
+                                <span class="text-area"><i></i></span>
+                        </div>
+                    </div>
+
+
+
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="footer pt-3">
+                <p>@2025 Tarajyau | All Rights Reserved</p>
+            </div>
+        </div>
+
+        <script>
+        document.querySelectorAll('.sidebar-items').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('open');
+            });
+        });
+
+
+// const fromPicker = flatpickr("#fromDate", {
+//     dateFormat: "d-m-Y",
+//     allowInput: true,
+//     // FIX 2: Prevents the calendar from closing after a single date selection
+//     closeOnSelect: false,
+//     // FIX 1: Append to the local container for scroll resilience
+//     appendTo: document.getElementById('fromDate-picker-container'), 
+//     // FIX 3: Revert to simpler 'below' positioning for stability
+//     position: "below", 
+//     onChange: function(selectedDates, dateStr, instance) {
+//         document.getElementById("fromDate").classList.add("has-value");
+//     }
+// });
+
+// const toPicker = flatpickr("#toDate", {
+//     dateFormat: "d-m-Y",
+//     allowInput: true,
+//     // FIX 2: Prevents the calendar from closing after a single date selection
+//     closeOnSelect: false,
+//     // FIX 1: Append to the local container for scroll resilience
+//     appendTo: document.getElementById('toDate-picker-container'),
+//     // FIX 3: Revert to simpler 'below' positioning for stability
+//     position: "below",
+//     onChange: function(selectedDates, dateStr, instance) {
+//         document.getElementById("toDate").classList.add("has-value");
+//     }
+// }); 
+
+
+
+  const fromPicker = flatpickr("#fromDate", {
+    dateFormat: "d-m-Y",
+    allowInput: true,
+    appendTo: document.body,
+    position: "below",
+    onChange: function(selectedDates, dateStr, instance) {
+      document.getElementById("fromDate").classList.add("has-value");
+    }   
+  });
+
+  const toPicker = flatpickr("#toDate", {
+    dateFormat: "d-m-Y",
+    allowInput: true,
+    appendTo: document.body,
+    position: "below",
+    onChange: function(selectedDates, dateStr, instance) {
+      document.getElementById("toDate").classList.add("has-value");
+    }
+}
+  );
+ 
+function openPicker(id) {
+    if (id === "fromDate") {
+      fromPicker.open();
+    } else if (id === "toDate") {
+      toPicker.open();
+    }
+}
+
+
+document.querySelectorAll('.effect-20').forEach(input => {
+    input.addEventListener('input', () => {
+      input.classList.toggle('has-value', input.value.trim()!== '');
+    });
+});
+
+
+  
+    </script>
+
+    </body>
+
+</html>

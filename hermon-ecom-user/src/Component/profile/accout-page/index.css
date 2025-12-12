@@ -1,0 +1,184 @@
+.user-icon-account {
+    margin-top: 15px;
+    font-size: 40px;
+    color: rgb(16, 137, 186);
+}
+
+.user-name-account {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.user-email-account {
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+}
+
+.edit-icon-account {
+    color: rgb(16, 137, 186);
+    cursor: pointer;
+}
+
+.side-bar-account-head {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-bar-header-acc {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.account-detail-div {
+    cursor: pointer;
+}
+
+.my-acc-sub-icons {
+    color: rgb(16, 137, 186);
+    font-size: 20px;
+}
+
+.my-acc-icon-content {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(107, 106, 106);
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.order-shop-btn {
+    background-color: rgb(16, 137, 186);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+
+.edit-profile-input {
+    border-radius: 0px !important;
+}
+
+.edit-profile-input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.edit-profile-input-1 {
+    border-radius: 0px !important;
+    resize: none;
+}
+
+.edit-profile-input-1:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.edit-cancel-btn {
+    border: 1px solid rgb(16, 137, 186);
+    background-color: transparent;
+    color: rgb(16, 137, 186);
+    padding: 5px 30px;
+    border-radius: 5px;
+}
+
+.edit-save-btn {
+    border: none;
+    background-color: rgb(16, 137, 186);
+    color: white;
+    padding: 5px 30px;
+    border-radius: 5px;
+}
+
+.toggle-password {
+    border: 1px solid lightgray;
+    background-color: transparent;
+    color: gray;
+}
+
+.toggle-password:focus {
+    border: 1px solid rgb(16, 137, 186) !important;
+}
+
+.add-address-input {
+    border-radius: 0px !important;
+    resize: none;
+    border-bottom: 1px solid lightgray !important;
+}
+
+.add-address-input:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid rgb(16, 137, 186) !important;
+}
+
+.address-save-button-add {
+    border: none;
+    background-color: rgb(16, 137, 186);
+    color: white;
+    font-weight: 500;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.add-address-header {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input-label-header {
+    /* font-size: 15px; */
+    font-weight: 700;
+    color: rgb(71, 71, 71);
+}
+
+.popup-add-address {
+    border-radius: 0px;
+}
+
+.saved-address-card {
+    border: 1px solid lightgray;
+}
+
+.saved-address-dot {
+    cursor: pointer;
+    color: rgb(16, 137, 186);
+}
+
+.dropdown-content-div {
+    box-shadow: 0 5px 15px rgba(186, 186, 186, 0.3);
+    border: none;
+    border-radius: 0px !important;
+}
+
+.current-location-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.b-right-left {
+    border: 1px solid lightgray;
+    width: 200px;
+    height: 1px !important;
+    margin-top: 13px;
+}
+
+.location-details {
+    text-align: left;
+}
+
+.map-address-base {
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gangnam Style Growth</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: "Poppins", sans-serif; padding: 30px; background: #f9fbfd; text-align: center; }
+    canvas { max-width: 900px; margin: auto; }
+  </style>
+</head>
+<body>
+  <h2>Growth of Gangnam Style on YouTube 📈</h2>
+  <canvas id="gangnamChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('gangnamChart');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          "Jul 15", "Jul 18", "Jul 23", "Aug 1", "Aug 11", "Aug 23",
+          "Aug 31", "Sep 4", "Sep 10", "Sep 13", "Sep 16", "Sep 18",
+          "Sep 21", "Sep 24", "Sep 26", "Sep 28"
+        ],
+        datasets: [{
+          label: "Views on YouTube",
+          data: [0, 2000000, 6000000, 10000000, 21000000, 50000000,
+                 75000000, 100000000, 125000000, 150000000, 175000000,
+                 200000000, 225000000, 250000000, 275000000, 302000000],
+          fill: true,
+          backgroundColor: "rgba(79,129,188,0.2)",
+          borderColor: "#4f81bc",
+          tension: 0.3,
+          pointRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: { display: true, text: "Growth of Gangnam Style on YouTube" }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { callback: value => value / 1000000 + "M" } },
+          x: { ticks: { color: "#004B8D" } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

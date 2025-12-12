@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Verifyzone</title>
+    <link rel="icon" href="/assets/img/logotop.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/exit-details.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <div class="notification-logo sidebar-items">
+                <img src="/assets/img/V.png" alt="Small Logo" class="logo-small">
+                <img src="/assets/img/white-logo.png" alt="Full Logo" class="logo-full">
+            </div>
+        </div>
+        <div class="sidebar-scroll">
+            <div class="sidebar-menu">
+                <a class="sidebar-items" href="dashboardxzone.html">
+                    <i class="ri-dashboard-line"></i>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1 active dropdown-toggle1">
+                        <i class="ri-earth-line"></i>
+                        <span class="menu-text">ExZone</span>
+                        <i class="ri-arrow-down-s-line arrow-icon"></i>
+                    </div>
+                    <div class="dropdown-content mt-2">
+                        <a href="exitdetails.html">
+                            <div class="sidebar-subitem active">
+                                <i class="ri-logout-circle-line"></i> Add exit details
+                            </div>
+                        </a>
+                        <a href="verification-request.html"><div class="sidebar-subitem"><i class="ri-shield-user-line"></i> Verification Request</div></a>
+                        <a href="new-request.html"><div class="sidebar-subitem"><i class="ri-file-list-3-line"></i> New request received</div></a>
+                        <a href="search-candidate.html"> <div class="sidebar-subitem"><i class="ri-search-line"></i> Search candidate</div></a>
+                        <a href="bulk-upload.html"><div class="sidebar-subitem"><i class="ri-upload-cloud-line"></i> Bulk upload</div></a>
+                    </div>
+                </div>
+
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1 dropdown-toggle1">
+                        <i class="ri-settings-3-line"></i>
+                        <span class="menu-text">Configurations</span>
+                        <i class="ri-arrow-down-s-line arrow-icon"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="sidebar-subitem">
+                            <i class="ri-rocket-line"></i> Activate Autopilot
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-dropdown">
+                    <div class="sidebar-items sidebar-items1 dropdown-toggle1">
+                        <i class="ri-bar-chart-2-line"></i>
+                        <span class="menu-text">Reports</span>
+                        <i class="ri-arrow-down-s-line arrow-icon"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="sidebar-subitem"><i class="ri-bar-chart-2-line"></i> Attrition Reports</div>
+                        <div class="sidebar-subitem"><i class="ri-history-line"></i> Re-verification History</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="sidebar-bottom">
+            <div class="notification1 sidebar-items">
+                <i class="ri-logout-circle-r-line"></i>
+                <span class="menu-text">VZone</span>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Right Content -->
+    <div class="main-container">
+         <div class="navbar">
+            <div class="navbar-left d-flex">
+                <div>
+                    <h5 class="navbar-exzone"><i class="ri-user-star-line"></i> Exzone /</h5>
+                </div>
+                <div class="navbar-x-vzone">
+                    <div class="navbar-vzone-button" data-tooltip="Go to Vzone">
+                        <div class="button-wrapper">
+                            <div class="text"><i class="ri-shield-check-line"></i> Vzone</div>
+                            <span class="icon">
+                                <i class="ri-shield-check-line"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <!-- <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <i class="ri-search-line"></i>
+                </div> -->
+
+                <div class="profile">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <img src="/assets/img/profile-nav.jpg" alt="Profile" class="profile-img">
+                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                        </button>
+                        <div class="dropdown-menu border-0">
+                            <a href="#">
+                                <i class="ri-user-line"></i> My Profile
+                            </a>
+                            <a href="#">
+                                <i class="ri-settings-3-line"></i> Settings
+                            </a>
+                            <a href="index.html">
+                                <i class="ri-logout-box-r-line"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="breadcrumbs" style="padding: 10px 0px 20px 5px"><a href="dashboardxzone.html"><i class="ri-home-8-line" style="color: var(--purple-color)"></i></a> <i class="ri-arrow-right-s-line" style="color: var(--purple-color)"></i> <span style="color: var(--purple-color);font-size: 14px;">Ex-Zone</span>            <i class="ri-arrow-right-s-line" style="color: var(--purple-color)"></i> <span style="font-size: 14px;">Add exit details</span></div>
+         <div class="content">
+            <h5 class="bulk-table-heading">Add exit details</h5>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="">
+                        <div class="cardz px-0 pt-4 pb-0 mt-3 mb-3">
+                            <form id="msform">
+                                <!-- Progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account">
+                                        <i class="ri-user-2-fill"></i>
+                                        <strong>Employee Details</strong>
+                                    </li>
+                                    <li id="personal">
+                                        <i class="ri-user-line"></i>
+                                        <strong>Personal Info</strong>
+                                    </li>
+                                    <li id="payment">
+                                        <i class="ri-add-box-line"></i>
+                                        <strong>Add Additional Details</strong>
+                                    </li>
+                                </ul>
+                                <br>
+
+                                <!-- Step 1 -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <!-- <h2 class="fs-title">Employee Information:</h2> -->
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 1 - 2</h2>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Employee name" type="text">
+                                                    <label class="usernameLabel" for="inputField">Employee name</label>
+                                                    <i class="ri-user-6-line userIcon"></i>
+                                                    <!-- <svg viewBox="0 0 448 512" class="userIcon"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>                                                     -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Employee code" type="text">
+                                                    <label class="usernameLabel" for="inputField">Employee code</label>
+                                                    <i class="ri-user-settings-line userIcon"></i>
+                                                    <!-- <svg class="userIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" fill="currentColor"><path d="M15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918ZM17.6569 12L14.1213 15.5355L12.7071 14.1213L14.8284 12L12.7071 9.87868L14.1213 8.46447L17.6569 12ZM6.34315 12L9.87868 8.46447L11.2929 9.87868L9.17157 12L11.2929 14.1213L9.87868 15.5355L6.34315 12Z"></path></svg> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Designation" type="text">
+                                                    <label class="usernameLabel" for="inputField">Designation</label>
+                                                    <i class="ri-bar-chart-grouped-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="From date" type="text" onfocus="handleFocus(this)" onblur="handleBlur(this)">
+                                                    <label class="usernameLabel" for="inputField">From date</label>
+                                                    <i class="ri-calendar-check-fill userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="To date" type="text">
+                                                    <label class="usernameLabel" for="inputField">To date</label>
+                                                    <i class="ri-calendar-close-fill userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer reasonContainer" id="inputContainer" style="position: relative;">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Type of exit" type="text" readonly>
+                                                    <label class="usernameLabel" for="inputField">Type of exit</label>
+                                                    <i class="ri-run-line userIcon"></i>
+                                                    <!-- Chevron Icon -->
+                                                    <svg viewBox="0 0 320 512" class="chevronIcon" id="chevronIcon">
+                                                        <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 
+                                                        24.6-9.4 33.9 0L160 239.4l96.5-96.5c9.4-9.4 
+                                                        24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 
+                                                        9.4 24.6 0 33.9l-136 136c-9.4 9.4-24.6 
+                                                        9.4-33.9 0z"/>
+                                                        </svg>
+                                                    <!-- Dropdown Menu -->
+                                                    <div id="dropdownMenu" class="newinput-dropdown-menu">
+                                                        <div class="newinput-dropdown-item" onclick="selectOption('Voluntary')"><i class="ri-file-user-line" style="color:var(--purple-color)"></i> Voluntary</div>
+                                                        <div class="newinput-dropdown-item" onclick="selectOption('Involuntary')"><i class="ri-folder-user-line" style="color:var(--purple-color)"></i> Involuntary</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Location" type="text">
+                                                    <label class="usernameLabel" for="inputField">Location</label>
+                                                    <i class="ri-map-pin-user-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Job type (Permanent/Contract/Other)" type="text">
+                                                    <label class="usernameLabel" for="inputField">Job type (Permanent/Contract/Other)</label>
+                                                    <i class="ri-user-settings-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Last draw salary" type="text">
+                                                    <label class="usernameLabel" for="inputField">Last draw salary</label>
+                                                    <i class="ri-wallet-3-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Reporting to" type="text">
+                                                    <label class="usernameLabel" for="inputField">Reporting to</label>
+                                                    <i class="ri-folder-chart-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Manager designation" type="text">
+                                                    <label class="usernameLabel" for="inputField">Manager designation</label>
+                                                    <i class="ri-contacts-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- Replace "Next" with a Submit button -->
+                                    <div class="col-md-12 text-end d-flex justify-content-end p-2">
+                                        <button class="btn-submit" type="button" name="next" value="Next">
+                                        <div class="original">Next</div>
+                                        <div class="letters">
+                                            <span>N</span>
+                                            <span>e</span>
+                                            <span>x</span>
+                                            <span>t</span>
+                                            </div>
+                                            </button>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Step 2 -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <!-- <h2 class="fs-title">Personal Information:</h2> -->
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 2 - 3</h2>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Duties & Responsiblities Handled" type="text">
+                                                    <label class="usernameLabel" for="inputField">Duties & Responsibilities Handled</label>
+                                                    <i class="ri-creative-commons-by-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Attitude & Personal Reputation of the Candidates" type="text">
+                                                    <label class="usernameLabel" for="inputField">Attitude & Personal Reputation of the Candidate</label>
+                                                    <i class="ri-presentation-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Performance at Work" type="text">
+                                                    <label class="usernameLabel" for="inputField">Performance at Work</label>
+                                                    <i class="ri-gps-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Notice Served? - Yes/No/Waived off" type="text">
+                                                    <label class="usernameLabel" for="inputField">Notice Served? - Yes/No/Waived off</label>
+                                                    <i class="ri-shake-hands-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Exit formalities complted - (id pending, is it from employer or employee)" type="text">
+                                                    <label class="usernameLabel" for="inputField">Exit formalities completed - (if pending, is it from employer or employee)</label>
+                                                    <i class="ri-list-check-3 userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Any due pending? - (Yes/No, if yes - please elaborate)" type="text">
+                                                    <label class="usernameLabel" for="inputField">Any due pending? - (Yes/No, if yes - please elaborate)</label>
+                                                    <i class="ri-alarm-warning-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Eligible for Rehire" type="text">
+                                                    <label class="usernameLabel" for="inputField">Eligible for Rehire</label>
+                                                    <i class="ri-user-follow-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Any specific comments, if any" type="text">
+                                                    <label class="usernameLabel" for="inputField">Any specific comments, if any</label>
+                                                    <i class="ri-chat-new-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Comments" type="text">
+                                                    <label class="usernameLabel" for="inputField">Comments</label>
+                                                    <i class="ri-chat-1-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- Replace "Next" with a Submit button -->
+                                    <div class="col-md-12 text-end d-flex justify-content-end p-2">
+                                        <button class="btn-closes">
+                                        <div class="original">Previous</div>
+                                        <div class="letters">
+                                            <span>P</span>
+                                            <span>r</span>
+                                            <span>e</span>
+                                            <span>v</span>
+                                            <span>i</span>
+                                            <span>o</span>
+                                            <span>u</span>
+                                            <span>s</span>
+                                        </div>
+                                        </button>&nbsp;&nbsp;
+                                        <button class="btn-submit" type="button" name="next" value="Next">
+                                        <div class="original">Next</div>
+                                        <div class="letters">
+                                            <span>N</span>
+                                            <span>e</span>
+                                            <span>x</span>
+                                            <span>t</span>
+                                            </div>
+                                            </button>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Step 3 (Final) -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <!-- <h2 class="fs-title">Image Upload:</h2> -->
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 3 - 3</h2>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="inputContainer">
+                                                    <input required="required" autocomplete="off" id="inputField" placeholder="Additional Field" type="text">
+                                                    <label class="usernameLabel" for="inputField">Additional Field</label>
+                                                    <i class="ri-add-box-line userIcon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- Replace "Next" with a Submit button -->
+                                    <div class="col-md-12 text-end d-flex justify-content-end p-2">
+                                        <button class="btn-closes">
+                                        <div class="original">Previous</div>
+                                        <div class="letters">
+                                            <span>P</span>
+                                            <span>r</span>
+                                            <span>e</span>
+                                            <span>v</span>
+                                            <span>i</span>
+                                            <span>o</span>
+                                            <span>u</span>
+                                            <span>s</span>
+                                        </div>
+                                    </button>&nbsp;&nbsp;
+                                        <button class="btn-submit">
+                                        <div class="original">Submit</div>
+                                        <div class="letters">
+                                            <span>S</span>
+                                            <span>u</span>
+                                            <span>b</span>
+                                            <span>m</span>
+                                            <span>i</span>
+                                            <span>t</span>
+                                        </div>
+                                    </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer pt-3" style="font-size: 12px;">
+            <p>@2025 <span style="color:var(--purple-color)">Tarajyau</span> | All Rights Reserved</p>
+        </div>
+    </div>
+
+     <script>
+        document.querySelectorAll('.reasonContainer').forEach(container => {
+            const input = container.querySelector('input');
+            const dropdown = container.querySelector('.newinput-dropdown-menu');
+            const icon = container.querySelector('.chevronIcon');
+
+            container.addEventListener('click', () => {
+                dropdown.classList.toggle('show');
+                icon.classList.toggle('rotate');
+            });
+
+            dropdown.querySelectorAll('.newinput-dropdown-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    // Update input value
+                    input.value = item.textContent.trim();
+                    input.classList.add('filled');
+
+                    // Remove "selected" from all items
+                    dropdown.querySelectorAll('.newinput-dropdown-item').forEach(i => i.classList.remove('selected'));
+
+                    // Add "selected" to clicked item
+                    item.classList.add('selected');
+
+                    // Close dropdown
+                    dropdown.classList.remove('show');
+                    icon.classList.remove('rotate');
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!container.contains(e.target)) {
+                    dropdown.classList.remove('show');
+                    icon.classList.remove('rotate');
+                }
+            });
+        });
+
+
+
+        function handleFocus(input) {
+            input.placeholder = "From date";
+            // Automatically open the date picker
+            setTimeout(() => input.showPicker && input.showPicker(), 100);
+        }
+
+        function handleBlur(input) {
+            if (!input.value) {
+                input.placeholder = "From date";
+            }
+        }
+        $(document).ready(function() {
+
+            var current_fs, next_fs, previous_fs; // fieldsets
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+
+            setProgressBar(current);
+
+            // Next button
+            $(".btn-submit").click(function(e) {
+                e.preventDefault(); // prevent form submission
+
+                current_fs = $(this).closest("fieldset");
+                next_fs = current_fs.next("fieldset");
+
+                if (next_fs.length === 0) return; // if no next fieldset, do nothing
+
+                // Add class active to next step in progressbar
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                // Show the next fieldset
+                next_fs.show();
+
+                // Hide the current fieldset with animation
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 500
+                });
+
+                setProgressBar(++current);
+            });
+
+            // Previous button
+            $(".btn-closes").click(function(e) {
+                e.preventDefault(); // prevent form submission
+
+                current_fs = $(this).closest("fieldset");
+                previous_fs = current_fs.prev("fieldset");
+
+                if (previous_fs.length === 0) return; // if no previous fieldset, do nothing
+
+                // Remove active class from current step
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+                // Show the previous fieldset
+                previous_fs.show();
+
+                // Hide the current fieldset with animation
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 500
+                });
+
+                setProgressBar(--current);
+            });
+
+            // Progress bar function
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar").css("width", percent + "%");
+            }
+
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.sidebar-items').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

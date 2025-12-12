@@ -1,0 +1,9 @@
+.footer{
+    bottom: 0 !important;
+    display: flex;
+    justify-content:space-around;
+    background-color: #6383e8;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: white;
+}

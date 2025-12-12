@@ -1,0 +1,236 @@
+     .hero-section {
+       position: relative;
+       width: 100%;
+       height: 310px;
+       overflow: hidden;
+     }
+
+     .hero-section {
+       position: relative;
+     }
+
+     .hero-section .main-img {
+       width: 100%;
+       max-height: 310px;
+       object-fit: cover;
+       background-size: cover;
+       background-position: center;
+     }
+
+     .hero-section .main-img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       display: block;
+     }
+
+     .hero-section .overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.4);
+       /* shadow overlay */
+       pointer-events: none;
+       z-index: 1;
+     }
+
+     .hero-text {
+       position: absolute;
+       top: 30%;
+       /* start higher */
+       left: 50%;
+       transform: translate(-50%, -100%);
+       padding: 15px 30px;
+       border-radius: 8px;
+       color: #FFFFFF;
+       font-family: "Oswald", Sans-serif;
+       font-size: 45px;
+       font-weight: 600;
+       text-transform: uppercase;
+       line-height: 1em;
+       z-index: 10;
+       transition: all 0.8s ease-out;
+       opacity: 0;
+       text-align: center;
+     }
+
+     .hero-text.animate {
+       top: 50%;
+       transform: translate(-50%, -50%);
+       opacity: 1;
+     }
+
+     .about-content {
+       transition: 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+       padding: 32px 0px 34px 0px;
+       text-align: left;
+       color: #000000;
+       font-family: "Montserrat", Sans-serif;
+       font-size: 18px;
+       font-weight: 400;
+     }
+
+     @media (max-width: 768px) {
+       .hero-text {
+         font-size: 2rem;
+         padding: 10px 20px;
+       }
+     }
+
+     .overview-text {
+       font-family: "Montserrat", Sans-serif;
+       font-size: 17px;
+       font-weight: 400;
+       line-height: 1.5;
+       transform: translatey(-100%);
+       opacity: 0;
+       transition: all 0.8s ease-out;
+     }
+
+
+     .overview-text.animate {
+       top: 0;
+       transform: translatey(0%);
+       opacity: 1;
+     }
+
+
+     .hero-section {
+       position: relative;
+       height: 300px;
+       overflow: hidden;
+     }
+
+     .image-wrapper {
+       width: 100%;
+       height: 100%;
+       position: relative;
+     }
+
+     .main-img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+     }
+
+     .overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.5);
+     }
+
+     .hero-text {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       color: white;
+       font-size: 3rem;
+       font-weight: 700;
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     .Career-card-container {
+       background-color: white;
+       border-radius: 1rem;
+       box-shadow: 0 0px 15px rgba(0, 0, 0, 0.08);
+          border: 1px solid #078307;
+       padding: 2rem;
+       height: 100%;
+     }
+
+     .Career-card-container p ul {
+       font-family: "Montserrat", Sans-serif;
+       font-size: 17px;
+       font-weight: 400;
+     }
+
+     .Career-card-container h2 {
+        color:#078307;
+       font-family: "Roboto", Sans-serif;
+       font-size: 1.4em;
+       font-weight: bold;
+       text-transform: uppercase;
+     }
+
+     .Career-section-heading {
+       font-size: 2rem;
+       font-weight: 600;
+       margin-bottom: 1.5rem;
+       color: #078307;
+     }
+
+     .Career-email {
+       color: #078307;
+       font-family: "Montserrat", Sans-serif;
+       font-size: 17px;
+       font-weight: 400;
+       text-decoration: none;
+     }
+
+    .Career-ul-list {
+       list-style: none;
+       padding: 0;
+     }
+
+         .Career-ul-list li {
+       margin-bottom: 0.5rem;
+     }
+
+        .Career-ul-list li::before {
+       /* content: "•";
+       color: #078307; */
+       font-weight: bold;
+       display: inline-block;
+       width: 1em;
+       margin-left: -1em;
+     }
+
+     .Career-btn-link {
+       display: inline-block;
+       margin-top: 1rem;
+       padding: 0.75rem 1.5rem;
+       background-color: #078307;
+       color: white;
+       text-decoration: none;
+       border-radius: 0.5rem;
+       font-weight: 500;
+       transition: background-color 0.3s ease;
+     }
+
+     .Career-btn-link:hover {
+      color: white;
+       background-color: #056b05;
+     }

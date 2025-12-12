@@ -1,0 +1,297 @@
+<!-- header -->
+<header class="headerStandard">
+    <div class="header-top-alert marq-section bg-pink">
+
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <a class="navbar-brand" href="#"><img class="imagelogo img-size" src="assets/images/qmc-logo-new1.png" /></a>
+            </div>
+        </div>
+    </div>
+    <nav *ngIf="!applicantdetailpage" class="navbar navbar-expand-md navbar-dark bg-pink header-bottom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleDisplay()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <!-- <a class="navbar-brand" href="#"><img src="assets/images/qmc-logo-new1.png"></a> -->
+            <div class="collapse navbar-collapse d-none d-sm-block" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" routerLink="/home">{{ "headerSection.menu.Home" | translate }}
+              </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/about">{{
+              "headerSection.menu.About" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/visa-medical-services">{{
+              "headerSection.menu.Visa Medical
+                            Services" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/careers">{{
+              "headerSection.menu.Careers" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/faqs">{{
+              "headerSection.menu.FAQs" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/contact">{{
+              "headerSection.menu.Contact" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/referrals">{{
+              "headerSection.menu.Referrals" | translate
+            }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-mobile d-block d-sm-none animate__animated animate__fadeInLeft" *ngIf="!isShow">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" routerLink="/home">{{ "headerSection.menu.Home" | translate
+              }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/about">{{
+              "headerSection.menu.About" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/visa-medical-services">{{
+              "headerSection.menu.Visa Medical Services" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/careers">{{
+              "headerSection.menu.Careers" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/faqs">{{
+              "headerSection.menu.FAQs" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/contact">{{
+              "headerSection.menu.Contact" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/referrals">{{
+              "headerSection.menu.Referrals" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/checklist">
+              {{ "homePage.contentTitle.Visit Checklist" | translate }}</a
+            >
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/book-referral-appointment">{{
+              "homePage.contentTitle.Book
+                            Referral Appointment" | translate
+            }}</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/status-check">{{
+              "homePage.contentTitle.Status Check" | translate
+            }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div class="three-boxes">
+        <section>
+
+            <form autocomplete="off" novalidate class="ng-untouched ng-pristine ng-invalid">
+                <div class="mb-3">
+                  <label for="emailProvider" class="form-label form-referral">Referral Type</label><br />
+                  <div class="custom-select" (clickOutside)="closeDropdown()">
+                    <div class="select-selected" (click)="toggleDropdown()">
+                      <span>{{ selectedOptions.length ? selectedOptions.join(', ') : 'Select referral type' }}</span>
+                      <span class="select-arrow">&#9662;</span>
+                    </div>
+                    <div class="select-items" [ngClass]="{ 'd-block': isDropdownOpen }">
+                      <div style="padding: 10px; cursor: pointer;" *ngFor="let option of options" class="checkbox-label">
+                        <label style="cursor: pointer;" class="checkbox-container">
+                          <input
+                            class="large-checkbox"
+                            style="cursor: pointer;"
+                            type="checkbox"
+                            [value]="option.value"
+                            [checked]="option.checked"
+                            (change)="onCheckboxChange($event, option)"
+                          />
+                          {{ option.label }}  <!-- Display the service name here -->
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              
+            
+
+
+
+            <ngx-spinner style="text-align: center;" bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+                <!-- <img style="display: block; margin: 0 auto; width: 400px; height: auto; will-change: transform;" src="assets/images/qmc-logo-new1.png" /> -->
+
+                <!-- <p style="font-size: 20px; color: white;text-align: center">Loading Please Wait...</p> -->
+            </ngx-spinner>
+
+            <!-- 
+   <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff">
+    <div style="text-align: center;">
+      <img src="assets/images/qmc-logo-new1.png" style="width: 400px; height: auto; margin-bottom: 20px;" />
+      <p style="font-size: 20px; color: white;">Loading Please Wait...</p>
+    </div>
+  </ngx-spinner> -->
+
+
+        </section>
+
+        <label style="padding-top: 20px;" for="emailProvider" class="form-label form-referral">Select Time Slot</label>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="h5-booking">Booking Dates</h5>
+                <hr class="hr-class" />
+
+            </div>
+            <div class="col-md-6 text-center">
+
+
+            </div>
+        </div>
+
+
+        <section>
+
+
+
+
+            <div class="row text-center date-top">
+                <div style="margin-bottom: 10px;" class="col-md-1 card card-border-radius" [ngClass]="{'selected-card': item.fullDate === selectedDate}" *ngFor="let item of storedResponse">
+                    <a style="cursor: pointer;" class="ul-list" (click)="handleDateClick(item.fullDate)">
+                        <div class="date-item">
+                            <p>{{ item.month }}</p>
+                            <p style="font-weight: 500;">{{ item.day }}</p>
+                            <h6 style="font-weight: bolder;">{{ item.date }}</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+        <!-- Time Html -->
+
+
+        <div class="row date-top">
+            <div style="margin-right: 35px; cursor: pointer;" class="col-md-2 date-radius" *ngFor="let slot of dateResponse" [ngClass]="{
+      'selected-time': isSelectedTime(slot.start_time, slot.end_time),
+      'highlighted-time': slot.start_time === selectedStartTime && slot.end_time === selectedEndTime
+    }" (click)="selectTime(slot.start_time, slot.end_time)">
+                <p class="ul-list">
+                    <a style="cursor: pointer;">
+                        <h6 style="padding: 0px 0px; font-size: 13px;">
+                            <i class="fa-solid fa-circle" style="color: white;" [ngStyle]="{'color': getCircleColor(slot.remaining)}"></i> {{ slot.start_time }} - {{ slot.end_time }}
+                        </h6>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- available and not available -->
+
+    <section class="Available-top">
+        <div class="row">
+            <div class="col-md-6 red-circle text-center">
+                <p><i class="fa-solid fa-circle green-circle round-left"></i>Available</p>
+            </div>
+            <div class="col-md-6 red-circle text-center">
+                <p><i class="fa-solid fa-circle red-circle round-left"></i>Not Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment button section -->
+    <section class="Available-top">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <button class="book-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" [disabled]="!selectedDate || !selectedTime">Book Appointment</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </section>
+
+
+</div>
+
+
+
+
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header confirm-color">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="fa-regular fa-circle-check"></i> Confirmation</h1>
+                <button type="button" class="btn-close close-btn " data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Your appointment has been confirmed and is scheduled for this date {{this.selectedDate}} at {{this.time}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn view-btn" data-bs-toggle="modal" (click)="onButtonClick()">view appointment history</button>
+                <button type="button" class="btn ok-btn" data-bs-toggle="modal" (click)="bookAppointment()">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- footer -->
+<div class="mini-footer bg-pink">
+    <div class="iw-copy-right">
+        <div style="padding: 10px">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        {{ "footerSection.footerAbt.Copyright © 2023 Stemz Healthcare. All rights reserved." | translate }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

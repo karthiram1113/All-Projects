@@ -1,0 +1,319 @@
+<app-nav></app-nav>
+<div class="about-page">
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="bannerBg">
+          <img style="width: 100%" src="assets/images/about1-1.jpg" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="wpb_wrapper" *ngIf="country == 'Pakistan'">
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistancontent1" | translate }}
+          </p>
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistancontent2" | translate }}
+          </p>
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistancontent3" | translate }}
+          </p>
+        </div>
+        <div class="wpb_wrapper" *ngIf="country != 'Pakistan'">
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.Stemz Healthcare was founded in 2015, to
+                        become the leading
+                        healthcare service provider for tourists, immigrants, and working professionals. We are a
+                        globally established organization and believe in creating lasting relationships with our
+                        employees, partners, and visitors, that establishes a positive environment based on honesty and
+                        trust." | translate
+            }}
+          </p>
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.Our infrastructure, systems, and processes
+                        have been developed to
+                        provide support and comfort to applicants and visitors while ensuring all government
+                        requirements are adhered to. At Stemz Healthcare we believe in innovation and continuous growth.
+                        We provide support to our employees, ensure they are trained on the latest techniques,
+                        processes, and protocols, and maintain an up-to-date technology-enabled environment at all our
+                        centers." | translate
+            }}
+          </p>
+        </div>
+      </div>
+      <div class="wpb_wrapper headcontent">
+        <div class="col-md-12" *ngIf="country == 'Pakistan'">
+          <h3 style="text-align: left; color: #303030">
+            {{ "aboutPage.contentTitle.WHO WE ARE" | translate }}
+          </h3>
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistanwhoweare1" | translate }}
+          </p>
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistanwhoweare2" | translate }}
+          </p>
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistanwhoweare3" | translate }}
+          </p>
+        </div>
+        <div class="col-md-12" *ngIf="country != 'Pakistan'">
+          <h3 style="text-align: left; color: #303030">
+            {{ "aboutPage.contentTitle.WHO WE ARE" | translate }}
+          </h3>
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.Stemz Healthcare manages the Visa Medical
+                        part of the process
+                        through the Qatar Medical Centers which are strategically located in the same location as the
+                        Qatar Visa Centers for the convenience of the applicants."
+                | translate
+            }}
+          </p>
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.The Ministry of Interior, State of Qatar
+                        has awarded a mandate to
+                        Biomet Services Pte. Ltd to provide select residency procedures on its behalf in eight countries
+                        through the Qatar Visa Centers." | translate
+            }}
+          </p>
+        </div>
+      </div>
+
+      <div class="iframe" style="margin-bottom: 10px">
+        <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72423.87705533903!2d78.34193212918224!3d17.44481487679374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93a3be7f0eb7%3A0xa14fbb5ef5f0edc4!2sStemz%20Healthcare!5e0!3m2!1sen!2sin!4v1618864721373!5m2!1sen!2sin"
+                    [width]="windowWidth" height="650" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+        <div class="vi__fullwidth_block index__map lazy">
+          <div class="index_map_offices">
+            <div
+              id="map"
+              class="lazy index__map__img"
+              [ngClass]="{ 'm-l170': lang == 'ur' }"
+              style="position: absolute; inset: 0px auto auto 0px"
+            >
+              <img
+                class="lazy map_offices_mobile"
+                alt="Travel Visa Requirements"
+                width="1446"
+                height="841"
+                src="assets/images/map_mobile.png"
+              />
+              <div class="map-handle"></div>
+
+              <div
+                *ngFor="let data of staticmapdetails"
+                class="map-offices-{{ data.cssclass }} index_map_office"
+                data-residency="IN"
+              >
+                <div class="offices_line"></div>
+                <div
+                  class="offices_position"
+                  id="{{ data.place }}"
+                  (click)="locationdeatils(data)"
+                  data-toggle="popover"
+                >
+                  <!-- (mouseenter)="locationdeatils(data)" (mouseleave)="closepopup(data)" -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-alt-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    />
+                  </svg>
+                </div>
+                <!-- class="offices_text popover fade right in" -->
+                <div
+                  *ngIf="enablepopup"
+                  class="popover fade right in"
+                  style="top: -162px; left: 9px; display: none"
+                >
+                  <div>
+                    <button
+                      (click)="closepopup(data)"
+                      type="button"
+                      class="close"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <h3 class="popover-title" style="display: none"></h3>
+                  <div class="popover-content">
+                    <p>
+                      <b>{{ mapaddressdetails.place }}</b>
+                      {{ mapaddressdetails.address1 }}<br />{{
+                        mapaddressdetails.address2
+                      }}<br />
+                      {{ mapaddressdetails.address3 }}<br />{{
+                        mapaddressdetails.address4
+                      }}<br />{{ mapaddressdetails.address5 }} <br />
+                    </p>
+                    <p>
+                      <span class="index_map_offices__title">Phone:</span>
+                      <span class="index_map_offices__phone">{{
+                        mapaddressdetails.Phnumber
+                      }}</span>
+                      <br />
+                      <span class="index_map_offices__title">Email:</span>
+                      info&#64;qatarmedicalcenter.com
+                    </p>
+                  </div>
+                </div>
+                <a class="offices_text" id="{{ data.place }}_pop">{{
+                  data.place
+                }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpacer"></div>
+  <div class="container" *ngIf="country != 'Pakistan'">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wpb_wrapper">
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.As per the agreement, those coming to work
+                        in Qatar must complete
+                        their biometric enrollment, undergo medical examinations, and sign their work contracts in their
+                        home countries before coming to Qatar." | translate
+            }}
+          </p>
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.The first phase of the project will take
+                        place in eight countries:
+                        India, Nepal, Sri Lanka, Pakistan, Bangladesh, Indonesia, Philippines &amp; Tunisia with the
+                        first ‘Qatar Visa Center launched in Colombo, Sri Lanka."
+                | translate
+            }}
+          </p>
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.The main objective behind this project is
+                        for the Ministry of
+                        Interior to align the rights of the workers with the best international standards while
+                        providing the services in the state-of-the-art facilities through a seamless efficient
+                        process." | translate
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row bg-pink visionSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="iw-heading">
+              <h4 class="iwh-title text-left">
+                {{ "aboutPage.contentTitle.OUR VISION" | translate }}
+              </h4>
+            </div>
+            <div class="wpb_wrapper" *ngIf="country == 'Pakistan'">
+              <div style="text-align: start; color: #fff">
+                {{ "aboutPage.contentText.pakistanourvision1" | translate }}
+              </div>
+            </div>
+            <div class="wpb_wrapper" *ngIf="country != 'Pakistan'">
+              <div style="text-align: start; color: #fff">
+                {{
+                  "aboutPage.contentText.Our expertise and effective
+                                collaboration make sure that we achieve our goal of becoming the leading integrated
+                                global healthcare provider for travel and general health."
+                    | translate
+                }}
+              </div>
+            </div>
+            <div class="emptySpacer"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="iw-heading">
+              <h4 class="iwh-title text-left">
+                {{ "aboutPage.contentTitle.OUR MISSION" | translate }}
+              </h4>
+            </div>
+            <div class="wpb_wrapper" *ngIf="country == 'Pakistan'">
+              <div style="text-align: start; color: #fff">
+                {{ "aboutPage.contentText.pakistanourmission1" | translate }}
+              </div>
+            </div>
+            <div class="wpb_wrapper" *ngIf="country != 'Pakistan'">
+              <div style="text-align: start; color: #fff">
+                {{
+                  "aboutPage.contentText.As the dedicated provider for
+                                medical health screenings, our goal is to provide an efficient customer-oriented
+                                service. We are one strong team united by our mission and values in our relentless quest
+                                to be the global partner of choice in Travel healthcare solutions. We are committed to
+                                building symbiotic relationships." | translate
+                }}
+              </div>
+            </div>
+          </div>
+          <div class="emptySpacer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="emptySpacer"></div>
+      <div class="iw-heading">
+        <h4 class="iwh-title text-left">
+          {{ "aboutPage.contentTitle.OUR CORE SERVICE" | translate }}
+        </h4>
+        <div class="wpb_wrapper" *ngIf="country == 'Pakistan'">
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistanourcoreservice1" | translate }}
+          </p>
+          <p style="text-align: start">
+            {{ "aboutPage.contentText.pakistanourcoreservice2" | translate }}
+          </p>
+        </div>
+        <div class="wpb_wrapper" *ngIf="country != 'Pakistan'">
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.Visa Medical Services – Some governments
+                        require a certificate of
+                        health before applying for entry visas, these tests may differ depending upon various factors
+                        including nationality and the type of visa applied for."
+                | translate
+            }}
+          </p>
+          <p style="text-align: start">
+            {{
+              "aboutPage.contentText.Stemz Healthcare provides visa medical
+                        services to individuals who
+                        must meet medical fitness standards when applying for work or tourist visas for specific
+                        countries. Our protocols are aligned to the requirements of international government
+                        departments" | translate
+            }}
+          </p>
+        </div>
+      </div>
+      <div class="emptySpacer"></div>
+    </div>
+    <div class="col-md-6">
+      <div class="emptySpacer"></div>
+      <img src="assets/images/about2.jpg" />
+      <div class="emptySpacer"></div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

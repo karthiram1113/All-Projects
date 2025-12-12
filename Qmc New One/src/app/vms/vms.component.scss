@@ -1,0 +1,155 @@
+.vms-page {
+    overflow-x: hidden;
+}
+.contentSection{
+    position: relative;
+}
+.iwh-title{
+    color: #303030; 
+    line-height: 28px;
+    font-size: 28px; 
+    font-weight: 600; 
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.wpb_wrapper p, ol {
+    color: #777777;
+}
+
+.iframe {
+    margin-top: 40px;
+}
+.qmcBtn {
+    a:hover {
+        color: #fff;
+        text-decoration: none;
+        background: #600435 !important;
+    }
+    a {
+        padding: 6px 18px;
+    }
+}
+.tooltipContent .col img{
+    width: 100%;
+    cursor: pointer;
+}
+.wpb_wrapper {
+    font-size: 15px;
+    line-height: 28px;
+}
+.emptySpacer {
+    height: 62px;
+}
+.row img {
+    width: 100%;
+}
+.radiusBtn.pinkBg {
+
+        margin: 14px;
+    a {
+    background-color: #9d004c;
+    padding: 6px 20px;
+    border-radius: 10px;
+    // border: 1px solid #ff0000;
+    /* -webkit-transition: all 400ms; */
+    transition: width all 400ms;
+    color:#fff;
+    margin: 12px;;
+}
+}
+.bg-pink{
+.iwh-title{
+    padding: 12px;
+    color:#fff;
+}
+.wpb_wrapper {
+    p{
+        color:#fff;
+    }
+}
+.seperator-line {
+    height: 1px;
+    border-top: 1px solid #EBEBEB;
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.video-player .play-button {
+    border: none;
+    display: block;
+    font-size: 72px;
+    transition: all 0.2s ease 0s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 150px;
+    // background: red;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/images/play-video-button.png") !important;
+    color: #5c0931;
+    z-index: 99;
+}
+// .video {
+//     width: 100%;
+//     max-width: 800px;
+//     position: relative;
+//     transform: none;
+//     top: auto;
+//     margin: 0 auto;
+// }
+}
+// .container {
+//     display: flex;
+//     background: #ccc;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+
+// .controls {
+//     display: flex;
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     flex-wrap: wrap;
+//     background: grey;
+// }
+// .buttons {
+//     padding: 10px;    
+// }
+// .buttons button {
+//     background: none;
+//     cursor: pointer;
+//     border: 0;
+//     outline: 0;      
+// }
+// .buttons button:before {
+//     content: "\f144";
+//     font-family: "Font Awesome 5 Free";
+//     width: 30px;
+//     height: 30px;
+//     display: inline-block;
+//     font-size: 28px;    
+// }
+p{
+    text-align: justify !important;
+}
+div{
+    text-align: justify !important;
+}
+
+h1,h2,h3,h4,h5{
+    text-align: justify !important;
+}

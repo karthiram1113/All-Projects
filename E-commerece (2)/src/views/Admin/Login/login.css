@@ -1,0 +1,253 @@
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  /* outline: none; */
+  /* box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2); */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+
+/* Loading */
+
+.div-spinner {
+  padding: 100px;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+}
+
+.preloader {
+  text-align: center;
+  max-width: 20em;
+  width: 100%;
+}
+
+.preloader__text {
+  position: relative;
+  height: 1.5em;
+}
+
+.preloader__msg {
+      margin-left: 10px;
+  animation: msg 0.3s 13.7s linear forwards;
+  position: absolute;
+  width: 100%;
+}
+
+.preloader__msg--last {
+  animation-direction: reverse;
+  animation-delay: 14s;
+  visibility: hidden;
+}
+
+.cart {
+  /* display: block; */
+  margin-bottom: 10px;
+  width: 5em;
+  height: 5em;
+}
+
+.cart__lines,
+.cart__top,
+.cart__wheel1,
+.cart__wheel2,
+.cart__wheel-stroke {
+  animation: cartLines 2s ease-in-out infinite;
+}
+
+.cart__lines {
+  stroke: #8ac43f;
+}
+.cart__wheel-stroke {
+  stroke: #00acf0;
+}
+.cart__top {
+  animation-name: cartTop;
+}
+
+.cart__wheel1 {
+  animation-name: cartWheel1;
+  transform: rotate(-0.25turn);
+  transform-origin: 43px 111px;
+}
+
+.cart__wheel2 {
+  animation-name: cartWheel2;
+  transform: rotate(0.25turn);
+  transform-origin: 102px 111px;
+}
+
+.cart__wheel-stroke {
+  animation-name: cartWheelStroke;
+}
+
+.cart__track {
+  stroke: hsla(223, 10%, 10%, 0.1);
+  transition: stroke 0.3s;
+}
+
+/* Animations */
+@keyframes msg {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  99.9% {
+    opacity: 0;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes cartLines {
+
+  from,
+  to {
+    opacity: 0;
+  }
+
+  8%,
+  92% {
+    opacity: 1;
+  }
+}
+
+@keyframes cartTop {
+  from {
+    stroke-dashoffset: -338;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 338;
+  }
+}
+
+@keyframes cartWheel1 {
+  from {
+    transform: rotate(-0.25turn);
+  }
+
+  to {
+    transform: rotate(2.75turn);
+  }
+}
+
+@keyframes cartWheel2 {
+  from {
+    transform: rotate(0.25turn);
+  }
+
+  to {
+    transform: rotate(3.25turn);
+  }
+}
+
+@keyframes cartWheelStroke {
+
+  from,
+  to {
+    stroke-dashoffset: 81.68;
+  }
+
+  50% {
+    stroke-dashoffset: 40.84;
+  }
+}
+.coolinput {
+    display: flex;
+      flex-direction: column;
+      /* width: fit-content; */
+      position: static;
+      max-width: 100%;
+}
+
+/* Match label background to autofill background */
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.coolinput label.text {
+  font-size: 14px !important;
+  color: #00acf0;
+  font-weight: 700;
+  position: relative;
+  top: 5px;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: white;
+  /* Make this match autofill background */
+  width: fit-content;
+  z-index: 1;
+}
+
+.coolinput .input {
+  padding: 15px 10px;
+  font-size: 14px;
+    border: 1px solid rgb(230 230 230);
+  border-radius: 5px;
+  border-top-left-radius: 5px;
+  background: white;
+}
+.img-input{
+  padding: 13px 10px !important;
+    font-size: 14px;
+      border: 1px solid rgb(230 230 230);
+      border-radius: 5px;
+      border-top-left-radius: 5px;
+      background: white;
+}
+.coolinput .input:focus {
+  outline: none;
+  border: 1px #00acf0 solid;
+}
+.coolinput-status :focus {
+  outline: none !important;
+  border: 1px #00acf0 solid !important;
+}
+

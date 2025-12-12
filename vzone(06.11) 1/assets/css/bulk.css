@@ -1,0 +1,120 @@
+
+.bulk-upload-card{
+    background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+}
+
+.drop-area {
+    height: 110px;
+    border: 2px dashed var(--purple-color);
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-status.selected {
+    color: var(--purple-color) !important;
+    font-weight: 500;
+}
+
+.drop-area {
+    height: 110px;
+    border: 2px dashed var(--purple-color);
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.drop-area:hover {
+    background-color: #f3f3f3;
+}
+
+.file-prompt {
+    color: var(--purple-color);
+    font-weight: 500;
+}
+
+.file-status {
+    font-style: italic;
+}
+
+.btn-upload {
+    background-color: var(--light-purple);
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-upload:hover {
+    background-color: var(--purple-color);
+}
+
+
+
+
+
+
+
+
+
+/* //panination */
+
+
+.pagination-custom {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 5px;
+}
+
+.page-item-custom {
+    width: 30px;
+    height: 30px;
+}
+
+.page-link-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #808080;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+.page-item-custom.active .page-link-custom {
+    background-color: var(--purple-color);
+    color: white;
+    /* box-shadow: 0 0 13px 3px rgba(138, 43, 226, 0.6); */
+    box-shadow: none;
+}
+.page-item-custom.active .page-link-custom:hover {
+    box-shadow: 0 0 6px 1px #5c249a;
+    color: white;
+    background-color: var(--purple-color);
+}
+
+.page-link-custom.prev,
+.page-link-custom.next {
+    color: #808080;
+    font-size: 15px;
+}
+
+.page-link-custom:hover:not(.active) {
+    background-color: #ebebeb;
+    color: #8a2be2;
+    box-shadow: 0 0 6px 1px #5c249a;
+}

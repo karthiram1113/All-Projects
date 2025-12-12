@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard | Verifyzone</title>
+        <link rel="icon" href="/assets/img/logotop.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/sidebar.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/exit-details.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+        <style>
+        #heading {
+            text-transform: uppercase;
+            color: #673AB7;
+            font-weight: normal;
+        }
+        
+        #msform {
+            text-align: center;
+            position: relative;
+            /* margin-top: 20px; */
+        }
+        /* Form sections */
+        
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        
+        .form-card {
+            text-align: left;
+        }
+        
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+        /* Inputs */
+        /* #msform input,
+        #msform textarea {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 25px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            color: #2C3E50;
+            background-color: #ECEFF1;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        
+        #msform input:focus,
+        #msform textarea:focus {
+            box-shadow: none !important;
+            border: 1px solid #673AB7;
+            outline-width: 0;
+        } */
+        /* Buttons */
+        
+        #msform .action-button {
+            width: 120px;
+            background: #673AB7;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 0px 10px 5px;
+            float: right;
+            transition: 0.3s ease-in-out;
+        }
+        
+        #msform .action-button:hover,
+        #msform .action-button:focus {
+            background-color: #311B92;
+        }
+        
+        #msform .action-button-previous {
+            width: 120px;
+            background: #616161;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px 10px 0px;
+            float: right;
+            transition: 0.3s ease-in-out;
+        }
+        
+        #msform .action-button-previous:hover,
+        #msform .action-button-previous:focus {
+            background-color: #000000;
+        }
+        /* Card styling */
+        
+        .card {
+            z-index: 0;
+            border: none;
+            position: relative;
+        }
+        
+        .fs-title {
+            font-size: 25px;
+            color: #673AB7;
+            margin-bottom: 15px;
+            font-weight: normal;
+            text-align: left;
+        }
+        
+        .purple-text {
+            color: #673AB7;
+            font-weight: normal;
+        }
+        
+        .steps {
+            font-size: 18px;
+            color: gray;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-align: right;
+        }
+        
+        .fieldlabels {
+            color: gray;
+            text-align: left;
+        }
+        /* Progress Bar (3 Steps) */
+        
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            color: lightgrey;
+            display: flex;
+            justify-content: space-between;
+            counter-reset: step;
+            text-align: center;
+        }
+        
+        #progressbar li {
+            list-style-type: none;
+            font-size: 15px;
+            width: 33.33%;
+            position: relative;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #progressbar li i {
+            font-size: 24px;
+            background: lightgray;
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        
+        #progressbar li.active i {
+            background: #673AB7;
+        }
+        
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: lightgray;
+            position: absolute;
+            left: -50%;
+            top: 25px;
+            z-index: -1;
+        }
+        
+        #progressbar li:first-child:after {
+            content: none;
+        }
+        
+        #progressbar li.active:after {
+            background: #673AB7;
+        }
+        
+        #progressbar .active {
+            color: #673AB7;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            #progressbar li i {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 20px;
+            }
+            .fs-title {
+                font-size: 20px;
+            }
+            .action-button,
+            .action-button-previous {
+                width: 100px;
+                font-size: 14px;
+            }
+        }
+        
+        .fit-image {
+            width: 100%;
+            object-fit: cover;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+        .inputContainer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+            margin-top: 10px;
+        }
+        
+        #inputField {
+            border: 1px solid #d3d3d3;
+            background-color: transparent;
+            border-radius: 10px;
+            padding: 10px 15px;
+            color: black;
+            /* font-weight: 500; */
+            font-size: 14px;
+            outline: none;
+            caret-color: var(--purple-color);
+            transition-duration: .3s;
+            font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .userIcon {
+            position: absolute;
+            fill: var(--purple-color);
+            width: 12px;
+            top: -23px;
+            left: -15px;
+            opacity: 0;
+            transition: .2s linear;
+        }
+        
+        .usernameLabel {
+            position: absolute;
+            top: -25px;
+            left: 5px;
+            color: var(--purple-color);
+            font-size: 14px;
+            font-weight: 600;
+            font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            transition: .2s linear;
+            opacity: 0;
+        }
+        
+        #inputField:focus~.usernameLabel,
+        #inputField:valid~.usernameLabel {
+            transform: translateX(20px);
+            opacity: 1;
+        }
+        
+        #inputField:focus~.userIcon,
+        #inputField:valid~.userIcon {
+            transform: translateX(20px);
+            opacity: 1;
+        }
+        
+        #inputField:focus,
+        #inputField:valid {
+            background-color: #fff;
+            transition-duration: .3s;
+            border: 1px solid var(--purple-color);
+        }
+        /* Hide placeholder on focus */
+        
+        #inputField::placeholder {
+            transition: color 0.3s ease;
+        }
+        
+        #inputField:focus::placeholder {
+            color: transparent;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /* dateinput */
+
+.dateInputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.dateInputContainer input {
+  border: 1px solid #d3d3d3;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px 40px 10px 15px; /* leave space for icon inside */
+  color: black;
+  font-size: 14px;
+  outline: none;
+  caret-color: var(--purple-color);
+  transition-duration: 0.3s;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+/* Hide the default browser calendar icon */
+.dateInputContainer input::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+/* New container for the label and its icon */
+.label-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and label */
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  transition: 0.2s linear;
+  opacity: 0; /* Hidden by default */
+  pointer-events: none;
+}
+
+/* Style for the new icon next to the label */
+.label-icon {
+  width: 14px;
+  height: 14px;
+  fill: var(--purple-color);
+}
+
+.dateLabel {
+  color: var(--purple-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+/* Icon positioned inside the input field */
+.dateIcon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: var(--purple-color);
+  pointer-events: none;
+}
+
+/*
+  Corrected selectors:
+  - We look for when the input inside .dateInputContainer is in focus or valid.
+  - Then we apply the styles to the .label-container that is also inside .dateInputContainer.
+*/
+.dateInputContainer input:focus ~ .label-container,
+.dateInputContainer input:valid ~ .label-container {
+    transform: translateX(20px);
+    opacity: 1;
+}
+
+.dateInputContainer input:focus,
+.dateInputContainer input:valid {
+    background-color: #fff;
+    transition-duration: .3s;
+    border: 1px solid var(--purple-color);
+}
+
+.dateInputContainer input::placeholder {
+  transition: color 0.3s ease;
+}
+
+.dateInputContainer input:focus::placeholder {
+  color: transparent;
+}
+    </style>
+    </head>
+
+    <body>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-top">
+                <div class="notification-logo sidebar-items">
+                    <img src="/assets/img/V.png" alt="Small Logo"
+                        class="logo-small">
+                    <img src="/assets/img/white-logo.png" alt="Full Logo"
+                        class="logo-full">
+                </div>
+            </div>
+            <div class="sidebar-scroll">
+                <div class="sidebar-menu">
+                    <a class="sidebar-items" href="dashboardxzone.html">
+                        <i class="ri-dashboard-line"></i>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 active dropdown-toggle1">
+                            <i class="ri-global-line"></i>
+                            <span class="menu-text">ExZone</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content mt-2">
+                            <a href="exitdetails.html">
+                                <div class="sidebar-subitem active">
+                                    <i class="ri-logout-circle-line"></i> Add
+                                    exit details
+                                </div>
+                            </a>
+                            <a href="verification-request.html">
+                                <div class="sidebar-subitem"><i
+                                        class="ri-shield-user-line"></i>
+                                    Verification Request</div>
+                            </a>
+                            <div class="sidebar-subitem"><i
+                                    class="ri-file-list-3-line"></i> New request
+                                received</div>
+                            <div class="sidebar-subitem"><i
+                                    class="ri-search-line"></i> Search
+                                candidate</div>
+                            <div class="sidebar-subitem"><i
+                                    class="ri-upload-cloud-line"></i> Bulk
+                                upload</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 dropdown-toggle1">
+                            <i class="ri-settings-3-line"></i>
+                            <span class="menu-text">Configurations</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="sidebar-subitem">
+                                <i class="ri-rocket-line"></i> Activate
+                                Autopilot
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 dropdown-toggle1">
+                            <i class="ri-bar-chart-2-line"></i>
+                            <span class="menu-text">Reports</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="sidebar-subitem"><i
+                                    class="ri-bar-chart-2-line"></i> Attrition
+                                Reports</div>
+                            <div class="sidebar-subitem"><i
+                                    class="ri-history-line"></i> Re-verification
+                                History</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="sidebar-bottom">
+            <div class="notification1 sidebar-items">
+                <i class="ri-logout-circle-r-line"></i>
+                <span class="menu-text">VZone</span>
+            </div>
+        </div> -->
+        </div>
+
+        <!-- Right Content -->
+        <div class="main-container">
+            <div class="navbar">
+                <div class="navbar-left">
+                    <h5 class="navbar-exzone"><i class="ri-user-star-line"></i>
+                        Exzone</h5>
+                </div>
+                <div class="navbar-right">
+                    <div class="navbar-x-vzone">
+                        <!-- <i class="ri-shield-check-line"></i> Vzone -->
+                        <div class="navbar-vzone-button"
+                            data-tooltip="Go to Vzone">
+                            <div class="button-wrapper">
+                                <div class="text"><i
+                                        class="ri-shield-check-line"></i>
+                                    Vzone</div>
+                                <span class="icon">
+                                    <i class="ri-shield-check-line"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <i class="ri-search-line"></i>
+                </div> -->
+
+                    <div class="profile">
+
+                        <div class="dropdown">
+                            <button class="dropdown-btn">
+                                <img src="/assets/img/profile-nav.jpg"
+                                    alt="Profile" class="profile-img">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="dropdown-menu border-0">
+                                <a href="#">
+                                    <i class="ri-user-line"></i> My Profile
+                                </a>
+                                <a href="#">
+                                    <i class="ri-settings-3-line"></i> Settings
+                                </a>
+                                <a href="index.html">
+                                    <i class="ri-logout-box-r-line"></i> Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="breadcrumbs" style="padding: 10px 0px 20px 5px"><a
+                    href="dashboardxzone.html"><i class="ri-home-8-line"
+                        style="color: var(--purple-color)"></i></a> <i
+                    class="ri-arrow-right-s-line"
+                    style="color: var(--purple-color)"></i> <span
+                    style="color: var(--purple-color);font-size: 14px;">Ex-Zone</span>
+                <i class="ri-arrow-right-s-line"
+                    style="color: var(--purple-color)"></i> <span
+                    style="font-size: 14px;">Add exit details</span></div>
+            <div class="content">
+                <h5>Add exit details</h5>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class>
+                            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                                <form id="msform">
+                                    <!-- Progressbar -->
+                                    <ul id="progressbar">
+                                        <li class="active" id="account">
+                                            <i class="ri-user-2-fill"></i>
+                                            <strong>Employee Details</strong>
+                                        </li>
+                                        <li id="personal">
+                                            <i class="ri-user-line"></i>
+                                            <strong>Personal Info</strong>
+                                        </li>
+                                        <li id="payment">
+                                            <i class="ri-image-line"></i>
+                                            <strong>Add Additional
+                                                Details</strong>
+                                        </li>
+                                    </ul>
+                                    <br>
+
+                                    <!-- Step 1 -->
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <!-- <h2 class="fs-title">Employee Information:</h2> -->
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps fs-6">Step
+                                                        1 - 2</h2>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Employee name"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Employee
+                                                            name</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Employee code"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Employee
+                                                            code</label>
+                                                        <svg class="userIcon"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 21 21"
+                                                            fill="currentColor"><path
+                                                                d="M15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918ZM17.6569 12L14.1213 15.5355L12.7071 14.1213L14.8284 12L12.7071 9.87868L14.1213 8.46447L17.6569 12ZM6.34315 12L9.87868 8.46447L11.2929 9.87868L9.17157 12L11.2929 14.1213L9.87868 15.5355L6.34315 12Z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Designation"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Designation</label>
+                                                        <svg
+                                                            viewBox="0 0 512 512"
+                                                            class="userIcon"><path
+                                                                d="M320 128V96c0-17.7-14.3-32-32-32H224c-17.7 0-32 14.3-32 32v32H32C14.3 128 0 142.3 0 160v288c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H320zM224 96h64v32H224V96z" /></svg>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="From date"
+                                                            type="date"
+                                                            onfocus="handleFocus(this)"
+                                                            onblur="handleBlur(this)">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">From
+                                                            date</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon">
+                                                            <path
+                                                                d="M152 64c0-8.8 7.2-16 16-16h112c8.8 0 16 7.2 16 16V96H152V64zM0 160V448c0 35.3 
+      28.7 64 64 64H384c35.3 0 64-28.7 64-64V160H0zm384 288H64V224H384V448zM400 
+      0H48C21.5 0 0 21.5 0 48V96H448V48c0-26.5-21.5-48-48-48z" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="To date"
+                                                            type="date">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">To
+                                                            date</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M400 64H48C21.5 64 0 85.5 0 112V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM336.5 232.5l-107.2 107.2c-4.7 4.7-12.3 4.7-17 0l-53.2-53.2c-4.7-4.7-4.7-12.3 0-17l17-17c4.7-4.7 12.3-4.7 17 0l28.7 28.7 90.2-90.2c4.7-4.7 12.3-4.7 17 0l17 17c4.7 4.7 4.7 12.3 0 17z" /></svg>
+                                                    </div>
+                                                </div> -->
+
+
+
+
+
+
+
+<div class="col-md-6">
+  <div class="dateInputContainer">
+    <input
+      required
+      autocomplete="off"
+      id="fromDate"
+      type="date"
+        placeholder="From date"
+    />
+    <div class="label-container">
+      <svg class="label-icon" viewBox="0 0 448 512">
+        <path
+                                                                d="M152 64c0-8.8 7.2-16 16-16h112c8.8 0 16 7.2 16 16V96H152V64zM0 160V448c0 35.3 
+      28.7 64 64 64H384c35.3 0 64-28.7 64-64V160H0zm384 288H64V224H384V448zM400 
+      0H48C21.5 0 0 21.5 0 48V96H448V48c0-26.5-21.5-48-48-48z" />
+      </svg>
+      <label class="dateLabel" for="fromDate">From date</label>
+    </div>
+    <svg class="dateIcon" viewBox="0 0 448 512">
+      <path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64h48V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192z" />
+    </svg>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="dateInputContainer">
+    <input
+      required
+      autocomplete="off"
+      id="toDate"
+      type="date"
+        placeholder="To date"
+    />
+    <div class="label-container">
+      <svg class="label-icon" viewBox="0 0 448 512">
+       <path
+                                                                d="M400 64H48C21.5 64 0 85.5 0 112V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM336.5 232.5l-107.2 107.2c-4.7 4.7-12.3 4.7-17 0l-53.2-53.2c-4.7-4.7-4.7-12.3 0-17l17-17c4.7-4.7 12.3-4.7 17 0l28.7 28.7 90.2-90.2c4.7-4.7 12.3-4.7 17 0l17 17c4.7 4.7 4.7 12.3 0 17z" />
+      </svg>
+      <label class="dateLabel" for="toDate">To date</label>
+    </div>
+    <svg class="dateIcon" viewBox="0 0 448 512">
+      <path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64h48V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192z" />
+    </svg>
+  </div>
+</div>
+
+
+
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Reason for leaving"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Reason
+                                                            for leaving</label>
+                                                        <svg
+                                                            viewBox="0 0 512 512"
+                                                            class="userIcon"><path
+                                                                d="M256 32C114.6 32 0 125.1 0 240c0 49.4 24.6 94.4 64.7 129.4c-2.6 29.2-13.5 64.8-24.7 93.3c-3.4 8.6 5.5 17.1 13.9 13.9c33.1-12.9 76.2-30.8 104.7-47.3C192.4 443.7 222.6 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32z" /></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Location"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Location</label>
+                                                        <svg
+                                                            viewBox="0 0 384 512"
+                                                            class="userIcon"><path
+                                                                d="M168 0C75.2 0 0 75.2 0 168C0 307.2 192 512 192 512s192-204.8 192-344C384 75.2 308.8 0 216 0zM192 240c-39.8 0-72-32.2-72-72s32.2-72 72-72s72 32.2 72 72S231.8 240 192 240z" /></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Job type (Permanent/Contact/Other)"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Job
+                                                            type
+                                                            (Permanent/Contact/Other)</label>
+                                                        <svg
+                                                            viewBox="0 0 384 512"
+                                                            class="userIcon"><path
+                                                                d="M224 136V0L384 160H248c-13.3 0-24-10.7-24-24zM64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V224H256c-17.7 0-32-14.3-32-32V64H64z" /></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Last draw salary"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Last
+                                                            draw salary</label>
+                                                        <svg
+                                                            viewBox="0 0 320 512"
+                                                            class="userIcon"><path
+                                                                d="M160 32c-53 0-96 43-96 96h48c0-26.5 21.5-48 48-48s48 21.5 48 48c0 20.1-12.5 37.3-30.1 44.4L139.3 193c-35.3 14.3-59.3 48.1-59.3 87c0 53 43 96 96 96s96-43 96-96h-48c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.1 12.5-37.3 30.1-44.4l38.6-16.6c35.3-14.3 59.3-48.1 59.3-87c0-53-43-96-96-96z" /></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Reporting to"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Reporting
+                                                            to</label>
+                                                        <svg
+                                                            viewBox="0 0 640 512"
+                                                            class="userIcon"><path
+                                                                d="M96 128a64 64 0 1 1 128 0A64 64 0 1 1 96 128zM0 416a96 96 0 0 1 96-96h128a96 96 0 0 1 96 96v32H0V416zM416 256a64 64 0 1 1 128 0A64 64 0 1 1 416 256zM320 480a96 96 0 0 1 96-96h128a96 96 0 0 1 96 96v32H320V480z" /></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Manager designation"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Manager
+                                                            designation</label>
+                                                        <svg
+                                                            viewBox="0 0 512 512"
+                                                            class="userIcon"><path
+                                                                d="M487.4 315.7l-42.3-24.5c1.6-8 2.4-16.2 2.4-24.5s-.8-16.5-2.4-24.5l42.3-24.5c4.6-2.7 6.9-8.1 5.5-13.3l-45.3-157.3c-1.7-5.9-7.2-9.7-13.3-9.7c-1.2 0-2.4 .2-3.6 .5l-49.9 14.3c-13.5-10.3-28.3-19-44.2-25.7L320.3 7c-1.9-5.8-7.2-9.7-13.3-9.7H205.1c-6.1 0-11.4 3.9-13.3 9.7l-15.1 50.4c-15.9 6.7-30.7 15.4-44.2 25.7L82.6 63.3c-1.2-.3-2.4-.5-3.6-.5c-6.1 0-11.6 3.8-13.3 9.7L20.4 229.8c-1.4 5.2 .9 10.6 5.5 13.3l42.3 24.5C66.6 276.2 64 284 64 292.7s2.6 16.5 4.1 24.5l-42.3 24.5c-4.6 2.7-6.9 8.1-5.5 13.3l45.3 157.3c1.7 5.9 7.2 9.7 13.3 9.7c1.2 0 2.4-.2 3.6-.5l49.9-14.3c13.5 10.3 28.3 19 44.2 25.7l15.1 50.4c1.9 5.8 7.2 9.7 13.3 9.7h101.9c6.1 0 11.4-3.9 13.3-9.7l15.1-50.4c15.9-6.7 30.7-15.4 44.2-25.7l49.9 14.3c1.2 .3 2.4 .5 3.6 .5c6.1 0 11.6-3.8 13.3-9.7l45.3-157.3c1.4-5.2-.9-10.6-5.5-13.3zM256 352c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z" /></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- Replace "Next" with a Submit button -->
+                                        <div
+                                            class="col-md-12 text-end d-flex justify-content-end p-2">
+                                            <button class="btn-submit"
+                                                type="button" name="next"
+                                                value="Next">
+                                                <div class="original">Next</div>
+                                                <div class="letters">
+                                                    <span>N</span>
+                                                    <span>e</span>
+                                                    <span>x</span>
+                                                    <span>t</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- Step 2 -->
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <!-- <h2 class="fs-title">Personal Information:</h2> -->
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps fs-6">Step
+                                                        2 - 3</h2>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Duties & Responsiblities Handled"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Duties
+                                                            & Responsiblities
+                                                            Handled</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Attitude & Personal Reputation of the Candidates"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Attitude
+                                                            & Personal
+                                                            Reputation of the
+                                                            Candidates</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Performance at Work"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Performance
+                                                            at Work</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Notice Served? - Yes/No/Waived off"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Notice
+                                                            Served? -
+                                                            Yes/No/Waived
+                                                            off</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Exit formalities complted - (id pending, is it from employer or employee)"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Exit
+                                                            formalities complted
+                                                            - (id pending, is it
+                                                            from employer or
+                                                            employee)</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Any due pending? - (Yes/No, if yes - please elaborate)"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Any
+                                                            due pending? -
+                                                            (Yes/No, if yes -
+                                                            please
+                                                            elaborate)</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Eligible for Rehire"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Eligible
+                                                            for Rehire</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Any specific comments, if any"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Any
+                                                            specific comments,
+                                                            if any</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="inputContainer">
+                                                        <input
+                                                            required="required"
+                                                            autocomplete="off"
+                                                            id="inputField"
+                                                            placeholder="Comments"
+                                                            type="text">
+                                                        <label
+                                                            class="usernameLabel"
+                                                            for="inputField">Comments</label>
+                                                        <svg
+                                                            viewBox="0 0 448 512"
+                                                            class="userIcon"><path
+                                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- Replace "Next" with a Submit button -->
+                                        <div
+                                            class="col-md-12 text-end d-flex justify-content-end p-2">
+                                            <button class="btn-closes">
+                                                <div
+                                                    class="original">Previous</div>
+                                                <div class="letters">
+                                                    <span>P</span>
+                                                    <span>r</span>
+                                                    <span>e</span>
+                                                    <span>v</span>
+                                                    <span>i</span>
+                                                    <span>o</span>
+                                                    <span>u</span>
+                                                    <span>s</span>
+                                                </div>
+                                            </button>&nbsp;&nbsp;
+                                            <button class="btn-submit"
+                                                type="button" name="next"
+                                                value="Next">
+                                                <div class="original">Next</div>
+                                                <div class="letters">
+                                                    <span>N</span>
+                                                    <span>e</span>
+                                                    <span>x</span>
+                                                    <span>t</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- Step 3 (Final) -->
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <!-- <h2 class="fs-title">Image Upload:</h2> -->
+                                                </div>
+                                                <div class="col-5">
+                                                    <h2 class="steps">Step 3 -
+                                                        3</h2>
+                                                </div>
+                                            </div>
+                                            <label class="fieldlabels">Upload
+                                                Your Photo:</label>
+                                            <input type="file" name="photo"
+                                                accept="image/*">
+                                            <label class="fieldlabels">Upload
+                                                Signature Photo:</label>
+                                            <input type="file" name="signature"
+                                                accept="image/*">
+                                        </div>
+
+                                        <!-- Replace "Next" with a Submit button -->
+                                        <div
+                                            class="col-md-12 text-end d-flex justify-content-end p-2">
+                                            <button class="btn-closes">
+                                                <div
+                                                    class="original">Previous</div>
+                                                <div class="letters">
+                                                    <span>P</span>
+                                                    <span>r</span>
+                                                    <span>e</span>
+                                                    <span>v</span>
+                                                    <span>i</span>
+                                                    <span>o</span>
+                                                    <span>u</span>
+                                                    <span>s</span>
+                                                </div>
+                                            </button>&nbsp;&nbsp;
+                                            <button class="btn-submit">
+                                                <div class="original">Next</div>
+                                                <div class="letters">
+                                                    <span>N</span>
+                                                    <span>e</span>
+                                                    <span>x</span>
+                                                    <span>t</span>
+                                                </div>
+                                            </button>
+
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer pt-3" style="font-size: 12px;">
+                <p>@2025 <span style="color:var(--purple-color)">Tarajyau</span>
+                    | All Rights Reserved</p>
+            </div>
+        </div>
+
+        <script>
+        function handleFocus(input) {
+            input.placeholder = "dd-mm-yyyy";
+            // Automatically open the date picker
+            setTimeout(() => input.showPicker && input.showPicker(), 100);
+        }
+
+        function handleBlur(input) {
+            if (!input.value) {
+                input.placeholder = "From date";
+            }
+        }
+        $(document).ready(function() {
+
+            var current_fs, next_fs, previous_fs; // fieldsets
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+
+            setProgressBar(current);
+
+            // Next button
+            $(".btn-submit").click(function(e) {
+                e.preventDefault(); // prevent form submission
+
+                current_fs = $(this).closest("fieldset");
+                next_fs = current_fs.next("fieldset");
+
+                if (next_fs.length === 0) return; // if no next fieldset, do nothing
+
+                // Add class active to next step in progressbar
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                // Show the next fieldset
+                next_fs.show();
+
+                // Hide the current fieldset with animation
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 500
+                });
+
+                setProgressBar(++current);
+            });
+
+            // Previous button
+            $(".btn-closes").click(function(e) {
+                e.preventDefault(); // prevent form submission
+
+                current_fs = $(this).closest("fieldset");
+                previous_fs = current_fs.prev("fieldset");
+
+                if (previous_fs.length === 0) return; // if no previous fieldset, do nothing
+
+                // Remove active class from current step
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+                // Show the previous fieldset
+                previous_fs.show();
+
+                // Hide the current fieldset with animation
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 500
+                });
+
+                setProgressBar(--current);
+            });
+
+            // Progress bar function
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar").css("width", percent + "%");
+            }
+
+        });
+
+
+
+
+
+
+flatpickr("#fromDate", { dateFormat: "d-m-Y", allowInput: true });
+flatpickr("#toDate", { dateFormat: "d-m-Y", allowInput: true });
+
+
+    </script>
+
+    </body>
+
+</html>

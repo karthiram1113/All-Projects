@@ -1,0 +1,345 @@
+<app-nav></app-nav>
+<div class="status-check-page">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="figure-wrapper">
+          <img src="assets/images/status page1.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <h3 class="iwh-title">
+            {{ "statusCheckPage.contentTitle.VISA STATUS CHECK" | translate }}
+          </h3>
+          <form [formGroup]="aFormGroup" autocomplete="off">
+            <div class="lable-head">
+              <p>
+                <label
+                  >{{ "statusCheckPage.contentText.visa number" | translate }}
+                  <span style="color: red">*</span><br />
+                  <input
+                    name="number"
+                    size="40"
+                    [(ngModel)]="visaNo"
+                    (keyup)="numberOnly($event, 'visa')"
+                    formControlName="visa_number"
+                    class="form-control"
+                    style="border-color: black"
+                /></label>
+                <!-- formControlName="visa_number" -->
+                <span *ngIf="errorVisaMsg != ''" class="errMsg">{{
+                  errorVisaMsg
+                }}</span>
+              </p>
+
+              <p>
+                <label
+                  >{{
+                    "statusCheckPage.contentText.passport number" | translate
+                  }}
+                  <span style="color: red">*</span>
+                  <input
+                    name="number"
+                    size="40"
+                    [(ngModel)]="passportNo"
+                    class="form-control"
+                    formControlName="passport_number"
+                    (keyup)="numberOnly($event, 'passport')"
+                    style="border-color: black"
+                /></label>
+              </p>
+              <!-- formControlName="passport_number" -->
+              <!-- <span *ngIf="errorPassMsg != ''" class="errMsg">{{
+                errorPassMsg
+              }}</span> -->
+
+              <div class="form-group">
+                <div class="col-md-6">
+                  <ngx-recaptcha2
+                    #captchaElem
+                    formControlName="recaptcha"
+                    [siteKey]="siteKey"
+                  >
+                  </ngx-recaptcha2>
+                </div>
+              </div>
+
+              <p style="text-align: center">
+                <input
+                  *ngIf="!loadingStatus"
+                  [disabled]="aFormGroup.invalid"
+                  type="button"
+                  (click)="statusCheckClick()"
+                  value="{{ 'careersPage.contentTitle.Submit' | translate }}"
+                  class="input btn btn-info"
+                />
+                <span *ngIf="loadingStatus" class="loading"
+                  ><img src="assets/images/loading.gif"
+                /></span>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="row" *ngIf="statusData">
+          <!-- <div class="card-group">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">{{statusData.fullname}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Gender</h5>
+                        <p class="card-text">{{statusData.gender}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Patient number</h5>
+                        <p class="card-text">{{statusData.patientnumber}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Location</h5>
+                        <p class="card-text"> {{statusData.location}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Visa number</h5>
+                        <p class="card-text"> {{statusData.visanumber}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Passport number</h5>
+                        <p class="card-text">{{statusData.passportnumber}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-group">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Patient Id</h5>
+                        <p class="card-text">{{statusData.patientid}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Registration date</h5>
+                        <p class="card-text">{{statusData.registrationdate}}</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Application status</h5>
+                        <p class="card-text">{{statusData.applicantstatus}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-group">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      </div>
+                    </div>
+                  </div> -->
+          <div class="col-md-12">
+            <ul class="list-group list-group-numbered font-color">
+              <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+                              <div class="ms-2 me-auto">
+                                <div class="fw-bold">Name</div>
+                                {{statusData.fullname}}
+                              </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                              <div class="ms-2 me-auto">
+                                <div class="fw-bold">Location</div>
+                                {{statusData.location}}
+                              </div>
+                            </li> -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    {{ "statusCheckPage.contentText.visa number" | translate }}
+                  </div>
+                  <!-- {{statusData.visanumber}} -->
+                  {{ statusData.detail[0].visa_number }}
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    {{
+                      "statusCheckPage.contentText.passport number" | translate
+                    }}
+                  </div>
+                  <!-- {{statusData.passportnumber}} -->
+                  {{ passportnumber }}
+                </div>
+              </li>
+              <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">Patient number</div>
+                                  {{statusData.patientnumber}}
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">Patient Id</div>
+                                  {{statusData.patientid}}
+                                </div>
+                              </li> -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    {{
+                      "statusCheckPage.contentText.Registration date"
+                        | translate
+                    }}
+                  </div>
+                  <!-- {{statusData.registrationdate}} -->
+                  {{ statusData.detail[0].register_time }}
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    {{
+                      "statusCheckPage.contentText.Application status"
+                        | translate
+                    }}
+                  </div>
+                  <!-- <div *ngIf="statusData.applicantstatus=='Report Pending with Authorities'">
+                                    Report Pending with Qatar Authorities
+                                  </div>
+                                  <div *ngIf="statusData.applicantstatus=='Medical Report Pending  after referral'">
+                                    Medical Report Pending
+                                  </div>
+                                  <div *ngIf="statusData.applicantstatus=='Applicant is required to Revisit center'">
+                                    Applicant is required to Revisit center
+                                  </div>
+                                  <div *ngIf="statusData.applicantstatus=='Final Medical Report Completed by Authorities'">
+                                    Final Medical Report Completed by Qatar Authorities
+                                  </div> -->
+                  <div  style="display: flex; justify-content: space-between; align-items: center;margin-right: 20px;">
+                    {{ statusData.detail[0].primary_status }}
+                    <a class="status-book-appointment" routerLink="/appointmentdetails" *ngIf="statusData.detail[0].portal_status === 'REVISIT'" >Book Appointment</a>
+                  </div>
+                </div>
+              </li>
+              <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">Gender</div>
+                                  {{statusData.gender}}
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">Certification date</div>
+                                  {{statusData.certificationdate}}
+                                </div>
+                              </li> -->
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    {{ "statusCheckPage.contentText.Description" | translate }}
+                  </div>
+                  <!-- <div *ngIf="statusData.applicantstatus=='Medical Pending'">
+                                    <p> {{'statusCheckPage.contentText.medicalpendingcontent1'| translate}}</p>
+                                    <p> {{'statusCheckPage.contentText.medicalpendingcontent2'| translate}}</p>
+                                    <p>{{'statusCheckPage.contentText.medicalpendingcontent3'| translate}}
+                                      ( <a href="tel:{{getCustomerCare(statusData.location)}}">{{getCustomerCare(statusData.location)}}</a> )
+                                      {{'statusCheckPage.contentText.medicalpendingcontent4'| translate}}
+                                    </p>
+                                  </div>
+                                  <div *ngIf="statusData.applicantstatus=='Medical Report Pending  after referral'">
+                                    <p> {{'statusCheckPage.contentText.medicalreportpending1'| translate}}</p>
+                                    <p>{{'statusCheckPage.contentText.medicalreportpending2'| translate}}</p>
+                                    <p>{{'statusCheckPage.contentText.medicalreportpending3'| translate}}</p>
+                                  </div>
+                                  <div *ngIf="statusData.applicantstatus=='Report Pending with Authorities'">
+                                    <p> {{'statusCheckPage.contentText.Authoritiespending'| translate}}</p>
+                                    <p>{{'statusCheckPage.contentText.Authoritiespending1'| translate}}</p>
+                                    <p>{{'statusCheckPage.contentText.Authoritiespending2'| translate}}</p>
+                                  </div>
+                                  <div *ngIf="statusData.applicantstatus=='Applicant is required to Revisit center'">
+                                    <p>{{'statusCheckPage.contentText.revisitstatus'| translate}}</p>
+                                    <p>{{'statusCheckPage.contentText.Please contact call center'| translate}}   (<a href="tel:{{getCustomerCare(statusData.location)}}">{{getCustomerCare(statusData.location)}}</a>) {{'statusCheckPage.contentText.to book appointment'| translate}}</p>
+                                      <p>{{'statusCheckPage.contentText.revisitstatus1'| translate}} (<a href="https://qatarmedicalcenter.com/referrals" target="_blank">https://qatarmedicalcenter.com/referrals</a>)</p>
+                                  </div>                                  
+                                  <div *ngIf="statusData.applicantstatus=='Final Medical Report Completed by Authorities'">
+                                    <p> {{'statusCheckPage.contentText.finalreport'| translate}}</p>
+                                  </div> -->
+
+                  <div
+                    *ngIf="
+                      statusData.detail[0].portal_status ==
+                        'MOPH_UNDER_PROCESS' ||
+                      statusData.detail[0].portal_status == 'PENDING' ||
+                      statusData.detail[0].portal_status == 'REPORT_PENDING'
+                    "
+                  >
+                    <div [innerHTML]="statusData.pending_text"></div>
+                  </div>
+                  <div *ngIf="statusData.detail[0].portal_status == 'REVISIT'">
+                    <div [innerHTML]="statusData.revist_text"></div>
+                  </div>
+                  <div hidden id="statusCheckResult"></div>
+                  <div
+                    *ngIf="
+                      statusData.detail[0].portal_status == 'FIT' ||
+                      statusData.detail[0].portal_status == 'UNFIT'
+                    "
+                  >
+                    <div [innerHTML]="statusData.completed_text"></div>
+                  </div>
+                </div>
+                <!-- <span class="badge bg-primary rounded-pill">14</span> -->
+              </li>
+              <li class="list-group-item d-flex align-items-start">
+                For more information &nbsp;<span
+                  routerLink="/faqs"
+                  style="border-bottom: 1px solid black; cursor: context-menu"
+                  >click here</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

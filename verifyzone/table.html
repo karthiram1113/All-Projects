@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard | Verifyzone</title>
+        <link rel="icon" href="/assets/img/logomain.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/sidebar.css">
+        <link rel="stylesheet" href="/assets/css/table.css">
+        <link rel="stylesheet" href="/assets/css/exit-details.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+        <!-- Flatpickr CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40pL/9k+xauJ/z2o7yYkH7+77o4b3p4c7+q6z7tH9Lg+H/X5gA+H8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Flatpickr JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-menu">
+                    <div class="notification sidebar-items">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="menu-text">Notifications</span>
+                    </div>
+                    <!-- <div class="side-bar-main"> -->
+                    <a class="sidebar-items" href="dashboardxzone.html">
+                        <i class="ri-dashboard-line"></i>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items active sidebar-items1 dropdown-toggle1">
+                            <i class="ri-global-line"></i>
+                            <span class="menu-text">ExZone</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="exitdetails.html">
+                                <div class="sidebar-subitem active">
+                                    <i class="ri-logout-circle-line"></i> Add
+                                    exit details
+                                </div>
+                            </a>
+                            <div class="sidebar-subitem">
+                                <i class="ri-shield-user-line"></i> Verification
+                                Request
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-file-list-3-line"></i> New request
+                                received
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-search-line"></i> Search candidate
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-upload-cloud-line"></i> Bulk upload
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 dropdown-toggle1">
+                            <i class="ri-settings-3-line"></i>
+                            <span class="menu-text">Configurations</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="sidebar-subitem">
+                                <i class="ri-rocket-line"></i> Activate
+                                Autopilot
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-dropdown">
+                        <div
+                            class="sidebar-items sidebar-items1 dropdown-toggle1">
+                            <i class="ri-bar-chart-2-line"></i>
+                            <span class="menu-text">Reports</span>
+                            <i class="ri-arrow-down-s-line arrow-icon"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="sidebar-subitem">
+                                <i class="ri-bar-chart-2-line"></i> Attrition
+                                Reports
+                            </div>
+                            <div class="sidebar-subitem">
+                                <i class="ri-history-line"></i> Re-verification
+                                History
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="notification1 sidebar-items">
+                    <i class="ri-logout-circle-r-line"></i>
+                    <span class="menu-text">VZone</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="main-container">
+             <div class="navbar p-1">
+                <div class="navbar-left">
+                    <img src="/assets/img/logo-dash.png" alt="Logo"
+                        class="logo">
+                </div>
+                <div class="navbar-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." />
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="profile">
+
+                        <div class="dropdown">
+                            <button class="dropdown-btn">
+                                <img src="/assets/img/profile-nav.jpg"
+                                    alt="Profile" class="profile-img">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="dropdown-menu border-0">
+                                <a href="#">My Profile</a>
+                                <a href="#">Settings</a>
+                                <a href="index.html">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+   <div class="content">
+
+<!-- <div class="table-container">
+  <table id="employee-table" class="emp-table" aria-label="Employee exit form">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Employee name</th>
+        <th>Employee code</th>
+        <th>Designation</th>
+        <th>From date</th>
+        <th>To date</th>
+        <th>Reason for leaving</th>
+        <th>Location</th>
+        <th>Job type</th>
+        <th>Last drawn salary</th>
+        <th>Reporting to</th>
+        <th>Manager designation</th>
+        <th>Comments</th>
+        <th>Last authorized by</th>
+        <th>Authorized date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td> <div class="d-flex justify-content-between align-items-center align-self-center"><img src="./assets/img/profile-nav.jpg" class="rounded-pill img-fluid h-50 w-50" alt="table-img"><span>Priya Sharma</span></div></td>
+  <td>EMP1024</td>
+  <td>Senior Software Engineer</td>
+  <td>2019-03-12</td>
+  <td>2025-08-31</td>
+  <td>Career growth opportunity</td>
+  <td>Bangalore</td>
+  <td>Full-time</td>
+  <td>₹1,25,000</td>
+  <td>Ravi Menon</td>
+  <td>Engineering Manager</td>
+  <td>Excellent performer. Left on good terms.</td>
+  <td>Anita Desai</td>
+  <td>2025-09-05</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+   
+
+
+
+
+<div class="table-wrapper">
+    <table class="futuristic-table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Project Name</th>
+                <th>Report date</th>
+                <th>Job type</th>
+                <th>Comments</th>
+                <th>Last authorized</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-sno">1</td>
+                <!-- <td class="w-25"> 
+                    <div class="d-flex justify-content-start align-items-center align-self-center">
+                        <img src="./assets/img/profile-nav.jpg" class="rounded-pill img-fluid h-25 w-25" alt="table-img">
+                        <span class="ms-2">Priya Sharma</span>
+                    </div>
+                </td> -->
+                <td class="w-25"> 
+    <div class="d-flex align-items-center">
+        <div class="profile-avatar position-relative">
+            <div class="profile-initials rounded-circle d-flex justify-content-center align-items-center">L</div>
+            <div class="status-dot bg-success rounded-circle"></div>
+        </div>
+
+        <div class="ms-3 profile-text">
+            <div class="d-flex align-items-center username-line mb-0">
+                <span class="fw-bold me-1">Lex1392</span>
+                <i class="verified-badge"></i> 
+            </div>
+            <div class="stats-line text-muted small">
+                5171 orders | 99.58% completion
+            </div>
+        </div>
+    </div>
+</td>
+                <td>SON 00</td>
+                <td>BAD 00</td>
+                <td>330 00</td>
+                <td>KID/00</td>
+                <td >
+                    <a href="#" class="action-btn edit-btn"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="action-btn view-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-sno">2</td>
+                <td class="w-25"> 
+                    <div class="d-flex justify-content-start align-items-center align-self-center">
+                        <img src="./assets/img/profile-nav.jpg" class="rounded-pill img-fluid h-25 w-25" alt="table-img">
+                        <span class="ms-2">Ravi Kumar</span>
+                    </div>
+                </td>
+                <td>SON 08</td>
+                <td>BAD 02</td>
+                <td>330 05</td>
+                <td>KID/10</td>
+                <td >
+                    <a href="#" class="action-btn edit-btn"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="action-btn view-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-sno">3</td>
+                <td class="w-25"> 
+                    <div class="d-flex justify-content-start align-items-center align-self-center">
+                        <img src="./assets/img/profile-nav.jpg" class="rounded-pill img-fluid h-25 w-25" alt="table-img">
+                        <span class="ms-2">Aisha Khan</span>
+                    </div>
+                </td>
+                <td>SON 10</td>
+                <td>BAD 09</td>
+                <td>330 11</td>
+                <td>KID/20</td>
+                <td >
+                    <a href="#" class="action-btn edit-btn"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="action-btn view-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-sno">4</td>
+                <td class="w-25"> 
+                    <div class="d-flex justify-content-start align-items-center align-self-center">
+                        <img src="./assets/img/profile-nav.jpg" class="rounded-pill img-fluid h-25 w-25" alt="table-img">
+                        <span class="ms-2">David Lee</span>
+                    </div>
+                </td>
+                <td>SON 12</td>
+                <td>BAD 15</td>
+                <td>330 18</td>
+                <td>KID/30</td>
+                <td >
+                    <a href="#" class="action-btn edit-btn"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="action-btn view-btn"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+                    <!-- table start here -->
+   <div class="footer pt-3">
+                <p>@2025 Tarajyau | All Rights Reserved</p>
+            </div>
+        </div>
+                    <!-- </div> -->
+                </div>
+           
+
+         
+
+
+
+    </body>
+
+</html>

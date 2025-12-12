@@ -1,0 +1,154 @@
+<div class="footerBg"></div>
+<footer class="footer-area footer--light">
+  <div class="footer-big bg-pink">
+    <!-- start .container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+          <div class="footer-left">
+            <div class="row" style="margin-top: 30px">
+              <div
+                [ngClass]="{ t_a_s: lang == 'ur' }"
+                class="col-lg-4 col-md-4 col-sm-6 col-sx-12"
+              >
+                <div
+                  class="inwave-contact-info-3 widget widget_inwave-contact-info"
+                >
+                  <div class="widget-info-footer no-title">
+                    <a
+                      *ngIf="country != 'Pakistan'"
+                      class="iw-widget-about-us"
+                      routerLink="/home"
+                    >
+                      <img src="assets/images/footer-logo.png" alt="" />
+                    </a>
+                    <a
+                      *ngIf="country == 'Pakistan'"
+                      class="iw-widget-about-us"
+                      routerLink="/home"
+                    >
+                      <img
+                        class="pakislogo"
+                        src="assets/images/qmcwhitelogo.png"
+                        alt=""
+                      />
+                    </a>
+                    <div *ngIf="country != 'Pakistan'">
+                      {{
+                        "homePage.contentText.Stemz Healthcare is backed by a team of highly
+                                            qualified healthcare professionals with internal systems and processes based
+                                            on the latest medical standards and best practices."
+                          | translate
+                      }}
+                    </div>
+                    <div *ngIf="country == 'Pakistan'">
+                      {{
+                        "homePage.contentText.pakistanfootercontent" | translate
+                      }}
+                    </div>
+                    <div style="display: flex; margin-top: 30px">
+                      <div style="margin-right: 10px">
+                        {{ "headerSection.menu.Follow us on" | translate }}:
+                      </div>
+                      <a
+                        style="margin-right: 10px; margin-top: -7px"
+                        href="https://www.linkedin.com/company/qatarmedicalcenter"
+                        target="_blank"
+                      >
+                        <img
+                          src="assets/images/linkedin.png"
+                          width="40"
+                          height="40"
+                      /></a>
+                      <a
+                        style="
+                          color: white;
+                          font-size: 40px;
+                          margin-top: -18px;
+                          margin-right: 10px;
+                        "
+                        href="https://www.facebook.com/Qatar-Medical-Center-106771411611160"
+                        target="_blank"
+                        >
+                        <!-- <i class="fa fa-facebook-square" aria-hidden="true"></i> -->
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                [ngClass]="{ t_a_s: lang == 'ur' }"
+                class="col-lg-4 col-md-4 col-sm-6 col-sx-12"
+              >
+                <div class="widget widget_nav_menu">
+                  <h3 class="widget-title">
+                    {{ "headerSection.menu.Quick Links" | translate }}
+                  </h3>
+                  <div class="menu-useful-links-container">
+                    <ul id="menu-useful-links" class="menu">
+                      <!-- <li class=""><a>Make
+                                                    an appointment</a></li> -->
+                      <li class="">
+                        <a routerLink="/about">{{
+                          "headerSection.menu.About Us" | translate
+                        }}</a>
+                      </li>
+                      <li class="">
+                        <a routerLink="/faqs">{{
+                          "headerSection.menu.FAQs" | translate
+                        }}</a>
+                      </li>
+                      <li class="">
+                        <a routerLink="/terms-of-use">Terms of Use</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                [ngClass]="{ t_a_s: lang == 'ur' }"
+                class="col-lg-4 col-md-4 col-sm-6 col-sx-12"
+              >
+                <div class="widget widget_nav_menu">
+                  <div class="menu-unnamed-container">
+                    <ul id="menu-unnamed" class="menu">
+                      <li class="">
+                        <a routerLink="/contact">{{
+                          "headerSection.menu.Contact Us" | translate
+                        }}</a>
+                      </li>
+                      <li class="">
+                        <a routerLink="/privacy-policy">{{
+                          "headerSection.menu.Privacy
+                                                    Policy" | translate
+                        }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mini-footer bg-pink">
+    <div class="iw-copy-right">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <!-- <div>{{'footerSection.footerAbt.Copyright © 2023 Stemz Healthcare. All rights reserved.'|
+                            translate}}</div> -->
+            <div>
+              {{ "footerSection.footerAbt.footerCopyright" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- <livechat-widget #liveChatWidget [licenseId]="licence" (onChatLoaded)="onChatLoaded($event)" (onChatWindowOpened)="onChatWindowOpened()" (onChatWindowMinimized)="onChatWindowMinimized()" ></livechat-widget> -->

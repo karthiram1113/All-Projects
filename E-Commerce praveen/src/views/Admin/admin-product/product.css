@@ -1,0 +1,45 @@
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    will-change: transform;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .clients li {
+    /* text-align: center; */
+    /* align-items: center; */
+    list-style-type: none;
+    display: inline;
+    /* padding: 0px 10px; */
+    letter-spacing: 10px;
+    font-size: 20px;
+    margin: 0;
+  }
+  .edit-font {
+    color:green;
+   
+  }
+  .delete-font {
+    color: red; 
+    
+  }
+
+  .tableHost {
+    width: 100%;
+text-wrap: nowrap;
+  }
+  .over{
+    overflow-x: scroll;
+    max-width: 1300px;
+    width: 100%;
+  }
+  .edit-icon {
+    color: green !important;
+  }
+.delete-user {
+color: red;
+}
+  

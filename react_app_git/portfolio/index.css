@@ -1,0 +1,214 @@
+      :root {
+          --primary-color: #4f46e5;
+          --secondary-color: #818cf8;
+          --text-color: #e5e7eb;
+          --bg-color-dark: #1f2937;
+          --bg-color-light: #374151;
+      }
+
+      body {
+          font-family: 'Inter', sans-serif;
+          background-color: var(--bg-color-dark);
+          color: var(--text-color);
+          overflow-x: hidden;
+          /* Do not hide the cursor */
+      }
+
+      /* Custom scrollbar for aesthetics */
+      ::-webkit-scrollbar {
+          width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+          background: var(--bg-color-light);
+          border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+          background: var(--secondary-color);
+          border-radius: 10px;
+      }
+
+      .section-container {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          position: relative;
+      }
+
+      .card {
+          background-color: var(--bg-color-light);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+          border-radius: 1rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Intersection Observer Animations */
+      .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .animate-on-scroll.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      .animate-on-scroll.delay-1 {
+          transition-delay: 0.1s;
+      }
+
+      .animate-on-scroll.delay-2 {
+          transition-delay: 0.2s;
+      }
+
+      .animate-on-scroll.delay-3 {
+          transition-delay: 0.3s;
+      }
+
+      .animate-on-scroll.delay-4 {
+          transition-delay: 0.4s;
+      }
+
+      .animate-on-scroll.delay-5 {
+          transition-delay: 0.5s;
+      }
+
+      /* New horizontal parallax for the third card */
+      .project-card-parallax {
+          transform: translateX(-50px);
+          opacity: 0;
+      }
+
+      .project-card-parallax.is-visible {
+          transform: translateX(0);
+          opacity: 1;
+      }
+
+
+      /* Mouse trail particles */
+      .trail-particle {
+          position: absolute;
+          background-color: var(--secondary-color);
+          border-radius: 50%;
+          opacity: 0;
+          transform: scale(0);
+          pointer-events: none;
+          animation: fadeOutTrail 1s forwards;
+          filter: blur(4px);
+          z-index: 1000;
+      }
+
+      @keyframes fadeOutTrail {
+          to {
+              opacity: 0;
+              transform: scale(1.2);
+          }
+      }
+
+      /* Parallax effect styles */
+      .parallax-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          transition: transform 0.1s ease-out;
+          /* Smooth mouse-based parallax */
+      }
+
+      .parallax-layer {
+          position: absolute;
+          border-radius: 50%;
+          background-color: var(--secondary-color);
+          opacity: 0.05;
+      }
+
+      .parallax-layer-1 {
+          width: 400px;
+          height: 400px;
+          top: -100px;
+          left: -100px;
+      }
+
+      .parallax-layer-2 {
+          width: 250px;
+          height: 250px;
+          bottom: 50px;
+          right: 200px;
+      }
+
+      .parallax-layer-3 {
+          width: 150px;
+          height: 150px;
+          top: 150px;
+          right: 50px;
+      }
+
+      .content-container {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+
+      /* Button hover effect */
+      .btn {
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+      }
+
+      .btn::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 1rem;
+          transform: scale(0);
+          transform-origin: bottom center;
+          transition: transform 0.3s ease;
+          z-index: -1;
+      }
+
+      .btn:hover::after {
+          transform: scale(1);
+      }
+
+      /* Success message box */
+      #success-message {
+          position: fixed;
+          bottom: 1rem;
+          right: 1rem;
+          background-color: #10b981;
+          /* Green-600 */
+          color: white;
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+          z-index: 1000;
+      }
+
+      #success-message.show {
+          opacity: 1;
+          transform: translateY(0);
+      }

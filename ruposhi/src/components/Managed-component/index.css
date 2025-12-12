@@ -1,0 +1,161 @@
+     .hero-section {
+         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542831371-29b0f74f9457?ixlib=rb-1.2.1&auto=format&fit=crop');
+         background-size: cover;
+         background-position: center;
+         color: #fff;
+         padding: 100px 0;
+         text-align: center;
+     }
+
+     .hero-section h1 {
+         font-size: 3.5rem;
+         font-weight: bold;
+     }
+
+     .hero-section .lead {
+         font-size: 1.25rem;
+         max-width: 800px;
+         margin: 0 auto 30px;
+     }
+
+     .btn-custom-primary {
+         /* background-color: var(--primary-color) !important; */
+         border-color: var(--primary-color) !important;
+         color: #fff;
+     }
+
+     .btn-custom-primary:hover {
+         background-color: #0056b3 !important;
+         border-color: #0056b3 !important;
+         color: #fff !important;
+     }
+
+     .btn-custom-secondary {
+         background-color: transparent !important;
+         border-color: #fff !important;
+         color: #fff !important;
+     }
+
+     .btn-custom-secondary:hover {
+         background-color: #fff !important;
+         color: #6383e8 !important;
+     }
+
+     .service-card {
+         min-height: 200px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         cursor: pointer;
+     }
+
+     .service-card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     }
+
+     .service-card .card-body {
+         padding: 1.5rem;
+     }
+
+     .service-card h5 {
+         font-size: 1.25rem;
+         font-weight: bold;
+         margin-top: 1rem;
+     }
+
+     .icon-square {
+         width: 60px;
+         height: 60px;
+         background-color: var(--light-color);
+         color: var(--primary-color);
+         border-radius: .25rem;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .why-choose-us .list-group-item {
+         border: none;
+         background-color: transparent;
+     }
+
+     .why-choose-us .list-group-item i {
+         color: var(--success-color);
+         margin-right: 10px;
+     }
+
+     .quick-contact-sticky {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         z-index: 1030;
+         transition: all 0.3s ease;
+     }
+
+     .quick-contact-sticky .btn-support {
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     }
+
+     .contact-info-footer {
+         background-color: var(--dark-color);
+         color: #fff;
+         padding: 20px 0;
+         text-align: center;
+     }
+
+     .contact-info-footer p {
+         margin-bottom: 0;
+     }
+
+         .flip-card {
+             background: transparent;
+             /* width: 300px; */
+             height: 200px;
+             perspective: 1000px;
+             /* Enables 3D effect */
+         }
+    
+         .flip-card-inner {
+             position: relative;
+             width: 100%;
+             height: 100%;
+             text-align: center;
+             transition: transform 0.6s;
+             transform-style: preserve-3d;
+         }
+    
+         .flip-card:hover .flip-card-inner {
+             transform: rotateY(180deg);
+         }
+    
+         .flip-card-front,
+         .flip-card-back {
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             backface-visibility: hidden;
+             border-radius: 10px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         }
+    
+         .flip-card-front {
+             background: #fff;
+             color: black;
+         }
+    
+         .flip-card-back {
+             background: #6383e8;
+             color: white;
+             transform: rotateY(180deg);
+         }
+
+         .flip-card-back .card-text{
+                height: 150px;
+                overflow: hidden;
+                    /* hide extra text */
+                    text-overflow: ellipsis;
+         }

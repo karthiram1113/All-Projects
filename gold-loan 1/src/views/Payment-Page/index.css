@@ -1,0 +1,101 @@
+.pay-button:disabled {
+  opacity: 0.6;             /* faded look */
+  cursor: not-allowed;      /* 🚫 cursor */
+  background-color: #ccc;   /* greyed out */
+  color: #666;              /* dimmed text */
+  border: 1px solid #aaa;   /* subtle border */
+}
+
+
+.loan-info-box {
+  background: #f7faff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #1e88e5;
+  margin-bottom: 20px;
+}
+
+.loan-info-box p {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.form-label-custom {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.pay-button {
+  width: 100%;
+  height: 47px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #1e88e5, #26c6da);
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.pay-button:hover {
+  opacity: 0.9;
+}
+
+.pay-button:disabled {
+  background: #bdbdbd;
+}
+
+.alert {
+  border-radius: 12px !important;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.blink-status {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Highlight the remaining amount div when condition is true */
+.highlight-remaining {
+  border: 1px solid rgb(0, 119, 255);    
+  border-radius: 5px;        
+  padding: 5px;               
+  background-color: #fff3f3;  
+  transition: all 0.3s ease;
+}
+
+/* Highlight remaining amount or interest due div/input when condition fails */
+.input-error {
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: #fff3f3;
+  transition: all 0.3s ease;
+}
+
+/* Override form-control for underline style */
+.form-controlss {
+  border: none;               /* remove full border */
+  border-bottom: 1px solid #ece03a;  /* underline always visible */
+  border-radius: 0;           /* remove rounded corners */
+  padding: 0 0 2px 0;         /* bottom padding only */
+  outline: none;              /* remove focus outline */
+}
+
+.form-controlss:focus {
+  border-bottom: 2px solid #007bff; /* thicker underline on focus */
+}

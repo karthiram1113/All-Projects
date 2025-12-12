@@ -1,0 +1,149 @@
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 310px;
+      overflow: hidden;
+    }
+
+    .hero-section {
+      position: relative;
+    }
+
+    .hero-section .main-img {
+      width: 100%;
+      max-height: 310px;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-section .main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-section .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      /* shadow overlay */
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 30%;
+      /* start higher */
+      left: 50%;
+      transform: translate(-50%, -100%);
+      padding: 15px 30px;
+      border-radius: 8px;
+      color: #FFFFFF;
+      font-family: "Oswald", Sans-serif;
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1em;
+      z-index: 10;
+      transition: all 0.8s ease-out;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .hero-text.animate {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    .about-content {
+      padding: 40px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text {
+        font-size: 2rem;
+        padding: 10px 20px;
+      }
+    }
+
+    .mission-text {
+      text-align: left;
+      color: #000000;
+      font-family: "Oswald", Sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      transform: translatey(-100%);
+      opacity: 0;
+      transition: all 0.8s ease-out;
+    }
+
+    .mission-text.animate {
+      top: 0;
+      transform: translatey(0%);
+      opacity: 1;
+    }
+
+    .animated-card {
+    background-color: white;
+    border: 1px solid #078307 !important;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+      /* Keeps a smooth shadow transition */
+      padding: 2.5rem;
+      /* Increased padding for a cleaner look */
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+height: 90%;
+    }
+    .animated-card h2{
+          font-family: "Roboto", Sans-serif;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-transform: uppercase;
+    }
+.animated-card p {
+        font-family: "Montserrat", Sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+}
+
+
+    .value-tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: "Oswald", Sans-serif;
+      gap: 0.75rem;
+      
+      /* Reduced gap for a tighter feel */
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .value-tag {
+
+      background-color: #078307;
+      /* Changed color for a softer look */
+      color: white;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-family: "Oswald", Sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .value-tag:hover {
+      background-color: #056b05;
+      /* Subtle hover effect on tags */
+    }

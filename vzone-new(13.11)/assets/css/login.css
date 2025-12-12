@@ -1,0 +1,199 @@
+        body {
+            background: #f7f7f7;
+            overflow-x: hidden;
+        }
+:root {
+    --purple-color: #5c249a;
+    --light-purple-color: #340c62;
+}
+        .login-bg {
+            background-image: url("/assets/img/bg-login.jpg");
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            z-index: -1;
+        }
+
+        .lcon {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            /* max-width: 1000px; */
+            /* height: 100%; */
+            /* margin: 120px auto; */
+            border-radius: 4rem;
+            display: flex;
+            box-shadow: -1px -2px 42px -19px rgba(0, 0, 0, 0.74);
+            overflow: hidden;
+        }
+
+        .login-left {
+            flex: 75%;
+            padding: 70px;
+            background-color: #fff;
+        }
+
+        .login-right {
+            flex: 40%;
+            background-color: #5c249a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .login-divider {
+            width: 67px;
+            position: absolute;
+            left: -67px;
+            top: 0;
+            height: 100%;
+        }
+
+        .login-divider svg {
+            height: 100%;
+            width: 80px;
+        }
+
+        .login-welcome {
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .login-subtext {
+            color: #535455;
+            text-align: center;
+        }
+
+
+        .login-btn {
+            background: linear-gradient(to right, #5c249a, #8546cd);
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 5px 25px;
+            /* width: 100%; */
+            margin-top: 20px;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(to right, #8546cd, #5c249a);
+        }
+
+        .login-btn:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .signup-btn {
+            background: #fff;
+            color: #5c249a;
+            border: none;
+            font-weight: 600;
+            padding: 5px 25px;
+            margin-top: 10px;
+        }
+
+        .signup-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .login-right img {
+            width: 200px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                border-radius: 2rem;
+            }
+
+            .login-divider {
+                display: none;
+            }
+
+            .login-left {
+                padding: 50px;
+            }
+
+            .login-left,
+            .login-right {
+                flex: 100%;
+                border-radius: 0;
+            }
+
+            .login-right {
+                border-radius: 0 0 2rem 2rem;
+                padding: 40px 20px;
+            }
+        }
+
+        /* From Uiverse.io by liyaxu123 */
+
+
+
+        /*  */
+
+        .captcha-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .captcha-refresh i {
+            font-size: 24px;
+            color: #5c249a;
+            cursor: pointer;
+            transition: transform 0.3s ease !important;
+        }
+
+   .captcha-refresh i {
+    transition: transform 0.5s ease; /* add this */
+}
+
+.captcha-refresh i:hover {
+    transform: rotate(360deg) !important;
+}
+        .captcha-place {
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 3px;
+            background-image: url('/assets/img/captcha-bg.jpg');
+            border: 1px dotted #ccc;
+            color: black;
+            padding: 10px;
+            user-select: none;
+        }
+
+
+
+.login-pass{
+    padding: 10px 40px 10px 10px !important;
+}
+                .togglePassword {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                    cursor: pointer;
+                    color: #555;
+                }

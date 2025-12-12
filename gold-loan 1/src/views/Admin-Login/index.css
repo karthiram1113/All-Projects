@@ -1,0 +1,169 @@
+.gold-text {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  animation: shine 3s linear infinite;
+}
+
+/* Optional shimmer animation */
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.custom-card {
+  width: 500px !important;
+  border-radius: 12px;
+}
+
+.ramesh-logo {
+  text-align: left !important;
+  width: 15rem !important;
+  margin-top: 0rem;
+}
+.login-page .ramesh-logo {
+  margin-top: -1rem !important;
+}
+.welcome-content {
+  margin-top: 0.5rem;
+}
+
+.required-star::after {
+  content: ' *';
+  color: red;
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+.form-field label {
+  font-size: 13px !important;
+}
+
+.overlay-text label {
+  font-weight: 500 !important;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 13px;
+}
+
+.form-control {
+  height: 45px;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+.btns {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+}
+
+/* ----------------------------- */
+/* ✅ MOBILE RESPONSIVE STYLING */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .custom-card {
+    width: 100% !important;
+    margin: 0 15px;
+    padding: 15px !important;
+  }
+
+  .ramesh-logo {
+    width: 10rem !important;
+    text-align: center !important;
+  }
+
+  
+
+  .welcome-content {
+    margin-top: 1.2rem;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .form-control {
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .btns {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .gold-text {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .section.register {
+    padding: 20px 0 !important;
+  }
+
+  .password-input-wrapper .toggle-password {
+    right: 10px;
+    font-size: 12px;
+  }
+
+  .text-danger {
+    font-size: 12px;
+  }
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: -10px !important;
+  color: black !important;
+  
+}
+
+
+@media (max-width: 576px) {
+  .ramesh-logo {
+    width: 14rem !important;   
+  }
+}
+
+.register-content {
+  margin-bottom: -1.3rem;
+}
+.register-content p {
+  text-align: center;
+  font-size: 14px;
+}
+.register-content a {
+  font-weight: 500;
+  margin-left: 5px;
+}

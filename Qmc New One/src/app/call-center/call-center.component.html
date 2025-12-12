@@ -1,0 +1,540 @@
+<app-nav></app-nav>
+<div class="call-center-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="emptySpacer"></div>
+        <div class="wpb_wrapper">
+          <p
+            class="description"
+            *ngIf="country == 'India'"
+            style="text-align: center"
+          >
+            {{
+              "Comman.To Book a Medical Referral Appointment call us at"
+                | translate
+            }}
+            +91 44 6133 1333. {{ "Comman.Bookreferralcontact" | translate }}
+          </p>
+          <p
+            class="description"
+            *ngIf="country == 'India'"
+            style="text-align: center"
+          >
+            <b>{{ "Comman.Call us" | translate }} -</b> +91 44 6133 1333
+          </p>
+
+          <p
+            class="description"
+            *ngIf="country == 'Sri Lanka'"
+            style="text-align: center"
+          >
+            {{
+              "Comman.To Book a Medical Referral Appointment call us at"
+                | translate
+            }}
+            +94 117942999. {{ "Comman.Bookreferralcontact" | translate }}
+          </p>
+          <p
+            class="description"
+            *ngIf="country == 'Sri Lanka'"
+            style="text-align: center"
+          >
+            <b>{{ "Comman.Call us" | translate }} -</b> +94 117942999
+          </p>
+
+          <p
+            class="description"
+            *ngIf="country == 'Nepal'"
+            style="text-align: center"
+          >
+            {{
+              "Comman.To Book a Medical Referral Appointment call us at"
+                | translate
+            }}
+            +977 15970029. {{ "Comman.Bookreferralcontact" | translate }}
+          </p>
+          <p
+            class="description"
+            *ngIf="country == 'Nepal'"
+            style="text-align: center"
+          >
+            <b>{{ "Comman.Call us" | translate }} -</b> +977 15970029
+          </p>
+
+          <p
+            class="description"
+            *ngIf="country == 'Bangladesh'"
+            style="text-align: center"
+          >
+            {{
+              "Comman.To Book a Medical Referral Appointment call us at"
+                | translate
+            }}
+            +880 9666 777 101. {{ "Comman.Bookreferralcontact" | translate }}
+          </p>
+          <p
+            class="description"
+            *ngIf="country == 'Bangladesh'"
+            style="text-align: center"
+          >
+            <b>{{ "Comman.Call us" | translate }} -</b> +880 9666 777 101
+          </p>
+
+          <p
+            class="description"
+            *ngIf="country == 'Pakistan'"
+            style="text-align: center"
+          >
+            {{
+              "Comman.To Book a Medical Referral Appointment call us at"
+                | translate
+            }}
+            +92 51 8439384. {{ "Comman.Bookreferralcontact" | translate }}
+          </p>
+          <p
+            class="description"
+            *ngIf="country == 'Pakistan'"
+            style="text-align: center"
+          >
+            <b>{{ "Comman.Call us" | translate }} -</b> +92 51 8439384
+          </p>
+
+          <p
+            class="description"
+            *ngIf="country == 'Philippines'"
+            style="text-align: center"
+          >
+            {{
+              "Comman.To Book a Medical Referral Appointment call us at"
+                | translate
+            }}
+            +632 85282554. {{ "Comman.Bookreferralcontact" | translate }}
+          </p>
+          <p
+            class="description"
+            *ngIf="country == 'Philippines'"
+            style="text-align: center"
+          >
+            <b>{{ "Comman.Call us" | translate }} -</b> +632 85282554
+          </p>
+
+          <p class="description" style="text-align: center">
+            <b>{{ "Comman.Email us" | translate }} -</b>
+            info&#64;qatarmedicalcenter.com
+          </p>
+          <h3 style="text-align: center">
+            <a class="iwh-title title">{{
+              "contactPage.contentTitle.Business Hours" | translate
+            }}</a>
+          </h3>
+          <p
+            *ngIf="country != 'Bangladesh' || country != 'Nepal'"
+            class="description"
+            style="text-align: center"
+          >
+            {{
+              "contactPage.contentText.Monday to Friday - 8:30 AM to 5:30 PM"
+                | translate
+            }}
+            <br />
+            Saturday - 8:30 AM to 1:00 PM
+            <br />
+            <span class="mat">*</span>
+            {{
+              "contactPage.contentText.Business hours might extend depending on the number of applicants at the center."
+                | translate
+            }}
+          </p>
+          <p
+            *ngIf="country == 'Bangladesh' || country == 'Nepal'"
+            class="description"
+            style="text-align: center"
+          >
+            {{ "contactPage.contentText.bangalaornepaltime" | translate }}
+            <br />
+            <span class="mat">*</span>
+            {{
+              "contactPage.contentText.Business hours might extend depending on the number of applicants at the center."
+                | translate
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="emptySpacer"></div>
+  <div *ngIf="country == 'India'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Qatar+Visa+Center/@28.6177889,77.2773206,17z/data=!3m1!4b1!4m5!3m4!1s0x390ce30154923e57:0x7abd330584af3a7e!8m2!3d28.6177425!4d77.2794144"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Delhi" | translate }}</a
+                    >
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Delhi - Unit no. 2, Lower Ground Floor"
+                      | translate
+                  }},
+                  {{
+                    "contactPage.contentText.Parsvnath Mall, Akshardham Metro Station, Akshardham, New Delhi - 110092."
+                      | translate
+                  }}
+                </p>
+              </div>
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Stemz+Healthcare/@19.05961,72.8531096,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c9852d870337:0xa12e2a890d71e12d!8m2!3d19.05961!4d72.8552983"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.MUMBAI" | translate }}</a
+                    >
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Hallmark Business Plaza, 2nd floor, Opposite Gurunanak Hospital, Bandra East Mumbai."
+                      | translate
+                  }}
+                </p>
+              </div>
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Bengal+Intelligent+Park/@22.570043,88.4302625,17z/data=!3m1!4b1!4m5!3m4!1s0x3a0275adda5b55ab:0x2127d92889f189fc!8m2!3d22.570043!4d88.4324512"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.KOLKATA" | translate }}</a
+                    >
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.BIPL Building Gamma, First Floor, Bengal Intelligent Park, Block EP & GP, Plot A2 & M2, Sector V Salt Lake Electronic Complex, Bidhan Nagar, Kolkata-700 091."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+    <div class="separator"></div>
+    <div class="emptySpacer"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Qatar+Visa+Center/@17.4424377,78.3851017,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9119d487b091:0x31aa5141d80b5bf!8m2!3d17.4424377!4d78.3872904"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.HYDERABAD" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Krishe Sapphire, Ground Floor, Hitech City Rd, Vittal Rao Nagar, Madhapur, Hyderabad, Telangana 500081."
+                      | translate
+                  }}
+                </p>
+              </div>
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Stemz+Healthcare/@13.0467494,80.192992,18z/data=!3m1!4b1!4m5!3m4!1s0x3a52670a3067f8f9:0x1b3d874bec10e937!8m2!3d13.0467494!4d80.1940863"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.CHENNAI" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.No. 136, Shyalama Towers, 1st Floor, Arcot Road, Vadapalani, Chennai."
+                      | translate
+                  }}
+                </p>
+              </div>
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Qatar+Visa+Center/@26.8711655,81.0118431,17z/data=!3m1!4b1!4m5!3m4!1s0x399be31b2e20dd57:0x94e137efefea43b7!8m2!3d26.8711655!4d81.0140318"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.LUCKNOW" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.2nd floor, BBD Viraj Tower, Vibhuti Khand,Gomti Nagar, Lucknow."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+    <div class="separator"></div>
+    <div class="emptySpacer"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Qatar+Visa+Center/@10.0149815,76.2995336,17z/data=!3m1!4b1!4m5!3m4!1s0x3b080d08b1e57813:0x3918557908ad4708!8m2!3d10.0149815!4d76.3017223"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Kochi" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.National Building, Pearl Star, Ground Floor, Edappally Raghavan Pillai Rd, Devankulangara, Mamangalam, Ernakulam, Kerala."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+    <div class="separator"></div>
+    <div class="emptySpacer"></div>
+    <div class="emptySpacer"></div>
+  </div>
+
+  <div *ngIf="country == 'Sri Lanka'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.com/maps/place/Qatar+Visa+Centre+and+Medical+Centre/@6.9069606,79.9023863,21z/data=!4m12!1m6!3m5!1s0x3ae25938cd93a621:0x642b6a7d4320f86f!2sQatar+Visa+Centre+and+Medical+Centre!8m2!3d6.9069593!4d79.9025231!3m4!1s0x3ae25938cd93a621:0x642b6a7d4320f86f!8m2!3d6.9069593!4d79.9025231"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Colombo" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.No.475 /3, Sentra Super City, Sri Jayawardenepura MW, Rajagiriya, Kotte, Sri Lanka."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+
+    <div class="emptySpacer"></div>
+    <div class="emptySpacer"></div>
+  </div>
+  <div *ngIf="country == 'Nepal'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.com/maps/place/Salesberry+Department+Store,+Chakrapath/@27.7556378,85.1702467,10.25z/data=!4m5!3m4!1s0x39eb19839f8e3f3b:0x6074373d8092690b!8m2!3d27.7376771!4d85.3411049"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Kathmandu" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Ward no. 4 Maharajgunj Chakrapath Kathmandu Nepal."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+
+    <div class="emptySpacer"></div>
+    <div class="emptySpacer"></div>
+  </div>
+  <div *ngIf="country == 'Bangladesh'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.co.in/maps/place/Rupayan+Trade+Center,+114+Kazi+Nazrul+Islam+Ave,+Dhaka+1205,+Bangladesh/@23.7455446,90.3931743,17z/data=!3m1!4b1!4m5!3m4!1s0x3755b896706bb089:0xb56f55b074efcf06!8m2!3d23.7455806!4d90.3953651?hl=en&authuser=0"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Dhaka" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Rupayan Trade Center at 114, Kazi Nazrul Islam Avenue (11th Floor), Bangla Motor, Ramna, Dhaka-1000, Bangladesh."
+                      | translate
+                  }}
+                </p>
+              </div>
+              <!-- <div class="col">
+                                <div class="addrHeading">
+                                    <h3 style="text-align: center;"><a class="iwh-title title" href="https://www.google.com/maps/place/Qatar+Visa+center/@24.8869174,91.8807043,17z/data=!4m12!1m6!3m5!1s0x3751abbe968ff133:0x9c8f7699c606ea4b!2sQatar+Visa+center!8m2!3d24.8869125!4d91.882893!3m4!1s0x3751abbe968ff133:0x9c8f7699c606ea4b!8m2!3d24.8869125!4d91.882893" target="_blank">{{'contactPage.contentTitle.Sylhet' | translate}}
+                                        </a></h3>
+                                </div>
+                                <p class="description" style="text-align: center;">{{'contactPage.contentText.Syed Plaza (Level-5, East Side) of Multiplan Shahjalal City, Plot #D/1, Main Road, Block-D, Shahjalal Housing Estate, Sylhet, Bangladesh.'|translate}}</p>
+                            </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+
+    <div class="emptySpacer"></div>
+    <div class="emptySpacer"></div>
+  </div>
+
+  <div *ngIf="country == 'Pakistan'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.com/maps/place/33%C2%B042'16.4%22N+73%C2%B004'59.0%22E/@33.704557,73.0830432,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d33.704557!4d73.0830432?shorturl=1"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Islamabad" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Gerry’s Building, 1-A, I & T Center, G-6, Islamabad, Pakistan"
+                      | translate
+                  }}
+                </p>
+              </div>
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.com/maps/place/Gerry's+Visa/@24.824326,67.0438824,15z/data=!4m5!3m4!1s0x0:0x8a006f4ae41d3a36!8m2!3d24.8243552!4d67.0439221?shorturl=1"
+                      target="_blank"
+                      >{{ "contactPage.contentTitle.Karachi" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Bahria Complex IV, 4th Floor, Main Chaudhary Khaliq UZ Zaman Road, Gizri Road, Clifton area Navy Housing Society, Karachi, Pakistan."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+
+    <div class="emptySpacer"></div>
+    <div class="emptySpacer"></div>
+  </div>
+  <div *ngIf="country == 'Philippines'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+              <div class="col">
+                <div class="addrHeading">
+                  <h3 style="text-align: center">
+                    <a
+                      class="iwh-title title"
+                      href="https://www.google.com/maps/place/Qatar+Visa+Center/@14.5307686,120.9807942,15z/data=!4m5!3m4!1s0x0:0x7cf18c4bbf3ae8a2!8m2!3d14.5307686!4d120.9807942"
+                      target="_blank"
+                    >
+                      {{ "contactPage.contentTitle.Manila" | translate }}
+                    </a>
+                  </h3>
+                </div>
+                <p class="description" style="text-align: center">
+                  {{
+                    "contactPage.contentText.Unit 106, NU mall of Asia Building, Coral Way st., MOA complex, Pasay City, Manila, Philippines."
+                      | translate
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpacer"></div>
+
+    <div class="emptySpacer"></div>
+    <div class="emptySpacer"></div>
+  </div>
+  <div class="emptySpacer"></div>
+</div>
+<app-footer></app-footer>

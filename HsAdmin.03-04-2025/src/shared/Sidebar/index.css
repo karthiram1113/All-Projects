@@ -1,0 +1,167 @@
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: rgba(139,197,63,255) #0000;
+    animation: l16 1s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .loader::before {
+    border-color: rgba(0,173,238,255) #0000;
+    animation: inherit; 
+    animation-duration: .5s;
+    animation-direction: reverse;
+  }
+  .loader::after {
+    margin: 8px;
+  }
+  @keyframes l16 { 
+    100%{transform: rotate(1turn)}
+  }
+/* 2 */
+  /* .loader {
+    width: 60px;
+    aspect-ratio: .5;
+    display: grid;
+  }
+  .loader:before {
+    content: "";
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: auto auto 0;
+    background: rgba(139,197,63,255);
+    animation: l9-0 .5s cubic-bezier(0,800,1,800) infinite;
+  }
+  .loader:after {
+    content: "";
+    width: 100%;
+    aspect-ratio: 1/cos(30deg);
+    margin: 0 auto auto;
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    background: rgba(0,173,238,255);
+    animation: l9-1 .5s linear infinite;
+  }
+  @keyframes l9-0 {
+    0%,2%  {translate: 0   0%}
+    98%,to {translate: 0 -.2%}
+  }
+  @keyframes l9-1 {
+    0%,5%  {rotate:  0deg}
+    95%,to {rotate:-60deg}
+  } */
+
+  /* 3 */
+
+  /* .loader {
+    width:28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #F10C49;
+    animation: l9 2s infinite;
+  }
+  @keyframes l9 {
+    0%   {box-shadow: 
+            0 -16px #F4DD51, calc(16px*0.707) calc(-16px*0.707) #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    12.5%   {box-shadow: 
+            0 0 #F4DD51, calc(16px*0.707) calc(-16px*0.707) #E3AAD6,16px 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    25%   {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,16px 0 #F4DD51, calc(16px*0.707) calc(16px*0.707) #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    37.5% {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, calc(16px*0.707) calc(16px*0.707) #E3AAD6,
+            0 16px #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    50%   {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 16px #F4DD51, calc(-16px*0.707) calc(16px*0.707) #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+    62.5% {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, calc(-16px*0.707) calc(16px*0.707) #E3AAD6,-16px 0 #F4DD51, 0 0 #E3AAD6}
+    75%   {box-shadow: 
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,-16px 0 #F4DD51, calc(-16px*0.707) calc(-16px*0.707) #E3AAD6}
+    87.5% {box-shadow: 
+            0 -16px #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, calc(-16px*0.707) calc(-16px*0.707) #E3AAD6}
+    100% {box-shadow: 
+            0 -16px #F4DD51, calc(16px*0.707) calc(-16px*0.707) #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6,
+            0 0 #F4DD51, 0 0 #E3AAD6,0 0 #F4DD51, 0 0 #E3AAD6}
+  } */
+
+  /* 4 */
+/* 
+  .loader {
+    width: 60px;
+    aspect-ratio: 1;
+    position:relative;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background:
+      radial-gradient(circle 10px,rgba(0,173,238,255) 94%,#0000),
+      repeating-conic-gradient(from -30deg,#0000 0 60deg,rgba(0,173,238,255) 61deg 120deg);
+    -webkit-mask:radial-gradient(circle 15px,#000 calc(100% - 6px),#0000 calc(100% - 5px) 94%,#000);
+  }
+  .loader:after {
+    animation: l4 1s infinite;
+    transform: perspective(300px) translateZ(0px)
+  }
+  @keyframes l4 {
+    to {transform:perspective(300px) translateZ(150px);opacity:0}
+  } */
+
+  /* 5 */
+
+  /* .loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-image:
+      linear-gradient(rgba(139,197,63,255) 16px, transparent 0) ,
+      linear-gradient(rgba(0,173,238,255) 16px, transparent 0) ,
+      linear-gradient(rgba(0,173,238,255) 16px, transparent 0) ,
+      linear-gradient(rgba(139,197,63,255) 16px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top , left bottom , right top , right bottom;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(0deg)
+    }
+    50% {
+      width: 30px;
+      height: 30px;
+      transform: rotate(180deg)
+    }
+    100% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(360deg)
+    }
+  }
+
+  
+   */
+
+   /* 6 */
+
+   

@@ -1,0 +1,600 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; 
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.admin-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.logout-btn {
+  background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f);
+  color: black;
+  border: none;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.logout-btn i {
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .admin-text {
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-text {
+    display: none; /* hide text for extra small screens */
+  }
+
+  .nav-right {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .admin-img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Menu icon */
+.menu-icon {
+  font-size: 22px;
+  color: #333;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  color: #ffb300;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px; 
+  width: 300px; 
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  padding: 25px; 
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ensures space between logo & close icon */
+  padding: 0px 15px;
+  margin-bottom: 25px; /* ⬆️ small increase for better spacing */
+}
+
+.sidebar-header img {
+  height: 55px; /* ⬆️ slightly increased logo size */
+  width: auto;
+}
+
+.close-icon {
+  font-size: 22px; /* ⬆️ slightly larger close icon */
+  cursor: pointer;
+  margin-left: 20px !important;
+   margin-right: 10px !important; 
+
+  color: #a79e9e;
+  transition: color 0.2s ease;
+}
+
+.close-icon:hover {
+  color: #e53935; /* red hover effect */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  font-size: 16px;
+  color: #333;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-menu li:hover {
+  background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f);
+  color: #000;
+}
+
+/* Overlay (background blur when sidenav open) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.sidebar {
+    width: 260px; 
+    left: -260px;
+    padding: 20px 20px 20px 20px; 
+  }
+
+  .sidebar-header img {
+    height: 45px; 
+  }
+
+  .sidebar-menu li {
+    font-size: 15px;
+  }
+   .close-icon {
+    font-size: 20px;
+    padding-right: 8px; 
+  }
+}
+
+
+.menu-image {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-image:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-menu li.active {
+   background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f);
+  color: #fff;
+  color: #000;
+  border-radius: 6px;
+  margin: 10px 0px;
+}
+
+.sidebar-menu li.active i {
+  color: #fff;
+}
+
+.sidebar-menu li.active {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px !important;
+}
+
+
+.admin-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.user-card {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.user-card-left {
+  margin-right: 10px;
+}
+
+.profile-img-wrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.update-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #007bff;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.user-card-right p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.user-card-right button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f);
+    color: #000 !important;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: rgb(65, 63, 63);
+}
+/* text */
+.texts {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: black !important;
+  font-size: 14px;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .texts {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+.profile-hover-area {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* image wrapper stays simple */
+.profile-img-wrapper {
+  position: relative;  /* important for arrow placement */
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+/* place card immediately below image (no gap that causes leave) */
+.profile-card {
+  position: absolute;
+  /* top: 100%;    */
+   top: calc(100% + 10px);            /* exactly below the image wrapper */
+  left: 50%;
+  transform: translateX(-50%) translateY(8px); /* initial small offset for hidden->visible */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  width: 250px;
+  padding: 12px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms cubic-bezier(.25,1,.5,1);
+}
+
+/* when shown, make visible and move slightly into place */
+.profile-hover-area .profile-card {
+  /* this selector ensures the card becomes visible when parent has hover or when showProfileCard is true and rendered */
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* arrow pointing up */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  box-shadow: -2px -2px 5px rgba(0,0,0,0.08);
+}
+
+.profile-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.profile-info h6 {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.upload-btn {
+  margin-top: 5px;
+  padding: 4px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-3px) scale(1.02);
+  }
+}
+
+
+.menu-label i {
+  width: auto; /* or remove this rule completely */
+}
+
+
+/* Each menu item in sidebar */
+.sidebar-menu > li {
+  display: block; /* so submenu stacks below */
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* The clickable title row (icon + label + arrow) */
+.menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 12px 14px; */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  color: #333;
+  /* font-size: 16px; */
+  background: transparent;
+}
+
+/* Proper spacing between icon and label */
+.menu-label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ✅ creates the space between icon and text */
+}
+
+/* Default icon spacing fix */
+.menu-label i {
+  /* width: 25px; */
+  text-align: center;
+}
+
+
+
+/* Submenu (collapsed by default) */
+.submenu {
+  list-style: none;
+  padding-left: 30px;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+/* When open */
+.menu-item.open .submenu {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 6px;
+}
+
+/* Each submenu item */
+.submenu li {
+  /* padding: 8px 10px; */
+  font-size: 15px;
+  color: #333;
+  border-radius: 6px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover only affects submenu item itself (not full menu) */
+.submenu li:hover {
+  background: #fff7c2;
+  transform: translateX(4px);
+}
+
+/* Arrow animation */
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Prevent submenu overflow clipping */
+.sidebar {
+  overflow: visible;
+}
+
+
+
+
+.menu-item.open > .menu-title {
+  /* background: linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f); */
+  color: #000;
+  /* font-weight: 600; */
+ /* padding: 12px 12px; */
+}
+
+ .submenu .active-sub {
+  background:linear-gradient(90deg, #ffcc00, #ffea00, #ffb300, #ffd54f); 
+  font-weight: 600;
+}
+.sidebar li.active-sub i {
+  color: #fff;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Verifyzone</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/assets/img/logotop.png" />
+    <link href="/assets/css/login.css" rel="stylesheet">
+    <link href="/assets/css/exit-details.css" rel="stylesheet">
+    <!-- Include Remix Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-bg"></div>
+
+    <div class="container lcon">
+        <div class="login-container">
+            <div class="login-left">
+                <h5 class="login-welcome">WELCOME TO VERIFYZONE!</h5>
+                <p class="login-subtext">Log in to access your dashboard, manage your tasks, and continue your journey
+                    with us.</p>
+
+                <form>
+                    <div class="inputContainer" style="margin-top: 35px;">
+                        <input required="required" autocomplete="off" id="inputField" placeholder="Enter your email"
+                            type="text">
+                        <label class="usernameLabel" for="inputField">Email</label>
+                        <i class="ri-mail-send-line userIcon"></i>
+                    </div>
+                    <div class="inputContainer" style="margin-top: 35px; position: relative;">
+                        <input required autocomplete="off" id="inputField" class="login-pass"
+                            placeholder="Enter your password" type="password">
+                        <label class="usernameLabel" for="inputField">Password</label>
+                        <i class="ri-lock-password-line userIcon"></i>
+
+                        <i class="ri-eye-line togglePassword" id="togglePassword"></i>
+                    </div>
+                    <div class="captcha-section" style="margin-top: 35px;">
+                        <div class="inputContainer m-0 w-100">
+                            <input required="required" autocomplete="off" id="inputField" placeholder="Enter captcha"
+                                type="text">
+                            <label class="usernameLabel" for="inputField">Captcha</label>
+                            <i class="ri-verified-badge-line userIcon"></i>
+                        </div>
+                        <div class="captcha-refresh">
+                            <i class="ri-refresh-line"></i>
+                        </div>
+                        <div class="">
+                            <h5 class="captcha-place">EdT23</h5>
+                        </div>
+                    </div>
+                    <p id="captchaMessage"
+                        style="margin-top: 5px; font-size: 14px; display: flex; align-items: center; gap: 5px;"></p>
+
+                    <!-- <div class="form-group mt-4">
+                        <label for="email"><strong>Email:</strong></label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><strong>Password:</strong></label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div> -->
+                    <div class="text-center">
+                        <a href="dashboard.html">
+                            <button type="button" class="btn btn-primary login-btn">Log in</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-right">
+                <!-- <div class="login-divider">
+                    <svg width="67px" height="578px" viewBox="0 0 67 577" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.3847656,0 C-7.44726562,36.7213542 5.14322917,126.757812 49.15625,270.109375 C70.9827986,341.199016 54.8877465,443.829224 0.87109375,578 L67,578 L67,0 L11.3847656,0 Z"
+                            fill="#5c249a"></path>
+                    </svg>
+                </div> -->
+
+                <img src="./assets/img/logo-login copy.png" alt="User Icon" />
+                <h5>New Here?</h5>
+                <p>Create an account and start exploring all the amazing features today!</p>
+                <a href="signup.html">
+                    <button type="button" class="btn signup-btn">Sign up</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.querySelector('.login-pass');
+
+        togglePassword.addEventListener('click', () => {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            togglePassword.classList.toggle('ri-eye-line');
+            togglePassword.classList.toggle('ri-eye-off-line');
+        });
+    </script>
+
+    <script>
+        // Generate random captcha
+        function generateCaptcha() {
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let captcha = "";
+            for (let i = 0; i < 5; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return captcha;
+        }
+
+        const captchaText = document.querySelector(".captcha-place");
+        const refreshBtn = document.querySelector(".captcha-refresh");
+        const captchaInput = document.querySelector('.captcha-section input[type="text"]');
+        const captchaMessage = document.getElementById("captchaMessage");
+
+        // Set initial captcha
+        function setNewCaptcha() {
+            captchaText.textContent = generateCaptcha();
+            captchaMessage.textContent = "";
+            captchaMessage.style.color = "";
+            captchaInput.value = "";
+        }
+
+        setNewCaptcha();
+
+        // Refresh captcha
+        refreshBtn.addEventListener("click", () => {
+            setNewCaptcha();
+        });
+
+        // Validate captcha as user types
+        captchaInput.addEventListener("input", () => {
+            captchaMessage.innerHTML = ""; // Clear previous message
+
+            if (captchaInput.value === "") {
+                return;
+            }
+
+            if (captchaInput.value === captchaText.textContent) {
+                captchaMessage.innerHTML = `
+            <i class="ri-checkbox-circle-line" style="color: green; font-size: 18px;"></i>
+            <span style="color: green;">Captcha correct</span>
+        `;
+            } else {
+                captchaMessage.innerHTML = `
+            <i class="ri-close-circle-line" style="color: red; font-size: 18px;"></i>
+            <span style="color: red;">Captcha incorrect</span>
+        `;
+            }
+        });
+
+        refreshBtn.addEventListener("click", () => {
+            setNewCaptcha();
+
+            // Add rotate animation class
+            refreshBtn.classList.add("rotate");
+
+            // Remove class after animation ends so it can play again next click
+            setTimeout(() => {
+                refreshBtn.classList.remove("rotate");
+            }, 500); // match animation duration
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.register-field .form-group {
+    margin-bottom: 0 !important;
+}
+
+.password-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+}

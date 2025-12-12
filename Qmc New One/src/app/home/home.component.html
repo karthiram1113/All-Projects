@@ -1,0 +1,599 @@
+<app-nav></app-nav>
+<div class="home-page">
+    <div class="container-fuild">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannerBg">
+                    <div class="floater-container" id="floater-container">
+                        <div class="left">
+                            <img src="assets/images/float/left-btn-out.png" alt="out-btn" class="out-btn" (click)="hidefloat('in')" />
+                            <img src="assets/images/float/left-btn-in.png" alt="in-btn" class="in-btn" (click)="showfloat('out')" />
+                        </div>
+                        <div class="right">
+                            <div>
+                                <img src="assets/images/float/download-text.png" alt="Download" class="download-text" />
+                            </div>
+                            <div>
+                                <img src="assets/images/download-app-qr.png" alt="Download QR" class="download-qr" />
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <a href="https://play.google.com/store/apps/details?id=com.stemzhealthcare.qmc_app" target="_blank"><img src="assets/images/popup/googleplay-btn.png" alt="download-app" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="https://apps.apple.com/in/app/qmc-app/id6499140562" target="_blank"><img src="assets/images/popup/applestore-btn.png" alt="download-app" /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container contentSection1">
+                    <div class="qmcBtn2 radiusBtn pinkBg1">
+                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 align-items-center homeBtn">
+                            <div>
+                                <a class="homebutton" type="button" routerLink="/checklist">{{
+                  "homePage.contentTitle.Visit Checklist" | translate
+                }}</a>
+                            </div>
+                            <div>
+                                <!-- <a class="homebutton" type="button" routerLink="/appointmentlogin">{{
+                  "homePage.contentTitle.Book
+                                    Referral
+                                    Appointment" | translate
+                }}</a> -->
+                <a class="homebutton" type="button" routerLink="/status-check">{{
+                  "homePage.contentTitle.Book
+                                    Referral
+                                    Appointment" | translate
+                }}</a>
+                            </div>
+                            <div>
+                                <a class="homebutton" type="button" routerLink="/status-check">{{ "homePage.contentTitle.Status Check" | translate }}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container contentSection1">
+    <div class="row">
+      <div class="col-md-12">
+        <ng-template #content let-modal>
+          <div class="modal-header text-center">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{
+                "homePage.contentTitle.Book Referral
+                            Appointment" | translate
+              }}
+            </h5>
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="modal.close('Save click'); modalClose()"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body qmcBtn1">
+            <p style="color: #777">
+              {{
+                "homePage.BookReferralAppointmentpopuptext.Only referral medical
+                            appointments can be booked" | translate
+              }}
+            </p>
+            <p style="color: #777">
+              {{
+                "homePage.BookReferralAppointmentpopuptext.Fresh applicants are
+                            required to book an appointment through"
+                  | translate
+              }}<a href="https://www.qatarvisacenter.com/shedule"
+                >www.qatarvisacenter.com</a
+              >
+            </p>
+          </div>
+
+          <div class="modal-footer">
+            <a routerLink="/book-referral-appointment" id="modelPopup"
+              ><button
+                type="button"
+                style="color: #fff"
+                class="btn btn-light"
+                (click)="modal.close('Save click')"
+                id="Countinue"
+              >
+                {{
+                  "homePage.BookReferralAppointmentpopuptext.Continue"
+                    | translate
+                }}
+              </button></a
+            >
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpacer"></div>
+  <div class="emptySpacer"></div>
+  <div class="container contentSection">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="iw-heading">
+          <h4 class="iwh-title">
+            {{
+              "homePage.contentTitle.MEDICAL VISA REQUIREMENTS FOR EXPATS IN THE STATE OF
+                        QATAR" | translate
+            }}
+          </h4>
+        </div>
+        <div class="emptySpacer" style="height: 20px"></div>
+        <div class="wpb_wrapper">
+          <p style="text-align: justify !important">
+            {{
+              "homePage.contentText.Expats who wish to visit the State of Qatar
+                        are required to apply for a Residence Visa with the Government of Qatar. As a part of the
+                        process, the people who are going to work and stay in Qatar from specific countries need to
+                        undergo a medical fitness check before traveling to Qatar."
+                | translate
+            }}
+          </p>
+          <p style="text-align: justify !important">
+            {{
+              "homePage.contentText.The Qatar Medical Center (QMC) is
+                        exclusively authorized by the Ministry of Interiors, Qatar to provide a Visa Medical
+                        certificate. QMC provides an efficient and up-to-date medical fitness check."
+                | translate
+            }}
+            <span *ngIf="country == 'India'">
+              {{ "homePage.contentText.indialocation" | translate }}
+            </span>
+            <span *ngIf="country == 'Pakistan'">
+              {{ "homePage.contentText.pakistanlocation" | translate }}
+            </span>
+            <span *ngIf="country == 'Bangladesh'">
+              {{ "homePage.contentText.bangaladeshlocation" | translate }}
+            </span>
+            <span *ngIf="country == 'Philippines'">
+              {{ "homePage.contentText.Philippineslocation" | translate }}
+            </span>
+            <span *ngIf="country == 'Nepal'">
+              {{ "homePage.contentText.Nepallocation" | translate }}
+            </span>
+            <span *ngIf="country == 'Sri Lanka'">
+              {{ "homePage.contentText.Srilankalocation" | translate }}
+            </span>
+          </p>
+        </div>
+        <div class="iframe">
+          <div class="row row-cols-1 row-cols-sm-1">
+            <div class="vi__fullwidth_block index__map lazy">
+              <div class="index_map_offices">
+                <div
+                  id="map"
+                  class="lazy index__map__img"
+                  [ngClass]="{ 'm-l170': lang == 'ur' }"
+                  style="position: absolute; inset: 0px auto auto 0px"
+                >
+                  <img
+                    class="lazy map_offices_mobile"
+                    alt="Travel Visa Requirements"
+                    width="1446"
+                    height="841"
+                    src="assets/images/map_mobile.png"
+                  />
+                  <div class="map-handle"></div>
+
+                  <div
+                    *ngFor="let data of staticmapdetails"
+                    class="map-offices-{{ data.cssclass }} index_map_office"
+                    data-residency="IN"
+                  >
+                    <div class="offices_line"></div>
+                    <div
+                      class="offices_position"
+                      id="{{ data.place }}"
+                      (click)="locationdeatils(data)"
+                      data-toggle="popover"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      *ngIf="enablepopup"
+                      class="popover fade right in"
+                      style="top: -162px; left: 9px; display: none"
+                    >
+                      <div>
+                        <button
+                          (click)="closepopup(data)"
+                          type="button"
+                          class="close"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <h3 class="popover-title" style="display: none"></h3>
+                      <div class="popover-content">
+                        <p>
+                          <b>{{ mapaddressdetails.place }}</b>
+                          {{ mapaddressdetails.address1 }}<br />{{
+                            mapaddressdetails.address2
+                          }}<br />
+                          {{ mapaddressdetails.address3 }}<br />{{
+                            mapaddressdetails.address4
+                          }}<br />{{ mapaddressdetails.address5 }} <br />
+                        </p>
+                        <p>
+                          <span class="index_map_offices__title">Phone:</span>
+                          <span class="index_map_offices__phone">{{
+                            mapaddressdetails.Phnumber
+                          }}</span>
+                          <br />
+                          <span class="index_map_offices__title">Email:</span>
+                          info&#64;qatarmedicalcenter.com
+                        </p>
+                      </div>
+                    </div>
+                    <a class="offices_text" id="{{ data.place }}_pop">{{
+                      data.place
+                    }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="emptySpacer"></div>
+        <div class="row">
+            <div class="col-md-8">
+                <img src="assets/images/home-1.jpg" />
+            </div>
+            <div class="col-md-4 col-sm-2">
+                <div class="iw-heading">
+                    <h4 class="iwh-title">
+                        {{ "homePage.contentTitle.What Happens at the QATAR MEDICAL CENTER?" | translate }}
+                    </h4>
+                </div>
+                <div class="wpb_wrapper">
+                    <p style="text-align: justify !important">
+                        {{ "homePage.contentText.Our team of professionals understands the visa requirements. They are trained to support the applicants throughout the process. The Visa Medical Test is a sequential process that starts with the confirmation of the appointment.
+                        On reaching the centers, the applicants are guided on how they need to proceed further." | translate }}
+                    </p>
+                    <div class="qmcBtn">
+                        <a routerLink="/checklist" class="bg-pink" style="font-size: 14px">{{ "homePage.contentText.Checklist" | translate }}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="emptySpacer"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="iw-heading">
+              <h4 class="iwh-title">
+                {{
+                  "homePage.contentTitle.Our Visa Medical Process" | translate
+                }}
+              </h4>
+            </div>
+            <div class="wpb_wrapper">
+              <p style="text-align: justify !important; margin-bottom: 50px">
+                {{
+                  "homePage.contentText.The Visa
+                                applicants are expected to undergo a preliminary medical check in their home country as
+                                part of the visa application process for the State of Qatar. The tests are carried out
+                                in the following steps" | translate
+                }}
+              </p>
+            </div>
+            <div class="tooltipContent" placement="auto">
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-5">
+                <div
+                  class="col"
+                  ngbPopover="{{
+                    'tooltipContentPage.contentText.a)Applicant’s documents are collected and verified.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.b)3 Check process where the Passport, Appointment letter, and the biometric receipt are validated.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.c)The applicants are then guided to the registration desk.'
+                      | translate
+                  }}"
+                  popoverTitle="{{
+                    'tooltipContentPage.contentTitle.SECURITY CHECK' | translate
+                  }}"
+                >
+                  <img src="assets/images/security-check-2.png" />
+                </div>
+                <div
+                  class="col"
+                  ngbPopover="{{
+                    'tooltipContentPage.contentText.a)Applicants are registered post verification of documents.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.b)Biometric authentication of the applicant.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.c)The applicant signs the consent form.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.d)A token is generated for the applicant to begin his Visa medical journey.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.e)Applicant feedback is captured.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.f)The applicant is then guided to the waiting area.'
+                      | translate
+                  }}"
+                  popoverTitle="{{
+                    'tooltipContentPage.contentTitle.REGISTRATION' | translate
+                  }}"
+                >
+                  <img src="assets/images/registration-1.png" />
+                </div>
+                <div
+                  class="col"
+                  ngbPopover="{{
+                    'tooltipContentPage.contentText.a)Biometric authentication of the applicant.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.b)Height, weight, and blood pressure is recorded.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.c)Vision Testing.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.d)Vaccine administration.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.e)Medical History is entered.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.f)Blood sample collection.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.g)Applicant feedback is captured.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.h)The applicant is then guided to the waiting area.'
+                      | translate
+                  }}"
+                  popoverTitle="{{
+                    'tooltipContentPage.contentTitle.NURSE STATION' | translate
+                  }}"
+                >
+                  <img src="assets/images/Nurse-station-1.png" />
+                </div>
+                <div
+                  class="col"
+                  placement="left"
+                  ngbPopover="{{
+                    'tooltipContentPage.contentText.a)Biometric authentication of the applicant.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.b)Review of Nurse findings.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.c)Complete Medical History and Physical examination.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.d)Applicant feedback is captured.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.e)The applicant is then guided to the waiting area.'
+                      | translate
+                  }}"
+                  popoverTitle="{{
+                    'tooltipContentPage.contentTitle.DOCTOR CONSULTATION'
+                      | translate
+                  }}"
+                >
+                  <img src="assets/images/Consultation-1-1.png" />
+                </div>
+                <div
+                  class="col"
+                  placement="left"
+                  ngbPopover="{{
+                    'tooltipContentPage.contentText.a)Biometric authentication of the applicant.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.b)Chest X-ray (PA view) is captured.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.c)Image quality is assessed by a technician and sent to the Radiologist.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.d)Applicant feedback is captured.'
+                      | translate
+                  }}
+                                        {{
+                    'tooltipContentPage.contentText.e)The applicant ends the Visa Medical Process and exits the center.'
+                      | translate
+                  }}"
+                  popoverTitle="{{
+                    'tooltipContentPage.contentTitle.CHEST X RAY' | translate
+                  }}"
+                >
+                  <img src="assets/images/x-ray-1.png" />
+                </div>
+              </div>
+            </div>
+            <div class="wpb_wrapper">
+              <p style="text-align: center; margin-top: 50px">
+                {{ "Comman.disclamcontent" | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fuild">
+    <div class="row bgt-dark">
+      <div class="col-md-12">
+        <div class="emptySpacer" style="height: 30px"></div>
+        <div class="qmcBtn radiusBtn pinkBg text-center">
+                        <!-- <a type="button" routerLink="/appointmentlogin">{{
+            "homePage.contentTitle.Book Referral
+                        Appointment" | translate
+          }}</a> -->
+          <a type="button" routerLink="/status-check">{{
+            "homePage.contentTitle.Book Referral
+                        Appointment" | translate
+          }}</a>
+                    </div>
+                    <div class="wpb_wrapper1 text-center">
+                        <div style="text-align: center; color: #fff">
+                            {{ "homePage.contentText.Medical check-up is mandatory before travelling to Qatar" | translate }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="emptySpacer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="iw-heading text-left">
+                        <h4 *ngIf="country != 'Pakistan'" class="iwh-title text-left">
+                            {{ "homePage.contentTitle.Stemz Healthcare" | translate }}
+                        </h4>
+                        <h4 *ngIf="country == 'Pakistan'" class="iwh-title text-left">
+                            {{ "homePage.contentTitle.QatarMedicalCenter" | translate }}
+                        </h4>
+                    </div>
+                    <div *ngIf="country != 'Pakistan'" style="text-align: justify !important" class="wpb_wrapper text-left">
+                        <p>
+                            {{ "homePage.contentText.STEMZ was founded in 2015, to become the leading healthcare provider for tourists, immigrants and working professionals serving Government and Diplomatic missions globally." | translate }}
+                        </p>
+                        <p>
+                            {{ "homePage.contentText.We believe in creating a long-lasting relationship with all our stakeholders, including our visitors, employees and partners." | translate }}
+                        </p>
+                        <p>
+                            {{ "homePage.contentText.STEMZ is backed by a team of highly qualified healthcare professionals with internal systems and processes based on the latest medical standards and best practices." | translate }}
+                        </p>
+                    </div>
+
+                    <div *ngIf="country == 'Pakistan'" style="text-align: justify !important" class="wpb_wrapper text-left">
+                        <p>
+                            {{ "homePage.contentText.pakistanstemzhealthcontent" | translate }}
+                        </p>
+                    </div>
+                    <div class="qmcBtn">
+                        <a routerLink="/about" class="bg-pink" style="font-size: 14px">{{
+            "homePage.contentTitle.About Us" | translate
+          }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="emptySpacer"></div>
+        <div class="container-fuild">
+            <div class="row bg-pink">
+                <div class="container">
+                    <div class="iw-heading text-center">
+                        <div class="emptySpacer" style="height: 32px"></div>
+                        <h4 class="iwh-title text-center fontWeight400">
+                            {{ "homePage.contentTitle.VISIT OUR CENTER" | translate }}
+                        </h4>
+                    </div>
+
+                    <div style="place-content: center" class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+                        <div style="width: 300px" *ngFor="let data of centeraddress" class="col underline">
+                            <div class="addressSection">
+                                <div class="mapIcon" placement="top" ngbTooltip="Location">
+                                    <a><img src="assets/images/location-50x50.jpg" /></a>
+                                </div>
+                                <div class="addrHeading">
+                                    <h3>
+                                        <a>{{ data.cityname | translate }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div *ngIf="data.cityname != 'contactPage.contentTitle.Sylhet'" class="addrDescribtion">
+                                <div>{{ data.cityaddress | translate }}</div>
+                            </div>
+
+                            <div *ngIf="data.cityname == 'contactPage.contentTitle.Sylhet'" class="addrDescribtion syletaddress">
+                                <div>{{ data.cityaddress | translate }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="emptySpacer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="emptySpacer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="iw-heading" style="text-align: center; margin-bottom: 50px">
+                        <h4 class="iwh-title">
+                            {{ "homePage.contentTitle.Work with us" | translate }}
+                        </h4>
+                        <p>
+                            <span class="font-color">{{
+              "homePage.contentText.Take the next step in your career with
+                            Qatar Medical Center" | translate
+            }}</span>
+                        </p>
+                    </div>
+                    <div class="iw-heading">
+                        <h4 class="iwh-title">
+                            {{ "homePage.contentTitle.Please send us your resume at careers@qatarmedicalcenter.com" | translate }}
+                        </h4>
+                    </div>
+
+                    <div class="emptySpacer"></div>
+                    <div class="wpb_wrapper text-center">
+                        <p>
+                            {{ "homePage.contentText.Please remember to mention the job title and location in the subject line." | translate }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="emptySpacer"></div>
+    </div>
+    <app-footer></app-footer>

@@ -1,0 +1,29 @@
+.banner-inner{
+    border-radius: 20px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -50px; 
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicator-btn {
+    width: 12px !important;
+    height: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(159, 159, 161) !important;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(24, 188, 24) !important; /* Highlight active dot */
+}
+
+/* body{
+    background-color: #f1f7f6;
+} */

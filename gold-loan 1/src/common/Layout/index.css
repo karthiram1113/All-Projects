@@ -1,0 +1,33 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidenav {
+  /* width: 240px; */
+  background: #f8f9fa;
+}
+
+.main-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.navbar {
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.bg-color-overall {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Verifyzone</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="icon" href="/assets/img/logotop.png" />
+        <link href="/assets/css/login.css" rel="stylesheet">
+        <link href="/assets/css/exit-details.css" rel="stylesheet">
+        <!-- Include Remix Icons CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="login-bg"></div>
+
+        <div class="container lcon">
+            <div class="login-container">
+                <div class="login-left">
+                    <h5 class="login-welcome">WELCOME TO VERIFYZONE!</h5>
+                    <p class="login-subtext">Log in to access your dashboard,
+                        manage your tasks, and continue your journey
+                        with us.</p>
+
+                    <form>
+                        <!-- <div class="form-control1 mt-4">
+                        <input type="value" required="">
+                        <label>
+                            <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span
+                                style="transition-delay:100ms">a</span><span
+                                style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
+                        </label>
+                    </div> -->
+
+                        <!-- <div class="form-control1 mt-4">
+                        <input type="value" required="">
+                        <label>
+                            <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span
+                                style="transition-delay:100ms">s</span><span
+                                style="transition-delay:150ms">s</span><span
+                                style="transition-delay:200ms">w</span><span
+                                style="transition-delay:250ms">o</span><span
+                                style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+                        </label>
+                    </div> -->
+                        <div class="inputContainer">
+                            <input required="required" autocomplete="off"
+                                id="inputField" placeholder="Enter your email"
+                                type="text">
+                            <label class="usernameLabel"
+                                for="inputField">Email</label>
+                         <i class="ri-mail-send-line userIcon"></i>
+                        </div>
+                     <div class="inputContainer" style="margin-top: 30px; position: relative;">
+    <input required autocomplete="off"
+           id="inputField"
+           class="login-pass"
+           placeholder="Enter your password"
+           type="password">
+    <label class="usernameLabel" for="inputField">Password</label>
+    <i class="ri-lock-password-line userIcon"></i>
+    
+    <i class="ri-eye-line togglePassword" id="togglePassword"></i>
+</div>
+                        <div class="captcha-section">
+                            <!-- <div class="form-control1 mt-4 w-75">
+                            <input type="value" required="">
+                            <label>
+                                <span style="transition-delay:0ms">C</span><span
+                                    style="transition-delay:50ms">a</span><span
+                                    style="transition-delay:100ms">p</span><span
+                                    style="transition-delay:150ms">t</span><span
+                                    style="transition-delay:200ms">c</span><span
+                                    style="transition-delay:250ms">h</span><span style="transition-delay:300ms">a</span>
+                            </label>
+                        </div> -->
+                            <div class="inputContainer m-0 w-100">
+                                <input required="required" autocomplete="off"
+                                    id="inputField" placeholder="Enter captcha"
+                                    type="text">
+                                <label class="usernameLabel"
+                                    for="inputField">Captcha</label>
+                           <i class="ri-verified-badge-line userIcon"></i>
+                            </div>
+                            <div class="captcha-refresh">
+                                <i class="ri-restart-line"></i>
+                            </div>
+                            <div class="pt-2">
+                                <h5 class="captcha-place">EdT23</h5>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group mt-4">
+                        <label for="email"><strong>Email:</strong></label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><strong>Password:</strong></label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div> -->
+                        <div class="text-center">
+                            <a href="dashboard.html">
+                                <button type="button"
+                                    class="btn btn-primary login-btn">Log
+                                    in</button>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="login-right">
+                    <!-- <div class="login-divider">
+                    <svg width="67px" height="578px" viewBox="0 0 67 577" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.3847656,0 C-7.44726562,36.7213542 5.14322917,126.757812 49.15625,270.109375 C70.9827986,341.199016 54.8877465,443.829224 0.87109375,578 L67,578 L67,0 L11.3847656,0 Z"
+                            fill="#5c249a"></path>
+                    </svg>
+                </div> -->
+
+                    <img src="./assets/img/logo-login copy.png"
+                        alt="User Icon" />
+                    <h5>New Here?</h5>
+                    <p>Create an account and start exploring all the amazing
+                        features today!</p>
+                    <a href="signup.html">
+                        <button type="button" class="btn signup-btn">Sign
+                            up</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const togglePassword = document.getElementById('togglePassword');
+const passwordField = document.querySelector('.login-pass');
+
+togglePassword.addEventListener('click', () => {
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+
+    togglePassword.classList.toggle('ri-eye-line');
+    togglePassword.classList.toggle('ri-eye-off-line');
+});
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>

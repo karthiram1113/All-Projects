@@ -1,0 +1,182 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap');
+:root {
+    --color-black: #41423d;
+    --color-neutral-100: #f5f4f0;
+    --color-neutral: #dfddd0;
+    --color-primary-100: #f0f7f5;
+    --color-primary-200: #fff;
+    --color-primary-300: #cfe5e0;
+    --color-primary: #5c249a;
+    --color-primary-500: #5c249a;
+    --color-white: #fbfcfa;
+    --text-font-family: 'Inter', sans-serif;
+    --title-font-family: 'Lora', serif;
+    --title-font-weight: 500;
+}
+
+
+/*
+  cards
+*/
+
+.card {
+    border: 1px solid var(--color-neutral);
+    border-radius: .25rem;
+    background: var(--color-white);
+    margin: 0 0 2.5rem;
+    overflow: auto;
+    padding: 1.5rem 1.5rem 2.5rem;
+    width: 100%;
+}
+
+
+/*
+  table
+*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border-bottom: 1px solid var(--color-primary-300);
+    font-size: 1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    padding: 1.5rem 1rem;
+}
+
+td {
+    padding: 1rem;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr.selected td {
+    background: var(--color-primary-200);
+    border-top: 1px solid gray;
+}
+
+.tbody-tr tr:hover {
+    background: #f6f1fd;
+}
+
+tbody tr:hover:not(.selected) td,
+tbody tr.hover:not(.selected) td {
+    background: var(--color-primary-100);
+}
+
+.table-footer,
+.table-header {
+    font-size: .875rem;
+}
+
+.table-footer {
+    margin: -1.5rem 0 0;
+}
+
+.table-header {
+    margin: 0 0 1rem;
+}
+
+.table-footer.grid,
+.table-header.grid {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.social-icons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--secondary-color);
+    box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-icon i {
+    font-size: calc(var(--icon-size) / 2);
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.social-icon:hover {
+    box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light), 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) rotateX(10deg);
+}
+
+:root {
+    --bg-color: #f0f2f5;
+    --shadow-light: #ffffff;
+    --shadow-dark: #b5b5b5;
+    --facebook-color: #5c249a;
+    --twitter-color: #00acee;
+    --instagram-color: #E1306C;
+    --linkedin-color: #0077B5;
+    --icon-size: 30px;
+    --border-radius: 20px;
+}
+
+
+/* Color change on hover */
+
+.social-icon.facebook:hover i {
+    color: var(--facebook-color);
+}
+
+.social-icon.twitter:hover i {
+    color: var(--twitter-color);
+}
+
+.social-icon.instagram:hover i {
+    color: var(--instagram-color);
+}
+
+.social-icon.linkedin:hover i {
+    color: var(--linkedin-color);
+}
+
+
+/* Pseudo-element for the lift-up shadow effect */
+
+.social-icon:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 80%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    filter: blur(5px);
+    opacity: 0;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-icon:hover:after {
+    opacity: 1;
+    transform: scale(1.2);
+}

@@ -1,0 +1,647 @@
+.qmc-center {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.img-size {
+    width: 350px;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select::after {
+    content: '\25BC';
+    /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.2em;
+    color: #495057;
+    /* Default color for Bootstrap's form control */
+}
+
+.form-referral {
+    color: gray;
+}
+
+.h5-select {
+    font-weight: bold;
+    color: rgb(243, 59, 59);
+}
+
+.h5-booking {
+    padding-top: 20px;
+}
+
+.aero-size {
+    margin-right: 20px;
+}
+
+.aero-top {
+    margin-top: 13px;
+}
+
+.aeromark {
+    font-size: 25px;
+}
+
+.hr-class {
+    width: 160px;
+}
+
+.date-top {
+    padding-top: 30px;
+}
+
+.card-border-radius {
+    border-radius: 30px;
+    background-color: #F7E5ED;
+}
+
+
+/* .input-color {
+    background-color: rgb(248, 227, 208);
+    padding: 10px 0px;
+} */
+
+option .span-select {
+    color: red;
+    /* Change this to your desired color */
+}
+
+.ul-list li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.date-time {
+    padding-top: 60px;
+}
+
+.date-radius {
+    border-radius: 20px;
+    background-color: #F7E5ED;
+    margin-top: 40px;
+}
+
+.row .card-border-radius {
+    margin: 0px 8px;
+}
+
+.date-dark {
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+
+.date-top {
+    margin: 0;
+}
+
+.p-class {
+    font-size: 12px;
+}
+
+.date-radius p {
+    margin-top: 12px;
+    margin-left: 10px;
+   
+}
+.date-radius a {
+    padding: 10px 0px;
+}
+
+// .card-border-radius {
+//     padding: 10px 0px;
+// }
+
+.time-value .data-radius {
+    margin-right: 10px;
+}
+
+.red-circle {
+    color: rgb(252, 53, 53);
+    // padding-right: -5px;
+    padding-top: 3px;
+    font-size: 16px;
+   
+
+}
+
+.Available-top {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.red-circle p {
+    text-align: center;
+}
+
+.round-left {
+    padding-right: 4px;
+}
+
+.green-circle {
+    color: green;
+    
+}
+
+.book-button {
+    padding: 10px 70px;
+    border-radius: 10px;
+    background-color: rgb(245, 91, 74);
+    color: white;
+    border: none;
+}
+
+.book-button[disabled] {
+    opacity: 0.65; /* Reduce opacity for disabled state */
+    cursor: not-allowed; /* Change cursor for disabled state */
+  }
+  
+//   .book-button:hover {
+//     background-color: #cbdef1; /* Darker color on hover */
+//   }
+.sss>div {
+    margin: 0px 5px;
+}
+
+.card a {
+    color: black;
+}
+
+.row .date-radius>a:hover {
+    background-color: rgb(255, 25, 0);
+}
+
+
+/* header css */
+
+.nav-item {
+    a {
+        height: 56px;
+        line-height: 56px;
+        padding: 0 25px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+    }
+}
+
+nav.navbar {
+    padding: 0px;
+}
+
+.header-bottom {
+    margin-bottom: 20px;
+}
+
+// modal button
+.modal-button1 {
+    margin-right: 70px;
+    padding: 7px 60px;
+}
+
+.modal-button2 {
+    padding: 7px 10px;
+}
+
+.confirm-color {
+    background-color: #521231;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #521231;
+    color: #ffffff;
+}
+.three-boxes {
+    padding: 0px 21px;
+}
+
+// -------------------------------
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+.marq-section {
+    marquee {
+        p {
+            margin: 0 !important;
+        }
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+
+.footer-end {
+    justify-content: end !important;
+}
+
+.header-top .ag,
+.header-top .pg {
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
+
+.header-top .head-fix-icn {
+    position: fixed;
+    right: 20px;
+    z-index: 9999;
+}
+
+.header-top .pg {
+    background-color: #fff;
+    color: #630332;
+}
+
+a.navbar-brand img {
+    width: 100%;
+}
+
+.modal-header {
+    background: #521231;
+    color: #fff;
+    text-align: center;
+    a {
+        color: #521231;
+    }
+}
+
+.qmcBtn1 {
+    a:hover {
+        color: #777;
+        text-decoration: none;
+    }
+    a {
+        color: #5c0931;
+        padding: 6px 18px;
+    }
+}
+
+.modal-footer {
+    justify-content: center;
+    border-top: 0px solid #dee2e6;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid white;
+    a {
+        background: transparent;
+    }
+    a:hover:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: -1;
+    }
+}
+
+.nav-item {
+    a {
+        height: 56px;
+        line-height: 56px;
+        padding: 0 25px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+    }
+}
+
+nav.navbar {
+    padding: 0px;
+}
+
+.qmcBtn {
+    text-align: right;
+    a:hover {
+        color: #fff;
+        text-decoration: none;
+        background: #600435 !important;
+    }
+    a {
+        padding: 10px 10px;
+    }
+}
+
+.modal-header button {
+    color: #fff !important;
+}
+
+.menu-mobile {
+    position: absolute;
+    width: 100%;
+    background: #1c1c1c;
+    /* height: -webkit-max-content; */
+    /* height: calc(100vh - 0px); */
+    /* right: 50px; */
+    top: 40px;
+    z-index: 1;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.stricky-header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    .menu-mobile {
+        top: 85px;
+    }
+    button.navbar-toggler {
+        padding: 26px;
+    }
+}
+
+.logo-small img {
+    width: 40% !important;
+}
+
+@media screen and (max-width: 600px) {
+    .qmcBtn {
+        text-align: center;
+    }
+}
+
+.activetab {
+    color: #495057 !important;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tabcolor {
+    color: #495057 !important;
+}
+
+.tabcolor {
+    .nav-item {
+        a {
+            height: 56px;
+            line-height: 56px;
+            padding: 0 25px;
+            color: #495057 !important;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+        }
+    }
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #e2535a;
+}
+
+.form-control[readonly] {
+    background-color: white !important;
+}
+
+.modal-xl .modal-xl {
+    max-width: 100%;
+}
+
+// .selected-dated {
+//     border: 1px solid #000 !important;
+//     background-color: #bc2e27 !important;
+//     color: #fff !important;
+//     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%) !important;
+// }
+
+.slotavailable {
+    background-color: #e0f1b5;
+    cursor: pointer;
+}
+
+.btncolor {
+    color: #fff;
+    background-color: #630332;
+}
+
+.historybtn {
+    color: #fff;
+    background-color: #630332;
+    border-color: #630332;
+}
+
+.alert {
+    margin-right: 5px;
+}
+
+.p-characters>p {
+    padding-top: 2px;
+    color: rgb(184, 169, 169) !important;
+    font-size: 13px;
+}
+
+// .cancel-submit {
+//     padding: 7px 30px;
+//     background-color: #630332;
+//     color: white;
+//     font-size: 14px;
+// }
+.ok-btn {
+    background-color: #630332;
+    color: white;
+    // margin-left: 390px;
+    padding: 7px 20px;
+    font-size: 14px;
+}
+.close-btn {
+    color: white !important;
+    background-color: white;
+    padding: 4px
+}
+
+.input-top {
+    padding-top: 20px;
+}
+
+// dropdown css
+
+.form-check-label {
+    font-size: 16px;
+    margin-left: 5px;
+    padding-top: 2px;
+    
+}
+
+
+  
+ 
+  
+
+.dropdown-input-wrapper {
+    position: relative;
+    width: 100%;
+   
+  }
+  .form-check-input {
+    border-color: #353434 !important;
+    padding: 10px;
+    cursor: pointer;
+
+    
+  }
+  .dropdown-input {
+    width: 100%;
+    padding-right: 30px; /* Make space for the arrow */
+    cursor: pointer;
+  }
+  
+  .dropdown-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000; /* Arrow color */
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+  
+  .dropdown.show .dropdown-menu {
+    display: block;
+  }
+  
+
+//* styles.css */
+.custom-select {
+    position: relative;
+    width: 100%; 
+    
+   
+  }
+  
+  .select-selected {
+    background-color: #eee;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .select-items {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    width: 100%;
+    z-index: 1;
+    display: none;
+  }
+  
+  .select-items.d-block {
+    display: block;
+  }
+  .large-checkbox {
+    // width: 20px; 
+    // height: 20px; 
+  padding: 10px 10px;
+
+ 
+  }
+  .checkbox-container {
+    width: 100%;
+  }
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    background-color: #F7E5ED;
+  }
+  
+  .checkbox-label input {
+    margin-right: 10px;
+   
+  }
+  
+  .select-arrow {
+    float: right;
+    margin-top: 5px;
+  }
+
+
+//   Time acground color
+  .selected-time {
+    // Define styles for selected time slots (e.g., bold text, different background)
+    background-color: #ca7171; /* Example background color for selected time */
+  }
+  
+  .highlighted-time {
+    // Define styles for highlighted time slots (e.g., different background color)
+    background-color:#ca7171; /* Example background color for highlighted time */
+  }
+  
+  
+//   footer
+
+.page-content {
+    min-height: calc(100vh - 70px); 
+    
+  }
+  
+  .mini-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .date-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+  
+    border-color: 10px solid red;
+  }
+  
+  .selected-card {
+    background-color: #ca7171;
+    color: white;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    border-color: 10px solid red;
+  }
+
+  .selected-time {
+    background-color: #ca7171; /* Your highlight color */
+    color: white; /* Text color */
+  }
+  
+  .selected-card .date-item {
+    color: white;
+  }
+   
+
+
+  

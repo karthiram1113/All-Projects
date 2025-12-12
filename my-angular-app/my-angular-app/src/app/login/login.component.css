@@ -1,0 +1,26 @@
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 0.5em;
+}
+
+button {
+  padding: 0.5em 1em;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}

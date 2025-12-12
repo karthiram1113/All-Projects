@@ -1,0 +1,192 @@
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    will-change: transform;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+
+  .clients li {
+    /* text-align: center; */
+    /* align-items: center; */
+    list-style-type: none;
+    display: inline;
+    /* padding: 0px 10px; */
+    letter-spacing: 10px;
+    font-size: 20px;
+    margin: 0;
+  }
+  .edit-font {
+    color:green;
+   
+  }
+  .delete-font {
+    color: red; 
+    
+  }
+
+  .tableHost {
+    width: 100%;
+text-wrap: nowrap;
+  }
+  .over{
+    overflow-x: scroll;
+    max-width: 1300px;
+    width: 100%;
+  }
+  .edit-icon {
+    color: green !important;
+  }
+.delete-user {
+color: red;
+}
+  .action-cell {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+.action-buttons {
+  display: flex;
+  gap: 6px;
+}
+.custom-icon-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.delete-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: -25px;
+  box-shadow: 0 4px 10px rgba(0,2,5,0.1) !important;
+}
+.custom-icon-button:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+
+.custom-icon-button::after {
+  content: "View";
+  position: absolute;
+  top: -25px;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+}
+
+.custom-icon-button:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Edit icon */
+
+.custom-edit-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  background-color: rgba(6, 182, 212, 0.2); 
+  color: #06b6d4; 
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.custom-edit-button:hover {
+  background-color: #06b6d4;
+  color: #ffffff;
+}
+
+
+.custom-edit-button::after {
+  content: "Edit";
+  position: absolute;
+  top: -25px;
+  background-color: #06b6d4;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+}
+
+.custom-edit-button:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delete icon */
+
+.custom-delete-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  background-color: rgba(239, 68, 68, 0.2); 
+  color: #ef4444;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.custom-delete-button:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+
+.custom-delete-button::after {
+  content: "Delete";
+  position: absolute;
+  top: -25px;
+  background-color: #ef4444;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+}
+
+.custom-delete-button:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}

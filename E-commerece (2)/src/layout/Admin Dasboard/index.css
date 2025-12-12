@@ -1,0 +1,76 @@
+.dashboard-card {
+    position: relative;
+    /* width: 250px; */
+    height: 160px;
+    background: white;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #000;
+    font-family: "ubuntu-regular", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 20px; */
+}
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    .dashboard-card {
+        margin-top: 10px;
+    }
+}
+.dashboard-card.blue {
+    background: white;
+    color: black;
+}
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.card-content h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.card-content .data {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+
+
+/* Splash design (could be SVG or background image) */
+.dashboard-card.blue .splash {
+    background: url('../../../public/assets/images/dash-r.png') no-repeat center/cover;
+}
+
+.dashboard-card.green .splash {
+    background: url('../../../public/assets/images/dash-bg.png') no-repeat center/cover;
+}
+
+.dashboard-card.pink .splash {
+    background: url('../../../public/assets/images/dash-p.png') no-repeat center/cover;
+}
+
+.dashboard-card.yellow .splash {
+    background: url('../../../public/assets/images/dash-y.png') no-repeat center/cover;
+}
+
+.splash {
+    position: absolute;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 230px;
+        z-index: 0;
+    
+}

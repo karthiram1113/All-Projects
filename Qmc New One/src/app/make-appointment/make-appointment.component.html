@@ -1,0 +1,54 @@
+<app-nav></app-nav>
+<div class="make-appointment-page">
+  <div class="emptySpacer"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wpb-wrapper text-center">
+          <div class="iw-heading">
+            <h3 class="iwh-title">
+              {{
+                "Comman.You are being directed to the Qatar Visa Center website"
+                  | translate
+              }}
+            </h3>
+          </div>
+          <div class="iw-heading">
+            <h3 class="iwh-title">
+              {{
+                "Comman.Please indicate whether you wish to continue"
+                  | translate
+              }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="emptySpacer"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+        <div class="cols qmcBtn">
+          <p style="text-align: center">
+            <a routerLink="/book-appointment" class="disabled bg-pink">{{
+              "Comman.YES, I WOULD LIKE TO CONTINUE" | translate
+            }}</a>
+          </p>
+        </div>
+        <div class="cols qmcBtn">
+          <p style="text-align: center">
+            <a routerLink="/home" class="bg-pink">{{
+              "Comman.I WOULD LIKE TO REMAIN ON STEMZ HEALTHCARE" | translate
+            }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpacer"></div>
+  <div class="emptySpacer"></div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,71 @@
+<app-nav></app-nav>
+<div class="row justify-content-center mt-5">
+  <div class="col col-md-5 col-sm-7 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <div class="col-12" *ngIf="fileUploadScreen; else uploadSuccess">
+            <form [formGroup]="uploadFileForm">
+              <div class="fileUpload">
+                <label for="formFileLg" class="form-label">File Upload</label>
+                <input
+                  class="form-control uploadInput"
+                  (change)="onFileSelected($event)"
+                  aria-describedby="fileHelpId"
+                  id="formFileLg"
+                  type="file"
+                  required
+                  data-max-size="10485760"
+                  formControlName="file"
+                  [ngClass]="{
+                    'border-danger':
+                      submitted &&
+                      (pdfFileFormatPdfFileSize ||
+                        uploadFileForm.hasError('required', 'file'))
+                  }"
+                />
+              </div>
+              <div
+                class="text-danger"
+                *ngIf="submitted && uploadFileForm.hasError('required', 'file')"
+              >
+                File is required.
+              </div>
+              <div
+                class="text-danger"
+                *ngIf="pdfFileFormatPdfFileSize && submitted"
+              >
+                PDF format only allowed. Maximum size is 10MB
+              </div>
+              <!-- <div class="text-danger" *ngIf="pdfFileSize && submitted">
+                Maximum file size 10MB.
+              </div> -->
+              <div class="fileUploadBtn mt-3">
+                <button
+                  type="button"
+                  class="btn btn-primary ms-2 uploadBtn"
+                  [disabled]="uploadFileForm.invalid"
+                  (click)="uploadFile()"
+                >
+                  Upload
+                </button>
+              </div>
+            </form>
+          </div>
+          <ng-template #uploadSuccess>
+            <div class="col-12">
+              <div class="fileUploadContainer p-3">
+                <div class="fileUpload">
+                  <h3 class="uploadSuccessFully">
+                    File uploaded successfully!
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
