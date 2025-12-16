@@ -1,0 +1,8 @@
+.transparent-header {
+  background-color: transparent !important;
+  box-shadow: none !important;  /* remove any shadow if exists */
+}
+/* .active-link {
+  border-bottom: 2px  linear-gradient(90deg,#0f67d1,#0ec623);
+  font-weight: 600;
+} */

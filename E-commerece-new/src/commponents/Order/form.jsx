@@ -12,7 +12,6 @@ function Orderform() {
 
   const [urlName, setUrlName] = useState('')
 
-
   // Useeffect Method
 
   useEffect(() => {
@@ -63,87 +62,87 @@ function Orderform() {
 
   // vendor Create Api
 
-  // const productAdd = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setSubmit(true)
-  //   // if (!shopType || !phone || !owner || !shopName || password !== confirmPassword) {
-  //   //   return;
-  //   // }
-  //   const formData = new FormData();
-  //   formData.append('shopOwnerFullName', owner);
-  //   formData.append('shopName', shopName);
-  //   formData.append('contact', phone);
-  //   formData.append('shopType', shopType);
-  //   formData.append('username', userName);
-  //   formData.append('password', password);
-  //   formData.append('status', status);
-  //   formData.append('confirmPassword', confirmPassword);
-  //   formData.append('avatar', img);
+  const productAdd = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSubmit(true)
+    // if (!shopType || !phone || !owner || !shopName || password !== confirmPassword) {
+    //   return;
+    // }
+    const formData = new FormData();
+    formData.append('shopOwnerFullName', owner);
+    formData.append('shopName', shopName);
+    formData.append('contact', phone);
+    formData.append('shopType', shopType);
+    formData.append('username', userName);
+    formData.append('password', password);
+    formData.append('status', status);
+    formData.append('confirmPassword', confirmPassword);
+    formData.append('avatar', img);
 
-  //   try {
+    try {
 
-  //     const responseData = await OVERALLAPI.adminVendorCreate(formData);
+      const responseData = await OVERALLAPI.adminVendorCreate(formData);
 
-  //     console.log('shoptype', responseData);
+      console.log('shoptype', responseData);
 
-  //     if (responseData.apiStatus.code == '200') {
-  //       Navigate('/productlist');
-  //       setSubmit(false)
-  //       toast.success(responseData.apiStatus.message);
-  //     } else {
-  //       toast.error(responseData.apiStatus.message);
-  //     }
-  //   } catch (error) {
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+      if (responseData.apiStatus.code == '200') {
+        Navigate('/productlist');
+        setSubmit(false)
+        toast.success(responseData.apiStatus.message);
+      } else {
+        toast.error(responseData.apiStatus.message);
+      }
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
 
 
 
   // Vendor Edit Api
-  // const vendorEdit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setSubmit(true);
-  //   if (!phone || !owner || !shopName) {
-  //     return;
-  //   }
-  //   console.log('Form inputs:', { phone, owner, shopName });
-  //   const formData = new FormData();
-  //   formData.append('vendorId', vendorId);
-  //   formData.append('shopOwnerFullName', owner);
-  //   formData.append('shopName', shopName);
-  //   formData.append('contact', phone);
-  //   formData.append('shopType', shopType);
-  //   formData.append('username', userName);
-  //   formData.append('password', password);
-  //   formData.append('status', status);
-  //   formData.append('confirmPassword', confirmPassword);
-  //   formData.append('avatar', img);
+  const vendorEdit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSubmit(true);
+    if (!phone || !owner || !shopName) {
+      return;
+    }
+    console.log('Form inputs:', { phone, owner, shopName });
+    const formData = new FormData();
+    formData.append('vendorId', vendorId);
+    formData.append('shopOwnerFullName', owner);
+    formData.append('shopName', shopName);
+    formData.append('contact', phone);
+    formData.append('shopType', shopType);
+    formData.append('username', userName);
+    formData.append('password', password);
+    formData.append('status', status);
+    formData.append('confirmPassword', confirmPassword);
+    formData.append('avatar', img);
 
-  //   try {
-  //     const responseData = await OVERALLAPI.adminVendorUpdate(formData);
+    try {
+      const responseData = await OVERALLAPI.adminVendorUpdate(formData);
 
-  //     console.log("responsedata", responseData);
-  //     console.log(responseData.apiStatus, "wwww");
+      console.log("responsedata", responseData);
+      console.log(responseData.apiStatus, "wwww");
 
-  //     if (responseData.apiStatus.code == "200") {
+      if (responseData.apiStatus.code == "200") {
 
-  //       Navigate("/productlist");
-  //       setSubmit(true);
-  //       toast.success(responseData.apiStatus.message);
-  //     } else {
-  //       toast.error(responseData.apiStatus.message);
-  //     }
-  //   } catch (error) {
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+        Navigate("/productlist");
+        setSubmit(true);
+        toast.success(responseData.apiStatus.message);
+      } else {
+        toast.error(responseData.apiStatus.message);
+      }
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
 
@@ -426,38 +425,38 @@ function Orderform() {
                       Cancel
                     </Link>
                     {urlName === "Create" ? (
-                      //   <button
-                      //   type="submit"
-                      //   // onClick={productAdd}
-                      //   class="btn btn-gradient-primary me-2"
-                      // >
-                      //   Create
-                      // </button>
-
-                      <Link
-                        to={"/orderlist"}
-
-                        type="button"
+                        <button
+                        type="submit"
+                        onClick={productAdd}
                         class="btn btn-gradient-primary me-2"
                       >
                         Create
-                      </Link>
-                    ) : (
-                    // <button
-                    //   type="submit"
-                    //   // onClick={vendorEdit}
-                    //   class="btn btn-gradient-primary me-2"
-                    // >
-                    //   Submit
-                    // </button>
-                        <Link
-                          to={"/orderlist"}
+                      </button>
 
-                          type="button"
-                          class="btn btn-gradient-primary me-2"
-                        >
-                          Submit
-                        </Link>
+                      // <Link
+                      //   to={"/orderlist"}
+
+                      //   type="button"
+                      //   class="btn btn-gradient-primary me-2"
+                      // >
+                      //   Create
+                      // </Link>
+                    ) : (
+                    <button
+                      type="submit"
+                      onClick={vendorEdit}
+                      class="btn btn-gradient-primary me-2"
+                    >
+                      Submit
+                    </button>
+                        // <Link
+                        //   to={"/orderlist"}
+
+                        //   type="button"
+                        //   class="btn btn-gradient-primary me-2"
+                        // >
+                        //   Submit
+                        // </Link>
                   )}
 
                   </div>
