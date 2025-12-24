@@ -1,0 +1,67 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.team-img {
+    width: 335px !important;
+    max-width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+}
+
+.about-img {
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.error-message-required {
+    color: color-mix(in srgb, red, transparent 50%);
+    text-shadow: 0 0 4px color-mix(in srgb, red, transparent 90%);
+    font-size: 13px;
+}
+
+.inputError {
+    border-color: color-mix(in srgb, red, transparent 50%) !important;
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, red, transparent 90%) !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}

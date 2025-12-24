@@ -1,0 +1,7 @@
+.hermon-gradient {
+  background: linear-gradient(90deg, #00adef, #8bc43f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-decoration: none;
+}

@@ -1,0 +1,217 @@
+
+
+.container {
+  --transition: 350ms;
+  --folder-W: 120px;
+  --folder-H: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  border-radius: 15px;
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); */
+  /* background: linear-gradient(135deg, #6dd5ed, #2193b0); */
+  /* background: #e3ffe4; */
+  background: linear-gradient(320deg, rgba(211, 252, 210, 0.7) 0%);
+  height: calc(var(--folder-H) * 1.7);
+  position: relative;
+  margin-top: 20px;
+}
+
+.folder {
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 60px);
+  animation: float 2.5s infinite ease-in-out;
+  transition: transform var(--transition) ease;
+}
+
+.folder:hover {
+  transform: scale(1.05);
+}
+
+.folder .front-side,
+.folder .back-side {
+  position: absolute;
+  transition: transform var(--transition);
+  transform-origin: bottom center;
+}
+
+.folder .back-side::before,
+.folder .back-side::after {
+  content: "";
+  display: block;
+  background-color: white;
+  opacity: 0.5;
+  width: var(--folder-W);
+  height: var(--folder-H);
+  position: absolute;
+  transform-origin: bottom center;
+  border-radius: 15px;
+  transition: transform 350ms;
+  z-index: 0;
+}
+
+.container:hover .back-side::before {
+  transform: rotateX(-5deg) skewX(5deg);
+}
+
+.container:hover .back-side::after {
+  transform: rotateX(-15deg) skewX(12deg);
+}
+
+.folder .front-side {
+  z-index: 1;
+}
+
+.container:hover .front-side {
+  transform: rotateX(-40deg) skewX(15deg);
+}
+
+.folder .tip {
+  background: linear-gradient(135deg, #ff9a56, #ff6f56);
+  width: 80px;
+  height: 20px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -10px;
+  z-index: 2;
+}
+
+.folder .cover {
+  background: linear-gradient(135deg, #ffe563, #ffc663);
+  width: var(--folder-W);
+  height: var(--folder-H);
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); */
+  border-radius: 10px;
+}
+
+.custom-file-upload {
+  font-size: 1.1em;
+  color: #00c111;
+  text-align: center;
+  background: rgb(143 251 130 / 20%);
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+  transition: 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 1rem 0rem 1rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.4em;
+  left: 0em;
+  bottom: 0em;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 1rem 0rem 1rem;
+  border: 3px solid white;
+}
+
+.ch:checked + .slider {
+  background-color: #72eb67;
+}
+
+.ch:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.ch:checked + .slider:before {
+  transform: translateX(2.2em);
+  background-color: green;
+  /* box-shadow: 0px 0px 40px 5px #72eb67; */
+  border: 3px solid white;
+}
+
+.ch:checked + .slider::after {
+  content: "|";
+  color: white;
+  position: absolute;
+  right: 0.3rem;
+  top: -3.3px;
+  transform: rotate(45deg);
+}
+
+.ck-editor__editable_inline {
+  min-height: 200px;
+}
+
+.whole-container {
+  /* margin-top: 20px; */
+  border-radius: 15px;
+  border: #e2eee5 2px solid;
+  padding: 20px;
+  background: white;
+}
+
+.preview-box {
+  width: 100%;
+  height: calc(var(--folder-H) * 1.7);
+  /* background: #f5f9f6; */
+  border-radius: 15px;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.preview-image {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

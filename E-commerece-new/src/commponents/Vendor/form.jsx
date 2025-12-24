@@ -31,14 +31,21 @@ function Vendorform() {
 
     const [vendorId, setVendorId] = useState("");
     const [owner, setOwner] = useState("");
-    const [shopName, setShopName] = useState();
+    const [shopName, setShopName] = useState("");
     const [userName, setuserName] = useState("");
+    const [Address, setAddress] = useState("");
     const [phone, setPhone] = useState("");
     const [shopType, setShowType] = useState("");
     const [password, setPassword] = useState("");
     const [img, setImg] = useState(null);
+    const [emailid, setEmailId] = useState("");
+    const [licenceActive, setlicenceActive] = useState("");
+    const [licenceExpiry, setlicenceExpriy] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    // const [cureshopAddress, setShopAddress] = useState('')
+    const [contactName, setContactName] = useState("");
+    const [contactEmailId, setContactEmailId] = useState("");
+    const [contactAddress, setContactAddress] = useState("");
+    const [contactPhone, setContactPhone] = useState("");
     const [status, setStatus] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const [showConfrimpassword, setShowConfrimPassword] = useState(false);
@@ -68,23 +75,31 @@ function Vendorform() {
         e.preventDefault();
         setLoading(true);
         setSubmit(true)
-        if (!phone || !owner || !shopType || !password || !confirmPassword) {
-            return;
-        }
-        if (password !== confirmPassword || phone?.length < 10) {
-            return;
-        }
+        // if (!phone || !owner || !shopType || !password || !confirmPassword) {
+        //     return;
+        // }
+        // if (password !== confirmPassword || phone?.length < 10) {
+        //     return;
+        // }
 
         const formData = new FormData();
-        formData.append('shopOwnerFullName', owner);
-        formData.append('shopName', shopName);
-        formData.append('contact', phone);
-        formData.append('shopType', shopType);
-        formData.append('username', userName);
+        // formData.append('shopOwnerFullName', owner);
+        formData.append('userName', userName);
+        formData.append('phone', phone);
+        formData.append('store_name', shopName);
+        formData.append('address', Address);
+        formData.append('profile_image', img);
+        formData.append('emailId', emailid);
+        formData.append('store_type', shopType);
+        formData.append('licence_active_date', licenceActive);
+        formData.append('licence_expire_date', licenceExpiry);
         formData.append('password', password);
-        formData.append('status', status);
-        formData.append('confirmPassword', confirmPassword);
-        formData.append('avatar', img);
+        formData.append('contact_name', contactName);
+        formData.append('contact_emailId', contactEmailId);
+        formData.append('contact_address', contactAddress);
+        formData.append('contact_phone', contactPhone);
+        // formData.append('status', status);
+        // formData.append('confirmPassword', confirmPassword);
 
         try {
 
@@ -114,12 +129,12 @@ function Vendorform() {
         e.preventDefault();
         setLoading(true);
         setSubmit(true)
-        if (!phone || !owner || !shopType || !password || !confirmPassword) {
-            return;
-        }
-        if (password !== confirmPassword || phone?.length < 10) {
-            return;
-        }
+        // if (!phone || !owner || !shopType || !password || !confirmPassword) {
+        //     return;
+        // }
+        // if (password !== confirmPassword || phone?.length < 10) {
+        //     return;
+        // }
 
 
 
@@ -134,7 +149,7 @@ function Vendorform() {
         formData.append('password', password);
         formData.append('status', status);
         formData.append('confirmPassword', confirmPassword);
-        formData.append('avatar', img);
+        formData.append('profile_image', img);
 
         try {
             const responseData = await OVERALLAPI.adminVendorUpdate(formData);
@@ -556,7 +571,7 @@ function Vendorform() {
                                     <div className="col-md-6">
                                         <div class="coolinput">
                                             <label for="input" class="text">Address</label>
-                                            <textarea style={{ padding: "6px 10px" }} type="date" value={vendorId} onChange={(e) => setVendorId(e.target.value)} id="exampleInputEmail1" placeholder="Enter your address" name="input" class="input" />
+                                            <textarea style={{ padding: "6px 10px" }} type="date" value={contactAddress} onChange={(e) => setContactAddress(e.target.value)} id="exampleInputEmail1" placeholder="Enter your address" name="input" class="input" />
                                         </div>
                                     </div>
                                 </div>

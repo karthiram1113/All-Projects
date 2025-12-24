@@ -1,8 +1,8 @@
 export const environment ={
   // baseURL: "http://localhost/hermonsolutions_ecommerce/api/"
-  baseURL: "http://192.168.0.106/hermonsolutions_ecommerce/api/"
+  baseURL: "http://192.168.0.105/hermonsolutions_ecommerce/api/"
 }
-const baseURL = "http://192.168.0.106/hermonsolutions_ecommerce/api/";
+const baseURL = "http://192.168.0.105/hermonsolutions_ecommerce/api/";
 // const baseURL = "http://localhost/hermonsolutions_ecommerce/api/";
 
 const API = async (requestURL, requestAPIData) => {

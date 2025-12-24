@@ -1,0 +1,15 @@
+.vendor-create-container .dropdown-menuz {
+    display: none !important;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: 0.2s ease-in-out;
+    position: absolute !important;
+    z-index: 9999;
+}
+
+.vendor-create-container .dropdown-menuz.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0px);
+    margin-left: 0px !important;
+}

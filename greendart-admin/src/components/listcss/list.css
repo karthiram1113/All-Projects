@@ -1,0 +1,313 @@
+/* Toggle Switch (Smaller Only) */
+/* From Uiverse.io by Galahhad */ 
+/* From Uiverse.io by Galahhad */ 
+.switch {
+  /* switch */
+  --switch-width: 46px;
+  --switch-height: 20px;
+  --switch-bg: rgb(131, 131, 131);
+  --switch-checked-bg: rgb(0, 218, 80);
+  --switch-offset: calc((var(--switch-height) - var(--circle-diameter)) / 2);
+  --switch-transition: all .2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+  /* circle */
+  --circle-diameter: 18px;
+  --circle-bg: #fff;
+  --circle-shadow: 1px 1px 2px rgba(146, 146, 146, 0.45);
+  --circle-checked-shadow: -1px 1px 2px rgba(163, 163, 163, 0.45);
+  --circle-transition: var(--switch-transition);
+  /* icon */
+  --icon-transition: all .2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+  --icon-cross-color: var(--switch-bg);
+  --icon-cross-size: 6px;
+  --icon-checkmark-color: var(--switch-checked-bg);
+  --icon-checkmark-size: 10px;
+  /* effect line */
+  --effect-width: calc(var(--circle-diameter) / 2);
+  --effect-height: calc(var(--effect-width) / 2 - 1px);
+  --effect-bg: var(--circle-bg);
+  --effect-border-radius: 1px;
+  --effect-transition: all .2s ease-in-out;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch {
+  display: inline-block;
+}
+
+.switch svg {
+  -webkit-transition: var(--icon-transition);
+  -o-transition: var(--icon-transition);
+  transition: var(--icon-transition);
+  position: absolute;
+  height: auto;
+}
+
+.switch .checkmark {
+  width: var(--icon-checkmark-size);
+  color: var(--icon-checkmark-color);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.switch .cross {
+  width: var(--icon-cross-size);
+  color: var(--icon-cross-color);
+}
+
+.slider {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border-radius: 999px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: var(--switch-transition);
+  -o-transition: var(--switch-transition);
+  transition: var(--switch-transition);
+  cursor: pointer;
+}
+
+.circle {
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  background: var(--circle-bg);
+  border-radius: inherit;
+  -webkit-box-shadow: var(--circle-shadow);
+  box-shadow: var(--circle-shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: var(--circle-transition);
+  -o-transition: var(--circle-transition);
+  transition: var(--circle-transition);
+  z-index: 1;
+  position: absolute;
+  left: var(--switch-offset);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: var(--effect-width);
+  height: var(--effect-height);
+  left: calc(var(--switch-offset) + (var(--effect-width) / 2));
+  background: var(--effect-bg);
+  border-radius: var(--effect-border-radius);
+  -webkit-transition: var(--effect-transition);
+  -o-transition: var(--effect-transition);
+  transition: var(--effect-transition);
+}
+
+/* actions */
+
+.switch input:checked+.slider {
+  background: var(--switch-checked-bg);
+}
+
+.switch input:checked+.slider .checkmark {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.switch input:checked+.slider .cross {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.switch input:checked+.slider::before {
+  left: calc(100% - var(--effect-width) - (var(--effect-width) / 2) - var(--switch-offset));
+}
+
+.switch input:checked+.slider .circle {
+  left: calc(100% - var(--circle-diameter) - var(--switch-offset));
+  -webkit-box-shadow: var(--circle-checked-shadow);
+  box-shadow: var(--circle-checked-shadow);
+}
+
+/* icons */
+
+/* Common icon hover */
+.table-icon-btn {
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple effect */
+.table-icon-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0.4;
+  transition: transform 0.4s ease;
+}
+
+/* Hover animation */
+.table-icon-btn:hover {
+  transform: scale(1.15);
+}
+
+/* View */
+.table-icon-btn.view {
+  color: #3b82f6;
+}
+.table-icon-btn.view::after {
+  background: #bfdbfe;
+}
+.table-icon-btn.view:hover::after {
+  transform: scale(3);
+}
+
+/* Edit */
+.table-icon-btn.edit {
+  color: #16a34a;
+}
+.table-icon-btn.edit::after {
+  background: #bbf7d0;
+}
+.table-icon-btn.edit:hover::after {
+  transform: scale(3);
+}
+
+/* Delete */
+.table-icon-btn.delete {
+  color: #dc2626;
+}
+.table-icon-btn.delete::after {
+  background: #fecaca;
+}
+.table-icon-btn.delete:hover::after {
+  transform: scale(3);
+}
+
+/*tooltip */
+
+/* .custom-tooltip {
+  --bs-tooltip-bg:  var(--bd-violet-bg);
+  --bs-tooltip-color: var(--bs-white);
+} */
+
+.tooltip-view .tooltip-inner {
+  background-color: #bfdbfe;
+  color:  #3b82f6;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+/* Arrow color */
+.tooltip-view.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #bfdbfe;
+}
+
+.tooltip-update .tooltip-inner {
+  background-color: #bbf7d0;
+  color:  #16a34a;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+/* Arrow color */
+.tooltip-update.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #bbf7d0;
+}
+
+.tooltip-delete .tooltip-inner {
+  background-color: #fecaca;
+  color: #dc2626;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+/* Arrow color */
+.tooltip-delete.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #fecaca;
+}
+
+
+/*Table stripped*/
+
+.table-custom {
+  --bs-table-striped-bg: #ecfeff;
+  --bs-table-striped-color: #0c4a6e;
+}
+
+
+.txt-just{
+  text-align: justify;
+}
+
+/* Home Banner List Card Styles */
+
+.banner-card {
+  position: relative;
+  height: 100%;
+}
+
+.banner-card-index {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.banner-card-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.banner-card-delete:hover {
+  background-color: #c82333;
+}
+
+.banner-card-delete:active {
+  transform: scale(0.95);
+}
+
+.banner-card-image {
+  height: 200px;
+  object-fit: cover;
+}
